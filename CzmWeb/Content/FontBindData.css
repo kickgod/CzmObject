@@ -1,0 +1,28 @@
+﻿body {
+}
+@font-face {font-family: '创造们';
+    src: url('../Font/webfont.eot'); /* IE9*/
+    src: url('../Font/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../Font/webfont.woff') format('woff'), /* chrome、firefox */
+         url('../Font/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+         url('../Font/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
+@font-face {font-family: 'navFont';
+    src: url('../Font/webfont_pnqaxdsleaaqyqfr/webfont.eot'); /* IE9*/
+    src: url('../Font/webfont_pnqaxdsleaaqyqfr/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../Font/webfont_pnqaxdsleaaqyqfr/webfont.woff') format('woff'), /* chrome、firefox */
+         url('../Font/webfont_pnqaxdsleaaqyqfr/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+         url('../Font/webfont_pnqaxdsleaaqyqfr/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
+.Font_Title{
+    font-family:"创造们" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+.Font_Nav_Pc{
+    font-family:"navFont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}

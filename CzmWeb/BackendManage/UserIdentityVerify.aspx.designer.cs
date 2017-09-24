@@ -7,10 +7,10 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace CzmWeb {
+namespace CzmWeb.BackendManage {
     
     
-    public partial class Default {
+    public partial class UserIdentityVerify {
         
         /// <summary>
         /// form1 控件。

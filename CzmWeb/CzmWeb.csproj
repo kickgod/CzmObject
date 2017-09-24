@@ -131,6 +131,7 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="BackendManage\UserIdentityVerify.aspx" />
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\AspNet.ScriptManager.jQuery.dll" />
     <Content Include="bin\AspNet.ScriptManager.jQuery.UI.Combined.dll" />
@@ -153,6 +154,7 @@
     <Content Include="Common\wuc_FileUpload.ascx" />
     <Content Include="Common\wuc_ListPager.ascx" />
     <Content Include="Contact.aspx" />
+    <Content Include="Content\FontBindData.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -209,6 +211,10 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Font\demowebfont.html" />
+    <Content Include="Font\webfont.svg" />
+    <Content Include="Font\webfont_pnqaxdsleaaqyqfr\demo.html" />
+    <Content Include="Font\webfont_pnqaxdsleaaqyqfr\webfont.svg" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\heroAccent.png" />
@@ -225,6 +231,12 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
+    <Content Include="Font\webfont.eot" />
+    <Content Include="Font\webfont.ttf" />
+    <Content Include="Font\webfont.woff" />
+    <Content Include="Font\webfont_pnqaxdsleaaqyqfr\webfont.eot" />
+    <Content Include="Font\webfont_pnqaxdsleaaqyqfr\webfont.ttf" />
+    <Content Include="Font\webfont_pnqaxdsleaaqyqfr\webfont.woff" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -321,6 +333,13 @@
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BackendManage\UserIdentityVerify.aspx.cs">
+      <DependentUpon>UserIdentityVerify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackendManage\UserIdentityVerify.aspx.designer.cs">
+      <DependentUpon>UserIdentityVerify.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Common\wuc_FileUpload.ascx.cs">
       <DependentUpon>wuc_FileUpload.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
