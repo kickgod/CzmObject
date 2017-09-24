@@ -208,6 +208,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Default.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\heroAccent.png" />
@@ -221,7 +222,6 @@
     <Content Include="Images\orderedList7.png" />
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
-    <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
@@ -271,7 +271,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\SendPhoneMessage.cs" />
+    <Compile Include="App_Code\GetDataFromView.cs" />
+    <Compile Include="App_Code\SendPhoneMessage.cs" />
+    <Compile Include="App_Code\PublicGetDataFromDB.cs" />
+    <Compile Include="App_Code\GetDataFromTable.cs" />
+    <Compile Include="App_Code\VwProvinceList.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -319,12 +323,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Common\wuc_FileUpload.ascx.cs">
       <DependentUpon>wuc_FileUpload.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Common\wuc_FileUpload.ascx.designer.cs">
       <DependentUpon>wuc_FileUpload.ascx</DependentUpon>
     </Compile>
     <Compile Include="Common\wuc_ListPager.ascx.cs">
       <DependentUpon>wuc_ListPager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Common\wuc_ListPager.ascx.designer.cs">
       <DependentUpon>wuc_ListPager.ascx</DependentUpon>
@@ -363,6 +369,7 @@
     </Compile>
     <Compile Include="UserPage\LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserPage\LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>

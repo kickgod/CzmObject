@@ -182,5 +182,21 @@ namespace CzmObject.Common
                 }                
             }
         }
+        #region 定义事件
+
+        public delegate void CustomerEventHandler(object sender, EventArgs e);
+        public event CustomerEventHandler BindList;
+        public virtual void OnBindList()
+        {
+            if (BindList != null)
+            {
+                BindList(this, EventArgs.Empty);
+            }
+        }
+        public void Bind()
+        {
+            OnBindList();
+        }
+        #endregion
     }
 }
