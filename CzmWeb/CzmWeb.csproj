@@ -212,6 +212,13 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Default.aspx" />
     <Content Include="Font\demowebfont.html" />
+    <Content Include="Font\font_yz1d77s34lzt1emi\demo.css" />
+    <Content Include="Font\font_yz1d77s34lzt1emi\demo_fontclass.html" />
+    <Content Include="Font\font_yz1d77s34lzt1emi\demo_symbol.html" />
+    <Content Include="Font\font_yz1d77s34lzt1emi\demo_unicode.html" />
+    <Content Include="Font\font_yz1d77s34lzt1emi\iconfont.css" />
+    <Content Include="Font\font_yz1d77s34lzt1emi\iconfont.js" />
+    <Content Include="Font\font_yz1d77s34lzt1emi\iconfont.svg" />
     <Content Include="Font\webfont.svg" />
     <Content Include="Font\webfont_pnqaxdsleaaqyqfr\demo.html" />
     <Content Include="Font\webfont_pnqaxdsleaaqyqfr\webfont.svg" />
@@ -230,6 +237,8 @@
     <Content Include="Images\orderedList9.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\SystemPicture\User.png" />
+    <Content Include="Images\SystemPicture\User_White.png" />
     <Content Include="packages.config" />
     <Content Include="Font\webfont.eot" />
     <Content Include="Font\webfont.ttf" />
@@ -237,6 +246,9 @@
     <Content Include="Font\webfont_pnqaxdsleaaqyqfr\webfont.eot" />
     <Content Include="Font\webfont_pnqaxdsleaaqyqfr\webfont.ttf" />
     <Content Include="Font\webfont_pnqaxdsleaaqyqfr\webfont.woff" />
+    <Content Include="Font\font_yz1d77s34lzt1emi\iconfont.eot" />
+    <Content Include="Font\font_yz1d77s34lzt1emi\iconfont.ttf" />
+    <Content Include="Font\font_yz1d77s34lzt1emi\iconfont.woff" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />

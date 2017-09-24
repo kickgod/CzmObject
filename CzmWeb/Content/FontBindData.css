@@ -1,5 +1,8 @@
 ﻿body {
+    padding: 0px;
+    margin: 0px;
 }
+/*字体*/
 @font-face {font-family: '创造们';
     src: url('../Font/webfont.eot'); /* IE9*/
     src: url('../Font/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -26,3 +29,20 @@
     -webkit-font-smoothing: antialiased;
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;}
+
+/*图片 iconfont*/ /*使得的是unicode引入 引入方法 <i class="iconfont">&#x33;</i> */
+@font-face {
+    font-family: 'iconfontUser';
+    src: url('../Font/font_yz1d77s34lzt1emi/iconfont.eot');
+    src: url('../Font/font_yz1d77s34lzt1emi/iconfont.eot?#iefix') format('embedded-opentype'),
+         url('../Font/font_yz1d77s34lzt1emi/iconfont.woff') format('woff'),
+         url('../Font/font_yz1d77s34lzt1emi/iconfont.ttf') format('truetype'),
+         url('../Font/font_yz1d77s34lzt1emi/iconfont.svg#iconfont') format('svg');
+}
+.UserIcon{
+    font-family:"iconfontUser" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
