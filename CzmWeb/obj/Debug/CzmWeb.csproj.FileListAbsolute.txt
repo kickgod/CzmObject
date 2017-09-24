@@ -1,0 +1,5 @@
+D:\Repository GitHub\CzmObject\CzmWeb\bin\CzmWeb.dll
+D:\Repository GitHub\CzmObject\CzmWeb\bin\CzmWeb.pdb
+D:\Repository GitHub\CzmObject\CzmWeb\obj\Debug\CzmWeb.csprojResolveAssemblyReference.cache
+D:\Repository GitHub\CzmObject\CzmWeb\obj\Debug\CzmWeb.dll
+D:\Repository GitHub\CzmObject\CzmWeb\obj\Debug\CzmWeb.pdb
