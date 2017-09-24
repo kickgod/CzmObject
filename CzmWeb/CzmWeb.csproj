@@ -271,7 +271,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\SendPhoneMessage.cs" />
+    <Compile Include="App_Code\GetDataFromView.cs" />
+    <Compile Include="App_Code\SendPhoneMessage.cs" />
+    <Compile Include="App_Code\PublicGetDataFromDB.cs" />
+    <Compile Include="App_Code\GetDataFromTable.cs" />
+    <Compile Include="App_Code\VwProvinceList.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="About.aspx.cs">
