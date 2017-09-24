@@ -6,6 +6,7 @@
     }
     .LinK:hover {
         color: red;
+        cursor: pointer;
     }
     *{
         padding: 0px;

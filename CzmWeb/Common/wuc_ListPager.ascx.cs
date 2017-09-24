@@ -10,13 +10,24 @@ namespace CzmObject.Common
 {
     public partial class wuc_ListPager : System.Web.UI.UserControl
     {
-        public Int32 PageSize = 10; //分页每页行数目
-        private Int32 RowCount = 0;   //总函数
-        private DataTable BindData;  //绑定数据 存入的数据
+        public Int32 PageSize = 5; //分页每页行数目
+        public Int32 RowCount = 0;   //总函数
+        public DataTable BindData;  //绑定数据 存入的数据
         public DataTable BindOutData; //对外数据; 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (IsPostBack)
+            {
+                if (ViewState["List"] != null)
+                {
+                    BindData = (DataTable) ViewState["List"];
+                    RowCount = BindData.Rows.Count;
+                }
+                else
+                {
+                    MessaegBox("kongshuju");
+                }
+            }
         }
         public DataTable GetDateBind(DataTable td)
         {
@@ -48,30 +59,33 @@ namespace CzmObject.Common
             else
             {
                 lblAllPage.Text = ((RowCount/PageSize) + 1).ToString();
-            } 
-            DataTable FisrtPager =new DataTable();
+            }
+            DataTable FisrtPager = td.Clone();
             //数据量小于单页面数量
+            DataRow[] rows = td.Select();
             if (RowCount <= PageSize)
             {
                 for (int i = 0; i < RowCount; i++)
                 {
-                    FisrtPager.Rows.Add(td.Rows[i]);
+
+                    FisrtPager.Rows.Add(rows[i].ItemArray);
                 }
             }
-            else
+            else if (RowCount>PageSize)
             {
                 for (int i = 0; i < PageSize; i++)
                 {
-                    FisrtPager.Rows.Add(td.Rows[i]);
+                    FisrtPager.Rows.Add(rows[i].ItemArray);
                 }               
             }
             //返回数据
+            ViewState["List"] = BindData.Copy();
             BindOutData = FisrtPager;
             return FisrtPager;
         }
         protected void btnFirstPage_Click(object sender, EventArgs e)
         {
-            if (BindOutData!=null)
+            if (BindData!= null)
             {
                 //已经在首页则点击无效
                 if (lblCurPage.Text != "1")
@@ -82,25 +96,30 @@ namespace CzmObject.Common
                     {
                         for (int i = 0; i < RowCount; i++)
                         {
-                            BackTable.Rows.Add(BindData.Rows[i]);
+                            BackTable.Rows.Add(BindData.Rows[i].ItemArray);
                         }
                     }
                     else
                     {
                         for (int i = 0; i < PageSize; i++)
                         {
-                            BackTable.Rows.Add(BindData.Rows[i]);
+                            BackTable.Rows.Add(BindData.Rows[i].ItemArray);
                         }
                     }
                     BindOutData = BackTable.Copy();
                     BackTable.Dispose();
                     lblCurPage.Text = "1";
-                }             
+                    Bind();
+                }
+            }
+            else
+            {
+                MessaegBox("你知道的");
             }
         }
         protected void lbtnUpPage_Click(object sender, EventArgs e)
         {
-            if (BindOutData != null)
+            if (BindData != null)
             {
                 DataTable BackTable = new DataTable();
                 BackTable = BindData.Clone();
@@ -114,19 +133,23 @@ namespace CzmObject.Common
                 {
                     CountStart = (Convert.ToInt32(lblCurPage.Text) - 2) * PageSize;
                     int count = Convert.ToInt32(lblCurPage.Text);
-                    for (int i = CountStart - 1; i < CountStart + PageSize; i++)
+                    for (int i = CountStart; i < CountStart + PageSize; i++)
                     {
-                        BackTable.Rows.Add(BindData.Rows[i]);
+                        BackTable.Rows.Add(BindData.Rows[i].ItemArray);
                     }
                     BindOutData = BackTable;
                     lblCurPage.Text = (count - 1).ToString();
-                }   
-            }
+                    Bind();
+                }
+             }
         }
-
+        private   void MessaegBox(String msg)
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('" + msg + "')</script>");
+        }
         protected void lbtnNextPage_Click(object sender, EventArgs e)
         {
-            if (BindOutData != null)
+            if (BindData != null)
             {
                 //已经是最后一页则不跳转
                 DataTable BackTable = new DataTable();
@@ -143,48 +166,51 @@ namespace CzmObject.Common
                     {
                         for (int i = Count * PageSize; i < RowCount; i++)
                         {
-                            BackTable.Rows.Add(BindData.Rows[i]);
+                            BackTable.Rows.Add(BindData.Rows[i].ItemArray);
                         }
                     }//如果下一页不是最后一页
                     else
                     {
                         for (int i = Count * PageSize; i < (Count + 1) * PageSize; i++)
                         {
-                            BackTable.Rows.Add(BindData.Rows[i]);
+                            BackTable.Rows.Add(BindData.Rows[i].ItemArray);
                         }                    
                     }
                     BindOutData = BackTable;
                     lblCurPage.Text = (Count + 1).ToString();
-                }               
+                }
+                Bind();
             }
 
         }
-
         protected void lbtnLastPage_Click(object sender, EventArgs e)
         {
-            if (BindOutData!=null)
+            if (BindData != null)
             {
                 DataTable BackTable = new DataTable();
                 BackTable = BindData.Clone();
                 if (lblCurPage.Text == lblAllPage.Text)
                 {
+                    return;
                 }
                 else
                 {
                     int Countpages = Convert.ToInt32(lblAllPage.Text);
                     for (int i = (Countpages - 1) * PageSize; i < Convert.ToInt32(lblCountDate.Text); i++)
                     {
-                        BackTable.Rows.Add(BindData.Rows[i]);
+                        BackTable.Rows.Add(BindData.Rows[i].ItemArray);
                     }
                     BindOutData = BackTable;
                     lblCurPage.Text = lblAllPage.Text;
-
-                }                
+                }
+                Bind();
             }
+
         }
         #region 定义事件
-
         public delegate void CustomerEventHandler(object sender, EventArgs e);
+        //public delegate void CusomerEventTowHandler(object sender, EventArgs e);
+        //public event CusomerEventTowHandler BindDataToControl;
         public event CustomerEventHandler BindList;
         public virtual void OnBindList()
         {
