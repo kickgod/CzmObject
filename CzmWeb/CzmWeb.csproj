@@ -154,7 +154,11 @@
     <Content Include="Common\wuc_FileUpload.ascx" />
     <Content Include="Common\wuc_ListPager.ascx" />
     <Content Include="Contact.aspx" />
+    <Content Include="Content\BtnGethupStyle.css" />
+    <Content Include="Content\BtnStanderdStyle.css" />
     <Content Include="Content\FontBindData.css" />
+    <Content Include="Content\gh-icons.png" />
+    <Content Include="Content\InputFileUploadStyle.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -211,6 +215,14 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Default.aspx" />
+    <Content Include="FirstImage\7.jpg" />
+    <Content Include="FirstImage\2.jpg" />
+    <Content Include="FirstImage\3.jpg" />
+    <Content Include="FirstImage\4.jpg" />
+    <Content Include="FirstImage\1.jpg" />
+    <Content Include="FirstImage\5.jpg" />
+    <Content Include="FirstImage\row.png" />
+    <Content Include="FirstImage\row2.png" />
     <Content Include="Font\demowebfont.html" />
     <Content Include="Font\font_yz1d77s34lzt1emi\demo.css" />
     <Content Include="Font\font_yz1d77s34lzt1emi\demo_fontclass.html" />
@@ -249,6 +261,7 @@
     <Content Include="Font\font_yz1d77s34lzt1emi\iconfont.eot" />
     <Content Include="Font\font_yz1d77s34lzt1emi\iconfont.ttf" />
     <Content Include="Font\font_yz1d77s34lzt1emi\iconfont.woff" />
+    <Content Include="Font\RTWSYueGoTrial-ExLight.otf" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />

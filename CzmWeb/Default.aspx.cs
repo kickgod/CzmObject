@@ -20,5 +20,10 @@ namespace CzmWeb
         {
             Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('" + msg + "')</script>");
         }
+
+        protected void lkbtnEnish_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

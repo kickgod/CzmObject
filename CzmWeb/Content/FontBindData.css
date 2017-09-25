@@ -17,6 +17,10 @@
          url('../Font/webfont_pnqaxdsleaaqyqfr/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
          url('../Font/webfont_pnqaxdsleaaqyqfr/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
 }
+@font-face{
+    font-family: wuyongti;
+    src: url('../Font/RTWSYueGoTrial-ExLight.otf');
+}
 .Font_Title{
     font-family:"创造们" !important;
     font-size:16px;font-style:normal;
