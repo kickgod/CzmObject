@@ -51,7 +51,7 @@
         .ProdecutShow{ width: 100%;height: 500px;}
         .ProdecutShow .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
         .ProdecutShow .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
-        .ProductImg{}
+        .ProdecutShow .ProductImg .heheda{}
         .Font_Name_English{ color: darkmagenta;font-weight: 900;font-size: 16px; text-align: center;padding-left: 10px;letter-spacing: 1px;word-spacing: 3px; }
     </style>
     <script type="text/javascript">
@@ -224,10 +224,10 @@
                 <span style="border-bottom: 2px darkblue dashed; padding-bottom: 15px;"><span class="productFont Font_Nav_Pc">产品分类</span><span class="Font_Name_English">PRODUCT CATEGORY</span></span>
             </div>
             <div class="ProductImg">
-                <div class="">
-                    <a><img src="" /></a> 
+                <div class="heheda">
+                    <div class="attachImg"></div>
+                    <a><img src=""  width="390px" height="300px"/></a> 
                 </div>
-
             </div>
         </section>
     </form>
