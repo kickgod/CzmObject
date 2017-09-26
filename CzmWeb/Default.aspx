@@ -9,7 +9,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="Content/FontBindData.css" type="text/css"  rel="stylesheet" />
     <style type="text/css">
-        *{ padding: 0px;margin-left: 0px; margin-right: 0px;  margin-top: 0px;text-decoration: none;}
+        *{ padding: 0px;margin: 0px;text-decoration: none;
+        }
         .Head{ width: 100%;background-color: RGB(176, 53, 112);height: 60px;}
         .Head .logo{ width: 20%;height: 60px;line-height: 60px;float: left}
         .Head .logo i{ color: RGB(232,105,170);font-weight: bold;font-size: 280%;font-style: italic;line-height: 60px;height: 60px;width: 100%;text-align: center;display: block}
@@ -26,16 +27,16 @@
         .Head .Login_ACE ul li .transfer{ width: 49%;text-decoration: none;color: white;float: left}
         .Head .Login_ACE ul li .transfer:hover{ color: gainsboro;border-top: 2px solid white;}
         .Head .Login_ACE ul li a{ width: 100%;height: 60px;display: block}
-        .Head .Login_ACE ul li img{ width: 40px;height: 40px;padding: 10px;}
-        .Head .Login_ACE ul li ul{width: 0%;color: white;border: none;transition: 0.8s;-o-transition: 0.8s; color: white;z-index: 1000;}
+        .Head .Login_ACE ul li img{ width: 40px;height: 40px;padding:5px;}
+        .Head .Login_ACE ul li ul{width: 0%;color: white;border: none;transition: 0.8s;-o-transition: 0.8s; color: white;}
         .Head .Login_ACE ul li ul li a{text-decoration: none; color: white;}
-        .Head .Login_ACE ul li ul li{background-color:RGB(176, 53, 112);width: 100%;}
+        .Head .Login_ACE ul li ul li{background-color:gainsboro;width: 100%;color: white;}
         .Head .Login_ACE ul li ul li:hover{ color: gainsboro;}
         .Head .Login_ACE ul li ul li .userL:hover{ background-color: darkmagenta;font-weight: 500;}
-        .Head .Login_ACE ul li:hover ul{ width: 100%;border: 1px solid white}
-        #containter {overflow: hidden; width: 1200px;height: 535px;position: relative;z-index: 1;margin:0px auto}
+        .Head .Login_ACE ul li:hover img{ padding-top: 0px;width: 50px;height: 50px;}
+        #containter { overflow: hidden; width: 1200px;height: 535px;position: relative;z-index: 1;margin: 0px auto;z-index: 1;}
         #ilist{width: 8400px;height: 535px;position: absolute;z-index: 1;left: 0px;}
-        #ilist img{float: left;}
+        #ilist img{float: left;z-index: 1;}
         #buttons {position: absolute;height: 10px;width: 160px;z-index: 2; bottom: 20px;left: 48%;}
         #buttons span{cursor: pointer;float: left;border: 1px solid #FFFDEF;width: 14px; height: 14px;border-radius: 50%;background: #333333;margin-right: 5px;}
         #buttons .on{background: orangered;}
@@ -48,11 +49,39 @@
         .lunboSection{ width: 100%;height: 535px;background: linear-gradient(darkmagenta, RGB(176, 53, 112));}
         .lunboSection .Font_ont{color: white;font-size: 2em; position: absolute;top: 25%;transform: rotate(64deg);}
         .lunboSection .Font_tot{color: white;font-size: 2em; position: absolute;top: 25%;transform: rotate(-152deg);right: 10%;}
-        .ProdecutShow{ width: 100%;height: 500px;}
+        .ProdecutShow{ width: 100%;height: 400px;}
         .ProdecutShow .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
         .ProdecutShow .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
-        .ProdecutShow .ProductImg .heheda{}
+        .ProdecutShow .ProductImg{ width: 1300px;margin: auto;}
+        .ProdecutShow .ProductImg  .heheda{position: relative; width: 320px;height: 225px;float: left;margin-right: 5px; }
+        .ProdecutShow .ProductImg  .heheda:hover{ transform: scale(1.1, 1.1);-webkie-transform: scale(1.1, 1.1);}
+        .ProdecutShow .ProductImg  .heheda:hover img{ box-shadow: 2px 2px 2px 2px slategrey;}
+        .ProdecutShow .ProductImg  .heheda img{ position: absolute;top: 0px;left: 10px;z-index: 2;}
+        .ProdecutShow .ProductImg  .heheda h2{top: 20px; z-index: 3; position: absolute;width: 25px;height: 120px;background: -webkit-linear-gradient(right,RGB(111,41,104),RGB(111,41,104),RGB(68,7,66));
+            background: -o-linear-gradient(right, RGB(176, 53, 112),RGB(82, 18, 87));
+            background: linear-gradient(right, RGB(176, 53, 112), RGB(82, 18, 87));
+            background: -moz-linear-gradient(right, RGB(176, 53, 112), RGB(82, 18, 87));
+            color: white;font-weight: 400;font-size: 16px;text-align: center;padding-top: 30px;font-family: '楷体','宋体' }
         .Font_Name_English{ color: darkmagenta;font-weight: 900;font-size: 16px; text-align: center;padding-left: 10px;letter-spacing: 1px;word-spacing: 3px; }
+        .NewProductShow{width: 100%;}
+        .NewProductShow .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
+        .NewProductShow .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
+        .NewProductShow .ListProduct{ width: 1220px;margin: auto;}
+        .NewProductShow .ListProduct .newproductList{ width: 400px;height: 360px; position: relative;float: left;
+            top: 0px;
+            left: 0px;
+        }
+        .NewProductShow .ListProduct .newproductList:hover {transform: translate(10px,10px); }
+        .NewProductShow .ListProduct .newproductList .UpRectangle{ width: 10%;height: 10%;border-left: 1px solid grey;border-top: 1px solid grey;transition: 3s}
+        .NewProductShow .ListProduct .newproductList .Rectangle{ width:80% ;height: 58%;margin: auto;background-color:RGB(228,143,184) }
+        .NewProductShow .ListProduct .newproductList .DownRectangle{ width: 10%;height: 10%;position: absolute;bottom: 0px; right: 0px;border-bottom: 1px solid grey;border-right: 1px solid grey;}
+        .NewProductShow .ListProduct .newproductList .IntroDuction{ position: absolute;bottom: 10%; height: 20%;width: 100%}
+        .NewProductShow .ListProduct .newproductList .IntroDuction input{font-size: 25px;font-family: '楷体';  width: 100px;height: 30px;line-height: 30px; position: absolute;right: 5%;top: 0px;color: white;background-color: RGB(105, 17, 75);border:2px solid RGB(105, 17, 75)  }
+        .LearnMoreProduct{ width: 100%;height: 150px}
+        .LearnMoreProduct a{display: block;margin-top: 50%;width: 300px;height: 150px;line-height: 150px; margin: auto;font-size: 30px;font-weight: 600;text-align: center;color:RGB(126,0,84) }
+        .LearnMoreProduct a:hover{ font-size: 40px;text-shadow: 2px 2px 2px saddlebrown}
+        .ProductIntrpDuction{ font-family: '华文楷体', '楷体', '微软雅黑','宋体'; color: RGB(188, 182, 184);font-size: 1em}
+        .VedioList{ width: 100%;height: 400px;}
     </style>
     <script type="text/javascript">
         window.onload = function () {
@@ -180,11 +209,7 @@
               <div class="Login_ACE">
                   <ul>
                       <li>
-                          <a href="#" class="hoverTitle" id="KickOpen" ><img src="Images/SystemPicture/User_White.png"/></a>
-                           <ul>
-                               <li><asp:HyperLink ID="HyperLink1" CssClass="userL" runat="server" NavigateUrl="~/UserPage/LoginPage.aspx">用户登陆</asp:HyperLink></li>
-                               <li><asp:HyperLink ID="HyperLink2" runat="server"  CssClass="userL" NavigateUrl="~/UserPage/LoginPage.aspx">用户注册</asp:HyperLink></li>
-                          </ul>
+                          <a href="../UserPage/LoginPage.aspx" class="hoverTitle" id="KickOpen" ><img src="Images/SystemPicture/User_White.png"/></a>
                       </li>
                       <li>
                           <asp:LinkButton ID="lkbtnChinese" CssClass="transfer" runat="server">汉语</asp:LinkButton>
@@ -194,8 +219,6 @@
               </div>
           </div>
         <section class="lunboSection">
-            <i class="Font_ont">汇聚思想</i>
-            <i class="Font_tot">创新创造</i>
             <div id="containter">
                 <div id="ilist">
                     <img src="../FirstImage/1.jpg" alt="" />
@@ -221,14 +244,85 @@
         </section>
         <section class="ProdecutShow">
             <div class="JuzhongFont">
-                <span style="border-bottom: 2px darkblue dashed; padding-bottom: 15px;"><span class="productFont Font_Nav_Pc">产品分类</span><span class="Font_Name_English">PRODUCT CATEGORY</span></span>
+                <span style="border-bottom: 2px darkblue dashed; padding-bottom: 15px;">
+                    <span class="productFont Font_Nav_Pc">产品分类</span><span class="Font_Name_English">PRODUCT CATEGORY</span>
+                </span> 
             </div>
             <div class="ProductImg">
                 <div class="heheda">
-                    <div class="attachImg"></div>
-                    <a><img src=""  width="390px" height="300px"/></a> 
+                    <h2>医疗保健</h2>
+                    <a><img src="ProductImage/productType1.jpg"  width="300px" height="220px"/></a> 
+                </div>
+                <div class="heheda">
+                    <h2>通钓鱼具</h2>
+                    <a><img src="ProductImage/productType2.jpg"  width="300px" height="220px"/></a> 
+                </div>
+                <div class="heheda">
+                    <h2>洗鞋袜</h2>
+                    <a><img src="ProductImage/productType3.jpg"  width="300px" height="220px"/></a> 
+                </div>
+                <div class="heheda">
+                    <h2>文物收藏</h2>
+                    <a><img src="ProductImage/productType4.jpg"  width="300px" height="220px"/></a> 
                 </div>
             </div>
+        </section>
+        <section class="NewProductShow">
+            <div class="JuzhongFont">
+                <span style="border-bottom: 2px darkblue dashed; padding-bottom: 15px;">
+                    <span class="productFont Font_Nav_Pc">新品预告</span><span class="Font_Name_English">NEW PRODUCT</span>
+                </span> 
+            </div>
+            <div class="ListProduct">
+                <div class="newproductList">
+                    <div class="UpRectangle"></div>
+                    <div class="Rectangle"></div>
+                    <div class="IntroDuction">
+                        <p style="text-indent: 10%">
+                            <span style="font-size: 25px;color:RGB(135,0,60) ">¥</span><span style="color: RGB(135, 0, 60);font-weight: 600;font-size: 30px">39.6</span>
+                            <input type="button" value="新品"/>
+                        </p>
+                        <p>
+                           <span style="color: purple" >【Introduction】</span><asp:Label ID="lblShow" CssClass="ProductIntrpDuction" runat="server" Text="人民币（缩写：RMB；货币代码是：CNY；货币符号：¥）是中华人民共和国的法定货币"></asp:Label>
+                        </p>
+                    </div>
+                    <div class="DownRectangle"></div>
+                </div>
+                <div class="newproductList">
+                    <div class="UpRectangle"></div>
+                    <div class="Rectangle"></div>
+                    <div class="IntroDuction">
+                        <p style="text-indent: 10%">
+                            <span style="font-size: 25px;color:RGB(135,0,60) ">¥</span><span style="color: RGB(135, 0, 60);font-weight: 600;font-size: 30px">39.6</span>
+                            <input type="button" value="新品"/>
+                        </p>
+                        <p>
+                            <span style="color: purple" >【Introduction】</span><asp:Label ID="Label1" CssClass="ProductIntrpDuction" runat="server" Text="人民币（缩写：RMB；货币代码是：CNY；货币符号：¥）是中华人民共和国的法定货币"></asp:Label>
+                        </p>
+                    </div>
+                    <div class="DownRectangle"></div>
+                </div>
+                <div class="newproductList">
+                    <div class="UpRectangle"></div>
+                    <div class="Rectangle"></div>
+                    <div class="IntroDuction">
+                        <p style="text-indent: 10%">
+                            <span style="font-size: 25px;color:RGB(135,0,60) ">¥</span><span style="color: RGB(135, 0, 60);font-weight: 600;font-size: 30px">39.6</span>
+                            <input type="button" value="新品"/>
+                        </p>
+                        <p>
+                            <span style="color: purple" >【Introduction】</span><asp:Label ID="Label2" CssClass="ProductIntrpDuction" runat="server" Text="人民币（缩写：RMB；货币代码是：CNY；货币符号：¥）是中华人民共和国的法定货币"></asp:Label>
+                        </p>
+                    </div>
+                    <div class="DownRectangle"></div>
+                </div>
+            </div>
+        </section>
+        <div class="LearnMoreProduct">
+                <a href="#" >GET MORE</a>
+        </div>
+        <section class="VedioList">
+            
         </section>
     </form>
 </body>
