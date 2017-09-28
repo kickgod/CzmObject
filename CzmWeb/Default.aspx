@@ -9,8 +9,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="Content/FontBindData.css" type="text/css"  rel="stylesheet" />
     <style type="text/css">
-        *{ padding: 0px;margin: 0px;text-decoration: none;
-        }
+        *{ padding: 0px;margin: 0px;text-decoration: none;}
         .Head{ width: 100%;background-color: RGB(176, 53, 112);height: 60px;}
         .Head .logo{ width: 20%;height: 60px;line-height: 60px;float: left}
         .Head .logo i{ color: RGB(232,105,170);font-weight: bold;font-size: 280%;font-style: italic;line-height: 60px;height: 60px;width: 100%;text-align: center;display: block}
@@ -58,19 +57,16 @@
         .ProdecutShow .ProductImg  .heheda:hover img{ box-shadow: 2px 2px 2px 2px slategrey;}
         .ProdecutShow .ProductImg  .heheda img{ position: absolute;top: 0px;left: 10px;z-index: 2;}
         .ProdecutShow .ProductImg  .heheda h2{top: 20px; z-index: 3; position: absolute;width: 25px;height: 120px;background: -webkit-linear-gradient(right,RGB(111,41,104),RGB(111,41,104),RGB(68,7,66));
-            background: -o-linear-gradient(right, RGB(176, 53, 112),RGB(82, 18, 87));
-            background: linear-gradient(right, RGB(176, 53, 112), RGB(82, 18, 87));
-            background: -moz-linear-gradient(right, RGB(176, 53, 112), RGB(82, 18, 87));
-            color: white;font-weight: 400;font-size: 16px;text-align: center;padding-top: 30px;font-family: '楷体','宋体' }
+         background: -o-linear-gradient(right, RGB(176, 53, 112),RGB(82, 18, 87));
+         background: linear-gradient(right, RGB(176, 53, 112), RGB(82, 18, 87));
+         background: -moz-linear-gradient(right, RGB(176, 53, 112), RGB(82, 18, 87));
+         color: white;font-weight: 400;font-size: 16px;text-align: center;padding-top: 30px;font-family: '楷体','宋体' }
         .Font_Name_English{ color: darkmagenta;font-weight: 900;font-size: 16px; text-align: center;padding-left: 10px;letter-spacing: 1px;word-spacing: 3px; }
-        .NewProductShow{width: 100%;}
+        .NewProductShow{width: 100%;height: 500px;}
         .NewProductShow .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
         .NewProductShow .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
         .NewProductShow .ListProduct{ width: 1220px;margin: auto;}
-        .NewProductShow .ListProduct .newproductList{ width: 400px;height: 360px; position: relative;float: left;
-            top: 0px;
-            left: 0px;
-        }
+        .NewProductShow .ListProduct .newproductList{ width: 400px;height: 360px; position: relative;float: left;top: 0px;left: 0px; }
         .NewProductShow .ListProduct .newproductList:hover {transform: translate(10px,10px); }
         .NewProductShow .ListProduct .newproductList .UpRectangle{ width: 10%;height: 10%;border-left: 1px solid grey;border-top: 1px solid grey;transition: 3s}
         .NewProductShow .ListProduct .newproductList .Rectangle{ width:80% ;height: 58%;margin: auto;background-color:RGB(228,143,184) }
@@ -81,8 +77,33 @@
         .LearnMoreProduct a{display: block;margin-top: 50%;width: 300px;height: 150px;line-height: 150px; margin: auto;font-size: 30px;font-weight: 600;text-align: center;color:RGB(126,0,84) }
         .LearnMoreProduct a:hover{ font-size: 40px;text-shadow: 2px 2px 2px saddlebrown}
         .ProductIntrpDuction{ font-family: '华文楷体', '楷体', '微软雅黑','宋体'; color: RGB(188, 182, 184);font-size: 1em}
-        .VedioList{ width: 100%;height: 400px;}
-    </style>
+        .VedioList{ width: 100%;height: 610px;background-color: RGB(231, 223, 238);box-sizing: border-box}
+        .VedioList .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
+        .VedioList .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
+        .VedioList .Vedioshelf { width: 810px;margin: auto;}
+        .VedioList .Vedioshelf .LeftBox{background-image: url(FirstImage/diaoyu.png); width: 200px;float: left;height: 200px;background-color:white;border-radius: 50%;border: 1px solid purple; }
+        .VedioList .Vedioshelf .LeftBox img{opacity: 0.75;filter:alpha(opacity=75);  width: 180px;height: 180px;border-radius: 50%;border: 1px solid plum;margin: 10px;}
+        .VedioList .Vedioshelf .CenterBox{background-image: url(FirstImage/yihui.png);  width: 400px;float: left;height: 400px;background-color:white;border-radius: 50%;border: 1px solid purple;  }
+        .VedioList .Vedioshelf .CenterBox img {opacity: 0.75;filter:alpha(opacity=75); width: 380px;height: 380px; border-radius: 50%;border: 1px solid plum;margin: 10px;}
+        .VedioList .Vedioshelf .RightBox{background-image: url(FirstImage/wenwu.png);  width:200px;float: left; height: 200px;background-color: white;border-radius: 50%;border: 1px solid purple; }
+        .VedioList .Vedioshelf .RightBox img {opacity: 0.75;filter:alpha(opacity=75); width: 180px;height: 180px; border-radius: 50%;border: 1px solid plum;margin: 10px;}
+        .VedioList .Vedioshelf::after{ content: "";display: block;clear: both}
+        .VedioList .LearingMoreVedio{ width: 100%;height: 30px;position: relative;}
+        .VedioList .LearingMoreVedio p{font-size: 1.2em; text-align: center;position: absolute;right: 20%;  width: 150px;height: 30px;line-height: 30px; border: solid 1px grey;font-weight: 600; background-color: white;}
+        .VedioList .LearingMoreVedio p a{color: purple;} 
+        .Watchlive{ width: 100%;height: 500px;}
+        .Watchlive .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
+        .Watchlive .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
+        .Watchlive .LiveSelf{ width: 700px;margin: 30px auto}
+        .Watchlive .LiveSelf a{ display: block;float: left;margin: 10px;}
+        .Watchlive .LiveSelf a img{ width: 200px;height: 200px;border-radius: 50%;}
+        .ProjectShow{ width: 100%;}
+        .ProjectShow .ProjectTitle{ background-color: RGB(62, 14, 88);text-align: center;line-height: 30px;height: 30px;color: white;font-weight: 600;}
+        .ProjectShow .ProjectSelf .VideoShow{position: relative;width: 300px;height: 300px;}
+        .ProjectShow .ProjectSelf .VideoShow .imgShow{position: relative; width: 300px;height: 300px; }
+        .ProjectShow .ProjectSelf .VideoShow .IntroDucation{ position: absolute;top: 0px;left: 0px;}
+        .ProjectShow .ProjectSelf .VideoShow .IntroDucation .Title{}
+   </style>
     <script type="text/javascript">
         window.onload = function () {
             var span = document.getElementsByTagName("span");
@@ -191,7 +212,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-          <div class="Head">
+        <div class="Head">
               <div class="logo"><i class="Font_Title">创造门</i></div>
               <div class="Nav">
                   <ul>
@@ -322,7 +343,48 @@
                 <a href="#" >GET MORE</a>
         </div>
         <section class="VedioList">
-            
+            <div class="JuzhongFont">
+                <span style="border-bottom: 2px darkblue solid; padding-bottom: 15px;">
+                    <span class="productFont Font_Nav_Pc">视频专区</span><span class="Font_Name_English">Video Shelf</span>
+                </span> 
+            </div>
+            <div class="Vedioshelf"> 
+                <div class="LeftBox"><a href="javascript:void(0)"><img src="FirstImage/图标8.png"/></a></div>
+                <div class="CenterBox"><a href="javascript:void(0)"><img src="FirstImage/图标8.png"/></a></div>
+                <div class="RightBox"><a href="javascript:void(0)"><img src="FirstImage/图标8.png"/></a></div>
+            </div>   <br/>
+            <div class="LearingMoreVedio">
+                <p><a href="javascript:void(0)">WATCH MORE</a></p>
+            </div>        
+        </section>
+        <section class="Watchlive">
+            <div class="JuzhongFont">
+                <span style="border-bottom: 2px darkblue solid; padding-bottom: 15px;">
+                    <span class="productFont Font_Nav_Pc">观看直播</span><span class="Font_Name_English">Watch Live</span>
+                </span> 
+            </div>
+            <div class="LiveSelf">
+                <a href="javascrpt:void(0)"><img src="FirstImage/kuaishou.png"/> </a>
+                <a href="javascrpt:void(0)"><img src="FirstImage/yinke.png"/></a>
+                <a href="javascrpt:void(0)"><img src="FirstImage/shangyu.png"/></a>
+            </div>
+        </section>
+        <section class="ProjectShow">
+            <p class="ProjectTitle">项目展示[PROJECT DISPALY]</p>
+            <div class="ProjectSelf">
+                <div class="VideoShow">
+                     <div class="imgShow"><img src="FirstImage/首页8.jpg"/></div>
+                     <div class="IntroDucation">
+                         <div class="Title"><p>等离子泊车项目</p></div>
+                         <div class="">
+                             <p>
+                                谷歌僵尸地图是指谷歌地图推出一项新功能，该地图专为面临自然灾害时提供一些必要的帮助信息。
+                                地图列出全球主要城市的加油站、杂货铺甚至枪械店.  
+                             </p>
+                         </div>
+                     </div>
+                </div>    
+            </div>
         </section>
     </form>
 </body>
