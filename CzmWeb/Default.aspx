@@ -99,10 +99,17 @@
         .Watchlive .LiveSelf a img{ width: 200px;height: 200px;border-radius: 50%;}
         .ProjectShow{ width: 100%;}
         .ProjectShow .ProjectTitle{ background-color: RGB(62, 14, 88);text-align: center;line-height: 30px;height: 30px;color: white;font-weight: 600;}
-        .ProjectShow .ProjectSelf .VideoShow{position: relative;width: 300px;height: 300px;}
-        .ProjectShow .ProjectSelf .VideoShow .imgShow{position: relative; width: 300px;height: 300px; }
-        .ProjectShow .ProjectSelf .VideoShow .IntroDucation{ position: absolute;top: 0px;left: 0px;}
-        .ProjectShow .ProjectSelf .VideoShow .IntroDucation .Title{}
+        .ProjectShow .ProjectSelf .VideoShow{position: relative;width: 400px;height: 400px;float: left;} 
+        .ProjectShow .ProjectSelf .VideoShow:hover .OpcityHtml{ width: 400px;background-color: black} 
+        .ProjectShow .ProjectSelf .VideoShow:hover .IntroDucation{ width: 400px;height: 400px}
+        .ProjectShow .ProjectSelf .VideoShow .imgShow img{ width: 400px;height: 400px;}
+        .ProjectShow .ProjectSelf .VideoShow .OpcityHtml{position: absolute;top: 0px;height: 0px;  width: 0px;height: 400px;opacity: 0.3;filter: alpha(opacity=30);transition: 1s; -moz-transition: 1s;}
+        .ProjectShow .ProjectSelf .VideoShow .IntroDucation{ position: absolute;top: 0px;height: 0px;  width: 0px;height: 400px;overflow: hidden;transition: 1s;-moz-transition: 1s; }
+        .ProjectShow .ProjectSelf .VideoShow .IntroDucation .Title{color: white;font-weight: bold;}
+        .ProjectShow .ProjectSelf .VideoShow .IntroDucation .Title p{ border:1px solid black;background-color: purple; margin:auto;margin-bottom: 30px;margin-top: 100px; width: 140px;text-align: center;height: 40px;line-height: 40px;}
+        .ProjectShow .ProjectSelf .VideoShow .IntroDucation .Informations{ color: white;font-size: medium;font-weight: bold}
+        .ProjectShow .ProjectSelf .VideoShow .IntroDucation .Informations p{ width: 400px; }
+        
    </style>
     <script type="text/javascript">
         window.onload = function () {
@@ -192,6 +199,8 @@
                 } else {
                     list.style.left = (list.offsetLeft - 1200).toString() + 'px';
                     index += 1;
+
+
                 }
                 showButton();
             }
@@ -371,20 +380,50 @@
         </section>
         <section class="ProjectShow">
             <p class="ProjectTitle">项目展示[PROJECT DISPALY]</p>
-            <div class="ProjectSelf">
-                <div class="VideoShow">
-                     <div class="imgShow"><img src="FirstImage/首页8.jpg"/></div>
-                     <div class="IntroDucation">
-                         <div class="Title"><p>等离子泊车项目</p></div>
-                         <div class="">
-                             <p>
-                                谷歌僵尸地图是指谷歌地图推出一项新功能，该地图专为面临自然灾害时提供一些必要的帮助信息。
-                                地图列出全球主要城市的加油站、杂货铺甚至枪械店.  
-                             </p>
+                <div class="ProjectSelf">
+                    <div class="VideoShow">
+                         <div class="imgShow"><img src="FirstImage/首页8.jpg"/></div>
+                         <div class="OpcityHtml"></div>
+                         <div class="IntroDucation">
+                             <div class="Title"><p>等离子泊车项目</p></div>
+                             <div class="Informations">
+                                 <p>
+                                    【简介(Introduction)】
+                                    谷歌僵尸地图是指谷歌地图推出一项新功能，该地图专为面临自然灾害时提供一些必要的帮助信息。
+                                    地图列出全球主要城市的加油站、杂货铺甚至枪械店.  
+                                 </p>
+                             </div>
                          </div>
-                     </div>
-                </div>    
-            </div>
+                    </div>    
+                    <div class="VideoShow">
+                        <div class="imgShow"><img src="FirstImage/首页8.jpg"/></div>
+                        <div class="OpcityHtml"></div>
+                        <div class="IntroDucation">
+                            <div class="Title"><p>等离子泊车项目</p></div>
+                            <div class="Informations">
+                                <p>
+                                    【简介(Introduction)】
+                                    谷歌僵尸地图是指谷歌地图推出一项新功能，该地图专为面临自然灾害时提供一些必要的帮助信息。
+                                    地图列出全球主要城市的加油站、杂货铺甚至枪械店.  
+                                </p>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="VideoShow">
+                        <div class="imgShow"><img src="FirstImage/首页8.jpg"/></div>
+                        <div class="OpcityHtml"></div>
+                        <div class="IntroDucation">
+                            <div class="Title"><p>等离子泊车项目</p></div>
+                            <div class="Informations">
+                                <p>
+                                    【简介(Introduction)】
+                                    谷歌僵尸地图是指谷歌地图推出一项新功能，该地图专为面临自然灾害时提供一些必要的帮助信息。
+                                    地图列出全球主要城市的加油站、杂货铺甚至枪械店.  
+                                </p>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
         </section>
     </form>
 </body>
