@@ -99,17 +99,20 @@
         .Watchlive .LiveSelf a img{ width: 200px;height: 200px;border-radius: 50%;}
         .ProjectShow{ width: 100%;}
         .ProjectShow .ProjectTitle{ background-color: RGB(62, 14, 88);text-align: center;line-height: 30px;height: 30px;color: white;font-weight: 600;}
-        .ProjectShow .ProjectSelf .VideoShow{position: relative;width: 400px;height: 400px;float: left;} 
-        .ProjectShow .ProjectSelf .VideoShow:hover .OpcityHtml{ width: 400px;background-color: black} 
-        .ProjectShow .ProjectSelf .VideoShow:hover .IntroDucation{ width: 400px;height: 400px}
-        .ProjectShow .ProjectSelf .VideoShow .imgShow img{ width: 400px;height: 400px;}
-        .ProjectShow .ProjectSelf .VideoShow .OpcityHtml{position: absolute;top: 0px;height: 0px;  width: 0px;height: 400px;opacity: 0.3;filter: alpha(opacity=30);transition: 1s; -moz-transition: 1s;}
-        .ProjectShow .ProjectSelf .VideoShow .IntroDucation{ position: absolute;top: 0px;height: 0px;  width: 0px;height: 400px;overflow: hidden;transition: 1s;-moz-transition: 1s; }
-        .ProjectShow .ProjectSelf .VideoShow .IntroDucation .Title{color: white;font-weight: bold;}
-        .ProjectShow .ProjectSelf .VideoShow .IntroDucation .Title p{ border:1px solid black;background-color: purple; margin:auto;margin-bottom: 30px;margin-top: 100px; width: 140px;text-align: center;height: 40px;line-height: 40px;}
-        .ProjectShow .ProjectSelf .VideoShow .IntroDucation .Informations{ color: white;font-size: medium;font-weight: bold}
-        .ProjectShow .ProjectSelf .VideoShow .IntroDucation .Informations p{ width: 400px; }
-        
+        .InvertMan{ width: 100%;height: 500px;background-color: pink}
+        ::-webkit-scrollbar{width:0px}
+        .InvertMan .right{ width: 420px;height: 500px;float: left;background-color: #fffdef}
+        .InvertMan .right .ProjectSelf{ margin: auto;width: 420px;height: 500px;overflow: auto;}
+        .InvertMan .right .ProjectSelf .VideoShow{position: relative;width: 400px;height: 400px;float: left;} 
+        .InvertMan .right .ProjectSelf .VideoShow:hover .OpcityHtml{ width: 400px;background-color: black} 
+        .InvertMan .right .ProjectSelf .VideoShow:hover .IntroDucation{ width: 400px;height: 400px}
+        .InvertMan .right .ProjectSelf .VideoShow .imgShow img{ width: 400px;height: 400px;}
+        .InvertMan .right .ProjectSelf .VideoShow .OpcityHtml{position: absolute;top: 0px;height: 0px;  width: 0px;height: 400px;opacity: 0.3;filter: alpha(opacity=30);transition: 1s; -moz-transition: 1s;}
+        .InvertMan .right .ProjectSelf .VideoShow .IntroDucation{ position: absolute;top: 0px;height: 0px;  width: 0px;height: 400px;overflow: hidden;transition: 1s;-moz-transition: 1s; }
+        .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Title{color: white;font-weight: bold;}
+        .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Title p{ border:1px solid black;background-color: purple; margin:auto;margin-bottom: 30px;margin-top: 100px; width: 140px;text-align: center;height: 40px;line-height: 40px;}
+        .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Informations{ color: white;font-size: medium;font-weight: bold}
+        .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Informations p{ width: 400px; }
    </style>
     <script type="text/javascript">
         window.onload = function () {
@@ -214,6 +217,16 @@
                 }
                 showButton();
             }
+            var box = document.getElementById("Scoll");
+            setInterval(function() {
+                var jiuTop = box.scrollTop;
+                var newtop = jiuTop + 1;
+                box.scrollTop = newtop;
+                if (newtop+box.offsetHeight>= box.scrollHeight) {
+                    box.scrollTop = 0;
+                }
+                },
+               10);
         }
     </script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -380,20 +393,37 @@
         </section>
         <section class="ProjectShow">
             <p class="ProjectTitle">项目展示[PROJECT DISPALY]</p>
-                <div class="ProjectSelf">
+        </section>
+        <section class="InvertMan">
+            <div class="right">
+                <div class="ProjectSelf" id="Scoll">
                     <div class="VideoShow">
-                         <div class="imgShow"><img src="FirstImage/首页8.jpg"/></div>
-                         <div class="OpcityHtml"></div>
-                         <div class="IntroDucation">
-                             <div class="Title"><p>等离子泊车项目</p></div>
-                             <div class="Informations">
-                                 <p>
+                        <div class="imgShow"><img src="FirstImage/首页10.jpg"/></div>
+                        <div class="OpcityHtml"></div>
+                        <div class="IntroDucation">
+                            <div class="Title"><p>等离子泊车项目</p></div>
+                            <div class="Informations">
+                                <p>
                                     【简介(Introduction)】
                                     谷歌僵尸地图是指谷歌地图推出一项新功能，该地图专为面临自然灾害时提供一些必要的帮助信息。
                                     地图列出全球主要城市的加油站、杂货铺甚至枪械店.  
-                                 </p>
-                             </div>
-                         </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="VideoShow">
+                        <div class="imgShow"><img src="FirstImage/首页10.jpg"/></div>
+                        <div class="OpcityHtml"></div>
+                        <div class="IntroDucation">
+                            <div class="Title"><p>等离子泊车项目</p></div>
+                            <div class="Informations">
+                                <p>
+                                    【简介(Introduction)】
+                                    谷歌僵尸地图是指谷歌地图推出一项新功能，该地图专为面临自然灾害时提供一些必要的帮助信息。
+                                    地图列出全球主要城市的加油站、杂货铺甚至枪械店.  
+                                </p>
+                            </div>
+                        </div>
                     </div>    
                     <div class="VideoShow">
                         <div class="imgShow"><img src="FirstImage/首页8.jpg"/></div>
@@ -410,7 +440,21 @@
                         </div>
                     </div>  
                     <div class="VideoShow">
-                        <div class="imgShow"><img src="FirstImage/首页8.jpg"/></div>
+                        <div class="imgShow"><img src="FirstImage/首页9.jpg"/></div>
+                        <div class="OpcityHtml"></div>
+                        <div class="IntroDucation">
+                            <div class="Title"><p>等离子泊车项目</p></div>
+                            <div class="Informations">
+                                <p>
+                                    【简介(Introduction)】
+                                    谷歌僵尸地图是指谷歌地图推出一项新功能，该地图专为面临自然灾害时提供一些必要的帮助信息。
+                                    地图列出全球主要城市的加油站、杂货铺甚至枪械店.  
+                                </p>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="VideoShow">
+                        <div class="imgShow"><img src="FirstImage/首页9.jpg"/></div>
                         <div class="OpcityHtml"></div>
                         <div class="IntroDucation">
                             <div class="Title"><p>等离子泊车项目</p></div>
@@ -424,6 +468,10 @@
                         </div>
                     </div>  
                 </div>
+            </div>
+            <div class="center">
+                
+            </div>
         </section>
     </form>
 </body>
