@@ -45,12 +45,12 @@
         #containter:hover .arrow{display: block;}
         #prev{left: 20px;z-index: 5;display: block;}
         #next{right: 20px;z-index: 5;display: block;}
-        .lunboSection{ width: 100%;height: 535px;background: linear-gradient(darkmagenta, RGB(176, 53, 112));}
-        .lunboSection .Font_ont{color: white;font-size: 2em; position: absolute;top: 25%;transform: rotate(64deg);}
-        .lunboSection .Font_tot{color: white;font-size: 2em; position: absolute;top: 25%;transform: rotate(-152deg);right: 10%;}
-        .ProdecutShow{ width: 100%;height: 400px;}
-        .ProdecutShow .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
-        .ProdecutShow .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
+       .lunboSection{ width: 100%;height: 535px;background: linear-gradient(darkmagenta, RGB(176, 53, 112));}
+       .lunboSection .Font_ont{color: white;font-size: 2em; position: absolute;top: 25%;transform: rotate(64deg);}
+       .lunboSection .Font_tot{color: white;font-size: 2em; position: absolute;top: 25%;transform: rotate(-152deg);right: 10%;}
+       .ProdecutShow{ width: 100%;height: 400px;}
+       .ProdecutShow .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
+       .ProdecutShow .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
         .ProdecutShow .ProductImg{ width: 1300px;margin: auto;}
         .ProdecutShow .ProductImg  .heheda{position: relative; width: 320px;height: 225px;float: left;margin-right: 5px; }
         .ProdecutShow .ProductImg  .heheda:hover{ transform: scale(1.1, 1.1);-webkie-transform: scale(1.1, 1.1);}
@@ -99,20 +99,35 @@
         .Watchlive .LiveSelf a img{ width: 200px;height: 200px;border-radius: 50%;}
         .ProjectShow{ width: 100%;}
         .ProjectShow .ProjectTitle{ background-color: RGB(62, 14, 88);text-align: center;line-height: 30px;height: 30px;color: white;font-weight: 600;}
-        .InvertMan{ width: 100%;height: 500px;background-color: pink}
-        ::-webkit-scrollbar{width:0px}
-        .InvertMan .right{ width: 420px;height: 500px;float: left;background-color: #fffdef}
+        .InvertMan{ width: 100%;margin: 0 auto;height: 500px;}
+        .InvertMan .right{ width: 30%;height: 500px;float: left;background-color: #fffdef}
         .InvertMan .right .ProjectSelf{ margin: auto;width: 420px;height: 500px;overflow: auto;}
         .InvertMan .right .ProjectSelf .VideoShow{position: relative;width: 400px;height: 400px;float: left;} 
         .InvertMan .right .ProjectSelf .VideoShow:hover .OpcityHtml{ width: 400px;background-color: black} 
         .InvertMan .right .ProjectSelf .VideoShow:hover .IntroDucation{ width: 400px;height: 400px}
-        .InvertMan .right .ProjectSelf .VideoShow .imgShow img{ width: 400px;height: 400px;}
+        .InvertMan .right .ProjectSelf .VideoShow .imgShow img{ width: 100%;height: 400px;}
         .InvertMan .right .ProjectSelf .VideoShow .OpcityHtml{position: absolute;top: 0px;height: 0px;  width: 0px;height: 400px;opacity: 0.3;filter: alpha(opacity=30);transition: 1s; -moz-transition: 1s;}
         .InvertMan .right .ProjectSelf .VideoShow .IntroDucation{ position: absolute;top: 0px;height: 0px;  width: 0px;height: 400px;overflow: hidden;transition: 1s;-moz-transition: 1s; }
         .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Title{color: white;font-weight: bold;}
         .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Title p{ border:1px solid black;background-color: purple; margin:auto;margin-bottom: 30px;margin-top: 100px; width: 140px;text-align: center;height: 40px;line-height: 40px;}
         .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Informations{ color: white;font-size: medium;font-weight: bold}
         .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Informations p{ width: 400px; }
+        .InvertMan .center{ width: 70%;float: left;height: 500px;overflow: auto}
+        .InvertMan .center .ShowInvertDw{ width: 100%;height: 40px;line-height: 40px;color: darkblue;text-indent: 10%;}
+        .InvertMan .center .ShowInvertDw .spanDw{ color:RGB(229,9,87) ;font-weight: 600;font-family: '华文楷体', '微软雅黑', '宋体';font-size: 1.2em}
+        .InvertMan .center .ShowInvertDw .spanXm{ color: purple;font-weight: 600;font-family: '华文楷体', '微软雅黑', '宋体'; }
+        .InvertMan .center .ShowInvertDw .date{ font-weight: 200;font-size: 0.9em;color: gray}
+        footer{ background-color: RGB(10, 18, 43);width: 100%; height: 250px;}
+        footer .HeadColor{ height: 40px;width: 100%;background-color: RGB(144,68,117)}
+        footer .TowPart{ width: 100%;background-color: white;height: 210px;}
+        footer .TowPart .Left_Font{ width: 49%;height: 210px;float: left;border: 1px solid red }
+        footer .TowPart .Left_Font table{width: 80%; padding: 7px;margin: auto;border: 1px solid black}
+        footer .TowPart .Left_Font table th{ height: 30px;line-height: 30px;margin: auto;font-size: 1.2em;font-family: '微软雅黑', '宋体';word-spacing: 2px;}
+        footer .TowPart .Left_Font table tr{height: 30px;line-height: 30px}
+        footer .TowPart .Left_Font table .TitleIntroduce{color:RGB(114,114,114)}
+        footer .TowPart .Right_Picture{ width: 49%;height: 210px;float: left}
+
+
    </style>
     <script type="text/javascript">
         window.onload = function () {
@@ -227,6 +242,16 @@
                 }
                 },
                10);
+            var boxs = document.getElementById("ShowBoxInvertMan");
+            setInterval(function () {
+                    var jiuTop = boxs.scrollTop;
+                    var newtop = jiuTop + 1;
+                    boxs.scrollTop = newtop;
+                    if (newtop + boxs.offsetHeight >= boxs.scrollHeight) {
+                        boxs.scrollTop = 0;
+                    }
+                },
+                10);
         }
     </script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -469,10 +494,97 @@
                     </div>  
                 </div>
             </div>
-            <div class="center">
-                
+            <div class="center" id="ShowBoxInvertMan" >
+                <div class="ShowInvertDw">
+                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                </div>
+                <div class="ShowInvertDw">
+                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                </div>
+                <div class="ShowInvertDw">
+                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                </div>
+                <div class="ShowInvertDw">
+                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                </div>
+                <div class="ShowInvertDw">
+                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                </div>
+                <div class="ShowInvertDw">
+                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                </div>
+                <div class="ShowInvertDw">
+                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                </div>
+                <div class="ShowInvertDw">
+                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                </div>
+                <div class="ShowInvertDw">
+                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                </div>
+                <div class="ShowInvertDw">
+                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                </div>
+                <div class="ShowInvertDw">
+                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                </div>
+                <div class="ShowInvertDw">
+                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                </div>
+                <div class="ShowInvertDw">
+                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                </div>
+                <div class="ShowInvertDw">
+                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                </div>
+                <div class="ShowInvertDw">
+                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                </div>
+                <div class="ShowInvertDw">
+                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                </div>
+                <div class="ShowInvertDw">
+                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                </div>
+                <div class="ShowInvertDw">
+                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                </div>
+                <div class="ShowInvertDw">
+                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                </div>
             </div>
         </section>
+        <footer>
+            <p class="HeadColor"></p>
+            <div class="TowPart">
+                <div class="Left_Font">
+                    <table>
+                        <tr>
+                            <th align="left" colspan="3">关于我们</th>
+                        </tr>
+                        <tr>
+                            <td class="TitleIntroduce" colspan="3">
+                                此公司成立于2017年，致力于渔业产品，各类产品的发展推广,例如洗鞋袜，文物收藏，医疗保健！
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                关于我们
+                            </td>
+                            <td>
+                                合作投资
+                            </td>
+                            <td>
+                                交流空间
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="Right_Picture">
+                    
+                </div>
+            </div>
+        </footer>
     </form>
 </body>
 </html>
