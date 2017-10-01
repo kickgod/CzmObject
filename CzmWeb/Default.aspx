@@ -12,6 +12,7 @@
         *{ padding: 0px;margin: 0px;text-decoration: none;}
         /***********************************************1300px以上*************************************************************************/
          @media only screen and (min-width:1300px) {
+             .PhoneImg{ width: 30px;height: 30px;padding-top: 10px;display: none}
              .PhoneHead{display:none}
              .Head{ width: 100%;background-color: RGB(176, 53, 112);height: 60px;}
              .Head .logo{ width: 20%;height: 60px;line-height: 60px;float: left}
@@ -22,6 +23,7 @@
              .Head .Nav ul li:hover{ color: red;font-size: 1em;cursor: pointer;border-top: 2px solid white;}
              .Head .Nav ul li a{ text-decoration: none;color: grey;}
              .Head .Nav ul li a img{padding-top:10px}
+             .Head .NavPhone{ display: none;}
              .Head .Login_ACE{ width: 20%;line-height: 60px;height: 60px;float: left}
              .FontColor{ color: RGB(255, 255, 255);font-size: 0.9em;}
              .FontColor:hover{color: gainsboro;font-size: 1em;cursor: pointer;}
@@ -122,7 +124,7 @@
              .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Informations p{ width: 400px; }
              .InvertMan .center{ width: 70%;float: left;height: 500px;overflow: auto}
              .InvertMan .center .ShowInvertDw{ width: 100%;height: 40px;line-height: 40px;color: darkblue;text-indent: 10%;}
-             .InvertMan .center .ShowInvertDw .spanDw{ color:RGB(229,9,87) ;font-weight: 600;font-family: '华文楷体', '微软雅黑', '宋体';font-size: 1.2em}
+             .InvertMan .center .ShowInvertDw .750px{ color:RGB(229,9,87) ;font-weight: 600;font-family: '华文楷体', '微软雅黑', '宋体';font-size: 1.2em}
              .InvertMan .center .ShowInvertDw .spanXm{ color: purple;font-weight: 600;font-family: '华文楷体', '微软雅黑', '宋体'; }
              .InvertMan .center .ShowInvertDw .date{ font-weight: 200;font-size: 0.9em;color: gray}
              footer{ background-color: RGB(10, 18, 43);width: 100%; height: 300px;}
@@ -148,22 +150,22 @@
          }
         /***********************************************768~1300px以内*********************************************************************/
          @media only screen and (max-width:1299.9px )and (min-width:768px) {
-             .PhoneHead{display:none}
+             .PhoneImg{ width: 30px;height: 30px;padding-top: 10px;display: none}
+            .PhoneHead{display:none}
             .Head{ width: 100%;background-color: RGB(176, 53, 112);height: 60px;}
             .Head .logo{ width: 10%;height: 60px;line-height: 60px;float: left}
             .Head .logo i{ color: RGB(232,105,170);font-weight: bold;font-size: 1.3em;font-style: italic;line-height: 60px;height: 60px;width: 100%;text-align: center;display: block}
             .Head .Nav{ width: 60%;height: 60px;line-height: 60px;float:left;}
             .Head .Nav ul{ width: 100%;line-height: 60px;height: 60px;list-style: none;}
             .Head .Nav ul li{ width: 55px;text-align: center;float: left;color: grey;}
-            .Head .Nav ul li:hover{ color: red;font-size: 1em;cursor: pointer;border-top: 2px solid white;}
             .Head .Nav ul li a{ text-decoration: none;color: grey;}
+             .Head .NavPhone{ display: none;}
             .Head .Login_ACE{ width: 20%;line-height: 60px;height: 60px;float: left}
             .FontColor{ color: RGB(255, 255, 255);font-size: 0.4em}
             .FontColor:hover{color: gainsboro;font-size: 0.4em;cursor: pointer;}
             .Head .Login_ACE ul{ list-style: none;height: 60px;}
             .Head .Login_ACE ul li{ width: 48%;height: 60px;text-align: center;float: left;}
             .Head .Login_ACE ul li .transfer{ width: 48%;text-decoration: none;color: white;float: left;font-size: small}
-            .Head .Login_ACE ul li .transfer:hover{ color: gainsboro;border-top: 2px solid white;}
             .Head .Login_ACE ul li a{ width: 100%;height: 60px;display: block}
             .Head .Login_ACE ul li img{ width: 25px;height: 25px;padding-top: 19px}
             .Head .Login_ACE ul li ul{width: 0%;color: white;border: none;transition: 0.8s;-o-transition: 0.8s; color: white;}
@@ -197,8 +199,6 @@
             .ProdecutShow .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
             .ProdecutShow .ProductImg{ width: 80%;margin: auto;}
             .ProdecutShow .ProductImg  .heheda{margin: 5px;position: relative; width: 45%;height: 280px;float: left;text-align: center}
-            .ProdecutShow .ProductImg  .heheda:hover{ transform: scale(1.1, 1.1);-webkie-transform: scale(1.1, 1.1);}
-            .ProdecutShow .ProductImg  .heheda:hover img{ box-shadow: 2px 2px 2px 2px slategrey;}
             .ProdecutShow .ProductImg  .heheda img{ position: absolute;top: 0px;left: 10px;z-index: 2;width: 100%;height: 280px;}
             .ProdecutShow .ProductImg  .heheda h2{top: 20px; z-index: 3; position: absolute;width: 25px;height: 120px;background: -webkit-linear-gradient(right,RGB(111,41,104),RGB(111,41,104),RGB(68,7,66));
                 background: -o-linear-gradient(right, RGB(176, 53, 112),RGB(82, 18, 87));
@@ -211,7 +211,6 @@
             .NewProductShow .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
             .NewProductShow .ListProduct{ width: 100%;margin: auto;}
             .NewProductShow .ListProduct .newproductList{ width: 33%;height: 450px; position: relative;float: left;top: 0px;left: 0px; }
-            .NewProductShow .ListProduct .newproductList:hover {transform: translate(10px,10px); }
             .NewProductShow .ListProduct .newproductList .UpRectangle{ width: 10%;height: 10%;border-left: 1px solid grey;border-top: 1px solid grey;transition: 3s}
             .NewProductShow .ListProduct .newproductList .Rectangle{ width:80% ;height: 200px;margin: auto;background-color:RGB(228,143,184) }
             .NewProductShow .ListProduct .newproductList .DownRectangle{ width: 10%;height: 10%;position: absolute;bottom: 0px; right: 0px;border-bottom: 1px solid grey;border-right: 1px solid grey;}
@@ -259,7 +258,7 @@
             .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Informations p{ width: 400px; }
             .InvertMan .center{ width: 50%;float: left;height: 500px;overflow: auto}
             .InvertMan .center .ShowInvertDw{font-size: 0.5em; width: 100%;height: 40px;color: darkblue;text-indent: 10%;}
-            .InvertMan .center .ShowInvertDw .spanDw{ color:RGB(229,9,87) ;font-weight: 600;font-family: '华文楷体', '微软雅黑', '宋体';font-size:0.9em}
+            .InvertMan .center .ShowInvertDw .750px{ color:RGB(229,9,87) ;font-weight: 600;font-family: '华文楷体', '微软雅黑', '宋体';font-size:0.9em}
             .InvertMan .center .ShowInvertDw .spanXm{ color: purple;font-weight: 500;font-family: '华文楷体', '微软雅黑', '宋体'; }
             .InvertMan .center .ShowInvertDw .date{ font-weight: 200;font-size: 0.3em;color: gray}
             footer{ background-color: RGB(10, 18, 43);width: 100%; height: 300px;}
@@ -286,10 +285,40 @@
          /***********************************************767以下主要适配手机****************************************************************/
          /*实质是宽度400多为中大屏幕手机主要分辨率适配参考iphone6 plus以上*/
         @media only screen and (min-width:0px )and (max-width:767px) {
-            .PhoneHead{display: block;height: 50px;width: 100%;background:linear-gradient(to left,purple ,RGB(176,53,112))}
-            .PhoneHead .headerTtile{width: 100%}
-            .PhoneHead .headerTtile .right{ width: 49%;float: left;height: 50px;}
-            .PhoneHead .headerTtile .left{ width: 50%;float: left;height: 50px;}
+            *{padding: 0px;margin: 0px;text-decoration: none;}
+            .PhoneHead{ position: fixed;top: 0px;left: 0px;display: block;height: 50px;width: 100%;background: linear-gradient(to left, purple, RGB(176, 53, 112));border-bottom:gray 2px solid}
+            .PhoneHead .headerTtile{ width: 100%;}
+            .PhoneHead .headerTtile .left .transfer{color: white}
+            .PhoneHead .headerTtile .left{ width: 20%;float: left;height: 50px;}
+            .PhoneHead .headerTtile .left span{text-indent: 15px; display: block;color: RGB(232,105,170);font-weight: bold;font-size: 1.3em;font-style: italic;line-height:50px;height: 50px;text-align: left;}
+            .PhoneHead .headerTtile .center{text-indent: 20px; width: 48%;float: left;}
+            .PhoneHead .headerTtile .center .cents{ height: 50px;line-height: 50px;color: white;font-weight: bold}
+            .PhoneHead .headerTtile .right{ width: 30%;float: left;height: 50px;position: relative}
+            .PhoneHead .headerTtile .right a{display: block; position: absolute;top: 0px;right: 5px}
+            .Head{background-color: white;color: #333333;display: none}
+            .Head .logo{display: none}
+            .Head .Nav ul li{ border-bottom: 1px solid black;height: 50px;line-height: 50px;text-indent: 30px;color: #333333}
+            .Head .NavPhone{ display: block;}
+            .Head .NavPhone ul li{ border-bottom: 1px solid black;height: 50px;line-height: 50px;text-indent: 30px;color: #333333}
+            .Head .Login_ACE{display: none}
+            .PhoneImg{ width: 30px;height: 30px;padding-top: 15px;}
+            .FontColor{ color: #333333;font-size: 1em;font-weight: bold}
+            #containter { overflow: hidden; width: 100%;height: 135px;position: relative;z-index: 1;margin: 0px auto;z-index: 1;}
+            #ilist{width: 1550px;height: 135px;position: absolute;z-index: 1;left: 0px;}
+            #ilist img{float: left;z-index: 1;width: 310px;height: 135px}
+            #buttons {position: absolute;height: 10px;width: 100px;z-index: 2; bottom: 20px;left: 48%;}
+            #buttons span{cursor: pointer;float: left;border: 1px solid #FFFDEF;width: 14px; height: 14px;border-radius: 50%;background: #333333;margin-right: 5px;}
+            #buttons .on{background: orangered;}
+            .Onlist{background-color: white;}
+            .arrow{cursor: pointer;display: none;line-height: 40px;tesxt-align: center;font-size: 36px;font-weight: bold;width: 50px;height: 50px;position: absolute;z-index: 2;top: 100px;background-color: rgba(0,0,0,0.3);}
+            .arrow:hover{background-color: rgba(0,0,0,0.7);}
+            .arrow img{ width: 50px;height: 50px}
+            #containter:hover .arrow{display: block;}
+            #prev{left: 20px;z-index: 5;display: block;}
+            #next{right: 20px;z-index: 5;display: block;}
+            .lunboSection{ width: 100%;height: 332px;background: linear-gradient(darkmagenta, RGB(176, 53, 112));}
+            .lunboSection .Font_ont{color: white;font-size: 2em; position: absolute;top: 25%;transform: rotate(64deg);}
+            .lunboSection .Font_tot{color: white;font-size: 2em; position: absolute;top: 25%;transform: rotate(-152deg);right: 10%;}  
         }
     </style>
     <script type="text/javascript">
@@ -299,12 +328,16 @@
             var widthLunbo;
             var screen1 = window.matchMedia('(min-width:1300px)');
             var screen2 = window.matchMedia('(min-width: 768px) and (max-width: 1299px)');
+            var screen3 = window.matchMedia('(min-width: 0px) and (max-width: 767px)');
             if (screen1.matches) {
                 console.log(1300);
                 widthLunbo = 1200;
             } else if (screen2.matches) {
                 console.log('pingban');
                 widthLunbo = 750;
+            }else if (screen3.matches) {
+                console.log('shouji');
+                widthLunbo = 310;
             }
             /*监视页面窗口大小变化*/
             window.onresize = function () {
@@ -418,14 +451,14 @@
             }
             var box = document.getElementById("Scoll");
             setInterval(function() {
-                var jiuTop = box.scrollTop;
-                var newtop = jiuTop + 1;
-                box.scrollTop = newtop;
-                if (newtop+box.offsetHeight>= box.scrollHeight) {
-                    box.scrollTop = 0;
-                }
+                    var jiuTop = box.scrollTop;
+                    var newtop = jiuTop + 1;
+                    box.scrollTop = newtop;
+                    if (newtop+box.offsetHeight>= box.scrollHeight) {
+                        box.scrollTop = 0;
+                    }
                 },
-               10);
+                10);
             var boxs = document.getElementById("ShowBoxInvertMan");
             setInterval(function () {
                     var jiuTop = boxs.scrollTop;
@@ -436,6 +469,7 @@
                     }
                 },
                 10);
+
         }
     </script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -443,29 +477,68 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <header class="PhoneHead">
+        <script type="text/javascript">
+            var screen3 = window.matchMedia('(min-width:0px) and (max-width:767px)');
+            function ShowHead() {
+                if (screen3) {
+                    var caidan = document.getElementById('headerCaidan');
+                    var zhidie = document.getElementById('imfzhijie');
+                    if (caidan.style.display == 'block') {
+                        caidan.style.display = 'none';
+                    } else {
+                        var daohang = document.getElementById('daohanglanPhone');
+                        /*获得当先手机的可视区域 得到的是数字*/
+                        var oHeight = daohang.offsetHeight;
+                        console.log('danhanglan' + oHeight);
+                        var wHeight = document.documentElement.clientHeight;
+                        var wWidth = document.documentElement.clientWidth;
+                        console.log('高度：' + wHeight + '宽度：' + wWidth);
+                        caidan.style.display = "block";
+                        caidan.style.position = 'fixed';
+                        caidan.style.top = oHeight + 'px';
+                        caidan.style.width = wWidth + 'px';
+                        caidan.style.height = (wHeight - oHeight) + 'px';
+                        caidan.style.backgroundColor = 'white';
+                        caidan.style.color = 'black';
+                    }
+                } else {
+                    console.log('2');
+                }
+            }
+        </script>
+        <header class="PhoneHead" id="daohanglanPhone">
             <div class="headerTtile">
                 <div class="left">
-                    
+                    <span>创造门</span>
+                </div>
+                <div class="center">
+                    <asp:LinkButton  CssClass="cents"  ID="lnkChinese" runat="server">CHE</asp:LinkButton>
+                    <asp:LinkButton  CssClass="cents" ID="LnkEnglish" runat="server" OnClick="lkbtnEnish_Click">ENG</asp:LinkButton>                    
                 </div>
                 <div class="right">
-                    
+                    <a href="javascript:ShowHead()"><img  src="Images/SystemPicture/zhedie.png" width="50px" height="50px"/></a>
                 </div>
             </div>
         </header>
-        <div class="Head">
+        <div class="Head" id="headerCaidan">
               <div class="logo"><i class="Font_Title">创造门</i></div>
               <div class="Nav">
                   <ul>
-                      <li><a href="https://www.baidu.com/"><asp:Label ID="lblFisrtPage" runat="server" CssClass="FontColor" Text="首页"></asp:Label></a></li>
-                      <li><a href="#"><asp:Label ID="lbl_Product_type"  runat="server" CssClass="FontColor"  Text="产品分类"></asp:Label></a></li>
-                      <li><a href="#"><asp:Label ID="lbl_NewProduct"    runat="server"  CssClass="FontColor" Text="新品预告"></asp:Label></a></li>
-                      <li><a href="#"><asp:Label ID="lbl_CreateProject" runat="server" CssClass="FontColor"  Text="我要创作"></asp:Label></a></li>
-                      <li><a href="#"><asp:Label ID="lbl_Create_Invert" runat="server" CssClass="FontColor"  Text="我要投资"></asp:Label></a></li>
-                      <li><a href="#"><asp:Label ID="lbl_Project_show" runat="server" CssClass="FontColor"  Text="项目展示"></asp:Label></a></li>
-                      <li><a href="#"><asp:Label ID="lbl_Look_OnlineVedio" runat="server" CssClass="FontColor"  Text="观看直播"></asp:Label></a></li>
-                      <li><a href="#"><asp:Label ID="lbl_Look_Vedio" runat="server"  CssClass="FontColor" Text="视屏专区"></asp:Label></a></li>
-                      <li><a href="#"><asp:Label ID="lblChangeSpace" runat="server"  CssClass="FontColor" Text="交流空间"></asp:Label></a></li>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneFirstPage20171001.png"/><a href="https://www.baidu.com/"><asp:Label ID="lblFisrtPage" runat="server" CssClass="FontColor" Text="首页"></asp:Label></a></li>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneType20171001.png"/><a href="#"><asp:Label ID="lbl_Product_type"  runat="server" CssClass="FontColor"  Text="产品分类"></asp:Label></a></li>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneNewProject20171001.png"/><a href="#"><asp:Label ID="lbl_NewProduct"    runat="server"  CssClass="FontColor" Text="新品预告"></asp:Label></a></li>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneCreate20171001.png"/><a href="#"><asp:Label ID="lbl_CreateProject" runat="server" CssClass="FontColor"  Text="我要创作"></asp:Label></a></li>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneInvest20171001.png"/><a href="#"><asp:Label ID="lbl_Create_Invert" runat="server" CssClass="FontColor"  Text="我要投资"></asp:Label></a></li>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneShoe20171001.png"/><a href="#"><asp:Label ID="lbl_Project_show" runat="server" CssClass="FontColor"  Text="项目展示"></asp:Label></a></li>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneOnlineTwo20171001.png"/><a href="#"><asp:Label ID="lbl_Look_OnlineVedio" runat="server" CssClass="FontColor"  Text="观看直播"></asp:Label></a></li>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneVedio20171001.png"/><a href="#"><asp:Label ID="lbl_Look_Vedio" runat="server"  CssClass="FontColor" Text="视屏专区"></asp:Label></a></li>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneConection20171001.png"/><a href="#"><asp:Label ID="lblChangeSpace" runat="server"  CssClass="FontColor" Text="交流空间"></asp:Label></a></li>
+                  </ul>
+              </div>
+              <div class="NavPhone">
+                  <ul>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneLog20171001.png"/><a href="#"><asp:Label ID="lblUserLog" runat="server"  CssClass="FontColor" Text="用户登录"></asp:Label></a></li>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneLogin20171001.png"/><a href="#"><asp:Label ID="lblUserLogin" runat="server"  CssClass="FontColor" Text="用户注册"></asp:Label></a></li>
                   </ul>
               </div>
               <div class="Login_ACE">
@@ -699,52 +772,52 @@
             </div>
             <div class="center" id="ShowBoxInvertMan" >
                 <div class="ShowInvertDw">
-                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
+                    <p><span class="750px">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
+                    <p><span class="750px">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
+                    <p><span class="750px">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
+                    <p><span class="750px">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
+                    <p><span class="750px">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
+                    <p><span class="750px">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
+                    <p><span class="750px">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
+                    <p><span class="750px">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
+                    <p><span class="750px">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
+                    <p><span class="750px">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
+                    <p><span class="750px">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
+                    <p><span class="750px">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
+                    <p><span class="750px">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
+                    <p><span class="750px">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
+                    <p><span class="750px">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
+                    <p><span class="750px">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
 
             </div>
