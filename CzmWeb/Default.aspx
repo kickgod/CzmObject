@@ -10,127 +10,314 @@
     <link href="Content/FontBindData.css" type="text/css"  rel="stylesheet" />
     <style type="text/css">
         *{ padding: 0px;margin: 0px;text-decoration: none;}
-        .Head{ width: 100%;background-color: RGB(176, 53, 112);height: 60px;}
-        .Head .logo{ width: 20%;height: 60px;line-height: 60px;float: left}
-        .Head .logo i{ color: RGB(232,105,170);font-weight: bold;font-size: 280%;font-style: italic;line-height: 60px;height: 60px;width: 100%;text-align: center;display: block}
-        .Head .Nav{ width: 60%;height: 60px;line-height: 60px;float:left;}
-        .Head .Nav ul{ width: 100%;line-height: 60px;height: 60px;list-style: none;}
-        .Head .Nav ul li{ width: 80px;text-align: center;float: left;color: grey;}
-        .Head .Nav ul li:hover{ color: red;font-size: 1em;cursor: pointer;border-top: 2px solid white;}
-        .Head .Nav ul li a{ text-decoration: none;color: grey;}
-        .Head .Login_ACE{ width: 20%;line-height: 60px;height: 60px;float: left}
-        .FontColor{ color: RGB(255, 255, 255);font-size: 0.9em;}
-        .FontColor:hover{color: gainsboro;font-size: 1em;cursor: pointer;}
-        .Head .Login_ACE ul{ list-style: none;height: 60px}
-        .Head .Login_ACE ul li{ width: 48%;height: 60px;text-align: center;float: left;}
-        .Head .Login_ACE ul li .transfer{ width: 49%;text-decoration: none;color: white;float: left}
-        .Head .Login_ACE ul li .transfer:hover{ color: gainsboro;border-top: 2px solid white;}
-        .Head .Login_ACE ul li a{ width: 100%;height: 60px;display: block}
-        .Head .Login_ACE ul li img{ width: 40px;height: 40px;padding:5px;}
-        .Head .Login_ACE ul li ul{width: 0%;color: white;border: none;transition: 0.8s;-o-transition: 0.8s; color: white;}
-        .Head .Login_ACE ul li ul li a{text-decoration: none; color: white;}
-        .Head .Login_ACE ul li ul li{background-color:gainsboro;width: 100%;color: white;}
-        .Head .Login_ACE ul li ul li:hover{ color: gainsboro;}
-        .Head .Login_ACE ul li ul li .userL:hover{ background-color: darkmagenta;font-weight: 500;}
-        .Head .Login_ACE ul li:hover img{ padding-top: 0px;width: 50px;height: 50px;}
-        #containter { overflow: hidden; width: 1200px;height: 535px;position: relative;z-index: 1;margin: 0px auto;z-index: 1;}
-        #ilist{width: 8400px;height: 535px;position: absolute;z-index: 1;left: 0px;}
-        #ilist img{float: left;z-index: 1;}
-        #buttons {position: absolute;height: 10px;width: 160px;z-index: 2; bottom: 20px;left: 48%;}
-        #buttons span{cursor: pointer;float: left;border: 1px solid #FFFDEF;width: 14px; height: 14px;border-radius: 50%;background: #333333;margin-right: 5px;}
-        #buttons .on{background: orangered;}
-        .Onlist{background-color: white;}
-        .arrow{cursor: pointer;display: none;line-height: 40px;text-align: center;font-size: 36px;font-weight: bold;width: 80px;height: 80px;position: absolute;z-index: 2;top: 180px;background-color: rgba(0,0,0,0.3);}
-        .arrow:hover{background-color: rgba(0,0,0,0.7);}
-        #containter:hover .arrow{display: block;}
-        #prev{left: 20px;z-index: 5;display: block;}
-        #next{right: 20px;z-index: 5;display: block;}
-       .lunboSection{ width: 100%;height: 535px;background: linear-gradient(darkmagenta, RGB(176, 53, 112));}
-       .lunboSection .Font_ont{color: white;font-size: 2em; position: absolute;top: 25%;transform: rotate(64deg);}
-       .lunboSection .Font_tot{color: white;font-size: 2em; position: absolute;top: 25%;transform: rotate(-152deg);right: 10%;}
-       .ProdecutShow{ width: 100%;height: 400px;}
-       .ProdecutShow .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
-       .ProdecutShow .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
-        .ProdecutShow .ProductImg{ width: 1300px;margin: auto;}
-        .ProdecutShow .ProductImg  .heheda{position: relative; width: 320px;height: 225px;float: left;margin-right: 5px; }
-        .ProdecutShow .ProductImg  .heheda:hover{ transform: scale(1.1, 1.1);-webkie-transform: scale(1.1, 1.1);}
-        .ProdecutShow .ProductImg  .heheda:hover img{ box-shadow: 2px 2px 2px 2px slategrey;}
-        .ProdecutShow .ProductImg  .heheda img{ position: absolute;top: 0px;left: 10px;z-index: 2;}
-        .ProdecutShow .ProductImg  .heheda h2{top: 20px; z-index: 3; position: absolute;width: 25px;height: 120px;background: -webkit-linear-gradient(right,RGB(111,41,104),RGB(111,41,104),RGB(68,7,66));
-         background: -o-linear-gradient(right, RGB(176, 53, 112),RGB(82, 18, 87));
-         background: linear-gradient(right, RGB(176, 53, 112), RGB(82, 18, 87));
-         background: -moz-linear-gradient(right, RGB(176, 53, 112), RGB(82, 18, 87));
-         color: white;font-weight: 400;font-size: 16px;text-align: center;padding-top: 30px;font-family: '楷体','宋体' }
-        .Font_Name_English{ color: darkmagenta;font-weight: 900;font-size: 16px; text-align: center;padding-left: 10px;letter-spacing: 1px;word-spacing: 3px; }
-        .NewProductShow{width: 100%;height: 500px;}
-        .NewProductShow .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
-        .NewProductShow .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
-        .NewProductShow .ListProduct{ width: 1220px;margin: auto;}
-        .NewProductShow .ListProduct .newproductList{ width: 400px;height: 360px; position: relative;float: left;top: 0px;left: 0px; }
-        .NewProductShow .ListProduct .newproductList:hover {transform: translate(10px,10px); }
-        .NewProductShow .ListProduct .newproductList .UpRectangle{ width: 10%;height: 10%;border-left: 1px solid grey;border-top: 1px solid grey;transition: 3s}
-        .NewProductShow .ListProduct .newproductList .Rectangle{ width:80% ;height: 58%;margin: auto;background-color:RGB(228,143,184) }
-        .NewProductShow .ListProduct .newproductList .DownRectangle{ width: 10%;height: 10%;position: absolute;bottom: 0px; right: 0px;border-bottom: 1px solid grey;border-right: 1px solid grey;}
-        .NewProductShow .ListProduct .newproductList .IntroDuction{ position: absolute;bottom: 10%; height: 20%;width: 100%}
-        .NewProductShow .ListProduct .newproductList .IntroDuction input{font-size: 25px;font-family: '楷体';  width: 100px;height: 30px;line-height: 30px; position: absolute;right: 5%;top: 0px;color: white;background-color: RGB(105, 17, 75);border:2px solid RGB(105, 17, 75)  }
-        .LearnMoreProduct{ width: 100%;height: 150px}
-        .LearnMoreProduct a{display: block;margin-top: 50%;width: 300px;height: 150px;line-height: 150px; margin: auto;font-size: 30px;font-weight: 600;text-align: center;color:RGB(126,0,84) }
-        .LearnMoreProduct a:hover{ font-size: 40px;text-shadow: 2px 2px 2px saddlebrown}
-        .ProductIntrpDuction{ font-family: '华文楷体', '楷体', '微软雅黑','宋体'; color: RGB(188, 182, 184);font-size: 1em}
-        .VedioList{ width: 100%;height: 610px;background-color: RGB(231, 223, 238);box-sizing: border-box}
-        .VedioList .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
-        .VedioList .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
-        .VedioList .Vedioshelf { width: 810px;margin: auto;}
-        .VedioList .Vedioshelf .LeftBox{background-image: url(FirstImage/diaoyu.png); width: 200px;float: left;height: 200px;background-color:white;border-radius: 50%;border: 1px solid purple; }
-        .VedioList .Vedioshelf .LeftBox img{opacity: 0.75;filter:alpha(opacity=75);  width: 180px;height: 180px;border-radius: 50%;border: 1px solid plum;margin: 10px;}
-        .VedioList .Vedioshelf .CenterBox{background-image: url(FirstImage/yihui.png);  width: 400px;float: left;height: 400px;background-color:white;border-radius: 50%;border: 1px solid purple;  }
-        .VedioList .Vedioshelf .CenterBox img {opacity: 0.75;filter:alpha(opacity=75); width: 380px;height: 380px; border-radius: 50%;border: 1px solid plum;margin: 10px;}
-        .VedioList .Vedioshelf .RightBox{background-image: url(FirstImage/wenwu.png);  width:200px;float: left; height: 200px;background-color: white;border-radius: 50%;border: 1px solid purple; }
-        .VedioList .Vedioshelf .RightBox img {opacity: 0.75;filter:alpha(opacity=75); width: 180px;height: 180px; border-radius: 50%;border: 1px solid plum;margin: 10px;}
-        .VedioList .Vedioshelf::after{ content: "";display: block;clear: both}
-        .VedioList .LearingMoreVedio{ width: 100%;height: 30px;position: relative;}
-        .VedioList .LearingMoreVedio p{font-size: 1.2em; text-align: center;position: absolute;right: 20%;  width: 150px;height: 30px;line-height: 30px; border: solid 1px grey;font-weight: 600; background-color: white;}
-        .VedioList .LearingMoreVedio p a{color: purple;} 
-        .Watchlive{ width: 100%;height: 500px;}
-        .Watchlive .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
-        .Watchlive .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
-        .Watchlive .LiveSelf{ width: 700px;margin: 30px auto}
-        .Watchlive .LiveSelf a{ display: block;float: left;margin: 10px;}
-        .Watchlive .LiveSelf a img{ width: 200px;height: 200px;border-radius: 50%;}
-        .ProjectShow{ width: 100%;}
-        .ProjectShow .ProjectTitle{ background-color: RGB(62, 14, 88);text-align: center;line-height: 30px;height: 30px;color: white;font-weight: 600;}
-        .InvertMan{ width: 100%;margin: 0 auto;height: 500px;}
-        .InvertMan .right{ width: 30%;height: 500px;float: left;background-color: #fffdef}
-        .InvertMan .right .ProjectSelf{ margin: auto;width: 420px;height: 500px;overflow: auto;}
-        .InvertMan .right .ProjectSelf .VideoShow{position: relative;width: 400px;height: 400px;float: left;} 
-        .InvertMan .right .ProjectSelf .VideoShow:hover .OpcityHtml{ width: 400px;background-color: black} 
-        .InvertMan .right .ProjectSelf .VideoShow:hover .IntroDucation{ width: 400px;height: 400px}
-        .InvertMan .right .ProjectSelf .VideoShow .imgShow img{ width: 100%;height: 400px;}
-        .InvertMan .right .ProjectSelf .VideoShow .OpcityHtml{position: absolute;top: 0px;height: 0px;  width: 0px;height: 400px;opacity: 0.3;filter: alpha(opacity=30);transition: 1s; -moz-transition: 1s;}
-        .InvertMan .right .ProjectSelf .VideoShow .IntroDucation{ position: absolute;top: 0px;height: 0px;  width: 0px;height: 400px;overflow: hidden;transition: 1s;-moz-transition: 1s; }
-        .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Title{color: white;font-weight: bold;}
-        .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Title p{ border:1px solid black;background-color: purple; margin:auto;margin-bottom: 30px;margin-top: 100px; width: 140px;text-align: center;height: 40px;line-height: 40px;}
-        .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Informations{ color: white;font-size: medium;font-weight: bold}
-        .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Informations p{ width: 400px; }
-        .InvertMan .center{ width: 70%;float: left;height: 500px;overflow: auto}
-        .InvertMan .center .ShowInvertDw{ width: 100%;height: 40px;line-height: 40px;color: darkblue;text-indent: 10%;}
-        .InvertMan .center .ShowInvertDw .spanDw{ color:RGB(229,9,87) ;font-weight: 600;font-family: '华文楷体', '微软雅黑', '宋体';font-size: 1.2em}
-        .InvertMan .center .ShowInvertDw .spanXm{ color: purple;font-weight: 600;font-family: '华文楷体', '微软雅黑', '宋体'; }
-        .InvertMan .center .ShowInvertDw .date{ font-weight: 200;font-size: 0.9em;color: gray}
-        footer{ background-color: RGB(10, 18, 43);width: 100%; height: 250px;}
-        footer .HeadColor{ height: 40px;width: 100%;background-color: RGB(144,68,117)}
-        footer .TowPart{ width: 100%;background-color: white;height: 210px;}
-        footer .TowPart .Left_Font{ width: 49%;height: 210px;float: left;border: 1px solid red }
-        footer .TowPart .Left_Font table{width: 80%; padding: 7px;margin: auto;border: 1px solid black}
-        footer .TowPart .Left_Font table th{ height: 30px;line-height: 30px;margin: auto;font-size: 1.2em;font-family: '微软雅黑', '宋体';word-spacing: 2px;}
-        footer .TowPart .Left_Font table tr{height: 30px;line-height: 30px}
-        footer .TowPart .Left_Font table .TitleIntroduce{color:RGB(114,114,114)}
-        footer .TowPart .Right_Picture{ width: 49%;height: 210px;float: left}
-
-
-   </style>
+        /***********************************************1300px以上*************************************************************************/
+         @media only screen and (min-width:1300px) {
+             .PhoneHead{display:none}
+             .Head{ width: 100%;background-color: RGB(176, 53, 112);height: 60px;}
+             .Head .logo{ width: 20%;height: 60px;line-height: 60px;float: left}
+             .Head .logo i{ color: RGB(232,105,170);font-weight: bold;font-size: 280%;font-style: italic;line-height: 60px;height: 60px;width: 100%;text-align: center;display: block}
+             .Head .Nav{ width: 60%;height: 60px;line-height: 60px;float:left;}
+             .Head .Nav ul{ width: 100%;line-height: 60px;height: 60px;list-style: none;}
+             .Head .Nav ul li{ width: 80px;text-align: center;float: left;color: grey;}
+             .Head .Nav ul li:hover{ color: red;font-size: 1em;cursor: pointer;border-top: 2px solid white;}
+             .Head .Nav ul li a{ text-decoration: none;color: grey;}
+             .Head .Nav ul li a img{padding-top:10px}
+             .Head .Login_ACE{ width: 20%;line-height: 60px;height: 60px;float: left}
+             .FontColor{ color: RGB(255, 255, 255);font-size: 0.9em;}
+             .FontColor:hover{color: gainsboro;font-size: 1em;cursor: pointer;}
+             .Head .Login_ACE ul{ list-style: none;height: 60px}
+             .Head .Login_ACE ul li{ width: 48%;height: 60px;text-align: center;float: left;}
+             .Head .Login_ACE ul li .transfer{ width: 49%;text-decoration: none;color: white;float: left}
+             .Head .Login_ACE ul li .transfer:hover{ color: gainsboro;border-top: 2px solid white;}
+             .Head .Login_ACE ul li a{ width: 100%;height: 60px;display: block}
+             .Head .Login_ACE ul li img{ width: 40px;height: 40px;padding-top:5px;}
+             .Head .Login_ACE ul li ul{width: 0%;color: white;border: none;transition: 0.8s;-o-transition: 0.8s; color: white;}
+             .Head .Login_ACE ul li ul li a{text-decoration: none; color: white;}
+             .Head .Login_ACE ul li ul li{background-color:gainsboro;width: 100%;color: white;}
+             .Head .Login_ACE ul li ul li:hover{ color: gainsboro;}
+             .Head .Login_ACE ul li ul li .userL:hover{ background-color: darkmagenta;font-weight: 500;}
+             .Head .Login_ACE ul li:hover img{ padding-top: 0px;width: 50px;height: 50px;}
+             #containter { overflow: hidden; width: 1200px;height: 535px;position: relative;z-index: 1;margin: 0px auto;z-index: 1;}
+             #ilist{width: 6000px;height: 535px;position: absolute;z-index: 1;left: 0px;}
+             #ilist img{float: left;z-index: 1;}
+             #buttons {position: absolute;height: 10px;width: 160px;z-index: 2; bottom: 20px;left: 48%;}
+             #buttons span{cursor: pointer;float: left;border: 1px solid #FFFDEF;width: 14px; height: 14px;border-radius: 50%;background: #333333;margin-right: 5px;}
+             #buttons .on{background: orangered;}
+             .Onlist{background-color: white;}
+             .arrow{cursor: pointer;display: none;line-height: 40px;text-align: center;font-size: 36px;font-weight: bold;width: 80px;height: 80px;position: absolute;z-index: 2;top: 180px;background-color: rgba(0,0,0,0.3);}
+             .arrow:hover{background-color: rgba(0,0,0,0.7);}
+             #containter:hover .arrow{display: block;}
+             #prev{left: 20px;z-index: 5;display: block;}
+             #next{right: 20px;z-index: 5;display: block;}
+             .lunboSection{ width: 100%;height: 535px;background: linear-gradient(darkmagenta, RGB(176, 53, 112));}
+             .lunboSection .Font_ont{color: white;font-size: 2em; position: absolute;top: 25%;transform: rotate(64deg);}
+             .lunboSection .Font_tot{color: white;font-size: 2em; position: absolute;top: 25%;transform: rotate(-152deg);right: 10%;}
+             .CompanyIntroDuce{ width: 100%;height: 200px}
+             .CompanyIntroDuce .CompnyName{ font-family: '华文楷体';height: 80px;line-height: 80px}
+             .CompanyIntroDuce p{ width: 60%;margin: 0 auto}
+             .CompanyIntroDuce p .Intro{ font-size: 1.2em;font-family: '楷体', '宋体';font-weight: 600;color: purple }
+             .ProdecutShow{ width: 100%;height: 400px;}
+             .ProdecutShow .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
+             .ProdecutShow .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
+             .ProdecutShow .ProductImg{ width: 1300px;margin: auto;}
+             .ProdecutShow .ProductImg  .heheda{position: relative; width: 320px;height: 225px;float: left;margin-right: 5px; }
+             .ProdecutShow .ProductImg  .heheda:hover{ transform: scale(1.1, 1.1);-webkie-transform: scale(1.1, 1.1);}
+             .ProdecutShow .ProductImg  .heheda:hover img{ box-shadow: 2px 2px 2px 2px slategrey;}
+             .ProdecutShow .ProductImg  .heheda img{ position: absolute;top: 0px;left: 10px;z-index: 2;}
+             .ProdecutShow .ProductImg  .heheda h2{top: 20px; z-index: 3; position: absolute;width: 25px;height: 120px;background: -webkit-linear-gradient(right,RGB(111,41,104),RGB(111,41,104),RGB(68,7,66));
+                 background: -o-linear-gradient(right, RGB(176, 53, 112),RGB(82, 18, 87));
+                 background: linear-gradient(right, RGB(176, 53, 112), RGB(82, 18, 87));
+                 background: -moz-linear-gradient(right, RGB(176, 53, 112), RGB(82, 18, 87));
+                 color: white;font-weight: 400;font-size: 16px;text-align: center;padding-top: 30px;font-family: '楷体','宋体' }
+             .Font_Name_English{ color: darkmagenta;font-weight: 900;font-size: 16px; text-align: center;padding-left: 10px;letter-spacing: 1px;word-spacing: 3px; }
+             .NewProductShow{width: 100%;height: 500px;}
+             .NewProductShow .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
+             .NewProductShow .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
+             .NewProductShow .ListProduct{ width: 1220px;margin: auto;}
+             .NewProductShow .ListProduct .newproductList{ width: 400px;height: 360px; position: relative;float: left;top: 0px;left: 0px; }
+             .NewProductShow .ListProduct .newproductList:hover {transform: translate(10px,10px); }
+             .NewProductShow .ListProduct .newproductList .UpRectangle{ width: 10%;height: 10%;border-left: 1px solid grey;border-top: 1px solid grey;transition: 3s}
+             .NewProductShow .ListProduct .newproductList .Rectangle{ width:80% ;height: 58%;margin: auto;background-color:RGB(228,143,184) }
+             .NewProductShow .ListProduct .newproductList .DownRectangle{ width: 10%;height: 10%;position: absolute;bottom: 0px; right: 0px;border-bottom: 1px solid grey;border-right: 1px solid grey;}
+             .NewProductShow .ListProduct .newproductList .IntroDuction{ position: absolute;bottom: 10%; height: 20%;width: 100%}
+             .NewProductShow .ListProduct .newproductList .IntroDuction input{font-size: 25px;font-family: '楷体';  width: 100px;height: 30px;line-height: 30px; position: absolute;right: 5%;top: 0px;color: white;background-color: RGB(105, 17, 75);border:2px solid RGB(105, 17, 75)  }
+             .LearnMoreProduct{ width: 100%;height: 150px}
+             .LearnMoreProduct a{display: block;margin-top: 50%;width: 300px;height: 150px;line-height: 150px; margin: auto;font-size: 30px;font-weight: 600;text-align: center;color:RGB(126,0,84) }
+             .LearnMoreProduct a:hover{ font-size: 40px;text-shadow: 2px 2px 2px saddlebrown}
+             .ProductIntrpDuction{ font-family: '华文楷体', '楷体', '微软雅黑','宋体'; color: RGB(188, 182, 184);font-size: 1em}
+             .VedioList{ width: 100%;height: 610px;background-color: RGB(231, 223, 238);box-sizing: border-box}
+             .VedioList .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
+             .VedioList .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
+             .VedioList .Vedioshelf { width: 810px;margin: auto;}
+             .VedioList .Vedioshelf .LeftBox{background-image: url(FirstImage/diaoyu.png); width: 200px;float: left;height: 200px;background-color:white;border-radius: 50%;border: 1px solid purple; }
+             .VedioList .Vedioshelf .LeftBox img{opacity: 0.75;filter:alpha(opacity=75);  width: 180px;height: 180px;border-radius: 50%;border: 1px solid plum;margin: 10px;}
+             .VedioList .Vedioshelf .CenterBox{background-image: url(FirstImage/yihui.png);  width: 400px;float: left;height: 400px;background-color:white;border-radius: 50%;border: 1px solid purple;  }
+             .VedioList .Vedioshelf .CenterBox img {opacity: 0.75;filter:alpha(opacity=75); width: 380px;height: 380px; border-radius: 50%;border: 1px solid plum;margin: 10px;}
+             .VedioList .Vedioshelf .RightBox{background-image: url(FirstImage/wenwu.png);  width:200px;float: left; height: 200px;background-color: white;border-radius: 50%;border: 1px solid purple; }
+             .VedioList .Vedioshelf .RightBox img {opacity: 0.75;filter:alpha(opacity=75); width: 180px;height: 180px; border-radius: 50%;border: 1px solid plum;margin: 10px;}
+             .VedioList .Vedioshelf::after{ content: "";display: block;clear: both}
+             .VedioList .LearingMoreVedio{ width: 100%;height: 30px;position: relative;}
+             .VedioList .LearingMoreVedio p{font-size: 1.2em; text-align: center;position: absolute;right: 20%;  width: 150px;height: 30px;line-height: 30px; border: solid 1px grey;font-weight: 600; background-color: white;}
+             .VedioList .LearingMoreVedio p a{color: purple;} 
+             .Watchlive{ width: 100%;height: 500px;}
+             .Watchlive .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
+             .Watchlive .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
+             .Watchlive .LiveSelf{ width: 700px;margin: 30px auto}
+             .Watchlive .LiveSelf a{ display: block;float: left;margin: 10px;}
+             .Watchlive .LiveSelf a img{ width: 200px;height: 200px;border-radius: 50%;}
+             .ProjectShow{ width: 100%;}
+             .ProjectShow .ProjectTitle{ background-color: RGB(62, 14, 88);text-align: center;line-height: 30px;height: 30px;color: white;font-weight: 600;}
+             .InvertMan{ width: 100%;margin: 0 auto;height: 500px;}
+             .InvertMan .right{ width: 30%;height: 500px;float: left;background-color: #fffdef}
+             .InvertMan .right .ProjectSelf{ margin: auto;width: 420px;height: 500px;overflow: auto;}
+             .InvertMan .right .ProjectSelf .VideoShow{position: relative;width: 400px;height: 400px;float: left;} 
+             .InvertMan .right .ProjectSelf .VideoShow:hover .OpcityHtml{ width: 400px;background-color: black} 
+             .InvertMan .right .ProjectSelf .VideoShow:hover .IntroDucation{ width: 400px;height: 400px}
+             .InvertMan .right .ProjectSelf .VideoShow .imgShow img{ width: 100%;height: 400px;}
+             .InvertMan .right .ProjectSelf .VideoShow .OpcityHtml{position: absolute;top: 0px;height: 0px;  width: 0px;height: 400px;opacity: 0.3;filter: alpha(opacity=30);transition: 1s; -moz-transition: 1s;}
+             .InvertMan .right .ProjectSelf .VideoShow .IntroDucation{ position: absolute;top: 0px;height: 0px;  width: 0px;height: 400px;overflow: hidden;transition: 1s;-moz-transition: 1s; }
+             .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Title{color: white;font-weight: bold;}
+             .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Title p{ border:1px solid black;background-color: purple; margin:auto;margin-bottom: 30px;margin-top: 100px; width: 140px;text-align: center;height: 40px;line-height: 40px;}
+             .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Informations{ color: white;font-size: medium;font-weight: bold}
+             .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Informations p{ width: 400px; }
+             .InvertMan .center{ width: 70%;float: left;height: 500px;overflow: auto}
+             .InvertMan .center .ShowInvertDw{ width: 100%;height: 40px;line-height: 40px;color: darkblue;text-indent: 10%;}
+             .InvertMan .center .ShowInvertDw .spanDw{ color:RGB(229,9,87) ;font-weight: 600;font-family: '华文楷体', '微软雅黑', '宋体';font-size: 1.2em}
+             .InvertMan .center .ShowInvertDw .spanXm{ color: purple;font-weight: 600;font-family: '华文楷体', '微软雅黑', '宋体'; }
+             .InvertMan .center .ShowInvertDw .date{ font-weight: 200;font-size: 0.9em;color: gray}
+             footer{ background-color: RGB(10, 18, 43);width: 100%; height: 300px;}
+             footer .HeadColor{ height: 50px;width: 100%;background-color: RGB(144,68,117)}
+             footer .TowPart{ width: 100%;background-color: white;height: 250px;}
+             footer .TowPart .Left_Font{ width: 69%;height: 250px;float: left; }
+             footer .TowPart .Left_Font table{width: 100%; padding: 7px;margin: auto}
+             footer .TowPart .Left_Font table th{ height: 40px;line-height: 40px;margin: auto;font-size: 1.2em;font-family: '微软雅黑', '宋体';word-spacing: 2px;}
+             footer .TowPart .Left_Font table tr{height: 40px;line-height: 40px;font-size: small}
+             footer .TowPart .Left_Font table .TitleIntroduce{ color: RGB(114, 114, 114);font-size: small}
+             footer .TowPart .Right_Picture{ width: 30%;height: 250px;float: left}
+             footer .TowPart .Right_Picture .PictureOneWechat { background-color: purple;width: 200px;height: 200px;position: relative;top: 10px;right: 100px;}
+             .JiaoBen{ width: 100%;height: 50px;line-height: 50px;font-size: small;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: RGB(114, 114, 114);text-align: center;background-color:RGB(10, 18, 43) }
+             .JiaoBen a{color: cornflowerblue}
+             .zixun{z-index: 100000; width: 170px;height: 220px;font-size: 1em;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: RGB(114, 114, 114);position: fixed;right: 0px;top: 35%;}
+             .zixun .showDiv{opacity: 0.8;filter: alpha(opacity=80);width: 135px;height: 220px;background-color: white;float: left}
+             .zixun .showDiv p{opacity: 0.8;filter: alpha(opacity=80); text-indent: 15px;letter-spacing: 2px;font-size: small}
+             .zixun .showDiv .fontci{opacity: 0.8;filter: alpha(opacity=80); height: 30px;line-height: 30px;color: white;font-family:'华文楷体', '微软雅黑', '宋体';font-weight: bold }
+             .zixun .showDiv img{opacity: 0.8;filter: alpha(opacity=80); width: 105px;height: 105px;background-color: white;padding: 15px}
+             .zixun .lanmu{ width: 32px;height: 220px;background-color: purple;color: white;float: right}
+             .zixun .lanmu a img{ width: 30px;height: 30px;margin:5px auto}
+             .zixun .lanmu a img:hover{ transform: translate(2px, 2px);-webkit-transform: translate(2px, 2px);background-color: white} /***1300px以上***/
+         }
+        /***********************************************768~1300px以内*********************************************************************/
+         @media only screen and (max-width:1299.9px )and (min-width:768px) {
+             .PhoneHead{display:none}
+            .Head{ width: 100%;background-color: RGB(176, 53, 112);height: 60px;}
+            .Head .logo{ width: 10%;height: 60px;line-height: 60px;float: left}
+            .Head .logo i{ color: RGB(232,105,170);font-weight: bold;font-size: 1.3em;font-style: italic;line-height: 60px;height: 60px;width: 100%;text-align: center;display: block}
+            .Head .Nav{ width: 60%;height: 60px;line-height: 60px;float:left;}
+            .Head .Nav ul{ width: 100%;line-height: 60px;height: 60px;list-style: none;}
+            .Head .Nav ul li{ width: 55px;text-align: center;float: left;color: grey;}
+            .Head .Nav ul li:hover{ color: red;font-size: 1em;cursor: pointer;border-top: 2px solid white;}
+            .Head .Nav ul li a{ text-decoration: none;color: grey;}
+            .Head .Login_ACE{ width: 20%;line-height: 60px;height: 60px;float: left}
+            .FontColor{ color: RGB(255, 255, 255);font-size: 0.4em}
+            .FontColor:hover{color: gainsboro;font-size: 0.4em;cursor: pointer;}
+            .Head .Login_ACE ul{ list-style: none;height: 60px;}
+            .Head .Login_ACE ul li{ width: 48%;height: 60px;text-align: center;float: left;}
+            .Head .Login_ACE ul li .transfer{ width: 48%;text-decoration: none;color: white;float: left;font-size: small}
+            .Head .Login_ACE ul li .transfer:hover{ color: gainsboro;border-top: 2px solid white;}
+            .Head .Login_ACE ul li a{ width: 100%;height: 60px;display: block}
+            .Head .Login_ACE ul li img{ width: 25px;height: 25px;padding-top: 19px}
+            .Head .Login_ACE ul li ul{width: 0%;color: white;border: none;transition: 0.8s;-o-transition: 0.8s; color: white;}
+            .Head .Login_ACE ul li ul li a{text-decoration: none; color: white;}
+            .Head .Login_ACE ul li ul li{background-color:gainsboro;width: 100%;color: white;}
+            .Head .Login_ACE ul li ul li:hover{ color: gainsboro;}
+            .Head .Login_ACE ul li ul li .userL:hover{ background-color: darkmagenta;font-weight: 500;}
+            .Head .Login_ACE ul li:hover img{ padding-top: 0px;width: 30px;height: 30px;}
+            #containter { overflow: hidden; width: 750px;height: 332px;position: relative;z-index: 1;margin: 0px auto;z-index: 1;}
+            #ilist{width: 3750px;height: 332px;position: absolute;z-index: 1;left: 0px;}
+            #ilist img{float: left;z-index: 1;width: 750px;height: 332px}
+            #buttons {position: absolute;height: 10px;width: 160px;z-index: 2; bottom: 20px;left: 48%;}
+            #buttons span{cursor: pointer;float: left;border: 1px solid #FFFDEF;width: 14px; height: 14px;border-radius: 50%;background: #333333;margin-right: 5px;}
+            #buttons .on{background: orangered;}
+            .Onlist{background-color: white;}
+            .arrow{cursor: pointer;display: none;line-height: 40px;tesxt-align: center;font-size: 36px;font-weight: bold;width: 50px;height: 50px;position: absolute;z-index: 2;top: 100px;background-color: rgba(0,0,0,0.3);}
+            .arrow:hover{background-color: rgba(0,0,0,0.7);}
+            .arrow img{ width: 50px;height: 50px}
+            #containter:hover .arrow{display: block;}
+            #prev{left: 20px;z-index: 5;display: block;}
+            #next{right: 20px;z-index: 5;display: block;}
+            .lunboSection{ width: 100%;height: 332px;background: linear-gradient(darkmagenta, RGB(176, 53, 112));}
+            .lunboSection .Font_ont{color: white;font-size: 2em; position: absolute;top: 25%;transform: rotate(64deg);}
+            .lunboSection .Font_tot{color: white;font-size: 2em; position: absolute;top: 25%;transform: rotate(-152deg);right: 10%;}  
+            .CompanyIntroDuce { height: 150px;margin-top: 20px}
+            .CompanyIntroDuce p{ width: 80%;margin: 0 auto}
+            .CompanyIntroDuce p .jianjie{font-size: 0.6em}
+            .CompanyIntroDuce .CompnyName{font-size: 1em}
+            .ProdecutShow{ width: 100%;height: 770px;}
+            .ProdecutShow .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
+            .ProdecutShow .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
+            .ProdecutShow .ProductImg{ width: 80%;margin: auto;}
+            .ProdecutShow .ProductImg  .heheda{margin: 5px;position: relative; width: 45%;height: 280px;float: left;text-align: center}
+            .ProdecutShow .ProductImg  .heheda:hover{ transform: scale(1.1, 1.1);-webkie-transform: scale(1.1, 1.1);}
+            .ProdecutShow .ProductImg  .heheda:hover img{ box-shadow: 2px 2px 2px 2px slategrey;}
+            .ProdecutShow .ProductImg  .heheda img{ position: absolute;top: 0px;left: 10px;z-index: 2;width: 100%;height: 280px;}
+            .ProdecutShow .ProductImg  .heheda h2{top: 20px; z-index: 3; position: absolute;width: 25px;height: 120px;background: -webkit-linear-gradient(right,RGB(111,41,104),RGB(111,41,104),RGB(68,7,66));
+                background: -o-linear-gradient(right, RGB(176, 53, 112),RGB(82, 18, 87));
+                background: linear-gradient(right, RGB(176, 53, 112), RGB(82, 18, 87));
+                background: -moz-linear-gradient(right, RGB(176, 53, 112), RGB(82, 18, 87));
+                color: white;font-weight: 400;font-size: 16px;text-align: center;padding-top: 30px;font-family: '楷体','宋体' }
+            .Font_Name_English{ color: darkmagenta;font-weight: 900;font-size: 16px; text-align: center;padding-left: 10px;letter-spacing: 1px;word-spacing: 3px; }
+            .NewProductShow{width: 100%;height: 650px;}
+            .NewProductShow .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
+            .NewProductShow .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
+            .NewProductShow .ListProduct{ width: 100%;margin: auto;}
+            .NewProductShow .ListProduct .newproductList{ width: 33%;height: 450px; position: relative;float: left;top: 0px;left: 0px; }
+            .NewProductShow .ListProduct .newproductList:hover {transform: translate(10px,10px); }
+            .NewProductShow .ListProduct .newproductList .UpRectangle{ width: 10%;height: 10%;border-left: 1px solid grey;border-top: 1px solid grey;transition: 3s}
+            .NewProductShow .ListProduct .newproductList .Rectangle{ width:80% ;height: 200px;margin: auto;background-color:RGB(228,143,184) }
+            .NewProductShow .ListProduct .newproductList .DownRectangle{ width: 10%;height: 10%;position: absolute;bottom: 0px; right: 0px;border-bottom: 1px solid grey;border-right: 1px solid grey;}
+            .NewProductShow .ListProduct .newproductList .IntroDuction{ position: absolute;bottom: 10%; height: 20%;width: 100%}
+            .NewProductShow .ListProduct .newproductList .IntroDuction input{font-size: 18px;font-family: '楷体';  width: 80px;height: 30px;line-height: 30px; position: absolute;right: 5%;top: 0px;color: white;background-color: RGB(105, 17, 75);border:2px solid RGB(105, 17, 75)  }
+            .LearnMoreProduct{ width: 100%;height: 150px}
+            .LearnMoreProduct a{display: block;margin-top: 50%;width: 300px;height: 150px;line-height: 150px; margin: auto;font-size: 30px;font-weight: 600;text-align: center;color:RGB(126,0,84) }
+            .LearnMoreProduct a:hover{ font-size: 40px;text-shadow: 2px 2px 2px saddlebrown}
+            .ProductIntrpDuction{ font-family: '华文楷体', '楷体', '微软雅黑','宋体'; color: RGB(188, 182, 184);font-size: 0.7em}
+            .VedioList{ width: 100%;height: 610px;background-color: RGB(231, 223, 238);box-sizing: border-box}
+            .VedioList .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
+            .VedioList .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
+            .VedioList .Vedioshelf { width: 680px;margin: auto;}
+            .VedioList .Vedioshelf a{display: block}
+            .VedioList .Vedioshelf .LeftBox{background-image: url(FirstImage/diaoyu.png); width: 180px;float: left;height: 180px;background-color:white;border-radius: 50%;border: 1px solid purple; }
+            .VedioList .Vedioshelf .LeftBox img{opacity: 0.75;filter:alpha(opacity=75);  width: 150px;height: 150px;border-radius: 50%;border: 1px solid plum;margin: 10px;}
+            .VedioList .Vedioshelf .CenterBox{background-image: url(FirstImage/yihui.png);  width: 300px;float: left;height: 300px;background-color:white;border-radius: 50%;border: 1px solid purple;  }
+            .VedioList .Vedioshelf .CenterBox img {opacity: 0.75;filter:alpha(opacity=75); width: 280px;height: 280px; border-radius: 50%;border: 1px solid plum;margin: 10px;}
+            .VedioList .Vedioshelf .RightBox{background-image: url(FirstImage/wenwu.png);  width:180px;float: left; height: 180px;background-color: white;border-radius: 50%;border: 1px solid purple; }
+            .VedioList .Vedioshelf .RightBox img {opacity: 0.75;filter:alpha(opacity=75); width: 150px;height: 150px; border-radius: 50%;border: 1px solid plum;margin: 10px;}
+            .VedioList .Vedioshelf::after{ content: "";display: block;clear: both}
+            .VedioList .LearingMoreVedio{ width: 100%;height: 30px;position: relative;}
+            .VedioList .LearingMoreVedio p{font-size: 1.2em; text-align: center;position: absolute;right: 20%;  width: 150px;height: 30px;line-height: 30px; border: solid 1px grey;font-weight: 600; background-color: white;}
+            .VedioList .LearingMoreVedio p a{color: purple;} 
+            .Watchlive{ width: 100%;height: 500px;}
+            .Watchlive .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
+            .Watchlive .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
+            .Watchlive .LiveSelf{ width: 700px;margin: 30px auto}
+            .Watchlive .LiveSelf a{ display: block;float: left;margin: 10px;}
+            .Watchlive .LiveSelf a img{ width: 200px;height: 200px;border-radius: 50%;}
+            .ProjectShow{ width: 100%;}
+            .ProjectShow .ProjectTitle{ background-color: RGB(62, 14, 88);text-align: center;line-height: 30px;height: 30px;color: white;font-weight: 600;}
+            .InvertMan{ width: 100%;margin: 0 auto;height: 500px;}
+            .InvertMan .right{ width: 50%;height: 500px;float: left;background-color: #fffdef}
+            .InvertMan .right .ProjectSelf{ margin: auto;width: 100%;height: 500px;overflow: auto;}
+            .InvertMan .right .ProjectSelf .VideoShow{position: relative;width: 400px;height: 400px;float: left;} 
+            .InvertMan .right .ProjectSelf .VideoShow:hover .OpcityHtml{ width: 400px;background-color: black} 
+            .InvertMan .right .ProjectSelf .VideoShow:hover .IntroDucation{ width: 400px;height: 400px}
+            .InvertMan .right .ProjectSelf .VideoShow .imgShow img{ width: 100%;height: 400px;}
+            .InvertMan .right .ProjectSelf .VideoShow .OpcityHtml{position: absolute;top: 0px;height: 0px;  width: 0px;height: 400px;opacity: 0.3;filter: alpha(opacity=30);transition: 1s; -moz-transition: 1s;}
+            .InvertMan .right .ProjectSelf .VideoShow .IntroDucation{ position: absolute;top: 0px;height: 0px;  width: 0px;height: 400px;overflow: hidden;transition: 1s;-moz-transition: 1s; }
+            .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Title{color: white;font-weight: bold;}
+            .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Title p{ border:1px solid black;background-color: purple; margin:auto;margin-bottom: 30px;margin-top: 100px; width: 140px;text-align: center;height: 40px;line-height: 40px;}
+            .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Informations{ color: white;font-size: medium;font-weight: bold}
+            .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Informations p{ width: 400px; }
+            .InvertMan .center{ width: 50%;float: left;height: 500px;overflow: auto}
+            .InvertMan .center .ShowInvertDw{font-size: 0.5em; width: 100%;height: 40px;color: darkblue;text-indent: 10%;}
+            .InvertMan .center .ShowInvertDw .spanDw{ color:RGB(229,9,87) ;font-weight: 600;font-family: '华文楷体', '微软雅黑', '宋体';font-size:0.9em}
+            .InvertMan .center .ShowInvertDw .spanXm{ color: purple;font-weight: 500;font-family: '华文楷体', '微软雅黑', '宋体'; }
+            .InvertMan .center .ShowInvertDw .date{ font-weight: 200;font-size: 0.3em;color: gray}
+            footer{ background-color: RGB(10, 18, 43);width: 100%; height: 300px;}
+            footer .HeadColor{ height: 50px;width: 100%;background-color: RGB(144,68,117)}
+            footer .TowPart{ width: 100%;background-color: white;height: 250px;}
+            footer .TowPart .Left_Font{ width: 69%;height: 250px;float: left; }
+            footer .TowPart .Left_Font table{width: 100%; padding: 7px;margin: auto}
+            footer .TowPart .Left_Font table th{ height: 40px;margin: auto;font-size: 1.2em;font-family: '微软雅黑', '宋体';word-spacing: 2px;}
+            footer .TowPart .Left_Font table tr{height: 40px;font-size: small}
+            footer .TowPart .Left_Font table .TitleIntroduce{ color: RGB(114, 114, 114);font-size: small}
+            footer .TowPart .Right_Picture{ width: 30%;height: 250px;float: left}
+            footer .TowPart .Right_Picture .PictureOneWechat { background-color: purple;width: 200px;height: 200px;position: relative;top: 10px;left: 18px;}
+            .JiaoBen{ width: 100%;height: 90px;font-size: small;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: RGB(114, 114, 114);text-align: center;background-color:RGB(10, 18, 43) }
+            .JiaoBen a{color: cornflowerblue}
+            .zixun{z-index: 100000; width: 170px;height: 220px;font-size: 1em;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: RGB(114, 114, 114);position: fixed;right: 0px;top: 35%;}
+            .zixun .showDiv{opacity: 0.8;filter: alpha(opacity=80);width: 135px;height: 220px;background-color: white;float: left}
+            .zixun .showDiv p{opacity: 0.8;filter: alpha(opacity=80); text-indent: 15px;letter-spacing: 2px;font-size: small}
+            .zixun .showDiv .fontci{opacity: 0.8;filter: alpha(opacity=80); height: 30px;line-height: 30px;color: white;font-family:'华文楷体', '微软雅黑', '宋体';font-weight: bold }
+            .zixun .showDiv img{opacity: 0.8;filter: alpha(opacity=80); width: 105px;height: 105px;background-color: white;padding: 15px}
+            .zixun .lanmu{ width: 32px;height: 220px;background-color: purple;color: white;float: right}
+            .zixun .lanmu a img{ width: 30px;height: 30px;margin:5px auto}
+            .zixun .lanmu a img:hover{ transform: translate(2px, 2px);-webkit-transform: translate(2px, 2px);background-color: white}
+        }
+         /***********************************************767以下主要适配手机****************************************************************/
+         /*实质是宽度400多为中大屏幕手机主要分辨率适配参考iphone6 plus以上*/
+        @media only screen and (min-width:0px )and (max-width:767px) {
+            .PhoneHead{display: block;height: 50px;width: 100%;background:linear-gradient(to left,purple ,RGB(176,53,112))}
+            .PhoneHead .headerTtile{width: 100%}
+            .PhoneHead .headerTtile .right{ width: 49%;float: left;height: 50px;}
+            .PhoneHead .headerTtile .left{ width: 50%;float: left;height: 50px;}
+        }
+    </style>
     <script type="text/javascript">
         window.onload = function () {
+            /**匹配屏幕查询**/
+            /*轮播图的大小*/
+            var widthLunbo;
+            var screen1 = window.matchMedia('(min-width:1300px)');
+            var screen2 = window.matchMedia('(min-width: 768px) and (max-width: 1299px)');
+            if (screen1.matches) {
+                console.log(1300);
+                widthLunbo = 1200;
+            } else if (screen2.matches) {
+                console.log('pingban');
+                widthLunbo = 750;
+            }
+            /*监视页面窗口大小变化*/
+            window.onresize = function () {
+                var screen1 = window.matchMedia('(min-width:1300px)');
+                var screen2 = window.matchMedia('(min-width: 768px) and (max-width: 1299px)');
+                if (screen1.matches) {
+                    console.log(1300);
+                    widthLunbo = 1200;
+                }else if (screen2.matches) {
+                    console.log('pingban');
+                    widthLunbo = 750;
+                }
+            }
             var span = document.getElementsByTagName("span");
             var container = document.getElementById('containter');
             var list = document.getElementById("ilist");
@@ -138,7 +325,6 @@
             var buttom = document.getElementById('buttons').getElementsByTagName('span');
             var prev = document.getElementById("prev");
             var next = document.getElementById("next");
-            var Beijing = document.getElementsByClassName("lunboSection");
             var index = 1;
             var change=1;
             for (var i = 0; i < buttom.length; i++) {
@@ -151,22 +337,22 @@
                         showButton();
                     }
                     else if (nowIndex == 2) {
-                        list.style.left = "-1200px";
+                        list.style.left = "-" + widthLunbo + "px";
                         index = 2;
                         showButton();
                     }
                     else if (nowIndex == 3) {
-                        list.style.left = "-2400px";
+                        list.style.left = "-" + widthLunbo*2 + "px";
                         index = 3;
                         showButton();
                     }
                     else if (nowIndex == 4) {
-                        list.style.left = "-3600px";
+                        list.style.left = "-"+widthLunbo*3+"px";
                         index = 4;
                         showButton();
                     }
                     else if (nowIndex == 5) {
-                        list.style.left = "-4800px";
+                        list.style.left = "-" + widthLunbo *4+ "px";
                         index = 5;
                         showButton();
                     }
@@ -183,22 +369,22 @@
                         showButton();
                     }
                     else if (nowIndex == 2) {
-                        list.style.left = "-1200px";
+                        list.style.left = "-" + widthLunbo + "px";
                         index = 2;
                         showButton();
                     }
                     else if (nowIndex == 3) {
-                        list.style.left = "-2400px";
+                        list.style.left = "-" + widthLunbo * 2 + "px";
                         index = 3;
                         showButton();
                     }
                     else if (nowIndex == 4) {
-                        list.style.left = "-3600px";
+                        list.style.left = "-" + widthLunbo * 3 + "px";
                         index = 4;
                         showButton();
                     }
                     else if (nowIndex == 5) {
-                        list.style.left = "-4800px";
+                        list.style.left = "-" + widthLunbo * 4 + "px";
                         index = 5;
                         showButton();
                     }
@@ -211,23 +397,21 @@
                 buttom[index - 1].style.backgroundColor = "orangered";
             }
             next.onclick = function () {
-                if (list.offsetLeft == -4800) {
+                if (list.offsetLeft == -widthLunbo*4) {
                     list.style.left = '0px';
                     index = 1;
                 } else {
-                    list.style.left = (list.offsetLeft - 1200).toString() + 'px';
+                    list.style.left = (list.offsetLeft - widthLunbo).toString() + 'px';
                     index += 1;
-
-
                 }
                 showButton();
             }
             prev.onclick = function () {
                 if (list.offsetLeft == 0) {
-                    list.style.left = '-4800px';
+                    list.style.left = '-' + widthLunbo *4+ 'px';
                     index = 5;
                 } else {
-                    list.style.left = (list.offsetLeft + 1200).toString() + 'px';
+                    list.style.left = (list.offsetLeft + widthLunbo).toString() + 'px';
                     index = index - 1;
                 }
                 showButton();
@@ -259,6 +443,16 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <header class="PhoneHead">
+            <div class="headerTtile">
+                <div class="left">
+                    
+                </div>
+                <div class="right">
+                    
+                </div>
+            </div>
+        </header>
         <div class="Head">
               <div class="logo"><i class="Font_Title">创造门</i></div>
               <div class="Nav">
@@ -303,12 +497,21 @@
                     <span index="5"></span>
                 </div>
                 <a href="javascript:;" id="prev" class="arrow">
-                    <img src="../FirstImage/row.png" width="80px" height="80px"/>
+                    <img src="../FirstImage/row.png" width="80px" height="80px"  />
                 </a>
                 <a href="javascript:;" id="next" class="arrow">
-                    <img src="../FirstImage/row2.png"  width="80px" height="80px"/>
+                    <img src="../FirstImage/row2.png"  width="80px" height="80px" />
                 </a>
             </div>
+        </section>
+        <section class="CompanyIntroDuce">
+            <h2 align="center" class="CompnyName">四川创造门高新技术开发有限公司</h2>
+            <p>
+               <span class="Intro">【公司简介(Introduction)】</span>
+                <asp:Label CssClass="jianjie" ID="lblCompanyIntr" runat="server" Text="四川创造门高新技术开发有限公司是致力于各种创新产品研发的实体机构，目前已经推出多项专利创新产品，并已获人们广泛认同
+                我们还会不断研发更多创新产品推向市场，为人类社会的发展做出贡献！创造改变命运！创造改变未来！我们吸纳各种创新人才成为我们的合作伙伴
+                ，为全人类服务，为有创造梦想的人服务，走进创造门，函授创造，拥有创造，参与创造，创造门与你同在！"></asp:Label>
+            </p>
         </section>
         <section class="ProdecutShow">
             <div class="JuzhongFont">
@@ -496,75 +699,67 @@
             </div>
             <div class="center" id="ShowBoxInvertMan" >
                 <div class="ShowInvertDw">
-                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
                 <div class="ShowInvertDw">
-                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
+                    <p><span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。</p>
                 </div>
-                <div class="ShowInvertDw">
-                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
-                </div>
-                <div class="ShowInvertDw">
-                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
-                </div>
-                <div class="ShowInvertDw">
-                    <span class="spanDw">四川关元科技有限公司</span>投资了 <span class="spanXm">等离子流项目</span> <span class="date"><time>2016-8-9</time></span>。
-                </div>
+
             </div>
         </section>
         <footer>
             <p class="HeadColor"></p>
             <div class="TowPart">
                 <div class="Left_Font">
-                    <table>
+                    <table cellpadding="0" cellspacing="0">
                         <tr>
                             <th align="left" colspan="3">关于我们</th>
                         </tr>
                         <tr>
                             <td class="TitleIntroduce" colspan="3">
-                                此公司成立于2017年，致力于渔业产品，各类产品的发展推广,例如洗鞋袜，文物收藏，医疗保健！
+                                此公司成立于2017年，致力于渔业产品，各类产品的发展推广,例如洗鞋袜，文物收藏，医疗保健！欢迎与我们交流！合作！
                             </td>
                         </tr>
                         <tr>
@@ -578,13 +773,47 @@
                                 交流空间
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                公司官网
+                            </td>
+                            <td>
+                                法律声明
+                            </td>
+                            <td>
+                                公司声明
+                            </td>
+                        </tr>
                     </table>
                 </div>
                 <div class="Right_Picture">
-                    
+                    <div class="PictureOneWechat">
+                    </div>
                 </div>
             </div>
         </footer>
+        <div class="JiaoBen">
+            <p>
+            <a href="http://wpa.qq.com/msgrd?v=1&uin=1944731504"><img src="Images/SystemPicture/阿里旺旺.png" width="20px" height="20px"/>阿里旺旺</a>
+            <a href="http://wpa.qq.com/msgrd?v=1&uin=1944731504"><img src="Images/SystemPicture/qq.png" width="20px" height="20px"/>QQ服务</a>Copyright © 2017-至今|四川创造门高新技术开发有限公司版权所有|客户电话：15698259380|企业邮件:chuangzaomen@163.com|热线电话：15826121
+            </p>
+        </div>
+        <div class="zixun">
+            <div class="showDiv">
+                <p>微信二维码</p>
+                <img src="Images/SystemPicture/timg.jpg"/>
+                <p>扫码咨询关注</p>
+                <p>惊喜连连更多</p>
+            </div>
+            <div class="lanmu">
+                <a href="javascript:void(0)"><img src="Images/SystemPicture/userLanse.png" title="用户登录"/></a>
+                <a href="javascript:void(0)"><img src="Images/SystemPicture/zixunlanse.png" title="在线咨询"/></a>
+                <a href="javascript:void(0)"><img src="Images/SystemPicture/阿里旺旺.png" title="阿里旺旺" /></a>
+                <a href="javascript:void(0)"><img src="Images/SystemPicture/qqlanse.png" title="QQ咨询" /></a>
+                <a href="javascript:void(0)"><img src="Images/SystemPicture/zhidinglanse.png" title="首页" /></a>
+            </div>
+       
+        </div>
     </form>
 </body>
 </html>
