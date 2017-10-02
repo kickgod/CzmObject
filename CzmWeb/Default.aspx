@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CzmWeb.Default" %>
 <%@ Register Src="~/Common/wuc_ListPager.ascx" TagPrefix="uc1" TagName="wuc_ListPager" %>
 <%@ Register Src="~/Common/wuc_FileUpload.ascx" TagPrefix="uc1" TagName="wuc_FileUpload" %>
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -14,7 +13,7 @@
          @media only screen and (min-width:1300px) {
              .PhoneImg{ width: 30px;height: 30px;padding-top: 10px;display: none}
              .PhoneHead{display:none}
-             .Head{ width: 100%;background-color: RGB(176, 53, 112);height: 60px;}
+             .Head{ width: 100%;background-color: RGB(176, 53, 112);height: 60px;display: block}
              .Head .logo{ width: 20%;height: 60px;line-height: 60px;float: left}
              .Head .logo i{ color: RGB(232,105,170);font-weight: bold;font-size: 280%;font-style: italic;line-height: 60px;height: 60px;width: 100%;text-align: center;display: block}
              .Head .Nav{ width: 60%;height: 60px;line-height: 60px;float:left;}
@@ -150,16 +149,16 @@
          }
         /***********************************************768~1300px以内*********************************************************************/
          @media only screen and (max-width:1299.9px )and (min-width:768px) {
-             .PhoneImg{ width: 30px;height: 30px;padding-top: 10px;display: none}
+            .PhoneImg{ width: 30px;height: 30px;padding-top: 10px;display: none}
             .PhoneHead{display:none}
-            .Head{ width: 100%;background-color: RGB(176, 53, 112);height: 60px;}
+            .Head{ width: 100%;background-color: RGB(176, 53, 112);height: 60px;display: block;visibility:visible}
             .Head .logo{ width: 10%;height: 60px;line-height: 60px;float: left}
             .Head .logo i{ color: RGB(232,105,170);font-weight: bold;font-size: 1.3em;font-style: italic;line-height: 60px;height: 60px;width: 100%;text-align: center;display: block}
-            .Head .Nav{ width: 60%;height: 60px;line-height: 60px;float:left;}
+            .Head .Nav{ width: 70%;height: 60px;line-height: 60px;float:left;}
             .Head .Nav ul{ width: 100%;line-height: 60px;height: 60px;list-style: none;}
             .Head .Nav ul li{ width: 55px;text-align: center;float: left;color: grey;}
             .Head .Nav ul li a{ text-decoration: none;color: grey;}
-             .Head .NavPhone{ display: none;}
+            .Head .NavPhone{ display: none;}
             .Head .Login_ACE{ width: 20%;line-height: 60px;height: 60px;float: left}
             .FontColor{ color: RGB(255, 255, 255);font-size: 0.4em}
             .FontColor:hover{color: gainsboro;font-size: 0.4em;cursor: pointer;}
@@ -286,16 +285,16 @@
          /*实质是宽度400多为中大屏幕手机主要分辨率适配参考iphone6 plus以上*/
         @media only screen and (min-width:0px )and (max-width:767px) {
             *{padding: 0px;margin: 0px;text-decoration: none;}
-            .PhoneHead{ position: fixed;top: 0px;left: 0px;display: block;height: 50px;width: 100%;background: linear-gradient(to left, purple, RGB(176, 53, 112));border-bottom:gray 2px solid}
+            .PhoneHead{z-index: 100000000000; position: fixed;top: 0px;left: 0px;display: block;height: 50px;width: 100%;background: linear-gradient(to left, purple, RGB(176, 53, 112));border-bottom:gray 2px solid}
             .PhoneHead .headerTtile{ width: 100%;}
             .PhoneHead .headerTtile .left .transfer{color: white}
             .PhoneHead .headerTtile .left{ width: 20%;float: left;height: 50px;}
-            .PhoneHead .headerTtile .left span{text-indent: 15px; display: block;color: RGB(232,105,170);font-weight: bold;font-size: 1.3em;font-style: italic;line-height:50px;height: 50px;text-align: left;}
+            .PhoneHead .headerTtile .left span{text-indent: 15px; display: block;color: RGB(232,105,170);font-weight: bold;font-size: 1em;font-style: italic;line-height:50px;height: 50px;text-align: left;}
             .PhoneHead .headerTtile .center{text-indent: 20px; width: 48%;float: left;}
             .PhoneHead .headerTtile .center .cents{ height: 50px;line-height: 50px;color: white;font-weight: bold}
             .PhoneHead .headerTtile .right{ width: 30%;float: left;height: 50px;position: relative}
             .PhoneHead .headerTtile .right a{display: block; position: absolute;top: 0px;right: 5px}
-            .Head{background-color: white;color: #333333;display: none}
+            .Head{display: none;background-color: white;color: #333333;position: fixed;top: 52px;color: #333333;width: 100%}
             .Head .logo{display: none}
             .Head .Nav ul li{ border-bottom: 1px solid black;height: 50px;line-height: 50px;text-indent: 30px;color: #333333}
             .Head .NavPhone{ display: block;}
@@ -303,22 +302,109 @@
             .Head .Login_ACE{display: none}
             .PhoneImg{ width: 30px;height: 30px;padding-top: 15px;}
             .FontColor{ color: #333333;font-size: 1em;font-weight: bold}
-            #containter { overflow: hidden; width: 100%;height: 135px;position: relative;z-index: 1;margin: 0px auto;z-index: 1;}
-            #ilist{width: 1550px;height: 135px;position: absolute;z-index: 1;left: 0px;}
-            #ilist img{float: left;z-index: 1;width: 310px;height: 135px}
-            #buttons {position: absolute;height: 10px;width: 100px;z-index: 2; bottom: 20px;left: 48%;}
-            #buttons span{cursor: pointer;float: left;border: 1px solid #FFFDEF;width: 14px; height: 14px;border-radius: 50%;background: #333333;margin-right: 5px;}
+            #containter { overflow: hidden; width: 350px;height: 156px;position: relative;z-index: 1;margin: 0px auto;z-index: 1;}
+            #ilist{width: 1750px;height: 156px;position: absolute;z-index: 1;left: 0px;}
+            #ilist img{float: left;z-index: 1;width: 350px;height: 156px}
+            #buttons {position: absolute;height: 10px;width: 160px;z-index: 2; bottom: 20px;left: 48%;}
+            #buttons span{cursor: pointer;float: left;border: 1px solid #FFFDEF;width: 6px; height: 6px;border-radius: 50%;background: #333333;margin-right: 2px;}
             #buttons .on{background: orangered;}
             .Onlist{background-color: white;}
-            .arrow{cursor: pointer;display: none;line-height: 40px;tesxt-align: center;font-size: 36px;font-weight: bold;width: 50px;height: 50px;position: absolute;z-index: 2;top: 100px;background-color: rgba(0,0,0,0.3);}
+            .arrow{cursor: pointer;display: none;line-height: 30px;text-align: center;font-size: 36px;font-weight: bold;width: 30px;height: 30px;position: absolute;z-index: 2;top: 80px;background-color: rgba(0,0,0,0.3);}
             .arrow:hover{background-color: rgba(0,0,0,0.7);}
-            .arrow img{ width: 50px;height: 50px}
+            .arrow img{ width: 30px;height: 30px}
             #containter:hover .arrow{display: block;}
             #prev{left: 20px;z-index: 5;display: block;}
             #next{right: 20px;z-index: 5;display: block;}
-            .lunboSection{ width: 100%;height: 332px;background: linear-gradient(darkmagenta, RGB(176, 53, 112));}
+            .lunboSection{position: relative ;top: 51px; width: 100%;height: 156px;background: linear-gradient(darkmagenta, RGB(176, 53, 112));}
             .lunboSection .Font_ont{color: white;font-size: 2em; position: absolute;top: 25%;transform: rotate(64deg);}
             .lunboSection .Font_tot{color: white;font-size: 2em; position: absolute;top: 25%;transform: rotate(-152deg);right: 10%;}  
+            .CompanyIntroDuce { height: 170px;margin-top: 60px;}
+            .CompanyIntroDuce p{ width: 80%;margin: 0 auto}
+            .CompanyIntroDuce p .Intro{color: purple;font-weight: 400}
+            .CompanyIntroDuce p .jianjie{ font-size: 0.6em;}
+            .CompanyIntroDuce .CompnyName{ font-size: 1.2em;font-family: '华文楷体','楷体','微软雅黑'}
+            .ProdecutShow{ width: 100%;height: 1200px;}
+            .ProdecutShow .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
+            .ProdecutShow .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
+            .ProdecutShow .ProductImg{ width: 80%;margin: auto;}
+            .ProdecutShow .ProductImg  .heheda{margin: 5px;position: relative; width: 100%;height: 280px;float: left;text-align: center}
+            .ProdecutShow .ProductImg  .heheda img{ position: absolute;top: 0px;left: 10px;z-index: 2;width: 100%;height: 280px;}
+            .ProdecutShow .ProductImg  .heheda h2{top: 20px; z-index: 3; position: absolute;width: 25px;height: 120px;background: -webkit-linear-gradient(right,RGB(111,41,104),RGB(111,41,104),RGB(68,7,66));
+                background: -o-linear-gradient(right, RGB(176, 53, 112),RGB(82, 18, 87));
+                background: linear-gradient(right, RGB(176, 53, 112), RGB(82, 18, 87));
+                background: -moz-linear-gradient(right, RGB(176, 53, 112), RGB(82, 18, 87));
+                color: white;font-weight: 400;font-size: 16px;text-align: center;padding-top: 30px;font-family: '楷体','宋体' }
+            .Font_Name_English{ color: darkmagenta;font-weight: 900;font-size: 16px; text-align: center;padding-left: 10px;letter-spacing: 1px;word-spacing: 3px; }
+            .NewProductShow{z-index: 10; width: 100%;height: 1500px;margin-top: 170px}
+            .NewProductShow .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
+            .NewProductShow .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
+            .NewProductShow .ListProduct{ width: 100%;margin: auto;}
+            .NewProductShow .ListProduct .newproductList{ width: 100%;height: 450px; position: relative;float: left;top: 0px;left: 0px; }
+            .NewProductShow .ListProduct .newproductList .UpRectangle{ width: 10%;height: 10%;border-left: 1px solid grey;border-top: 1px solid grey;transition: 3s}
+            .NewProductShow .ListProduct .newproductList .Rectangle{ width:80% ;height: 200px;margin: auto;background-color:RGB(228,143,184) }
+            .NewProductShow .ListProduct .newproductList .DownRectangle{ width: 10%;height: 10%;position: absolute;bottom: 0px; right: 0px;border-bottom: 1px solid grey;border-right: 1px solid grey;}
+            .NewProductShow .ListProduct .newproductList .IntroDuction{ position: absolute;bottom: 10%; height: 20%;width: 100%}
+            .NewProductShow .ListProduct .newproductList .IntroDuction input{font-size: 18px;font-family: '楷体';  width: 80px;height: 30px;line-height: 30px; position: absolute;right: 5%;top: 0px;color: white;background-color: RGB(105, 17, 75);border:2px solid RGB(105, 17, 75)  }
+            .LearnMoreProduct{ width: 100%;height: 150px}
+            .LearnMoreProduct a{display: block;margin-top: 50%;width: 300px;height: 150px;line-height: 150px; margin: auto;font-size: 30px;font-weight: 600;text-align: center;color:RGB(126,0,84) }
+            .ProductIntrpDuction{ font-family: '华文楷体', '楷体', '微软雅黑','宋体'; color: RGB(188, 182, 184);font-size: 0.7em}
+            .VedioList{ width: 100%;height: 550px;background-color: RGB(231, 223, 238);box-sizing: border-box}
+            .VedioList .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
+            .VedioList .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
+            .VedioList .Vedioshelf { width: 100%;margin: auto;}
+            .VedioList .Vedioshelf a{display: block}
+            .VedioList .Vedioshelf .LeftBox{display: none}
+            .VedioList .Vedioshelf .CenterBox{margin: auto; background-image: url(FirstImage/yihui.png);  width: 300px;height: 300px;background-color:white;border-radius: 50%;border: 1px solid purple;  }
+            .VedioList .Vedioshelf .CenterBox img {opacity: 0.75;filter:alpha(opacity=75); width: 280px;height: 280px; border-radius: 50%;border: 1px solid plum;margin: 10px;}
+            .VedioList .Vedioshelf .RightBox{display: none }
+            .VedioList .Vedioshelf::after{ content: "";display: block;clear: both}
+            .VedioList .LearingMoreVedio{ width: 100%;height: 30px;position: relative;}
+            .VedioList .LearingMoreVedio p{font-size: 1.2em; text-align: center;position: absolute;right: 20%;  width: 150px;height: 30px;line-height: 30px; border: solid 1px grey;font-weight: 600; background-color: white;}
+            .VedioList .LearingMoreVedio p a{color: purple;} 
+            .Watchlive{ width: 100%;height: 350px;}
+            .Watchlive .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
+            .Watchlive .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
+            .Watchlive .LiveSelf{ width: 700px;margin: 30px auto}
+            .Watchlive .LiveSelf a{ display: block;float: left;margin-left: 20px}
+            .Watchlive .LiveSelf a img{ width: 110px;height: 110px;border-radius: 50%;}
+            .ProjectShow{ width: 100%;}
+            .ProjectShow .ProjectTitle{ background-color: RGB(62, 14, 88);text-align: center;line-height: 30px;height: 30px;color: white;font-weight: 600;}
+            .InvertMan{ width: 100%;margin: 0 auto;height: 560px;}
+            .InvertMan .right{ width: 100%;height: 400px;float: left;background-color: #fffdef}
+            .InvertMan .right .ProjectSelf{ margin: auto;width: 100%;height: 400px;overflow: auto;}
+            .InvertMan .right .ProjectSelf .VideoShow{position: relative;width: 400px;height: 400px;float: left;} 
+            .InvertMan .right .ProjectSelf .VideoShow .imgShow img{ width: 100%;height: 400px;}
+            .InvertMan .right .ProjectSelf .VideoShow .OpcityHtml{background-color: black;position: absolute;top: 0px;height: 0px; width: 400px;height: 400px;opacity: 0.3;filter: alpha(opacity=30);transition: 1s; -moz-transition: 1s;}
+            .InvertMan .right .ProjectSelf .VideoShow .IntroDucation{ position: absolute;top: 0px;height: 0px;  width: 400px;height: 400px;overflow: hidden;transition: 1s;-moz-transition: 1s; }
+            .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Title{color: white;font-weight: bold;}
+            .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Title p{ border:1px solid black;background-color: purple; margin:auto;margin-bottom: 30px;margin-top: 100px; width: 140px;text-align: center;height: 40px;line-height: 40px;}
+            .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Informations{ color: white;font-size: medium;font-weight: bold}
+            .InvertMan .right .ProjectSelf .VideoShow .IntroDucation .Informations p{ width: 400px; }
+            .InvertMan .center{ width: 100%;float: left;height: 150px;overflow: auto}
+            .InvertMan .center .ShowInvertDw{font-size: 0.5em; width: 100%;height: 40px;color: darkblue;text-indent: 10%;}
+            .InvertMan .center .ShowInvertDw .750px{ color:RGB(229,9,87) ;font-weight: 600;font-family: '华文楷体', '微软雅黑', '宋体';font-size:0.9em}
+            .InvertMan .center .ShowInvertDw .spanXm{ color: purple;font-weight: 500;font-family: '华文楷体', '微软雅黑', '宋体'; }
+            .InvertMan .center .ShowInvertDw .date{ font-weight: 200;font-size: 0.3em;color: gray}
+            footer{ background-color: RGB(10, 18, 43);width: 100%; height: 600px;}
+            footer .HeadColor{ height: 50px;width: 100%;background-color: RGB(144,68,117)}
+            footer .TowPart{ width: 100%;background-color: white;height: 250px;}
+            footer .TowPart .Left_Font{ width: 100%;height: 250px;float: left; }
+            footer .TowPart .Left_Font table{width: 100%; padding: 7px;margin: auto}
+            footer .TowPart .Left_Font table th{ height: 40px;margin: auto;font-size: 1.2em;font-family: '微软雅黑', '宋体';word-spacing: 2px;}
+            footer .TowPart .Left_Font table tr{height: 40px;font-size: small}
+            footer .TowPart .Left_Font table .TitleIntroduce{ color: RGB(114, 114, 114);font-size: small}
+            footer .TowPart .Right_Picture{ width: 100%;height: 250px;float: left}
+            footer .TowPart .Right_Picture .PictureOneWechat { background-color: purple;width: 200px;height: 200px;position: relative;top: 10px;left: 18px;}
+            .JiaoBen{ width: 100%;height: 90px;font-size: small;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: RGB(114, 114, 114);text-align: center;background-color:RGB(10, 18, 43) }
+            .JiaoBen a{color: cornflowerblue}
+            .zixun{z-index: 100000; width: 170px;height: 220px;font-size: 1em;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: RGB(114, 114, 114);position: fixed;right: 0px;top: 35%;}
+            .zixun .showDiv{opacity: 0.8;filter: alpha(opacity=80);width: 135px;height: 220px;background-color: white;float: left}
+            .zixun .showDiv p{opacity: 0.8;filter: alpha(opacity=80); text-indent: 15px;letter-spacing: 2px;font-size: small}
+            .zixun .showDiv .fontci{opacity: 0.8;filter: alpha(opacity=80); height: 30px;line-height: 30px;color: white;font-family:'华文楷体', '微软雅黑', '宋体';font-weight: bold }
+            .zixun .showDiv img{opacity: 0.8;filter: alpha(opacity=80); width: 105px;height: 105px;background-color: white;padding: 15px}
+            .zixun .lanmu{ width: 32px;height: 220px;background-color: purple;color: white;float: right}
+            .zixun .lanmu a img{ width: 30px;height: 30px;margin:5px auto}
+            .zixun .lanmu a img:hover{ transform: translate(2px, 2px);-webkit-transform: translate(2px, 2px);background-color: white}
         }
     </style>
     <script type="text/javascript">
@@ -326,29 +412,52 @@
             /**匹配屏幕查询**/
             /*轮播图的大小*/
             var widthLunbo;
+            var wWidth = document.documentElement.clientWidth;
             var screen1 = window.matchMedia('(min-width:1300px)');
             var screen2 = window.matchMedia('(min-width: 768px) and (max-width: 1299px)');
             var screen3 = window.matchMedia('(min-width: 0px) and (max-width: 767px)');
             if (screen1.matches) {
-                console.log(1300);
                 widthLunbo = 1200;
+                document.getElementById('headerCaidan').style.display = 'block';
+                document.getElementById('headerCaidan').style.height = '60px';
+                document.getElementById('daohanglanPhone').style.display = 'none';
+                document.getElementById('daohanglanPhone').style.visibility = false;
             } else if (screen2.matches) {
-                console.log('pingban');
                 widthLunbo = 750;
+                document.getElementById('headerCaidan').style.display = 'block';
+                document.getElementById('headerCaidan').style.height = '60px';
+                document.getElementById('daohanglanPhone').style.display = 'none';
+                document.getElementById('daohanglanPhone').style.visibility = false;
             }else if (screen3.matches) {
-                console.log('shouji');
-                widthLunbo = 310;
+                widthLunbo = 350;
+                document.getElementById('headerCaidan').style.display = 'none';
+                document.getElementById('daohanglanPhone').style.display = 'block';
+                document.getElementById('daohanglanPhone').style.visibility = true;
+                var list = document.getElementById('ilist');
             }
             /*监视页面窗口大小变化*/
             window.onresize = function () {
+                var wWidth = document.documentElement.clientWidth;
                 var screen1 = window.matchMedia('(min-width:1300px)');
                 var screen2 = window.matchMedia('(min-width: 768px) and (max-width: 1299px)');
+                var screen3 = window.matchMedia('(min-width: 0px) and (max-width: 767px)');
                 if (screen1.matches) {
-                    console.log(1300);
                     widthLunbo = 1200;
-                }else if (screen2.matches) {
-                    console.log('pingban');
+                    document.getElementById('headerCaidan').style.display = 'block';
+                    document.getElementById('headerCaidan').style.height = '60px';
+                    document.getElementById('daohanglanPhone').style.display = 'none';
+                    document.getElementById('daohanglanPhone').style.visibility = false;
+                } else if (screen2.matches) {
                     widthLunbo = 750;
+                    document.getElementById('headerCaidan').style.display = 'block';
+                    document.getElementById('headerCaidan').style.height = '60px';
+                    document.getElementById('daohanglanPhone').style.display = 'none';
+                    document.getElementById('daohanglanPhone').style.visibility = false;
+                } else if (screen3.matches) {
+                    widthLunbo = wWidth;
+                    document.getElementById('headerCaidan').style.display = 'none';
+                    document.getElementById('daohanglanPhone').style.display = 'block';
+                    document.getElementById('daohanglanPhone').style.visibility = true;
                 }
             }
             var span = document.getElementsByTagName("span");
@@ -480,31 +589,43 @@
         <script type="text/javascript">
             var screen3 = window.matchMedia('(min-width:0px) and (max-width:767px)');
             function ShowHead() {
-                if (screen3) {
-                    var caidan = document.getElementById('headerCaidan');
-                    var zhidie = document.getElementById('imfzhijie');
+                var caidan = document.getElementById('headerCaidan'); /*PC端导航栏*/
+                var zhidie = document.getElementById('daohanglanPhone');/*手机导航栏折叠菜单*/
+                var oHeight = document.documentElement.clientHeight;/*得到页面可视区域高度*/
+                if (screen3.matches) {
+                    /*使得手机端折叠菜单打开pc端折叠菜单*/
                     if (caidan.style.display == 'block') {
+                        document.getElementById('Closeit').style.display = 'block';
                         caidan.style.display = 'none';
                     } else {
-                        var daohang = document.getElementById('daohanglanPhone');
-                        /*获得当先手机的可视区域 得到的是数字*/
-                        var oHeight = daohang.offsetHeight;
-                        console.log('danhanglan' + oHeight);
-                        var wHeight = document.documentElement.clientHeight;
-                        var wWidth = document.documentElement.clientWidth;
-                        console.log('高度：' + wHeight + '宽度：' + wWidth);
-                        caidan.style.display = "block";
-                        caidan.style.position = 'fixed';
-                        caidan.style.top = oHeight + 'px';
-                        caidan.style.width = wWidth + 'px';
-                        caidan.style.height = (wHeight - oHeight) + 'px';
-                        caidan.style.backgroundColor = 'white';
-                        caidan.style.color = 'black';
+                        document.getElementById('Closeit').style.display = 'none';
+                        caidan.style.display = 'block';
+                        caidan.style.height = oHeight+'px';
                     }
                 } else {
-                    console.log('2');
+                    /*nonthing*/
                 }
             }
+            /*
+            if (screen3) {
+                var caidan = document.getElementById('headerCaidan');
+                var zhidie = document.getElementById('imfzhijie');
+                if (caidan.style.display == 'block') {
+                    caidan.style.display = 'none';
+                } else {
+                    var daohang = document.getElementById('daohanglanPhone');
+                    var oHeight = daohang.offsetHeight;
+                    console.log('danhanglan' + oHeight);
+                    var wHeight = document.documentElement.clientHeight;
+                    caidan.style.display = "block";
+                    caidan.style.top = oHeight + 'px';
+                    caidan.style.height = (wHeight - oHeight) + 'px';
+                }
+            } else {
+                console.log('2');
+                caidan.style.display == 'block';
+            }
+        }*/
         </script>
         <header class="PhoneHead" id="daohanglanPhone">
             <div class="headerTtile">
@@ -553,6 +674,7 @@
                   </ul>
               </div>
           </div>
+        <div id="Closeit">
         <section class="lunboSection">
             <div id="containter">
                 <div id="ilist">
@@ -883,9 +1005,10 @@
                 <a href="javascript:void(0)"><img src="Images/SystemPicture/zixunlanse.png" title="在线咨询"/></a>
                 <a href="javascript:void(0)"><img src="Images/SystemPicture/阿里旺旺.png" title="阿里旺旺" /></a>
                 <a href="javascript:void(0)"><img src="Images/SystemPicture/qqlanse.png" title="QQ咨询" /></a>
-                <a href="javascript:void(0)"><img src="Images/SystemPicture/zhidinglanse.png" title="首页" /></a>
+                <a href="#"><img src="Images/SystemPicture/zhidinglanse.png" title="首页" /></a>
             </div>
        
+        </div>
         </div>
     </form>
 </body>
