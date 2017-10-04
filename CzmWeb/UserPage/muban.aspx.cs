@@ -4,11 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using CzmObject.App_Code;
+using CzmWeb.App_Code;
 
 namespace CzmWeb.UserPage
 {
     public partial class UserPageRegister : System.Web.UI.Page
     {
+        GetDataFromTable getTable = new GetDataFromTable();
+        GetDataFromView getView = new GetDataFromView();
+        PublicGetDataFromDB DB = new PublicGetDataFromDB();
+        SendPhoneMessage sender = new SendPhoneMessage();
         protected void Page_Load(object sender, EventArgs e)
         {
 

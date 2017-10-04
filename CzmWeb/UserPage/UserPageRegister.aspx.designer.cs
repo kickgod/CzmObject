@@ -166,6 +166,15 @@ namespace CzmWeb.UserPage {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
+        /// lblyzm 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblyzm;
+        
+        /// <summary>
         /// lblUserName_C 控件。
         /// </summary>
         /// <remarks>
@@ -211,13 +220,13 @@ namespace CzmWeb.UserPage {
         protected global::System.Web.UI.WebControls.Label lblUserPwd_E;
         
         /// <summary>
-        /// TextBox1 控件。
+        /// txtUserRealName 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtUserRealName;
         
         /// <summary>
         /// lblSex_C 控件。
@@ -292,13 +301,13 @@ namespace CzmWeb.UserPage {
         protected global::System.Web.UI.WebControls.Label lblUserPhone_E;
         
         /// <summary>
-        /// TextBox2 控件。
+        /// txtUserPhone 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtUserPhone;
         
         /// <summary>
         /// Code_C 控件。
@@ -319,13 +328,13 @@ namespace CzmWeb.UserPage {
         protected global::System.Web.UI.WebControls.Label Code_E;
         
         /// <summary>
-        /// TextBox3 控件。
+        /// txtCode 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox txtCode;
         
         /// <summary>
         /// btnSendCode 控件。
@@ -355,13 +364,13 @@ namespace CzmWeb.UserPage {
         protected global::System.Web.UI.WebControls.Label IDNumber_E;
         
         /// <summary>
-        /// TextBox4 控件。
+        /// txtUserCardID 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox txtUserCardID;
         
         /// <summary>
         /// pictureUp_C 控件。
@@ -436,13 +445,13 @@ namespace CzmWeb.UserPage {
         protected global::System.Web.UI.WebControls.Label LblPwdW_E;
         
         /// <summary>
-        /// TextBox5 控件。
+        /// txtPasswordOne 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox txtPasswordOne;
         
         /// <summary>
         /// lblPwds_C 控件。
@@ -463,13 +472,13 @@ namespace CzmWeb.UserPage {
         protected global::System.Web.UI.WebControls.Label lblPwds_E;
         
         /// <summary>
-        /// TextBox6 控件。
+        /// txtPasswordTwo 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox txtPasswordTwo;
         
         /// <summary>
         /// btnLoginNowTime 控件。

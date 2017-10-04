@@ -214,6 +214,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="CradIDPictureDB\2017104162454686.jpg" />
+    <Content Include="CradIDPictureDB\201710416920339.jpg" />
     <Content Include="CSS\TraditionalButtonStyle.css" />
     <Content Include="CSS\TraditionalFontStyle.css" />
     <Content Include="Default.aspx" />

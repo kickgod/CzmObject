@@ -196,6 +196,7 @@
         window.onload = function () {
             /**匹配屏幕查询**/
             /*轮播图的大小*/
+
             var widthLunbo;
             var wWidth = document.documentElement.clientWidth;
             var screen1 = window.matchMedia('(min-width:1300px)');
@@ -305,7 +306,7 @@
             <div class="NavPhone">
                 <ul>
                     <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneLog20171001.png"/><a href="../UserPage/UserPageLogin.aspx"><asp:Label ID="lblUserLog" runat="server"  CssClass="FontColor" Text="用户登录"></asp:Label></a></li>
-                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneLogin20171001.png"/><a href="#"><asp:Label ID="lblUserLogin" runat="server"  CssClass="FontColor" Text="用户注册"></asp:Label></a></li>
+                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneLogin20171001.png"/><a href="../UserPage/UserPageRegister.aspx"><asp:Label ID="lblUserLogin" runat="server"  CssClass="FontColor" Text="用户注册"></asp:Label></a></li>
                 </ul>
             </div>
             <div class="Login_ACE">
@@ -322,30 +323,85 @@
         </div>
         <div id="Closeit">
             <script type="text/javascript">
-                
+                function sendCodes() {
+                    var phoneNumber = document.getElementById('<%=txtUserPhone.ClientID%>');
+                    if (phoneNumber.value == "" || phoneNumber.value == null) {
+                        alert("请填写你的手机号！");
+                        return false;
+                    } else {
+                        return true;
+                    }
+                }
+                function CheckNull() {
+                    var userName = document.getElementById('<%=txtUserName.ClientID%>');
+                    var realName = document.getElementById('<%= txtUserRealName.ClientID%>');
+                    var emai = document.getElementById('<%= txtPwd.ClientID%>');
+                    var phoneNumber = document.getElementById('<%=txtUserPhone.ClientID%>');
+                    var verificatioN = document.getElementById('<%= txtCode.ClientID%>');
+                    var cardIdNuMber = document.getElementById('<%= txtUserCardID.ClientID%>');
+                    var passwordC = document.getElementById('<%= txtPasswordOne.ClientID%>');
+                    var passstwo = document.getElementById('<%= txtPasswordTwo.ClientID%>');
+                    if (userName.value == "" || userName.value == null) {
+                        alert("请填写你的微信号(plese enter your Wechat");
+                        return false;
+                    }
+                    if (realName.value == "" || realName.value == null) {
+                        alert("请填写你的真实姓名( plese enter your real Name)");
+                        return false;
+                    }
+                    if (emai.value == "" || emai.value == null) {
+                        alert("请填写你的电子邮件(plese enter your Email)");
+                        return false;
+                    }
+                    if (phoneNumber.value == "" || phoneNumber.value == null) {
+                        alert("请填写你的手机号！(Please enter a mobile phone number)");
+                        return false;
+                    }
+                    if (verificatioN.value == "" || verificatioN.value == null) {
+                        alert("请填写验证码(Please enter the verification code)");
+                        return false;
+                    }
+                    if (cardIdNuMber.value == "" || cardIdNuMber.value == null) {
+                        alert("请填写你的身份证号码！(Please fill in your ID card)");
+                        return false;
+                    }
+                    if (passwordC.value == "" || passwordC.value == null) {
+                        alert("请填写你的密码！(Please fill in your password)");
+                        return false;
+                    }
+                    if (passstwo.value == "" || passstwo.value == null) {
+                        alert("请再次填写你的密码！(Please fill in your password again)");
+                        return false;
+                    }
+                    if (passstwo.value.toString() != passwordC.value.toString()) {
+                        alert("两次密码不相同！(different passwords)");
+                        return false;
+                    }
+                    return true;
+                }
             </script>
             <div class="Register">
                 <div class="MainRegister">
                     <p class="FistHange">
-                        <span><asp:Label ID="Label2" runat="server" Text="用户注册"></asp:Label></span>
+                        <span><asp:Label ID="Label2" runat="server" Text="用户注册"></asp:Label></span><asp:Label ID="lblyzm" runat="server" Text="" Visible="False"></asp:Label>
                     </p>
                     <br/><br/>
                     <p class="Sheck UserName">
-                        <asp:Label ID="lblUserName_C" CssClass="TFS_FormFont" runat="server" Text="用户名:" Visible="True"></asp:Label>
-                        <asp:Label ID="lblUserName_E" CssClass="TFS_FormFont"  runat="server" Text="Username:" Visible="false"></asp:Label>
-                        <asp:TextBox ID="txtUserName" CssClass="BtnTextForm"  runat="server"  placeholder="请输入用户名(Input User Name)！"></asp:TextBox>
+                        <asp:Label ID="lblUserName_C" CssClass="TFS_FormFont" runat="server" Text="微信号:" Visible="True"></asp:Label>
+                        <asp:Label ID="lblUserName_E" CssClass="TFS_FormFont"  runat="server" Text="Wechat:" Visible="false"></asp:Label>
+                        <asp:TextBox ID="txtUserName" CssClass="BtnTextForm"  runat="server"  placeholder="微信号(Input User Wechat)！"></asp:TextBox>
                     </p>
                     <p class="Sheck UserRealName">
                         <asp:Label ID="lblUserPwd_C" CssClass="TFS_FormFont" runat="server" Text="真实姓名:" Visible="True"></asp:Label>
                         <asp:Label ID="lblUserPwd_E" CssClass="TFS_FormFont"  runat="server" Text="Real Name:" Visible="false"></asp:Label>
-                        <asp:TextBox ID="TextBox1" CssClass="BtnTextFormS"  runat="server"  placeholder="请输入你的真实姓名(Input Your Real Name)！"></asp:TextBox>
+                        <asp:TextBox ID="txtUserRealName" CssClass="BtnTextFormS"  runat="server"  placeholder="真实姓名(Input Your Real Name)！"></asp:TextBox>
                     </p>
                     <p class="Sheck UserSex">
                         <asp:Label ID="lblSex_C" CssClass="TFS_FormFont" runat="server" Text="性别:" Visible="True"></asp:Label>
                         <asp:Label ID="lblSex_E" CssClass="TFS_FormFont"  runat="server" Text="Sex:" Visible="false"></asp:Label>
                         <asp:DropDownList ID="DropDownList1"  CssClass="BtnTextFormSex" runat="server">
-                            <asp:ListItem Value="1">男（male）</asp:ListItem>
-                            <asp:ListItem Value="0">女（female）</asp:ListItem>
+                            <asp:ListItem value="1">男（male）</asp:ListItem>
+                            <asp:ListItem value="0">女（female）</asp:ListItem>
                         </asp:DropDownList>
                     </p>
                     <p class="Sheck UserPwd">
@@ -357,46 +413,46 @@
                     <p class="Sheck UserPhone">
                         <asp:Label ID="lblUserPhone_C" CssClass="TFS_FormFont" runat="server" Text="手机号:" Visible="True"></asp:Label>
                         <asp:Label ID="lblUserPhone_E" CssClass="TFS_FormFont"  runat="server" Text="Phone Number:" Visible="false"></asp:Label>
-                        <asp:TextBox ID="TextBox2" CssClass="BtnTextFormPhone"  runat="server"  placeholder="请输入手机号(Phone Number)"></asp:TextBox>
+                        <asp:TextBox ID="txtUserPhone" CssClass="BtnTextFormPhone"  runat="server"  placeholder="手机号(Phone Number)"></asp:TextBox>
                         <span class="biaozhu">你的手机号就是以后的登录ID</span>
                     </p>
                     <p class="Sheck VaildCodes">
                         <asp:Label ID="Code_C" CssClass="TFS_FormFont" runat="server" Text="验证码:" Visible="True" ></asp:Label>
                         <asp:Label ID="Code_E" CssClass="TFS_FormFont"  runat="server" Text="Verification code:" Visible="False" ></asp:Label>
-                        <asp:TextBox ID="TextBox3" CssClass="BtnTextFormCode"  runat="server"  placeholder="请输入验证码（Verification Code）"></asp:TextBox>
-                        <asp:Button ID="btnSendCode" runat="server" Text="发送"  CssClass="BtnSendCodes"/>
+                        <asp:TextBox ID="txtCode" CssClass="BtnTextFormCode"  runat="server"  placeholder="验证码（Verification Code）"></asp:TextBox>
+                        <asp:Button ID="btnSendCode" runat="server" Text="发送" OnClientClick="return  sendCodes()" CssClass="BtnSendCodes" OnClick="btnSendCode_Click"/>
                         <span class="biaozhu">填写好后点击发送</span>
                     </p>
                     <p class="Sheck CradIdNumber">
                         <asp:Label ID="IDNumber_C" CssClass="TFS_FormFont" runat="server" Text="身份证号:" Visible="True" ></asp:Label>
                         <asp:Label ID="IDNumber_E" CssClass="TFS_FormFont"  runat="server" Text="Chinese identity card number:" Visible="False" ></asp:Label>
-                        <asp:TextBox ID="TextBox4" CssClass="BtnTextFormIDNumber"  runat="server"  placeholder="请输入身份证号码（Chinese identity card number）"></asp:TextBox>
+                        <asp:TextBox ID="txtUserCardID" CssClass="BtnTextFormIDNumber"  runat="server"  placeholder="身份证号(Chinese identity card number)"></asp:TextBox>
                         <span class="biaozhu">我们会按照法律保护你的隐私！</span>
                     </p>
                     <p class="Sheck CradIdPicture">
                         <asp:Label ID="pictureUp_C" CssClass="TFS_FormFont" runat="server" Text="身份证照片上传:" Visible="True" ></asp:Label>
-                        <asp:Label ID="pictureUp_E" CssClass="TFS_FormFont"  runat="server" Text="Chinese identity card number:" Visible="False" ></asp:Label>
+                        <asp:Label ID="pictureUp_E" CssClass="TFS_FormFont"  runat="server" Text="Chinese identity card:" Visible="False" ></asp:Label>
                         <uc1:wuc_FileUpload ID="wuc_FileUpload1" runat="server"  />
-                        <span class="biaozhu">请上传正面照片</span>
+                        <span class="biaozhu">请上传身份证正面照片</span>
                     </p>
                     <p class="Sheck CradIdPicture">
                         <asp:Label ID="pictureDown_C" CssClass="TFS_FormFont" runat="server" Text="身份证照片上传:" Visible="True" ></asp:Label>
-                        <asp:Label ID="pictureDown_E" CssClass="TFS_FormFont"  runat="server" Text="Chinese identity card number:" Visible="False" ></asp:Label>
+                        <asp:Label ID="pictureDown_E" CssClass="TFS_FormFont"  runat="server" Text="Chinese identity card :" Visible="False" ></asp:Label>
                         <uc1:wuc_FileUpload ID="wuc_FileUpload2" runat="server"  />
-                        <span class="biaozhu">请上传背面照片</span>
+                        <span class="biaozhu">请上传身份证背面照片</span>
                     </p>
                     <p class="Sheck UserPwd">
                         <asp:Label ID="LblPwdW_C" CssClass="TFS_FormFont" runat="server" Text="设置密码:" Visible="True"></asp:Label>
                         <asp:Label ID="LblPwdW_E" CssClass="TFS_FormFont"  runat="server" Text="Password:" Visible="false"></asp:Label>
-                        <asp:TextBox ID="TextBox5" CssClass="BtnTextFormPwd"  runat="server"  placeholder="请输入密码(Password)"></asp:TextBox><span class="biaozhu">请输入严格密码</span>
+                        <asp:TextBox ID="txtPasswordOne" CssClass="BtnTextFormPwd"  runat="server" TextMode="Password" placeholder="请输入密码(Password)"></asp:TextBox><span class="biaozhu">请输入严格密码</span>
                     </p>
                     <p class="Sheck UserPwd">
                         <asp:Label ID="lblPwds_C" CssClass="TFS_FormFont" runat="server" Text="重复输入:" Visible="True"></asp:Label>
                         <asp:Label ID="lblPwds_E" CssClass="TFS_FormFont"  runat="server" Text="Password:" Visible="false"></asp:Label>
-                        <asp:TextBox ID="TextBox6" CssClass="BtnTextFormPwd"  runat="server"  placeholder="请输入密码(Input Password Again)"></asp:TextBox><span class="biaozhu">请输入严格密码</span>
+                        <asp:TextBox ID="txtPasswordTwo" CssClass="BtnTextFormPwd"  runat="server" TextMode="Password"  placeholder="请输入密码(Input Password Again)"></asp:TextBox><span class="biaozhu">请输入严格密码</span>
                     </p>
                     <p class="Sheck LoginNow">
-                        <asp:Button ID="btnLoginNowTime" CssClass="btnLoginNowTime" runat="server" Text="注册" />
+                        <asp:Button ID="btnLoginNowTime" CssClass="btnLoginNowTime" runat="server" Text="注册" OnClientClick="return CheckNull();" OnClick="btnLoginNowTime_Click" />
                         <span class="biaozhu">
                             <asp:Label ID="lblResult" runat="server" Text="" Visible="False"></asp:Label>
                         </span>

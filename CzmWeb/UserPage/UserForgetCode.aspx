@@ -48,6 +48,13 @@
             .zixun .lanmu{ width: 32px;height: 220px;background-color: purple;color: white;float: right}
             .zixun .lanmu a img{ width: 30px;height: 30px;margin:5px auto}
             .zixun .lanmu a img:hover{ transform: translate(2px, 2px);-webkit-transform: translate(2px, 2px);background-color: white} /***1300px以上***/
+            .ForgetPassword{ width: 100%;background-color: RGB(245,234,240);height:1200px}
+            .ForgetPassword .UpRectangles{ height: 40px;width: 100%}
+            .ForgetPassword .ChangePwd{ width: 60%;height: 800px;background-color: inherit;margin: auto;}
+            .ForgetPassword .ChangePwd p{ width: 100%;height: 50px;line-height: 50px}
+            .ForgetPassword .ChangePwd .UserID{text-align: center}
+            .ForgetPassword .ChangePwd .UserID img{ width: 40px;height: 40px;vertical-align: bottom}
+            .ForgetPassword .ChangePwd .UserID .txtPhoneNumber{margin-left: 10px; height: 40px;width: 300px;}
         }
         /***********************************************768~1300px以内*********************************************************************/
         @media only screen and (max-width:1299.9px )and (min-width:768px) {
@@ -232,8 +239,8 @@
             </div>
             <div class="NavPhone">
                 <ul>
-                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneLog20171001.png"/><a href="../UserPage/UserPageLogin.aspx"><asp:Label ID="lblUserLog" runat="server"  CssClass="FontColor" Text="用户登录"></asp:Label></a></li>
-                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneLogin20171001.png"/><a href="#"><asp:Label ID="lblUserLogin" runat="server"  CssClass="FontColor" Text="用户注册"></asp:Label></a></li>
+                    <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneLog20171001.png"/><a href="../UserPage/UserPageLogin.aspx"><asp:Label ID="lblUserLog" runat="server"  CssClass="FontColor" Text="用户登录"></asp:Label></a></li>
+                    <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneLogin20171001.png"/><a href="../UserPage/UserPageRegister.aspx"><asp:Label ID="lblUserLogin" runat="server"  CssClass="FontColor" Text="用户注册"></asp:Label></a></li>
                 </ul>
             </div>
             <div class="Login_ACE">
@@ -249,8 +256,31 @@
             </div>
         </div>
         <div id="Closeit">
-            <div style="background-color: #333333; height: 600px;width: 100%">
-        
+            <div class="ForgetPassword">
+                <div class="UpRectangles"></div>
+                <div class="ChangePwd">
+                        <p class="UserID">
+                            <img src="../Images/SystemPicture/User.png"/><asp:TextBox ID="txtPhoneNumber" CssClass="txtPhoneNumber" runat="server" placeholder="[手机号(Phone Number)]" ></asp:TextBox>
+                             <span>
+                                <asp:Image ID="imgPhoneRight" runat="server"  />
+                                <asp:Image ID="imgPhoneRights" runat="server" />
+                             </span>
+                        </p>
+                        <p class="UserID">
+                            <img src="../Images/SystemPicture/User.png"/><asp:TextBox ID="TextBox1" CssClass="txtPhoneNumber" runat="server" placeholder="[手机号(Phone Number)]" ></asp:TextBox>
+                            <span>
+                                <asp:Image ID="imgNewPassword" runat="server" />
+                                <asp:Image ID="imgNewPasswords" runat="server" />
+                            </span>
+                        </p>
+                        <p class="UserID">
+                            <img src="../Images/SystemPicture/User.png"/><asp:TextBox ID="TextBox2" CssClass="txtPhoneNumber" runat="server" placeholder="[手机号(Phone Number)]" ></asp:TextBox>
+                            <span>
+                                <asp:Image ID="imgPwdOne" runat="server" />
+                                <asp:Image ID="imgPwdTwo" runat="server" />
+                            </span>
+                        </p>
+                </div>
             </div>
             <div class="JiaoBen">
                 <p>
