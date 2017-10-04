@@ -13,6 +13,24 @@ namespace CzmWeb.UserPage {
     public partial class UserPageLogin {
         
         /// <summary>
+        /// ScriptManager1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        
+        /// <summary>
+        /// UpdatePanel1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        
+        /// <summary>
         /// txtUserID 控件。
         /// </summary>
         /// <remarks>
@@ -22,40 +40,22 @@ namespace CzmWeb.UserPage {
         protected global::System.Web.UI.WebControls.TextBox txtUserID;
         
         /// <summary>
-        /// lblisRight 控件。
+        /// txtUserPwds 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblisRight;
+        protected global::System.Web.UI.WebControls.TextBox txtUserPwds;
         
         /// <summary>
-        /// TextBox1 控件。
+        /// txtVaildCode 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
-        
-        /// <summary>
-        /// lblisRightTwo 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblisRightTwo;
-        
-        /// <summary>
-        /// TextBox2 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtVaildCode;
         
         /// <summary>
         /// BtnSendCode 控件。
@@ -67,13 +67,13 @@ namespace CzmWeb.UserPage {
         protected global::System.Web.UI.WebControls.Button BtnSendCode;
         
         /// <summary>
-        /// Button1 控件。
+        /// btnLogin 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnLogin;
         
         /// <summary>
         /// likbtnForgetPwd 控件。
@@ -85,12 +85,12 @@ namespace CzmWeb.UserPage {
         protected global::System.Web.UI.WebControls.LinkButton likbtnForgetPwd;
         
         /// <summary>
-        /// LinkButton1 控件。
+        /// likbtnRegister 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.LinkButton likbtnRegister;
     }
 }

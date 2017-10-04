@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserPageMaster.master.cs" Inherits="CzmWeb.Master.UserPageMaster" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserForgetCode.aspx.cs" Inherits="CzmWeb.UserPage.UserForgetCode" %>
 
 <!DOCTYPE html>
 
@@ -6,12 +6,10 @@
 <head runat="server">
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>创造门</title>
     <link href="../Content/FontBindData.css" type="text/css"  rel="stylesheet" />
-    <link href="../CSS/TraditionalFontStyle.css" type="text/css"  rel="stylesheet" />
     <style type="text/css">
         *{ padding: 0px;margin: 0px;text-decoration: none;}
-        .JiaoBen{ width: 100%;height: 40px;font-size: smaller;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: gainsboro;text-align: center;background-color:RGB(176,53,112) }
+        .JiaoBen{ width: 100%;height: 80px;font-size: smaller;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: gainsboro;text-align: center;background-color:RGB(176,53,112) }
         .JiaoBen a{color: gainsboro}
         /***********************************************1300px以上*************************************************************************/
         @media only screen and (min-width:1300px) {
@@ -22,14 +20,14 @@
             .Head .logo i{ color: RGB(232,105,170);font-weight: bold;font-size: 280%;font-style: italic;line-height: 60px;height: 60px;width: 100%;text-align: center;display: block}
             .Head .Nav{ width: 60%;height: 60px;line-height: 60px;float:left;}
             .Head .Nav ul{ width: 100%;line-height: 60px;height: 60px;list-style: none;}
-            .Head .Nav ul li{ width: 80px;text-align: center;float: left;color: grey;}
-            .Head .Nav ul li:hover{ color: red;font-size: 1em;cursor: pointer;border-top: 2px solid white;}
+            .Head .Nav ul li{margin-left: 10px;text-align: left;float: left;color: grey;}
+            .Head .Nav ul li:hover{ color: red;font-size: 0.6em;cursor: pointer;border-top: 2px solid white;}
             .Head .Nav ul li a{ text-decoration: none;color: grey;}
-            .Head .Nav ul li a img{padding-top:10px}
+            .Head .Nav ul li a img{ visibility: hidden;display: none}
             .Head .NavPhone{ display: none;}
             .Head .Login_ACE{ width: 20%;line-height: 60px;height: 60px;float: left}
-            .FontColor{ color: RGB(255, 255, 255);font-size: 0.9em;}
-            .FontColor:hover{color: gainsboro;font-size: 1em;cursor: pointer;}
+            .FontColor{ color: RGB(255, 255, 255);font-size: 0.8em;}
+            .FontColor:hover{color: gainsboro;font-size: 0.8em;cursor: pointer;}
             .Head .Login_ACE ul{ list-style: none;height: 60px}
             .Head .Login_ACE ul li{ width: 48%;height: 60px;text-align: center;float: left;}
             .Head .Login_ACE ul li .transfer{ width: 49%;text-decoration: none;color: white;float: left}
@@ -42,6 +40,14 @@
             .Head .Login_ACE ul li ul li:hover{ color: gainsboro;}
             .Head .Login_ACE ul li ul li .userL:hover{ background-color: darkmagenta;font-weight: 500;}
             .Head .Login_ACE ul li:hover img{ padding-top: 0px;width: 50px;height: 50px;}
+            .zixun{z-index: 100000; width: 170px;height: 220px;font-size: 1em;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: RGB(114, 114, 114);position: fixed;right: 0px;top: 35%;}
+            .zixun .showDiv{opacity: 0.8;filter: alpha(opacity=80);width: 135px;height: 220px;background-color: white;float: left}
+            .zixun .showDiv p{opacity: 0.8;filter: alpha(opacity=80); text-indent: 15px;letter-spacing: 2px;font-size: small}
+            .zixun .showDiv .fontci{opacity: 0.8;filter: alpha(opacity=80); height: 30px;line-height: 30px;color: white;font-family:'华文楷体', '微软雅黑', '宋体';font-weight: bold }
+            .zixun .showDiv img{opacity: 0.8;filter: alpha(opacity=80); width: 105px;height: 105px;background-color: white;padding: 15px}
+            .zixun .lanmu{ width: 32px;height: 220px;background-color: purple;color: white;float: right}
+            .zixun .lanmu a img{ width: 30px;height: 30px;margin:5px auto}
+            .zixun .lanmu a img:hover{ transform: translate(2px, 2px);-webkit-transform: translate(2px, 2px);background-color: white} /***1300px以上***/
         }
         /***********************************************768~1300px以内*********************************************************************/
         @media only screen and (max-width:1299.9px )and (min-width:768px) {
@@ -52,12 +58,12 @@
             .Head .logo i{ color: RGB(232,105,170);font-weight: bold;font-size: 1.3em;font-style: italic;line-height: 60px;height: 60px;width: 100%;text-align: center;display: block}
             .Head .Nav{ width: 70%;height: 60px;line-height: 60px;float:left;}
             .Head .Nav ul{ width: 100%;line-height: 60px;height: 60px;list-style: none;}
-            .Head .Nav ul li{ width: 55px;text-align: center;float: left;color: grey;}
+            .Head .Nav ul li{text-align: center;float: left;color: grey;margin-left: 10px}
             .Head .Nav ul li a{ text-decoration: none;color: grey;}
             .Head .NavPhone{ display: none;}
             .Head .Login_ACE{ width: 20%;line-height: 60px;height: 60px;float: left}
-            .FontColor{ color: RGB(255, 255, 255);font-size: 0.4em}
-            .FontColor:hover{color: gainsboro;font-size: 0.4em;cursor: pointer;}
+            .FontColor{ color: RGB(255, 255, 255);font-size: 5px}
+            .FontColor:hover{color: gainsboro;font-size: 5px;cursor: pointer;}
             .Head .Login_ACE ul{ list-style: none;height: 60px;}
             .Head .Login_ACE ul li{ width: 48%;height: 60px;text-align: center;float: left;}
             .Head .Login_ACE ul li .transfer{ width: 48%;text-decoration: none;color: white;float: left;font-size: small}
@@ -69,6 +75,14 @@
             .Head .Login_ACE ul li ul li:hover{ color: gainsboro;}
             .Head .Login_ACE ul li ul li .userL:hover{ background-color: darkmagenta;font-weight: 500;}
             .Head .Login_ACE ul li:hover img{ padding-top: 0px;width: 30px;height: 30px;}
+            .zixun{z-index: 100000; width: 170px;height: 220px;font-size: 1em;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: RGB(114, 114, 114);position: fixed;right: 0px;top: 35%;}
+            .zixun .showDiv{opacity: 0.8;filter: alpha(opacity=80);width: 135px;height: 220px;background-color: white;float: left}
+            .zixun .showDiv p{opacity: 0.8;filter: alpha(opacity=80); text-indent: 15px;letter-spacing: 2px;font-size: small}
+            .zixun .showDiv .fontci{opacity: 0.8;filter: alpha(opacity=80); height: 30px;line-height: 30px;color: white;font-family:'华文楷体', '微软雅黑', '宋体';font-weight: bold }
+            .zixun .showDiv img{opacity: 0.8;filter: alpha(opacity=80); width: 105px;height: 105px;background-color: white;padding: 15px}
+            .zixun .lanmu{ width: 32px;height: 220px;background-color: purple;color: white;float: right}
+            .zixun .lanmu a img{ width: 30px;height: 30px;margin:5px auto}
+            .zixun .lanmu a img:hover{ transform: translate(2px, 2px);-webkit-transform: translate(2px, 2px);background-color: white}
         }
         /***********************************************767以下主要适配手机****************************************************************/
         /*实质是宽度400多为中大屏幕手机主要分辨率适配参考iphone6 plus以上*/
@@ -90,17 +104,79 @@
             .Head .NavPhone ul li{ border-bottom: 1px solid black;height: 50px;line-height: 50px;text-indent: 30px;color: #333333}
             .Head .Login_ACE{display: none}
             .PhoneImg{ width: 30px;height: 30px;padding-top: 15px;}
-            .FontColor{ color: #333333;font-size: 1em;font-weight: bold}
-            .JiaoBen{margin-bottom: 0px; width: 100%;height: 80px;font-size: smaller;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: gainsboro;text-align: center;background-color:RGB(176,53,112) }
-            .JiaoBen a{color: gainsboro}
+            .FontColor{ color: #333333;font-size: 0.6em;font-weight: bold}
+            .zixun{z-index: 100000; width: 170px;height: 220px;font-size: 1em;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: RGB(114, 114, 114);position: fixed;right: 0px;top: 35%;}
+            .zixun .showDiv{opacity: 0.8;filter: alpha(opacity=80);width: 135px;height: 220px;background-color: white;float: left}
+            .zixun .showDiv p{opacity: 0.8;filter: alpha(opacity=80); text-indent: 15px;letter-spacing: 2px;font-size: small}
+            .zixun .showDiv .fontci{opacity: 0.8;filter: alpha(opacity=80); height: 30px;line-height: 30px;color: white;font-family:'华文楷体', '微软雅黑', '宋体';font-weight: bold }
+            .zixun .showDiv img{opacity: 0.8;filter: alpha(opacity=80); width: 105px;height: 105px;background-color: white;padding: 15px}
+            .zixun .lanmu{ width: 32px;height: 220px;background-color: purple;color: white;float: right}
+            .zixun .lanmu a img{ width: 30px;height: 30px;margin:5px auto}
+            .zixun .lanmu a img:hover{ transform: translate(2px, 2px);-webkit-transform: translate(2px, 2px);background-color: white}
         }
         @media only screen and (max-width: 340px) {
             .JiaoBen{margin-bottom: 0px; width: 100%;height: 80px;font-size: 0.5em;font-family:'华文楷体','楷体', '微软雅黑', '宋体';word-spacing: 2px;color: gainsboro;text-align: center;background-color:RGB(176,53,112) }
             .JiaoBen a{color: gainsboro}
         }
+        .English {font-size: smaller;font-family: '华文楷体', '微软雅黑', '宋体';}
     </style>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        window.onload = function () {
+            /**匹配屏幕查询**/
+            /*轮播图的大小*/
+            var widthLunbo;
+            var wWidth = document.documentElement.clientWidth;
+            var screen1 = window.matchMedia('(min-width:1300px)');
+            var screen2 = window.matchMedia('(min-width: 768px) and (max-width: 1299px)');
+            var screen3 = window.matchMedia('(min-width: 0px) and (max-width: 767px)');
+            if (screen1.matches) {
+                widthLunbo = 1200;
+                document.getElementById('headerCaidan').style.display = 'block';
+                document.getElementById('headerCaidan').style.height = '60px';
+                document.getElementById('daohanglanPhone').style.display = 'none';
+                document.getElementById('daohanglanPhone').style.visibility = false;
+            } else if (screen2.matches) {
+                widthLunbo = 750;
+                document.getElementById('headerCaidan').style.display = 'block';
+                document.getElementById('headerCaidan').style.height = '60px';
+                document.getElementById('daohanglanPhone').style.display = 'none';
+                document.getElementById('daohanglanPhone').style.visibility = false;
+            } else if (screen3.matches) {
+                widthLunbo = 350;
+                document.getElementById('headerCaidan').style.display = 'none';
+                document.getElementById('daohanglanPhone').style.display = 'block';
+                document.getElementById('daohanglanPhone').style.visibility = true;
+                var list = document.getElementById('ilist');
+            }
+            /*监视页面窗口大小变化*/
+            window.onresize = function () {
+                var wWidth = document.documentElement.clientWidth;
+                var screen1 = window.matchMedia('(min-width:1300px)');
+                var screen2 = window.matchMedia('(min-width: 768px) and (max-width: 1299px)');
+                var screen3 = window.matchMedia('(min-width: 0px) and (max-width: 767px)');
+                if (screen1.matches) {
+                    widthLunbo = 1200;
+                    document.getElementById('headerCaidan').style.display = 'block';
+                    document.getElementById('headerCaidan').style.height = '60px';
+                    document.getElementById('daohanglanPhone').style.display = 'none';
+                    document.getElementById('daohanglanPhone').style.visibility = false;
+                } else if (screen2.matches) {
+                    widthLunbo = 750;
+                    document.getElementById('headerCaidan').style.display = 'block';
+                    document.getElementById('headerCaidan').style.height = '60px';
+                    document.getElementById('daohanglanPhone').style.display = 'none';
+                    document.getElementById('daohanglanPhone').style.visibility = false;
+                } else if (screen3.matches) {
+                    widthLunbo = wWidth;
+                    document.getElementById('headerCaidan').style.display = 'none';
+                    document.getElementById('daohanglanPhone').style.display = 'block';
+                    document.getElementById('daohanglanPhone').style.visibility = true;
+                }
+            }
+
+        }
+    </script>
+    <title>创造门</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -131,7 +207,7 @@
                     <span>创造门</span>
                 </div>
                 <div class="center">
-                    <asp:LinkButton  CssClass="cents"  ID="lnkChinese" runat="server">CHE</asp:LinkButton>
+                    <asp:LinkButton  CssClass="cents"  ID="lnkChinese" runat="server" OnClick="lnkChinese_Click">CHE</asp:LinkButton>
                     <asp:LinkButton  CssClass="cents" ID="LnkEnglish" runat="server" OnClick="lkbtnEnish_Click">ENG</asp:LinkButton>                    
                 </div>
                 <div class="right">
@@ -173,14 +249,30 @@
             </div>
         </div>
         <div id="Closeit">
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <div style="background-color: #333333; height: 600px;width: 100%">
         
-            </asp:ContentPlaceHolder>
+            </div>
             <div class="JiaoBen">
                 <p>
                     <a href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="../Images/SystemPicture/阿里旺旺.png" width="20px" height="20px"/>阿里旺旺</a>
                     <a href="http://wpa.qq.com/msgrd?v=1&uin=544956252"><img src="../Images/SystemPicture/qq.png" width="20px" height="20px"/>QQ服务</a>Copyright © 2017-至今|四川创造门高新技术开发有限公司版权所有|客户电话：15698259380|企业邮件:chuangzaomen@163.com|热线电话：15826121
                 </p>
+            </div>
+            <div class="zixun">
+                <div class="showDiv">
+                    <p>微信二维码</p>
+                    <img src="../Images/SystemPicture/timg.jpg"/>
+                    <p>扫码咨询关注</p>
+                    <p>惊喜连连更多</p>
+                </div>
+                <div class="lanmu">
+                    <a href="javascript:void(0)"><img src="../Images/SystemPicture/userLanse.png" title="用户登录"/></a>
+                    <a href="javascript:void(0)"><img src="../Images/SystemPicture/zixunlanse.png" title="在线咨询"/></a>
+                    <a href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="../Images/SystemPicture/阿里旺旺.png" title="阿里旺旺" /></a>
+                    <a href="javascript:void(0)"><img src="../Images/SystemPicture/qqlanse.png" title="QQ咨询" /></a>
+                    <a href="#"><img src="../Images/SystemPicture/zhidinglanse.png" title="首页" /></a>
+                </div>
+       
             </div>
         </div>
     </form>

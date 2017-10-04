@@ -18,14 +18,14 @@
              .Head .logo i{ color: RGB(232,105,170);font-weight: bold;font-size: 280%;font-style: italic;line-height: 60px;height: 60px;width: 100%;text-align: center;display: block}
              .Head .Nav{ width: 60%;height: 60px;line-height: 60px;float:left;}
              .Head .Nav ul{ width: 100%;line-height: 60px;height: 60px;list-style: none;}
-             .Head .Nav ul li{ width: 80px;text-align: center;float: left;color: grey;}
-             .Head .Nav ul li:hover{ color: red;font-size: 1em;cursor: pointer;border-top: 2px solid white;}
+             .Head .Nav ul li{margin-left: 10px;text-align: left;float: left;color: grey;}
+             .Head .Nav ul li:hover{ color: red;font-size: 0.6em;cursor: pointer;border-top: 2px solid white;}
              .Head .Nav ul li a{ text-decoration: none;color: grey;}
-             .Head .Nav ul li a img{padding-top:10px}
+             .Head .Nav ul li a img{ visibility: hidden;display: none}
              .Head .NavPhone{ display: none;}
              .Head .Login_ACE{ width: 20%;line-height: 60px;height: 60px;float: left}
-             .FontColor{ color: RGB(255, 255, 255);font-size: 0.9em;}
-             .FontColor:hover{color: gainsboro;font-size: 1em;cursor: pointer;}
+             .FontColor{ color: RGB(255, 255, 255);font-size: 0.8em;}
+             .FontColor:hover{color: gainsboro;font-size: 0.8em;cursor: pointer;}
              .Head .Login_ACE ul{ list-style: none;height: 60px}
              .Head .Login_ACE ul li{ width: 48%;height: 60px;text-align: center;float: left;}
              .Head .Login_ACE ul li .transfer{ width: 49%;text-decoration: none;color: white;float: left}
@@ -156,12 +156,12 @@
             .Head .logo i{ color: RGB(232,105,170);font-weight: bold;font-size: 1.3em;font-style: italic;line-height: 60px;height: 60px;width: 100%;text-align: center;display: block}
             .Head .Nav{ width: 70%;height: 60px;line-height: 60px;float:left;}
             .Head .Nav ul{ width: 100%;line-height: 60px;height: 60px;list-style: none;}
-            .Head .Nav ul li{ width: 55px;text-align: center;float: left;color: grey;}
+            .Head .Nav ul li{text-align: center;float: left;color: grey;margin-left: 10px}
             .Head .Nav ul li a{ text-decoration: none;color: grey;}
             .Head .NavPhone{ display: none;}
             .Head .Login_ACE{ width: 20%;line-height: 60px;height: 60px;float: left}
-            .FontColor{ color: RGB(255, 255, 255);font-size: 0.4em}
-            .FontColor:hover{color: gainsboro;font-size: 0.4em;cursor: pointer;}
+            .FontColor{ color: RGB(255, 255, 255);font-size: 5px}
+            .FontColor:hover{color: gainsboro;font-size: 5px;cursor: pointer;}
             .Head .Login_ACE ul{ list-style: none;height: 60px;}
             .Head .Login_ACE ul li{ width: 48%;height: 60px;text-align: center;float: left;}
             .Head .Login_ACE ul li .transfer{ width: 48%;text-decoration: none;color: white;float: left;font-size: small}
@@ -283,7 +283,7 @@
         }
          /***********************************************767以下主要适配手机****************************************************************/
          /*实质是宽度400多为中大屏幕手机主要分辨率适配参考iphone6 plus以上*/
-        @media only screen and (min-width:0px )and (max-width:767px) {
+         @media only screen and (min-width:0px )and (max-width:767px) {
             *{padding: 0px;margin: 0px;text-decoration: none;}
             .PhoneHead{z-index: 100000000000; position: fixed;top: 0px;left: 0px;display: block;height: 50px;width: 100%;background: linear-gradient(to left, purple, RGB(176, 53, 112));border-bottom:gray 2px solid}
             .PhoneHead .headerTtile{ width: 100%;}
@@ -296,12 +296,12 @@
             .PhoneHead .headerTtile .right a{display: block; position: absolute;top: 0px;right: 5px}
             .Head{display: none;background-color: white;color: #333333;position: fixed;top: 52px;color: #333333;width: 100%}
             .Head .logo{display: none}
-            .Head .Nav ul li{ border-bottom: 1px solid black;height: 50px;line-height: 50px;text-indent: 30px;color: #333333}
+            .Head .Nav ul li{ border-bottom: 1px solid black;height: 45px;line-height: 45px;text-indent: 30px;color: #333333;}
             .Head .NavPhone{ display: block;}
-            .Head .NavPhone ul li{ border-bottom: 1px solid black;height: 50px;line-height: 50px;text-indent: 30px;color: #333333}
+            .Head .NavPhone ul li{ border-bottom: 1px solid black;height: 45px;line-height: 45px;text-indent: 30px;color: #333333}
             .Head .Login_ACE{display: none}
             .PhoneImg{ width: 30px;height: 30px;padding-top: 15px;}
-            .FontColor{ color: #333333;font-size: 1em;font-weight: bold}
+            .FontColor{ color: #333333;font-size: 0.6em;font-weight: bold}
             #containter { overflow: hidden; width: 350px;height: 156px;position: relative;z-index: 1;margin: 0px auto;z-index: 1;}
             #ilist{width: 1750px;height: 156px;position: absolute;z-index: 1;left: 0px;}
             #ilist img{float: left;z-index: 1;width: 350px;height: 156px}
@@ -318,7 +318,7 @@
             .lunboSection{position: relative ;top: 51px; width: 100%;height: 156px;background: linear-gradient(darkmagenta, RGB(176, 53, 112));}
             .lunboSection .Font_ont{color: white;font-size: 2em; position: absolute;top: 25%;transform: rotate(64deg);}
             .lunboSection .Font_tot{color: white;font-size: 2em; position: absolute;top: 25%;transform: rotate(-152deg);right: 10%;}  
-            .CompanyIntroDuce { height: 170px;margin-top: 60px;}
+            .CompanyIntroDuce { height: 370px;margin-top: 60px;}
             .CompanyIntroDuce p{ width: 80%;margin: 0 auto}
             .CompanyIntroDuce p .Intro{color: purple;font-weight: 400}
             .CompanyIntroDuce p .jianjie{ font-size: 0.6em;}
@@ -406,6 +406,7 @@
             .zixun .lanmu a img{ width: 30px;height: 30px;margin:5px auto}
             .zixun .lanmu a img:hover{ transform: translate(2px, 2px);-webkit-transform: translate(2px, 2px);background-color: white}
         }
+        .English {font-size: smaller;font-family: '华文楷体', '微软雅黑', '宋体';}
     </style>
     <script type="text/javascript">
         window.onload = function () {
@@ -581,7 +582,6 @@
 
         }
     </script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
 <body>
@@ -633,7 +633,7 @@
                     <span>创造门</span>
                 </div>
                 <div class="center">
-                    <asp:LinkButton  CssClass="cents"  ID="lnkChinese" runat="server">CHE</asp:LinkButton>
+                    <asp:LinkButton  CssClass="cents"  ID="lnkChinese" runat="server" OnClick="lnkChinese_Click">CHE</asp:LinkButton>
                     <asp:LinkButton  CssClass="cents" ID="LnkEnglish" runat="server" OnClick="lkbtnEnish_Click">ENG</asp:LinkButton>                    
                 </div>
                 <div class="right">
@@ -646,29 +646,29 @@
               <div class="Nav">
                   <ul>
                       <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneFirstPage20171001.png"/><a href="https://www.baidu.com/"><asp:Label ID="lblFisrtPage" runat="server" CssClass="FontColor" Text="首页"></asp:Label></a></li>
-                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneType20171001.png"/><a href="#"><asp:Label ID="lbl_Product_type"  runat="server" CssClass="FontColor"  Text="产品分类"></asp:Label></a></li>
-                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneNewProject20171001.png"/><a href="#"><asp:Label ID="lbl_NewProduct"    runat="server"  CssClass="FontColor" Text="新品预告"></asp:Label></a></li>
-                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneCreate20171001.png"/><a href="#"><asp:Label ID="lbl_CreateProject" runat="server" CssClass="FontColor"  Text="我要创作"></asp:Label></a></li>
-                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneInvest20171001.png"/><a href="#"><asp:Label ID="lbl_Create_Invert" runat="server" CssClass="FontColor"  Text="我要投资"></asp:Label></a></li>
-                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneShoe20171001.png"/><a href="#"><asp:Label ID="lbl_Project_show" runat="server" CssClass="FontColor"  Text="项目展示"></asp:Label></a></li>
-                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneOnlineTwo20171001.png"/><a href="#"><asp:Label ID="lbl_Look_OnlineVedio" runat="server" CssClass="FontColor"  Text="观看直播"></asp:Label></a></li>
-                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneVedio20171001.png"/><a href="#"><asp:Label ID="lbl_Look_Vedio" runat="server"  CssClass="FontColor" Text="视屏专区"></asp:Label></a></li>
-                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneConection20171001.png"/><a href="#"><asp:Label ID="lblChangeSpace" runat="server"  CssClass="FontColor" Text="交流空间"></asp:Label></a></li>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneType20171001.png"/><a href="#"><asp:Label                           ID="lbl_Product_type"  runat="server" CssClass="FontColor"  Text="产品分类"></asp:Label></a></li>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneNewProject20171001.png"/><a href="#"><asp:Label                     ID="lbl_NewProduct"    runat="server"  CssClass="FontColor" Text="新品预告"></asp:Label></a></li>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneCreate20171001.png"/><a href="#"><asp:Label                         ID="lbl_CreateProject" runat="server" CssClass="FontColor"  Text="我要创作"></asp:Label></a></li>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneInvest20171001.png"/><a href="#"><asp:Label                         ID="lbl_Create_Invert" runat="server" CssClass="FontColor"  Text="我要投资"></asp:Label></a></li>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneShoe20171001.png"/><a href="#"><asp:Label                           ID="lbl_Project_show" runat="server" CssClass="FontColor"  Text="项目展示"></asp:Label></a></li>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneOnlineTwo20171001.png"/><a href="#"><asp:Label                      ID="lbl_Look_OnlineVedio" runat="server" CssClass="FontColor"  Text="观看直播"></asp:Label></a></li>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneVedio20171001.png"/><a href="#"><asp:Label                          ID="lbl_Look_Vedio" runat="server"  CssClass="FontColor" Text="视屏专区"></asp:Label></a></li>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneConection20171001.png"/><a href="#"><asp:Label                      ID="lblChangeSpace" runat="server"  CssClass="FontColor" Text="交流空间"></asp:Label></a></li>
                   </ul>
               </div>
               <div class="NavPhone">
                   <ul>
-                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneLog20171001.png"/><a href="#"><asp:Label ID="lblUserLog" runat="server"  CssClass="FontColor" Text="用户登录"></asp:Label></a></li>
-                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneLogin20171001.png"/><a href="#"><asp:Label ID="lblUserLogin" runat="server"  CssClass="FontColor" Text="用户注册"></asp:Label></a></li>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneLog20171001.png"/><a href="../UserPage/UserPageLogin.aspx"><asp:Label ID="lblUserLog" runat="server"  CssClass="FontColor" Text="用户登录"></asp:Label></a></li>
+                      <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneLogin20171001.png"/><a href="../UserPage/UserPageRegister.aspx"><asp:Label ID="lblUserLogin" runat="server"  CssClass="FontColor" Text="用户注册"></asp:Label></a></li>
                   </ul>
               </div>
               <div class="Login_ACE">
                   <ul>
                       <li>
-                          <a href="../UserPage/LoginPage.aspx" class="hoverTitle" id="KickOpen" ><img src="Images/SystemPicture/User_White.png"/></a>
+                          <a href="../UserPage/UserPageLogin.aspx" class="hoverTitle" id="KickOpen" ><img src="Images/SystemPicture/User_White.png"/></a>
                       </li>
                       <li>
-                          <asp:LinkButton ID="lkbtnChinese" CssClass="transfer" runat="server">汉语</asp:LinkButton>
+                          <asp:LinkButton ID="lkbtnChinese" CssClass="transfer" runat="server" OnClick="lkbtnChinese_Click">汉语</asp:LinkButton>
                           <asp:LinkButton ID="lkbtnEnish" CssClass="transfer"  runat="server" OnClick="lkbtnEnish_Click">English</asp:LinkButton>
                       </li>
                   </ul>
@@ -700,7 +700,7 @@
             </div>
         </section>
         <section class="CompanyIntroDuce">
-            <h2 align="center" class="CompnyName">四川创造门高新技术开发有限公司</h2>
+            <h2 align="center" class="CompnyName"><asp:Label ID="lblCompanyName" runat="server" Text="四川创造门高新技术开发有限公司"></asp:Label></h2>
             <p>
                <span class="Intro">【公司简介(Introduction)】</span>
                 <asp:Label CssClass="jianjie" ID="lblCompanyIntr" runat="server" Text="四川创造门高新技术开发有限公司是致力于各种创新产品研发的实体机构，目前已经推出多项专利创新产品，并已获人们广泛认同
@@ -718,18 +718,24 @@
                 <div class="heheda">
                     <h2>医疗保健</h2>
                     <a><img src="ProductImage/productType1.jpg"  width="300px" height="220px"/></a> 
+                    <asp:Label ID="lblYIniao" runat="server" Text="Medical Insurance" Visible="False"></asp:Label>
                 </div>
                 <div class="heheda">
                     <h2>通钓鱼具</h2>
                     <a><img src="ProductImage/productType2.jpg"  width="300px" height="220px"/></a> 
+                    <asp:Label ID="lbldiaoyu" runat="server" Text="Fishing Tackle" Visible="False"></asp:Label>
                 </div>
                 <div class="heheda">
                     <h2>洗鞋袜</h2>
                     <a><img src="ProductImage/productType3.jpg"  width="300px" height="220px"/></a> 
+                    <asp:Label ID="lblxiwa" runat="server" Text="Wash the socks" Visible="False"></asp:Label>
                 </div>
                 <div class="heheda">
                     <h2>文物收藏</h2>
-                    <a><img src="ProductImage/productType4.jpg"  width="300px" height="220px"/></a> 
+                    <figure>
+                        <a><img src="ProductImage/productType4.jpg"  width="300px" height="220px"/></a>                         
+                        <figcaption><asp:Label ID="lblwenwu" runat="server" Visible="False" Text="Cultural relics collection"></asp:Label></figcaption>
+                    </figure>
                 </div>
             </div>
         </section>
@@ -950,33 +956,34 @@
                 <div class="Left_Font">
                     <table cellpadding="0" cellspacing="0">
                         <tr>
-                            <th align="left" colspan="3">关于我们</th>
+                            <th align="left" colspan="3">
+                                <asp:Label ID="lblAubotUss" runat="server" Text="关于我们"></asp:Label></th>
                         </tr>
                         <tr>
-                            <td class="TitleIntroduce" colspan="3">
-                                此公司成立于2017年，致力于渔业产品，各类产品的发展推广,例如洗鞋袜，文物收藏，医疗保健！欢迎与我们交流！合作！
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                关于我们
-                            </td>
-                            <td>
-                                合作投资
-                            </td>
-                            <td>
-                                交流空间
+                            <td class="TitleIntroduce" colspan="3" style="height: 16px">
+                                <asp:Label ID="lblIntro" runat="server" Text="此公司成立于2017年，致力于渔业产品，各类产品的发展推广,例如洗鞋袜，文物收藏，医疗保健！欢迎与我们交流！合作！" Width="90%"></asp:Label>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                公司官网
+                                <asp:Label ID="lblAbotUs" runat="server" Text="关于我们"></asp:Label> 
                             </td>
                             <td>
-                                法律声明
+                                <asp:Label ID="LBLHEZUO" runat="server" Text="合作投资"></asp:Label>  
                             </td>
                             <td>
-                                公司声明
+                                <asp:Label ID="lblConmnite" runat="server" Text="交流空间"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Label ID="lblCompany" runat="server" Text="公司官网"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="lblFalv" runat="server" Text="法律声明"></asp:Label>
+                            </td>
+                            <td>
+                                <asp:Label ID="lblshengming" runat="server" Text="公司声明"></asp:Label>
                             </td>
                         </tr>
                     </table>
@@ -989,8 +996,8 @@
         </footer>
         <div class="JiaoBen">
             <p>
-            <a href="http://wpa.qq.com/msgrd?v=1&uin=1944731504"><img src="Images/SystemPicture/阿里旺旺.png" width="20px" height="20px"/>阿里旺旺</a>
-            <a href="http://wpa.qq.com/msgrd?v=1&uin=1944731504"><img src="Images/SystemPicture/qq.png" width="20px" height="20px"/>QQ服务</a>Copyright © 2017-至今|四川创造门高新技术开发有限公司版权所有|客户电话：15698259380|企业邮件:chuangzaomen@163.com|热线电话：15826121
+            <a href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="Images/SystemPicture/阿里旺旺.png" width="20px" height="20px"/>阿里旺旺</a>
+            <a href="http://wpa.qq.com/msgrd?v=1&uin=544956252"><img src="Images/SystemPicture/qq.png" width="20px" height="20px"/>QQ服务</a>Copyright © 2017-至今|四川创造门高新技术开发有限公司版权所有|客户电话：15698259380|企业邮件:chuangzaomen@163.com|热线电话：15826121
             </p>
         </div>
         <div class="zixun">
@@ -1003,7 +1010,7 @@
             <div class="lanmu">
                 <a href="javascript:void(0)"><img src="Images/SystemPicture/userLanse.png" title="用户登录"/></a>
                 <a href="javascript:void(0)"><img src="Images/SystemPicture/zixunlanse.png" title="在线咨询"/></a>
-                <a href="javascript:void(0)"><img src="Images/SystemPicture/阿里旺旺.png" title="阿里旺旺" /></a>
+                <a href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="Images/SystemPicture/阿里旺旺.png" title="阿里旺旺" /></a>
                 <a href="javascript:void(0)"><img src="Images/SystemPicture/qqlanse.png" title="QQ咨询" /></a>
                 <a href="#"><img src="Images/SystemPicture/zhidinglanse.png" title="首页" /></a>
             </div>

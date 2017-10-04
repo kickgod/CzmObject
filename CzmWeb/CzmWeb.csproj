@@ -214,6 +214,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="CSS\TraditionalButtonStyle.css" />
     <Content Include="CSS\TraditionalFontStyle.css" />
     <Content Include="Default.aspx" />
     <Content Include="FirstImage\diaoyu.png" />
@@ -367,7 +368,10 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="UserPage\img\20170923151619.jpg" />
+    <Content Include="UserPage\UserForgetCode.aspx" />
     <Content Include="UserPage\UserPageLogin.aspx" />
+    <Content Include="UserPage\muban.aspx" />
+    <Content Include="UserPage\UserPageRegister.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -493,12 +497,33 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="UserPage\UserForgetCode.aspx.cs">
+      <DependentUpon>UserForgetCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\UserForgetCode.aspx.designer.cs">
+      <DependentUpon>UserForgetCode.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserPage\UserPageLogin.aspx.cs">
       <DependentUpon>UserPageLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserPage\UserPageLogin.aspx.designer.cs">
       <DependentUpon>UserPageLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage\muban.aspx.cs">
+      <DependentUpon>muban.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\muban.aspx.designer.cs">
+      <DependentUpon>muban.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage\UserPageRegister.aspx.cs">
+      <DependentUpon>UserPageRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\UserPageRegister.aspx.designer.cs">
+      <DependentUpon>UserPageRegister.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
