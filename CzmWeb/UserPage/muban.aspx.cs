@@ -23,7 +23,17 @@ namespace CzmWeb.UserPage
         {
             Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('" + msg + "')</script>");
         }
-
+        private void MessageBoxLanguge(string Chinese, string English)
+        {
+            if (Session["Lang"].ToString() == "CHE" || Session["Lang"] == null)
+            {
+                MessaegBox(Chinese);
+            }
+            else
+            {
+                MessaegBox(English);
+            }
+        }
         protected void lkbtnEnish_Click(object sender, EventArgs e)
         {
             EnglishTranslate();

@@ -175,22 +175,22 @@ namespace CzmWeb.UserPage {
         protected global::System.Web.UI.WebControls.Image imgPhoneRight;
         
         /// <summary>
-        /// imgPhoneRights 控件。
+        /// imgPhoneError 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgPhoneRights;
+        protected global::System.Web.UI.WebControls.Image imgPhoneError;
         
         /// <summary>
-        /// TextBox1 控件。
+        /// txtPwdOne 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtPwdOne;
         
         /// <summary>
         /// imgNewPassword 控件。
@@ -211,13 +211,13 @@ namespace CzmWeb.UserPage {
         protected global::System.Web.UI.WebControls.Image imgNewPasswords;
         
         /// <summary>
-        /// TextBox2 控件。
+        /// txtPwdTwo 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtPwdTwo;
         
         /// <summary>
         /// imgPwdOne 控件。
@@ -236,5 +236,32 @@ namespace CzmWeb.UserPage {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imgPwdTwo;
+        
+        /// <summary>
+        /// txtVaildCode 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtVaildCode;
+        
+        /// <summary>
+        /// btnSendCodeNow 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSendCodeNow;
+        
+        /// <summary>
+        /// btnOk 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnOk;
     }
 }

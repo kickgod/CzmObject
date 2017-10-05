@@ -216,6 +216,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="CradIDPictureDB\2017104162454686.jpg" />
     <Content Include="CradIDPictureDB\201710416920339.jpg" />
+    <Content Include="CSS\Demo.css" />
     <Content Include="CSS\TraditionalButtonStyle.css" />
     <Content Include="CSS\TraditionalFontStyle.css" />
     <Content Include="Default.aspx" />
@@ -287,6 +288,7 @@
     <Content Include="Images\orderedList9.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\SystemPicture\again_hover.png" />
     <Content Include="Images\SystemPicture\IsRight.png" />
     <Content Include="Images\SystemPicture\NavPhoneConection20171001.png" />
     <Content Include="Images\SystemPicture\NavPhoneCreate20171001.png" />
@@ -318,7 +320,10 @@
     <Content Include="Images\SystemPicture\咨询.png" />
     <Content Include="Images\SystemPicture\旺旺.png" />
     <Content Include="Images\SystemPicture\置顶.png" />
+    <Content Include="Images\SystemPicture\Right.png" />
+    <Content Include="Images\SystemPicture\Error.png" />
     <Content Include="Images\SystemPicture\阿里旺旺.png" />
+    <Content Include="Js\Demo.js" />
     <Content Include="packages.config" />
     <Content Include="Font\webfont.eot" />
     <Content Include="Font\webfont.ttf" />

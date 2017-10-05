@@ -40,6 +40,8 @@
             .Head .Login_ACE ul li ul li:hover{ color: gainsboro;}
             .Head .Login_ACE ul li ul li .userL:hover{ background-color: darkmagenta;font-weight: 500;}
             .Head .Login_ACE ul li:hover img{ padding-top: 0px;width: 50px;height: 50px;}
+            .JiaoBen{ width: 100%;height: 50px;line-height: 50px;font-size: smaller;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: gainsboro;text-align: center;background-color:RGB(176,53,112) }
+            .JiaoBen a{color: gainsboro}
             .zixun{z-index: 100000; width: 170px;height: 220px;font-size: 1em;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: RGB(114, 114, 114);position: fixed;right: 0px;top: 35%;}
             .zixun .showDiv{opacity: 0.8;filter: alpha(opacity=80);width: 135px;height: 220px;background-color: white;float: left}
             .zixun .showDiv p{opacity: 0.8;filter: alpha(opacity=80); text-indent: 15px;letter-spacing: 2px;font-size: small}
@@ -49,12 +51,18 @@
             .zixun .lanmu a img{ width: 30px;height: 30px;margin:5px auto}
             .zixun .lanmu a img:hover{ transform: translate(2px, 2px);-webkit-transform: translate(2px, 2px);background-color: white} /***1300px以上***/
             .ForgetPassword{ width: 100%;background-color: RGB(245,234,240);height:1200px}
-            .ForgetPassword .UpRectangles{ height: 40px;width: 100%}
+            .ForgetPassword .UpRectangles{ height: 150px;width: 100%}
             .ForgetPassword .ChangePwd{ width: 60%;height: 800px;background-color: inherit;margin: auto;}
             .ForgetPassword .ChangePwd p{ width: 100%;height: 50px;line-height: 50px}
-            .ForgetPassword .ChangePwd .UserID{text-align: center}
+            .ForgetPassword .ChangePwd .UserID{ margin-left: 30%;}
             .ForgetPassword .ChangePwd .UserID img{ width: 40px;height: 40px;vertical-align: bottom}
             .ForgetPassword .ChangePwd .UserID .txtPhoneNumber{margin-left: 10px; height: 40px;width: 300px;}
+            .ForgetPassword .ChangePwd .SendCode{margin-left: 30%;}
+            .ForgetPassword .ChangePwd .SendCode img{ width: 40px;height: 40px;vertical-align: bottom}
+            .ForgetPassword .ChangePwd .SendCode .txtPhoneNumber{margin-left: 10px; height: 40px;width: 200px;}
+            /*重复可利用Button 全局*/
+            .BtnSendCode{ width: 100px;height: 40px;background-color: RGB(176,53,112);border-radius: 2px;font-size: 1.2em;color: white;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';word-spacing: 4px;font-weight: 400;}
+            .Btn_Submit{margin-left: 50px; width: 310px;height: 40px;background-color: RGB(176,53,112);border-radius: 2px;font-size: 1.2em;color: white;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';word-spacing: 4px;font-weight: 400;}
         }
         /***********************************************768~1300px以内*********************************************************************/
         @media only screen and (max-width:1299.9px )and (min-width:768px) {
@@ -90,6 +98,19 @@
             .zixun .lanmu{ width: 32px;height: 220px;background-color: purple;color: white;float: right}
             .zixun .lanmu a img{ width: 30px;height: 30px;margin:5px auto}
             .zixun .lanmu a img:hover{ transform: translate(2px, 2px);-webkit-transform: translate(2px, 2px);background-color: white}
+            .ForgetPassword{ width: 100%;background-color: RGB(245,234,240);height:1200px}
+            .ForgetPassword .UpRectangles{ height: 150px;width: 100%}
+            .ForgetPassword .ChangePwd{ width: 60%;height: 800px;background-color: inherit;margin: auto;}
+            .ForgetPassword .ChangePwd p{ width: 100%;height: 50px;line-height: 50px}
+            .ForgetPassword .ChangePwd .UserID{ margin-left: 20%;}
+            .ForgetPassword .ChangePwd .UserID img{ width: 40px;height: 40px;vertical-align: bottom}
+            .ForgetPassword .ChangePwd .UserID .txtPhoneNumber{margin-left: 10px; height: 40px;width: 300px;}
+            .ForgetPassword .ChangePwd .SendCode{margin-left: 20%;}
+            .ForgetPassword .ChangePwd .SendCode img{ width: 40px;height: 40px;vertical-align: bottom}
+            .ForgetPassword .ChangePwd .SendCode .txtPhoneNumber{margin-left: 10px; height: 40px;width: 200px;}
+            /*重复可利用Button 全局*/
+            .BtnSendCode{ width: 100px;height: 40px;background-color: RGB(176,53,112);border-radius: 2px;font-size: 1.2em;color: white;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';word-spacing: 4px;font-weight: 400;}
+            .Btn_Submit{margin-left: 50px; width: 310px;height: 40px;background-color: RGB(176,53,112);border-radius: 2px;font-size: 1.2em;color: white;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';word-spacing: 4px;font-weight: 400;}
         }
         /***********************************************767以下主要适配手机****************************************************************/
         /*实质是宽度400多为中大屏幕手机主要分辨率适配参考iphone6 plus以上*/
@@ -120,6 +141,19 @@
             .zixun .lanmu{ width: 32px;height: 220px;background-color: purple;color: white;float: right}
             .zixun .lanmu a img{ width: 30px;height: 30px;margin:5px auto}
             .zixun .lanmu a img:hover{ transform: translate(2px, 2px);-webkit-transform: translate(2px, 2px);background-color: white}
+            .ForgetPassword{ width: 100%;background-color: RGB(245,234,240);height:1200px}
+            .ForgetPassword .UpRectangles{ height: 150px;width: 100%}
+            .ForgetPassword .ChangePwd{ width: 60%;height: 800px;background-color: inherit;margin: auto;}
+            .ForgetPassword .ChangePwd p{ width: 100%;height: 50px;line-height: 50px}
+            .ForgetPassword .ChangePwd .UserID{ margin-left: 20%;}
+            .ForgetPassword .ChangePwd .UserID img{ width: 40px;height: 40px;vertical-align: bottom}
+            .ForgetPassword .ChangePwd .UserID .txtPhoneNumber{margin-left: 10px; height: 40px;width: 300px;}
+            .ForgetPassword .ChangePwd .SendCode{margin-left: 20%;}
+            .ForgetPassword .ChangePwd .SendCode img{ width: 40px;height: 40px;vertical-align: bottom}
+            .ForgetPassword .ChangePwd .SendCode .txtPhoneNumber{margin-left: 10px; height: 40px;width: 200px;}
+            /*重复可利用Button 全局*/
+            .BtnSendCode{ width: 100px;height: 40px;background-color: RGB(176,53,112);border-radius: 2px;font-size: 1.2em;color: white;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';word-spacing: 4px;font-weight: 400;}
+            .Btn_Submit{margin-left: 50px; width: 310px;height: 40px;background-color: RGB(176,53,112);border-radius: 2px;font-size: 1.2em;color: white;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';word-spacing: 4px;font-weight: 400;}
         }
         @media only screen and (max-width: 340px) {
             .JiaoBen{margin-bottom: 0px; width: 100%;height: 80px;font-size: 0.5em;font-family:'华文楷体','楷体', '微软雅黑', '宋体';word-spacing: 2px;color: gainsboro;text-align: center;background-color:RGB(176,53,112) }
@@ -239,8 +273,8 @@
             </div>
             <div class="NavPhone">
                 <ul>
-                    <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneLog20171001.png"/><a href="../UserPage/UserPageLogin.aspx"><asp:Label ID="lblUserLog" runat="server"  CssClass="FontColor" Text="用户登录"></asp:Label></a></li>
-                    <li><img class="PhoneImg" src="Images/SystemPicture/NavPhoneLogin20171001.png"/><a href="../UserPage/UserPageRegister.aspx"><asp:Label ID="lblUserLogin" runat="server"  CssClass="FontColor" Text="用户注册"></asp:Label></a></li>
+                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneLog20171001.png"/><a href="../UserPage/UserPageLogin.aspx"><asp:Label ID="lblUserLog" runat="server"  CssClass="FontColor" Text="用户登录"></asp:Label></a></li>
+                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneLogin20171001.png"/><a href="../UserPage/UserPageRegister.aspx"><asp:Label ID="lblUserLogin" runat="server"  CssClass="FontColor" Text="用户注册"></asp:Label></a></li>
                 </ul>
             </div>
             <div class="Login_ACE">
@@ -262,23 +296,30 @@
                         <p class="UserID">
                             <img src="../Images/SystemPicture/User.png"/><asp:TextBox ID="txtPhoneNumber" CssClass="txtPhoneNumber" runat="server" placeholder="[手机号(Phone Number)]" ></asp:TextBox>
                              <span>
-                                <asp:Image ID="imgPhoneRight" runat="server"  />
-                                <asp:Image ID="imgPhoneRights" runat="server" />
+                                <asp:Image ID="imgPhoneRight"  runat="server"  ImageUrl="../Images/SystemPicture/Right.png" Visible="False" Width="20px" Height="20px" />
+                                <asp:Image ID="imgPhoneError" runat="server" ImageUrl="../Images/SystemPicture/Error.png" Visible="False" Width="20px" Height="20px"/>
                              </span>
                         </p>
                         <p class="UserID">
-                            <img src="../Images/SystemPicture/User.png"/><asp:TextBox ID="TextBox1" CssClass="txtPhoneNumber" runat="server" placeholder="[手机号(Phone Number)]" ></asp:TextBox>
+                            <img src="../Images/SystemPicture/again_hover.png"/><asp:TextBox ID="txtPwdOne" CssClass="txtPhoneNumber" runat="server" placeholder="[重复密码(Password)]" ></asp:TextBox>
                             <span>
-                                <asp:Image ID="imgNewPassword" runat="server" />
-                                <asp:Image ID="imgNewPasswords" runat="server" />
+                                <asp:Image ID="imgNewPassword" runat="server" ImageUrl="../Images/SystemPicture/Right.png" Visible="False"  Width="20px" Height="20px"/>
+                                <asp:Image ID="imgNewPasswords" runat="server"  ImageUrl="../Images/SystemPicture/Error.png" Visible="False" Width="20px" Height="20px"/>
                             </span>
                         </p>
                         <p class="UserID">
-                            <img src="../Images/SystemPicture/User.png"/><asp:TextBox ID="TextBox2" CssClass="txtPhoneNumber" runat="server" placeholder="[手机号(Phone Number)]" ></asp:TextBox>
+                            <img src="../Images/SystemPicture/again_hover.png"/><asp:TextBox ID="txtPwdTwo" CssClass="txtPhoneNumber" runat="server" placeholder="[重复密码(Password Again)]" ></asp:TextBox>
                             <span>
-                                <asp:Image ID="imgPwdOne" runat="server" />
-                                <asp:Image ID="imgPwdTwo" runat="server" />
+                                <asp:Image ID="imgPwdOne" runat="server" ImageUrl="../Images/SystemPicture/Right.png" Visible="False" Width="20px" Height="20px"/>
+                                <asp:Image ID="imgPwdTwo" runat="server"  ImageUrl="../Images/SystemPicture/Error.png" Visible="False" Width="20px" Height="20px"/>
                             </span>
+                        </p>
+                        <p class="SendCode"> 
+                            <img src="../Images/SystemPicture/validcoed.png"/><asp:TextBox ID="txtVaildCode" CssClass="txtPhoneNumber" runat="server" placeholder="[验证码(Verification Code)]" ></asp:TextBox>
+                            <asp:Button ID="btnSendCodeNow"  runat="server" Text="发送" CssClass="BtnSendCode" OnClick="btnSendCodeNow_Click" />
+                        </p>
+                        <p class="SendCode">
+                            <asp:Button ID="btnOk" runat="server" CssClass="Btn_Submit" Text="提交" OnClick="btnOk_Click" />
                         </p>
                 </div>
             </div>
