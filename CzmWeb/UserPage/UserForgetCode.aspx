@@ -60,6 +60,7 @@
             .ForgetPassword .ChangePwd .SendCode{margin-left: 30%;}
             .ForgetPassword .ChangePwd .SendCode img{ width: 40px;height: 40px;vertical-align: bottom}
             .ForgetPassword .ChangePwd .SendCode .txtPhoneNumber{margin-left: 10px; height: 40px;width: 200px;}
+            .ForgetPassword .ChangePwd .titles{height: 50px;line-height: 50px; color: RGB(176, 53, 112);font-size: 2em;text-align: center;font-style: italic;font-weight: bold;letter-spacing: 10px}
             /*重复可利用Button 全局*/
             .BtnSendCode{ width: 100px;height: 40px;background-color: RGB(176,53,112);border-radius: 2px;font-size: 1.2em;color: white;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';word-spacing: 4px;font-weight: 400;}
             .Btn_Submit{margin-left: 50px; width: 310px;height: 40px;background-color: RGB(176,53,112);border-radius: 2px;font-size: 1.2em;color: white;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';word-spacing: 4px;font-weight: 400;}
@@ -108,13 +109,14 @@
             .ForgetPassword .ChangePwd .SendCode{margin-left: 20%;}
             .ForgetPassword .ChangePwd .SendCode img{ width: 40px;height: 40px;vertical-align: bottom}
             .ForgetPassword .ChangePwd .SendCode .txtPhoneNumber{margin-left: 10px; height: 40px;width: 200px;}
+            .ForgetPassword .ChangePwd .titles{height: 50px;line-height: 50px; color: RGB(176, 53, 112);font-size: 2em;text-align: center;font-style: italic;font-weight: bold;letter-spacing: 10px}
             /*重复可利用Button 全局*/
             .BtnSendCode{ width: 100px;height: 40px;background-color: RGB(176,53,112);border-radius: 2px;font-size: 1.2em;color: white;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';word-spacing: 4px;font-weight: 400;}
             .Btn_Submit{margin-left: 50px; width: 310px;height: 40px;background-color: RGB(176,53,112);border-radius: 2px;font-size: 1.2em;color: white;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';word-spacing: 4px;font-weight: 400;}
         }
         /***********************************************767以下主要适配手机****************************************************************/
         /*实质是宽度400多为中大屏幕手机主要分辨率适配参考iphone6 plus以上*/
-        @media only screen and (min-width:0px )and (max-width:767px) {
+        @media only screen and (min-width:450px )and (max-width:767px) {
             *{padding: 0px;margin: 0px;text-decoration: none;}
             .PhoneHead{z-index: 100000000000; position: fixed;top: 0px;left: 0px;display: block;height: 50px;width: 100%;background: linear-gradient(to left, purple, RGB(176, 53, 112));border-bottom:gray 2px solid}
             .PhoneHead .headerTtile{ width: 100%;}
@@ -133,27 +135,56 @@
             .Head .Login_ACE{display: none}
             .PhoneImg{ width: 30px;height: 30px;padding-top: 15px;}
             .FontColor{ color: #333333;font-size: 0.6em;font-weight: bold}
-            .zixun{z-index: 100000; width: 170px;height: 220px;font-size: 1em;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: RGB(114, 114, 114);position: fixed;right: 0px;top: 35%;}
-            .zixun .showDiv{opacity: 0.8;filter: alpha(opacity=80);width: 135px;height: 220px;background-color: white;float: left}
-            .zixun .showDiv p{opacity: 0.8;filter: alpha(opacity=80); text-indent: 15px;letter-spacing: 2px;font-size: small}
-            .zixun .showDiv .fontci{opacity: 0.8;filter: alpha(opacity=80); height: 30px;line-height: 30px;color: white;font-family:'华文楷体', '微软雅黑', '宋体';font-weight: bold }
-            .zixun .showDiv img{opacity: 0.8;filter: alpha(opacity=80); width: 105px;height: 105px;background-color: white;padding: 15px}
-            .zixun .lanmu{ width: 32px;height: 220px;background-color: purple;color: white;float: right}
-            .zixun .lanmu a img{ width: 30px;height: 30px;margin:5px auto}
-            .zixun .lanmu a img:hover{ transform: translate(2px, 2px);-webkit-transform: translate(2px, 2px);background-color: white}
-            .ForgetPassword{ width: 100%;background-color: RGB(245,234,240);height:1200px}
+            .zixun{display: none}
+            .ForgetPassword{ width: 100%;background-color: RGB(245,234,240);height:800px}
             .ForgetPassword .UpRectangles{ height: 150px;width: 100%}
-            .ForgetPassword .ChangePwd{ width: 60%;height: 800px;background-color: inherit;margin: auto;}
+            .ForgetPassword .ChangePwd{ width: 100%;height: 600px;background-color: inherit;margin: auto;}
             .ForgetPassword .ChangePwd p{ width: 100%;height: 50px;line-height: 50px}
-            .ForgetPassword .ChangePwd .UserID{ margin-left: 20%;}
-            .ForgetPassword .ChangePwd .UserID img{ width: 40px;height: 40px;vertical-align: bottom}
+            .ForgetPassword .ChangePwd .UserID{ margin-left: 18%;}
+            .ForgetPassword .ChangePwd .UserID img{ width: 30px;height: 30px;vertical-align: bottom}
             .ForgetPassword .ChangePwd .UserID .txtPhoneNumber{margin-left: 10px; height: 40px;width: 300px;}
-            .ForgetPassword .ChangePwd .SendCode{margin-left: 20%;}
-            .ForgetPassword .ChangePwd .SendCode img{ width: 40px;height: 40px;vertical-align: bottom}
+            .ForgetPassword .ChangePwd .SendCode{margin-left: 18%;}
+            .ForgetPassword .ChangePwd .SendCode img{ width: 30px;height: 30px;vertical-align: bottom}
             .ForgetPassword .ChangePwd .SendCode .txtPhoneNumber{margin-left: 10px; height: 40px;width: 200px;}
+            .ForgetPassword .ChangePwd .titles{height: 50px;line-height: 50px; color: RGB(176, 53, 112);font-size: 2em;text-align: center;font-style: italic;font-weight: bold;letter-spacing: 10px}
             /*重复可利用Button 全局*/
             .BtnSendCode{ width: 100px;height: 40px;background-color: RGB(176,53,112);border-radius: 2px;font-size: 1.2em;color: white;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';word-spacing: 4px;font-weight: 400;}
-            .Btn_Submit{margin-left: 50px; width: 310px;height: 40px;background-color: RGB(176,53,112);border-radius: 2px;font-size: 1.2em;color: white;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';word-spacing: 4px;font-weight: 400;}
+            .Btn_Submit{margin-left: 38px; width: 310px;height: 40px;background-color: RGB(176,53,112);border-radius: 2px;font-size: 1.2em;color: white;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';word-spacing: 4px;font-weight: 400;}           
+        }
+        @media only screen and (min-width:0px )and (max-width:449px) {
+            *{padding: 0px;margin: 0px;text-decoration: none;}
+            .PhoneHead{z-index: 100000000000; position: fixed;top: 0px;left: 0px;display: block;height: 50px;width: 100%;background: linear-gradient(to left, purple, RGB(176, 53, 112));border-bottom:gray 2px solid}
+            .PhoneHead .headerTtile{ width: 100%;}
+            .PhoneHead .headerTtile .left .transfer{color: white}
+            .PhoneHead .headerTtile .left{ width: 20%;float: left;height: 50px;}
+            .PhoneHead .headerTtile .left span{text-indent: 15px; display: block;color: RGB(232,105,170);font-weight: bold;font-size: 1em;font-style: italic;line-height:50px;height: 50px;text-align: left;}
+            .PhoneHead .headerTtile .center{text-indent: 20px; width: 48%;float: left;}
+            .PhoneHead .headerTtile .center .cents{ height: 50px;line-height: 50px;color: white;font-weight: bold}
+            .PhoneHead .headerTtile .right{ width: 30%;float: left;height: 50px;position: relative}
+            .PhoneHead .headerTtile .right a{display: block; position: absolute;top: 0px;right: 5px}
+            .Head{display: none;background-color: white;color: #333333;position: fixed;top: 52px;color: #333333;width: 100%}
+            .Head .logo{display: none}
+            .Head .Nav ul li{ border-bottom: 1px solid black;height: 50px;line-height: 50px;text-indent: 30px;color: #333333}
+            .Head .NavPhone{ display: block;}
+            .Head .NavPhone ul li{ border-bottom: 1px solid black;height: 50px;line-height: 50px;text-indent: 30px;color: #333333}
+            .Head .Login_ACE{display: none}
+            .PhoneImg{ width: 30px;height: 30px;padding-top: 15px;}
+            .FontColor{ color: #333333;font-size: 0.6em;font-weight: bold}
+            .zixun{display: none}
+            .ForgetPassword{ width: 100%;background-color: RGB(245,234,240);height:800px}
+            .ForgetPassword .UpRectangles{ height: 150px;width: 100%}
+            .ForgetPassword .ChangePwd{ width: 100%;height: 600px;background-color: inherit;margin: auto;}
+            .ForgetPassword .ChangePwd p{ width: 100%;height: 50px;line-height: 50px}
+            .ForgetPassword .ChangePwd .UserID{ margin-left: 12px;}
+            .ForgetPassword .ChangePwd .UserID img{ width: 30px;height: 30px;vertical-align: bottom}
+            .ForgetPassword .ChangePwd .UserID .txtPhoneNumber{margin-left: 10px; height: 40px;width: 300px;}
+            .ForgetPassword .ChangePwd .SendCode{margin-left: 12px;}
+            .ForgetPassword .ChangePwd .SendCode img{ width: 30px;height: 30px;vertical-align: bottom}
+            .ForgetPassword .ChangePwd .SendCode .txtPhoneNumber{margin-left: 10px; height: 40px;width: 200px;}
+            .ForgetPassword .ChangePwd .titles{height: 50px;line-height: 50px; color: RGB(176, 53, 112);font-size: 2em;text-align: center;font-style: italic;font-weight: bold;letter-spacing: 10px}
+            /*重复可利用Button 全局*/
+            .BtnSendCode{ width: 100px;height: 40px;background-color: RGB(176,53,112);border-radius: 2px;font-size: 1.2em;color: white;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';word-spacing: 4px;font-weight: 400;}
+            .Btn_Submit{margin-left: 38px; width: 310px;height: 40px;background-color: RGB(176,53,112);border-radius: 2px;font-size: 1.2em;color: white;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';word-spacing: 4px;font-weight: 400;}
         }
         @media only screen and (max-width: 340px) {
             .JiaoBen{margin-bottom: 0px; width: 100%;height: 80px;font-size: 0.5em;font-family:'华文楷体','楷体', '微软雅黑', '宋体';word-spacing: 2px;color: gainsboro;text-align: center;background-color:RGB(176,53,112) }
@@ -293,6 +324,7 @@
             <div class="ForgetPassword">
                 <div class="UpRectangles"></div>
                 <div class="ChangePwd">
+                        <p class="titles">创造门 </p>
                         <p class="UserID">
                             <img src="../Images/SystemPicture/User.png"/><asp:TextBox ID="txtPhoneNumber" CssClass="txtPhoneNumber" runat="server" placeholder="[手机号(Phone Number)]" ></asp:TextBox>
                              <span>
