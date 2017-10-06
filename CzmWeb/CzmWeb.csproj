@@ -131,7 +131,9 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
-    <Content Include="BackendManage\UserIdentityVerify.aspx" />
+    <Content Include="BackendManage\AdminLogin.aspx" />
+    <Content Include="BackendManage\BackAdmin.aspx" />
+    <Content Include="BackendManage\UserValidCheck.aspx" />
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\AspNet.ScriptManager.jQuery.dll" />
     <Content Include="bin\AspNet.ScriptManager.jQuery.UI.Combined.dll" />
@@ -216,9 +218,32 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="CradIDPictureDB\2017104162454686.jpg" />
     <Content Include="CradIDPictureDB\201710416920339.jpg" />
+    <Content Include="CSS\button.css" />
     <Content Include="CSS\Demo.css" />
+    <Content Include="CSS\index.css" />
+    <Content Include="CSS\PrintPage.css" />
+    <Content Include="CSS\resetStyle.css" />
+    <Content Include="CSS\superfish-navbar.css" />
+    <Content Include="CSS\superfish-vertical.css" />
+    <Content Include="CSS\superfish.css" />
+    <Content Include="CSS\SysButton.css" />
+    <Content Include="CSS\SysLogin.css" />
+    <Content Include="CSS\SysManage.css" />
+    <Content Include="CSS\SysReset.css" />
+    <Content Include="CSS\SysTable.css" />
+    <Content Include="CSS\table.css" />
+    <Content Include="CSS\TcContent.css" />
+    <Content Include="CSS\TcIndex.css" />
+    <Content Include="CSS\TcIndex2.css" />
     <Content Include="CSS\TraditionalButtonStyle.css" />
     <Content Include="CSS\TraditionalFontStyle.css" />
+    <Content Include="CSS\video-js.min.css" />
+    <Content Include="CSS\WebContent.css" />
+    <Content Include="CSS\WebIndex.css" />
+    <Content Include="CSS\WebQuery.css" />
+    <Content Include="CSS\WebScreen.css" />
+    <Content Include="CSS\WebSubPage.css" />
+    <Content Include="CSS\WebTable.css" />
     <Content Include="Default.aspx" />
     <Content Include="FirstImage\diaoyu.png" />
     <Content Include="FirstImage\7.jpg" />
@@ -273,9 +298,124 @@
     <Content Include="Font\webfont.svg" />
     <Content Include="Font\webfont_pnqaxdsleaaqyqfr\demo.html" />
     <Content Include="Font\webfont_pnqaxdsleaaqyqfr\webfont.svg" />
+    <Content Include="Images\2017104162454690.jpg" />
+    <Content Include="Images\201710416920346.jpg" />
     <Content Include="Images\accent.png" />
+    <Content Include="Images\bg_error.png" />
+    <Content Include="Images\bg_error_bottom.png" />
+    <Content Include="Images\bg_error_middle.png" />
+    <Content Include="Images\bg_error_top.png" />
+    <Content Include="Images\bg_wordbrowse_bottom.png" />
+    <Content Include="Images\bg_wordbrowse_middle.png" />
+    <Content Include="Images\bg_wordbrowse_top.png" />
+    <Content Include="Images\btn_downarrow_sed.png" />
     <Content Include="Images\bullet.png" />
+    <Content Include="Images\button\allow_right.png" />
+    <Content Include="Images\button\btn_add.png" />
+    <Content Include="Images\button\btn_back.png" />
+    <Content Include="Images\button\btn_bg.png" />
+    <Content Include="Images\button\btn_bg2.png" />
+    <Content Include="Images\button\btn_bg4.png" />
+    <Content Include="Images\button\btn_bg6.png" />
+    <Content Include="Images\button\btn_bg8.png" />
+    <Content Include="Images\button\btn_bohui.png" />
+    <Content Include="Images\button\btn_cancel.png" />
+    <Content Include="Images\button\btn_delete.png" />
+    <Content Include="Images\button\btn_detail.png" />
+    <Content Include="Images\button\btn_downarrow.png" />
+    <Content Include="Images\button\btn_downarrow_sed.png" />
+    <Content Include="Images\button\btn_edit.png" />
+    <Content Include="Images\button\btn_error_back.png" />
+    <Content Include="Images\button\btn_exit.png" />
+    <Content Include="Images\button\btn_fold.gif" />
+    <Content Include="Images\button\btn_home.png" />
+    <Content Include="Images\button\btn_ico_back.png" />
+    <Content Include="Images\button\btn_ico_exit.png" />
+    <Content Include="Images\button\btn_ico_home.png" />
+    <Content Include="Images\button\btn_ico_refresh.png" />
+    <Content Include="Images\button\btn_initpwd.png" />
+    <Content Include="Images\button\btn_mingxi.png" />
+    <Content Include="Images\button\btn_modify.png" />
+    <Content Include="Images\button\btn_movedown.png" />
+    <Content Include="Images\button\btn_moveup.png" />
+    <Content Include="Images\button\btn_Msg.png" />
+    <Content Include="Images\button\btn_NewMsg.png" />
+    <Content Include="Images\button\btn_openup.gif" />
+    <Content Include="Images\button\btn_packup.gif" />
+    <Content Include="Images\button\btn_refresh.png" />
+    <Content Include="Images\button\btn_save.png" />
+    <Content Include="Images\button\btn_sc.png" />
+    <Content Include="Images\button\btn_search.png" />
+    <Content Include="Images\button\btn_submit.png" />
+    <Content Include="Images\button\btn_unfold.gif" />
+    <Content Include="Images\color.png" />
+    <Content Include="Images\error_bg.png" />
+    <Content Include="Images\error_left.png" />
+    <Content Include="Images\error_right.png" />
+    <Content Include="Images\Example\csv1.png" />
+    <Content Include="Images\Example\excel1.png" />
+    <Content Include="Images\Example\excel10.png" />
+    <Content Include="Images\Example\excel11.png" />
+    <Content Include="Images\Example\excel12.png" />
+    <Content Include="Images\Example\excel13.png" />
+    <Content Include="Images\Example\excel14.png" />
+    <Content Include="Images\Example\excel15.png" />
+    <Content Include="Images\Example\excel2.png" />
+    <Content Include="Images\Example\excel3.png" />
+    <Content Include="Images\Example\excel4.jpg" />
+    <Content Include="Images\Example\excel5.jpg" />
+    <Content Include="Images\Example\excel6.png" />
+    <Content Include="Images\Example\excel7.png" />
+    <Content Include="Images\Example\excel8.png" />
+    <Content Include="Images\Example\excel9.png" />
+    <Content Include="Images\Example\saveas1.png" />
+    <Content Include="Images\frm_bg3.gif" />
     <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\Ico\1.png" />
+    <Content Include="Images\Ico\10.png" />
+    <Content Include="Images\Ico\11.png" />
+    <Content Include="Images\Ico\12.png" />
+    <Content Include="Images\Ico\13.png" />
+    <Content Include="Images\Ico\14.png" />
+    <Content Include="Images\Ico\2.png" />
+    <Content Include="Images\Ico\3.png" />
+    <Content Include="Images\Ico\4.png" />
+    <Content Include="Images\Ico\5.png" />
+    <Content Include="Images\Ico\6.png" />
+    <Content Include="Images\Ico\7.png" />
+    <Content Include="Images\Ico\8.png" />
+    <Content Include="Images\Ico\9.png" />
+    <Content Include="Images\Ico\bg_icon_arrow.png" />
+    <Content Include="Images\Ico\downflag.png" />
+    <Content Include="Images\Ico\func.png" />
+    <Content Include="Images\Ico\ico_about.png" />
+    <Content Include="Images\Ico\ico_error.png" />
+    <Content Include="Images\Ico\ico_help.png" />
+    <Content Include="Images\Ico\logo.png" />
+    <Content Include="Images\Ico\spacer.gif" />
+    <Content Include="Images\Ico\subMenuIco.png" />
+    <Content Include="Images\Index\bg_help.png" />
+    <Content Include="Images\Index\bg_leftbar.png" />
+    <Content Include="Images\Index\bg_MainMenu.png" />
+    <Content Include="Images\Index\bg_MainMenu_Hover.png" />
+    <Content Include="Images\Index\bg_SubMenuItem_Sed.png" />
+    <Content Include="Images\Index\bg_SubMenuTitle.png" />
+    <Content Include="Images\Index\bg_SubMenuTitle_Sed.png" />
+    <Content Include="Images\Index\bg_system_op.png" />
+    <Content Include="Images\Index\bg_Top.png" />
+    <Content Include="Images\Index\leftbar_left.png" />
+    <Content Include="Images\Index\leftbar_right.png" />
+    <Content Include="Images\Index\leftbar_top.png" />
+    <Content Include="Images\Index\logo.png" />
+    <Content Include="Images\Index\MainMenu_Left.png" />
+    <Content Include="Images\Index\MainMenu_Right.png" />
+    <Content Include="Images\Login\bg_body.png" />
+    <Content Include="Images\Login\bg_main.png" />
+    <Content Include="Images\Login\btn_login.png" />
+    <Content Include="Images\Login\btn_login2.png" />
+    <Content Include="Images\Login\ico_login.png" />
+    <Content Include="Images\Login\ico_logo.png" />
+    <Content Include="Images\Login\pic1.png" />
     <Content Include="Images\orderedList0.png" />
     <Content Include="Images\orderedList1.png" />
     <Content Include="Images\orderedList2.png" />
@@ -288,7 +428,20 @@
     <Content Include="Images\orderedList9.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\pic\sicnu_logo.png" />
+    <Content Include="Images\pic\sicnu_name.png" />
+    <Content Include="Images\pic\test.png" />
+    <Content Include="Images\Print\sicnu_font.png" />
+    <Content Include="Images\Print\sicnu_font_300.png" />
+    <Content Include="Images\Print\sicnu_font_350.png" />
+    <Content Include="Images\Print\sicnu_logo.png" />
+    <Content Include="Images\Print\sicnu_logo_350.png" />
+    <Content Include="Images\process.gif" />
+    <Content Include="Images\QrCode\wb_zjc.jpg" />
+    <Content Include="Images\QrCode\wx_jy.jpg" />
+    <Content Include="Images\QrCode\wx_zs.jpg" />
     <Content Include="Images\SystemPicture\again_hover.png" />
+    <Content Include="Images\SystemPicture\firstpage.png" />
     <Content Include="Images\SystemPicture\IsRight.png" />
     <Content Include="Images\SystemPicture\NavPhoneConection20171001.png" />
     <Content Include="Images\SystemPicture\NavPhoneCreate20171001.png" />
@@ -318,11 +471,63 @@
     <Content Include="Images\SystemPicture\二维码.png" />
     <Content Include="Images\SystemPicture\向下箭头.png" />
     <Content Include="Images\SystemPicture\咨询.png" />
+    <Content Include="Images\SystemPicture\折叠xiangzuo.png" />
+    <Content Include="Images\SystemPicture\折叠zhedie.png" />
     <Content Include="Images\SystemPicture\旺旺.png" />
+    <Content Include="Images\SystemPicture\生生世世.png" />
     <Content Include="Images\SystemPicture\置顶.png" />
     <Content Include="Images\SystemPicture\Right.png" />
     <Content Include="Images\SystemPicture\Error.png" />
+    <Content Include="Images\SystemPicture\退出.png" />
     <Content Include="Images\SystemPicture\阿里旺旺.png" />
+    <Content Include="Images\tt_bg.png" />
+    <Content Include="Images\WaterMark.jpg" />
+    <Content Include="Images\Web\2016zs.png" />
+    <Content Include="Images\Web\banner_default.png" />
+    <Content Include="Images\Web\bg_Query_Ks.png" />
+    <Content Include="Images\Web\btn_Query.png" />
+    <Content Include="Images\Web\code_01.png" />
+    <Content Include="Images\Web\code_02.png" />
+    <Content Include="Images\Web\code_03.png" />
+    <Content Include="Images\Web\doc.png" />
+    <Content Include="Images\Web\footer_bg.png" />
+    <Content Include="Images\Web\index_banner_bg.png" />
+    <Content Include="Images\Web\index_main_bg.png" />
+    <Content Include="Images\Web\links_01.png" />
+    <Content Include="Images\Web\links_02.png" />
+    <Content Include="Images\Web\links_03.png" />
+    <Content Include="Images\Web\links_04.png" />
+    <Content Include="Images\Web\links_icon01.png" />
+    <Content Include="Images\Web\logo.png" />
+    <Content Include="Images\Web\main_Title1.png" />
+    <Content Include="Images\Web\more_icon.png" />
+    <Content Include="Images\Web\new.gif" />
+    <Content Include="Images\Web\noImage.png" />
+    <Content Include="Images\Web\Query_Syd_1.png" />
+    <Content Include="Images\Web\Query_Syd_2.png" />
+    <Content Include="Images\Web\Query_Xy_1.png" />
+    <Content Include="Images\Web\Query_Xy_2.png" />
+    <Content Include="Images\Web\Query_Zh_1.png" />
+    <Content Include="Images\Web\Query_Zh_2.png" />
+    <Content Include="Images\Web\Query_Zy_1.png" />
+    <Content Include="Images\Web\Query_Zy_2.png" />
+    <Content Include="Images\Web\search-btn.png" />
+    <Content Include="Images\Web\spacer.gif" />
+    <Content Include="Images\Web\SubImg.png" />
+    <Content Include="Images\Web\SubleftTitle.png" />
+    <Content Include="Images\Web\subleft_bg.png" />
+    <Content Include="Images\Web\sub_1.png" />
+    <Content Include="Images\Web\sub_2.png" />
+    <Content Include="Images\Web\sub_3.png" />
+    <Content Include="Images\Web\sub_4.png" />
+    <Content Include="Images\Web\sub_5.png" />
+    <Content Include="Images\Web\title_border.png" />
+    <Content Include="Images\Web\title_icon.png" />
+    <Content Include="Images\Web\title_icon1.png" />
+    <Content Include="Images\Web\title_line.htm" />
+    <Content Include="Images\Web\title_line.png" />
+    <Content Include="Images\Web\top.png" />
+    <Content Include="Images\Web\xxgk.png" />
     <Content Include="Js\Demo.js" />
     <Content Include="packages.config" />
     <Content Include="Font\webfont.eot" />
@@ -374,7 +579,6 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
-    <Content Include="UserPage\img\20170923151619.jpg" />
     <Content Include="UserPage\UserForgetCode.aspx" />
     <Content Include="UserPage\UserPageLogin.aspx" />
     <Content Include="UserPage\muban.aspx" />
@@ -444,12 +648,26 @@
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="BackendManage\UserIdentityVerify.aspx.cs">
-      <DependentUpon>UserIdentityVerify.aspx</DependentUpon>
+    <Compile Include="BackendManage\AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BackendManage\UserIdentityVerify.aspx.designer.cs">
-      <DependentUpon>UserIdentityVerify.aspx</DependentUpon>
+    <Compile Include="BackendManage\AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackendManage\BackAdmin.aspx.cs">
+      <DependentUpon>BackAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackendManage\BackAdmin.aspx.designer.cs">
+      <DependentUpon>BackAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackendManage\UserValidCheck.aspx.cs">
+      <DependentUpon>UserValidCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackendManage\UserValidCheck.aspx.designer.cs">
+      <DependentUpon>UserValidCheck.aspx</DependentUpon>
     </Compile>
     <Compile Include="Common\wuc_FileUpload.ascx.cs">
       <DependentUpon>wuc_FileUpload.ascx</DependentUpon>
@@ -543,7 +761,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="ForePage\" />
-    <Folder Include="UserPage\Css\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />

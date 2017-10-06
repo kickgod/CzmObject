@@ -1,0 +1,53 @@
+﻿ .QueryTitle
+{
+    width:880px;
+    height:64px;
+	margin-left: 164px;
+	line-height: 64px;
+	border-bottom: solid 3px #333;
+    color:#333;
+    font-size:26px;
+    font-family:微软雅黑;
+    font-weight:bold;
+    text-align:center;
+}
+#Query
+{
+    width:880px;
+    height:260px;
+	margin-top: 32px;
+	margin-left: 164px;
+    text-align:center;
+}
+#Query .KsSingle
+{
+    width:280px;
+    height:241px;
+    text-align:center;
+    background: url("../images/Web/bg_Query_Ks.png");
+	background-position:center top;
+	background-repeat:no-repeat;
+	color:#FFF;
+    float:left;
+}
+#Query .Separate
+{
+    width:20px;
+    float:left;
+}
+#Query .KsMulti
+{
+    width:540px;
+    text-align:center;
+    float:left;
+}
+.btnQuery
+{
+	height: 33px;
+	width: 158px;
+	border: none;
+	background: none;
+	background-image: url("../Images/Web/btn_Query.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}

@@ -14,7 +14,7 @@ namespace CzmWeb.UserPage
         GetDataFromTable getTable = new GetDataFromTable();
         GetDataFromView getView = new GetDataFromView();
         PublicGetDataFromDB DB = new PublicGetDataFromDB();
-        SendPhoneMessage sender = new SendPhoneMessage();
+        SendPhoneMessage send = new SendPhoneMessage();
         protected void Page_Load(object sender, EventArgs e)
         {
 

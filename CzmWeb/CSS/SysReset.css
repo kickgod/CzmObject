@@ -1,0 +1,70 @@
+﻿/****************************************************************************************
+* 设置默认样式
+****************************************************************************************/
+body, p, br, div, span, h1, h2, h3, h4, h5, ul, li, form, select, input, hr, img, image
+{
+	margin: 0px;
+	padding: 0px;
+}
+body
+{
+	background-color:#FCFCFC;
+	text-align: left; /*text-align: center; 居中辅助*/
+	font-family: 宋体;
+	font-size: 12px;
+	color: #000000;
+}
+.redStar
+{
+	color: #FF0000;
+}
+input
+{	
+	height:26px \9;
+	height:26px;
+	font-size:12px;
+	font-family: 宋体;
+	line-height: 22px;
+	vertical-align:middle;
+	cursor: pointer;
+}
+select,select option
+{
+	height:26px \9;
+	height:26px;
+	line-height: 22px;
+	vertical-align:middle;
+	font-size:13px;
+	font-family: 宋体;
+	cursor: pointer;
+}
+/****************************************************************************************
+* table样式
+****************************************************************************************/
+
+/****************************************************************************************
+* ul样式
+****************************************************************************************/
+ul
+{
+	list-style: none;
+}
+/****************************************************************************************
+* a样式
+****************************************************************************************/
+a
+{
+	color: #000000;
+	text-decoration: none;
+	cursor:pointer;
+}
+a:hover
+{
+	color: Red;
+	cursor:pointer;
+}
+.MultiLineTextBox
+{
+    font-size:12pt;
+    line-height:32px;
+}

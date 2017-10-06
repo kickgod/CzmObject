@@ -1,0 +1,447 @@
+﻿/******************************表格按钮CSS******************************/
+.checkbox{vertical-align:middle; margin:0;}
+.btnAdd
+{
+	height: 26px;
+	width: 60px;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_add.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btnSubmit
+{
+	height: 26px;
+	width: 60px;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_submit.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btnDelete
+{
+	height: 26px;
+	width: 60px;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_delete.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btnEdit
+{
+	height: 26px;
+	width: 60px;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_edit.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btnModify
+{
+	height: 26px;
+	width: 60px;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_modify.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btnDetail
+{
+	height: 26px;
+	width: 60px;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_detail.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btnMingXi
+{
+	height: 26px;
+	width: 60px;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_mingxi.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btnPrint
+{
+	height: 21px;
+	width: 58px;
+	border: none;
+	background: none;
+	background-image: url("../Images/btn_print.gif");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btnPrintView
+{
+	height: 21px;
+	width: 100px;
+	border: none;
+	background: none;
+	background-image: url("../Images/btn_printview.gif");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btnClear
+{
+	height: 21px;
+	width: 58px;
+	border: none;
+	background: none;
+	background-image: url("../Images/btn_clear.gif");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btnInitpwd
+{
+	height: 26px;
+	width: 80px;
+	border: none;
+	background: none;
+	color: #275E85;
+	background-image: url("../Images/button/btn_initpwd.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_save
+{
+	height: 26px;
+	width: 60px;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_save.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_cancel
+{
+	height: 26px;
+	width: 60px;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_cancel.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_back
+{
+	height: 26px;
+	width: 60px;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_back.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_home
+{
+	height: 26px;
+	width: 60px;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_home.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_bohui
+{
+	height: 26px;
+	width: 60px;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_bohui.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_pass
+{
+	height: 21px;
+	width: 58px;
+	border: none;
+	background: none;
+	background-image: url("../Images/btn_tg.gif");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_check
+{
+	height: 26px;
+	width: 60px;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_sc.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.Button
+{
+	height: 26px;
+	width: 60px;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_bg.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_downarrow
+{
+	height: 36px;
+	width: 100px;
+	padding-bottom:10px \9;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_downarrow.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_rightarrow
+{
+	height: 36px;
+	width: 18px;
+	padding-bottom:10px \9;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/allow_right.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_downarrow_sed
+{
+	height: 36px;
+	width: 100px;
+	padding-bottom:10px \9;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_downarrow_sed.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.button_up
+{
+	width: 26px; /*图片宽度*/
+	background: url(../images/button/btn_moveup.png) no-repeat left top; /* 图片路径*/
+	border: none; /*去掉边框*/
+	height: 26px; /*图片高度*/
+	cursor: pointer;
+}
+.button_down
+{
+	width: 26px; /*图片宽度*/
+	background: url(../images/button/btn_movedown.png) no-repeat left top; /* 图片路径*/
+	border: none; /*去掉边框*/
+	height: 26px; /*图片高度*/
+	cursor: pointer;
+}
+.btn_tag
+{
+	width: 80px; /*图片宽度*/
+	background: url(../images/button/btn_tag.gif) no-repeat left top; /* 图片路径*/
+	border: none; /*去掉边框*/
+	height: 40px; /*图片高度*/
+	padding-top: 20px;
+	cursor: pointer;
+}
+.btn_tag_sed
+{
+	width: 80px; /*图片宽度*/
+	background: url(../images/button/btn_tag_sed.gif) no-repeat left top; /* 图片路径*/
+	border: none; /*去掉边框*/
+	height: 40px; /*图片高度*/
+	padding-top: 20px;
+	cursor: pointer;
+}
+.btn_search
+{
+	height: 26px;
+	width: 60px;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_search.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_hide
+{
+	height: 21px;
+	width: 80px;
+	border: none;
+	background: none;
+	background-image: url("../Images/btn_bg2.gif");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_refresh
+{
+	height: 26px;
+	width: 60px;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_refresh.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_submit
+{
+	height: 26px;
+	width: 60px;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_submit.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_none
+{
+	border: none;
+	background: none;
+}
+.btn_ok
+{
+	height: 18px;
+	width: 23px;
+	border: none;
+	background: none;
+	background-image: url("../Images/btn_ok.gif");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_login
+{
+	height: 26px;
+	width: 60px;
+	border: none;
+	background: none;
+	color: #1F85BC;
+	background-image: url(../Images/Login/login.png);
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_bg5
+{
+	height: 26px;
+	width: 136px;
+	border: none;
+	background: none;
+	color: #FFF;
+	background-image: url(../Images/Login/button_bg.png);
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_bg1
+{
+	height: 26px;
+	width: 60px;
+	border: none;
+	background: none;
+	color: #1F85BC;
+	background-image: url("../Images/button/btn_bg.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_bg2
+{
+	height: 26px;
+	width: 80px;
+	border: none;
+	background: none;
+	color: #1F85BC;
+	background-image: url("../Images/button/btn_bg2.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_bg3
+{
+	height: 18px;
+	width: 46px;
+	border: none;
+	background: none;
+	color:#1F85BC;
+	background-image: url("../Images/btn_bg3.gif");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_bg4
+{
+	height: 26px;
+	width: 100px;
+	border: none;
+	background: none;
+	color: #1F85BC;
+	background-image: url("../Images/button/btn_bg4.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_bg6
+{
+	height: 26px;
+	width: 120px;
+	border: none;
+	background: none;
+	color: #1F85BC;
+	background-image: url("../Images/button/btn_bg6.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_bg8
+{
+	height: 26px;
+	width: 140px;
+	border: none;
+	background: none;
+	color: #1F85BC;
+	background-image: url("../Images/button/btn_bg8.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_folder
+{
+	background: none;
+	background-image: url(../images/button/btn_fold.gif); /* 图片路径*/
+	background-position: center center;
+	background-repeat: no-repeat;
+	border: none;
+	width: 12px; /*图片宽度*/
+	height: 12px;
+	margin: 3px auto auto 5px;
+	cursor: pointer;
+}
+.btn_unfolder
+{
+	background: none;
+	background-image: url(../images/button/btn_unfold.gif); /* 图片路径*/
+	background-position: center center;
+	background-repeat: no-repeat;
+	border: none;
+	width: 12px; /*图片宽度*/
+	height: 12px;
+	margin: 3px auto auto 5px;
+	cursor: pointer;
+}
+.btn_Msg
+{
+	height: 28px;
+	width: 28px;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_Msg.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}
+.btn_NewMsg
+{
+	height: 28px;
+	width: 28px;
+	border: none;
+	background: none;
+	background-image: url("../Images/button/btn_NewMsg.png");
+	background-repeat:no-repeat;
+	cursor: pointer;
+}

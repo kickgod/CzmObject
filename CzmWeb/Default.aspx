@@ -717,23 +717,23 @@
             <div class="ProductImg">
                 <div class="heheda">
                     <h2>医疗保健</h2>
-                    <a><img src="ProductImage/productType1.jpg"  width="300px" height="220px"/></a> 
+                    <a><img src="../ProductImage/productType1.jpg"  width="300px" height="220px"/></a> 
                     <asp:Label ID="lblYIniao" runat="server" Text="Medical Insurance" Visible="False"></asp:Label>
                 </div>
                 <div class="heheda">
                     <h2>通钓鱼具</h2>
-                    <a><img src="ProductImage/productType2.jpg"  width="300px" height="220px"/></a> 
+                    <a><img src="../ProductImage/productType2.jpg"  width="300px" height="220px"/></a> 
                     <asp:Label ID="lbldiaoyu" runat="server" Text="Fishing Tackle" Visible="False"></asp:Label>
                 </div>
                 <div class="heheda">
                     <h2>洗鞋袜</h2>
-                    <a><img src="ProductImage/productType3.jpg"  width="300px" height="220px"/></a> 
+                    <a><img src="../ProductImage/productType3.jpg"  width="300px" height="220px"/></a> 
                     <asp:Label ID="lblxiwa" runat="server" Text="Wash the socks" Visible="False"></asp:Label>
                 </div>
                 <div class="heheda">
                     <h2>文物收藏</h2>
                     <figure>
-                        <a><img src="ProductImage/productType4.jpg"  width="300px" height="220px"/></a>                         
+                        <a><img src="../ProductImage/productType4.jpg"  width="300px" height="220px"/></a>                         
                         <figcaption><asp:Label ID="lblwenwu" runat="server" Visible="False" Text="Cultural relics collection"></asp:Label></figcaption>
                     </figure>
                 </div>
@@ -800,9 +800,9 @@
                 </span> 
             </div>
             <div class="Vedioshelf"> 
-                <div class="LeftBox"><a href="javascript:void(0)"><img src="FirstImage/图标8.png"/></a></div>
-                <div class="CenterBox"><a href="javascript:void(0)"><img src="FirstImage/图标8.png"/></a></div>
-                <div class="RightBox"><a href="javascript:void(0)"><img src="FirstImage/图标8.png"/></a></div>
+                <div class="LeftBox"><a href="javascript:void(0)"><img src="../FirstImage/图标8.png"/></a></div>
+                <div class="CenterBox"><a href="javascript:void(0)"><img src="../FirstImage/图标8.png"/></a></div>
+                <div class="RightBox"><a href="javascript:void(0)"><img src="../FirstImage/图标8.png"/></a></div>
             </div>   <br/>
             <div class="LearingMoreVedio">
                 <p><a href="javascript:void(0)">WATCH MORE</a></p>
@@ -815,9 +815,9 @@
                 </span> 
             </div>
             <div class="LiveSelf">
-                <a href="javascrpt:void(0)"><img src="FirstImage/kuaishou.png"/> </a>
-                <a href="javascrpt:void(0)"><img src="FirstImage/yinke.png"/></a>
-                <a href="javascrpt:void(0)"><img src="FirstImage/shangyu.png"/></a>
+                <a href="javascrpt:void(0)"><img src="../FirstImage/kuaishou.png"/> </a>
+                <a href="javascrpt:void(0)"><img src="../FirstImage/yinke.png"/></a>
+                <a href="javascrpt:void(0)"><img src="../FirstImage/shangyu.png"/></a>
             </div>
         </section>
         <section class="ProjectShow">
@@ -827,7 +827,7 @@
             <div class="right">
                 <div class="ProjectSelf" id="Scoll">
                     <div class="VideoShow">
-                        <div class="imgShow"><img src="FirstImage/首页10.jpg"/></div>
+                        <div class="imgShow"><img src="../FirstImage/首页10.jpg"/></div>
                         <div class="OpcityHtml"></div>
                         <div class="IntroDucation">
                             <div class="Title"><p>等离子泊车项目</p></div>
@@ -841,7 +841,7 @@
                         </div>
                     </div>    
                     <div class="VideoShow">
-                        <div class="imgShow"><img src="FirstImage/首页10.jpg"/></div>
+                        <div class="imgShow"><img src="../FirstImage/首页10.jpg"/></div>
                         <div class="OpcityHtml"></div>
                         <div class="IntroDucation">
                             <div class="Title"><p>等离子泊车项目</p></div>
@@ -855,7 +855,7 @@
                         </div>
                     </div>    
                     <div class="VideoShow">
-                        <div class="imgShow"><img src="FirstImage/首页8.jpg"/></div>
+                        <div class="imgShow"><img src="../FirstImage/首页8.jpg"/></div>
                         <div class="OpcityHtml"></div>
                         <div class="IntroDucation">
                             <div class="Title"><p>等离子泊车项目</p></div>
@@ -869,7 +869,7 @@
                         </div>
                     </div>  
                     <div class="VideoShow">
-                        <div class="imgShow"><img src="FirstImage/首页9.jpg"/></div>
+                        <div class="imgShow"><img src="../FirstImage/首页9.jpg"/></div>
                         <div class="OpcityHtml"></div>
                         <div class="IntroDucation">
                             <div class="Title"><p>等离子泊车项目</p></div>
@@ -883,7 +883,7 @@
                         </div>
                     </div>  
                     <div class="VideoShow">
-                        <div class="imgShow"><img src="FirstImage/首页9.jpg"/></div>
+                        <div class="imgShow"><img src="../FirstImage/首页9.jpg"/></div>
                         <div class="OpcityHtml"></div>
                         <div class="IntroDucation">
                             <div class="Title"><p>等离子泊车项目</p></div>
@@ -996,8 +996,10 @@
         </footer>
         <div class="JiaoBen">
             <p>
-            <a href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="Images/SystemPicture/阿里旺旺.png" width="20px" height="20px"/>阿里旺旺</a>
-            <a href="http://wpa.qq.com/msgrd?v=1&uin=544956252"><img src="Images/SystemPicture/qq.png" width="20px" height="20px"/>QQ服务</a>Copyright © 2017-至今|四川创造门高新技术开发有限公司版权所有|客户电话：15698259380|企业邮件:chuangzaomen@163.com|热线电话：15826121
+            <a href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="../Images/SystemPicture/阿里旺旺.png" width="20px" height="20px"/>阿里旺旺</a>
+            <a href="http://wpa.qq.com/msgrd?v=1&uin=544956252"><img src="../Images/SystemPicture/qq.png" width="20px" height="20px"/>QQ服务</a>Copyright © 2017-至今|四川创造门高新技术开发有限公司版权所有|客户电话：15698259380|企业邮件:chuangzaomen@163.com|热线电话：15826121
+            <a href="../BackendManage/AdminLogin.aspx">管理员</a>
+
             </p>
         </div>
         <div class="zixun">
@@ -1008,11 +1010,11 @@
                 <p>惊喜连连更多</p>
             </div>
             <div class="lanmu">
-                <a href="javascript:void(0)"><img src="Images/SystemPicture/userLanse.png" title="用户登录"/></a>
-                <a href="javascript:void(0)"><img src="Images/SystemPicture/zixunlanse.png" title="在线咨询"/></a>
-                <a href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="Images/SystemPicture/阿里旺旺.png" title="阿里旺旺" /></a>
-                <a href="javascript:void(0)"><img src="Images/SystemPicture/qqlanse.png" title="QQ咨询" /></a>
-                <a href="#"><img src="Images/SystemPicture/zhidinglanse.png" title="首页" /></a>
+                <a href="javascript:void(0)"><img src="../Images/SystemPicture/userLanse.png" title="用户登录"/></a>
+                <a href="javascript:void(0)"><img src="../Images/SystemPicture/zixunlanse.png" title="在线咨询"/></a>
+                <a href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="../Images/SystemPicture/阿里旺旺.png" title="阿里旺旺" /></a>
+                <a href="javascript:void(0)"><img src="../Images/SystemPicture/qqlanse.png" title="QQ咨询" /></a>
+                <a href="#"><img src="../Images/SystemPicture/zhidinglanse.png" title="首页" /></a>
             </div>
        
         </div>
