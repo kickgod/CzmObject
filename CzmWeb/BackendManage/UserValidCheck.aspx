@@ -34,7 +34,8 @@
                         管理员列表
                     </td>
                     <td>
-                        <asp:DropDownList ID="ddlAdmin" runat="server"></asp:DropDownList>
+                        <asp:DropDownList ID="ddlAdmin" runat="server" Height="25px" AutoPostBack="True" OnSelectedIndexChanged="ddlAdmin_SelectedIndexChanged" Width="220px">
+                        </asp:DropDownList>
                     </td>
                    <td colspan="2" class="TdClass" >
                        [这里你可以对管理进行修改操作]
@@ -60,6 +61,7 @@
                     </td>
                     <td>
                         <asp:TextBox ID="txtAdminID"  Enabled="False" runat="server"></asp:TextBox>
+                        <asp:Label ID="lblIDLast" Visible="True" runat="server" Text=""></asp:Label>
                     </td>
                     <td class="TdClass">
                         密码
@@ -80,20 +82,15 @@
                     </td>
                     <td>
                         正常
+                     
+                        <asp:Label ID="lblxiugai" Visible="True" runat="server" Text=""></asp:Label>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="4" class="TdClass" >
-                        <asp:Button ID="btnAdd" runat="server" Text="" CssClass="btnAdd" />
-                        <asp:Button ID="btnEdit" runat="server" Text="" CssClass="btnEdit" />
-                        <asp:Button ID="Button1" runat="server" Text="" CssClass="btn_save" />
-                        <asp:Button ID="Button2" runat="server" Text="" CssClass="btnDelete" />
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="4">
-                        <asp:Label ID="lblAdmin" runat="server" Text="" Visible="False"></asp:Label>
-                        <asp:Label ID="lbladminpwd" runat="server" Text="" Visible="False" ></asp:Label>
+                        <asp:Button ID="btnAdd" runat="server" Text="" CssClass="btnAdd" OnClick="btnAdd_Click" />
+                        <asp:Button ID="btnEdit" runat="server" Text="" CssClass="btnEdit" OnClick="btnEdit_Click" />
+                        <asp:Button ID="Button1" runat="server" Text="" CssClass="btn_save" OnClick="Button1_Click" />
                     </td>
                 </tr>
             </table>

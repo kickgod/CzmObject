@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.SessionState;
 using System.Web.UI.WebControls;
 using CzmObject.App_Code;
 using CzmWeb.App_Code;
@@ -64,9 +65,6 @@ namespace CzmWeb.BackendManage
         {
             if (CheckIsHave())
             {
-                Session["Admin"] = txtID.Text;
-                Session["AdminPassword"] = txtpwd.Text;
-                //MessaegBox("~/BackendManage/BackAdmin.aspx ?Admin=" + Session["Admin"] + " & AdminPassword=" + Session["AdminPassword"]);
                 Response.Redirect("~/BackendManage/BackAdmin.aspx?Admin=" + txtID.Text + "&AdminPassword="+txtpwd.Text);
             }
         }

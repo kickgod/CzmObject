@@ -5,6 +5,7 @@ using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.SessionState;
 using CzmObject.App_Code;
 using CzmWeb.App_Code;
 
@@ -26,6 +27,9 @@ namespace CzmWeb.BackendManage
                     lblAdmin.Text = Admin;
                     String AdminPassword = Request.QueryString["AdminPassword"].ToString();
                     lbladminpwd.Text = AdminPassword;
+                    Response.Cookies["administator"]["ID"]=Admin;
+                    Response.Cookies["administator"]["Pswd"] = AdminPassword;
+                    Response.Cookies["administator"].Expires=DateTime.Now.AddHours(1);
                 }
                 else
                 {
@@ -66,17 +70,6 @@ namespace CzmWeb.BackendManage
         private void MessaegBox(String msg)
         {
             Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('" + msg + "')</script>");
-        }
-        private void MessageBoxLanguge(string Chinese, string English)
-        {
-            if (Session["Lang"].ToString() == "CHE" || Session["Lang"] == null)
-            {
-                MessaegBox(Chinese);
-            }
-            else
-            {
-                MessaegBox(English);
-            }
         }
     }
 }
