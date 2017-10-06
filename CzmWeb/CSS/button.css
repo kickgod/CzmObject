@@ -113,12 +113,11 @@
 }
 .btn_save
 {
-	height: 26px;
-	width: 60px;
-	border: none;
-	background: none;
-	background-image: url("../Images/button/btn_save.png");
-	background-repeat:no-repeat;
+	border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    width: 60px;
+	background: url('../Images/button/btn_save.png') no-repeat;
 	cursor: pointer;
 }
 .btn_cancel

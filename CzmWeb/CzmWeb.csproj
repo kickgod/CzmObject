@@ -133,6 +133,7 @@
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="BackendManage\AdminLogin.aspx" />
     <Content Include="BackendManage\BackAdmin.aspx" />
+    <Content Include="BackendManage\UserApplyCheck.aspx" />
     <Content Include="BackendManage\UserValidCheck.aspx" />
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\AspNet.ScriptManager.jQuery.dll" />
@@ -661,6 +662,13 @@
     </Compile>
     <Compile Include="BackendManage\BackAdmin.aspx.designer.cs">
       <DependentUpon>BackAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackendManage\UserApplyCheck.aspx.cs">
+      <DependentUpon>UserApplyCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackendManage\UserApplyCheck.aspx.designer.cs">
+      <DependentUpon>UserApplyCheck.aspx</DependentUpon>
     </Compile>
     <Compile Include="BackendManage\UserValidCheck.aspx.cs">
       <DependentUpon>UserValidCheck.aspx</DependentUpon>
