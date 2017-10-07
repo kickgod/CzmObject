@@ -97,7 +97,7 @@
                 <div class="ChooseKa">
                     <ul>
                         <li><a href="javascript:void(0)">首页管理</a></li>
-                        <li><a href="javascript:void(0)">产品管理</a></li>
+                        <li><a href="javascript:GetPage('../BackendManage/AddProductList.aspx')">产品管理</a></li>
                         <li><a href="javascript:GetPage('../BackendManage/UserApplyCheck.aspx')">会员管理</a></li>
                         <li><a href="javascript:void(0)">项目审核</a></li>
                         <li><a href="javascript:void(0)">投资审核</a></li>

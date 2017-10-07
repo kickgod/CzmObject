@@ -259,7 +259,7 @@ namespace CzmWeb.BackendManage
                     string sql = "  UPDATE [XcXm].[dbo].[tblAdministrator] SET AdminId ='"+txtAdminID+"' ,Pwd='"+txtAdminPwd+"' ,Phone='"+txtPhone+"',AdminName='"+txtName+"'WHERE AdminId='"+lblIDLast.Text+"'";
                     DB.CarryOutSqlSentence(sql);
                     MessaegBox("修改完毕");
-                    Server.Transfer("../BackendManage/AdminLogin.aspx");
+                    MessaegBoxs();
                     lblxiugai.Text = "10";
                     lblIDLast.Text = "";
                 }
@@ -322,7 +322,7 @@ namespace CzmWeb.BackendManage
                     string sql = "  UPDATE [XcXm].[dbo].[tblAdministrator] SET AdminId ='" + txtAdminID.Text + "' ,Pwd='" + txtAdminPwd.Text + "' ,Phone='" + txtPhone.Text + "',AdminName='" + txtName.Text + "'WHERE AdminId='" + lblIDLast.Text + "'";
                     DB.CarryOutSqlSentence(sql);
                     MessaegBox("修改完毕");
-                    Server.Transfer("../BackendManage/AdminLogin.aspx");
+                    MessaegBoxs();
                     lblxiugai.Text = "10";
                     lblIDLast.Text = "";
                     Close();
@@ -336,14 +336,17 @@ namespace CzmWeb.BackendManage
                     lblIDLast.Text = "";
                     Close();
                 }
-
             }
             else
             {
                 MessaegBox("尚未选择！");
             }
         }
-
+        private int MessaegBoxs()
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>window.parent.frames.location.href = '../Default.aspx"+"';</script>");
+            return 1;
+        }
         protected void rpItem_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
 

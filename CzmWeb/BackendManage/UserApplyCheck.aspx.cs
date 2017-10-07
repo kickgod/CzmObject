@@ -191,7 +191,7 @@ namespace CzmWeb.BackendManage
                 sql += " and UserName_e ='" + txtName.Text + "'";
             }
             lblWhere.Text = sql;
-            //binds();
+            binds();
         }
         protected void wuc_ListPager1_OnBindList(object sender, EventArgs e)
         {

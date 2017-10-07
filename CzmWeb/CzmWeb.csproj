@@ -131,6 +131,7 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="BackendManage\AddProductList.aspx" />
     <Content Include="BackendManage\AdminLogin.aspx" />
     <Content Include="BackendManage\BackAdmin.aspx" />
     <Content Include="BackendManage\UserApplyCheck.aspx" />
@@ -545,6 +546,7 @@
     <Content Include="Font\font_ppbzixtnuahsemi\iconfont.ttf" />
     <Content Include="Font\font_ppbzixtnuahsemi\iconfont.woff" />
     <Content Include="Master\UserPageMaster.Master" />
+    <Content Include="Content\锐字云姚体.TTF" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="ProductImage\首页1.jpg" />
     <Content Include="ProductImage\首页10.jpg" />
@@ -649,6 +651,13 @@
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BackendManage\AddProductList.aspx.cs">
+      <DependentUpon>AddProductList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackendManage\AddProductList.aspx.designer.cs">
+      <DependentUpon>AddProductList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BackendManage\AdminLogin.aspx.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

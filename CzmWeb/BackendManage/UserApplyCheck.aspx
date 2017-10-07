@@ -12,7 +12,7 @@
     <link href="../CSS/TraditionalFontStyle.css" rel="stylesheet" type="text/css" />
     <link href="../CSS/button.css" type="text/css" rel="stylesheet"  />
     <link href="../CSS/table.css" rel="stylesheet" type="text/css"  />
-    
+    <link href="../Content/FontBindData.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         .Div_Center{ width: 100%;}
         .Div_Center .Div_Main{ width: 70%;margin: 0 auto}

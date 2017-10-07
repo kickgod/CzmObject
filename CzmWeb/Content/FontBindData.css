@@ -17,6 +17,10 @@
          url('../Font/webfont_pnqaxdsleaaqyqfr/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
          url('../Font/webfont_pnqaxdsleaaqyqfr/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
 }
+@font-face {
+    font-family: 'ProductFontStyle';
+    src: url('../Content/锐字云姚体.TTF');
+}
 @font-face{
     font-family: wuyongti;
     src: url('../Font/RTWSYueGoTrial-ExLight.otf');
