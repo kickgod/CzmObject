@@ -51,7 +51,14 @@ namespace CzmWeb.App_Code
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM tblAdministrator Where "+Where;
+            if (Where=="")
+            {
+                cmd.CommandText = "SELECT * FROM tblAdministrator";
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM tblAdministrator Where " + Where;  
+            }
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(td);
             return td;
@@ -89,7 +96,14 @@ namespace CzmWeb.App_Code
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM tblAdviceInfo Where " + Where;
+            if (Where == "")
+            {
+                cmd.CommandText = "SELECT * FROM tblAdviceInfo";
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM tblAdviceInfo Where " + Where;
+            }
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(td);
             return td;
@@ -127,7 +141,14 @@ namespace CzmWeb.App_Code
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM tblDowntownRegionList Where " + Where;
+            if (Where == "")
+            {
+                cmd.CommandText = "SELECT * FROM tblDowntownRegionList";
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM tblDowntownRegionList Where " + Where;
+            }
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(td);
             return td;
@@ -165,7 +186,14 @@ namespace CzmWeb.App_Code
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM tblFirstPictureList Where " + Where;
+            if (Where == "")
+            {
+                cmd.CommandText = "SELECT * FROM tblFirstPictureList";
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM tblFirstPictureList Where " + Where;
+            }
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(td);
             return td;
@@ -203,7 +231,14 @@ namespace CzmWeb.App_Code
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM tblProductInfo Where " + Where;
+            if (Where == "")
+            {
+                cmd.CommandText = "SELECT * FROM tblProductInfo";
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM tblProductInfo Where " + Where;
+            }
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(td);
             return td;
@@ -241,7 +276,14 @@ namespace CzmWeb.App_Code
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM tblProductTypeInfo Where " + Where;
+            if (Where == "")
+            {
+                cmd.CommandText = "SELECT * FROM tblProductTypeInfo";
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM tblProductTypeInfo Where " + Where;
+            }
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(td);
             return td;
@@ -279,7 +321,14 @@ namespace CzmWeb.App_Code
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM tblProjectCreate Where " + Where;
+            if (Where == "")
+            {
+                cmd.CommandText = "SELECT * FROM tblProjectCreate";
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM tblProjectCreate Where " + Where;
+            }
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(td);
             return td;
@@ -317,7 +366,14 @@ namespace CzmWeb.App_Code
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM tblProjectInvestInfo Where " + Where;
+            if (Where == "")
+            {
+                cmd.CommandText = "SELECT * FROM tblProjectInvestInfo";
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM tblProjectInvestInfo Where " + Where;
+            }
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(td);
             return td;
@@ -355,7 +411,14 @@ namespace CzmWeb.App_Code
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM tblProvinceRegionList Where " + Where;
+            if (Where == "")
+            {
+                cmd.CommandText = "SELECT * FROM tblProvinceRegionList";
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM tblProvinceRegionList Where " + Where;
+            }
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(td);
             return td;
@@ -393,7 +456,14 @@ namespace CzmWeb.App_Code
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM tblUserInfo Where " + Where;
+            if (Where == "")
+            {
+                cmd.CommandText = "SELECT * FROM tblUserInfo";
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM tblUserInfo Where " + Where;
+            }
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(td);
             return td;
@@ -431,7 +501,14 @@ namespace CzmWeb.App_Code
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM tblUserTypeInfo Where " + Where;
+            if (Where == "")
+            {
+                cmd.CommandText = "SELECT * FROM tblUserTypeInfo";
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM tblUserTypeInfo Where " + Where;
+            }
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(td);
             return td;
@@ -469,7 +546,14 @@ namespace CzmWeb.App_Code
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM tblVideoInfo Where " + Where;
+            if (Where == "")
+            {
+                cmd.CommandText = "SELECT * FROM tblVideoInfo";
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM tblVideoInfo Where " + Where;
+            }
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(td);
             return td;

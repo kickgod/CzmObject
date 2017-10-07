@@ -150,7 +150,20 @@ namespace CzmWeb.UserPage
                     }
                     else
                     {
-                        MessaegBox("请上传文件");
+                        String sql =
+                            "INSERT INTO tblUserInfo(UserId,UserType,UserName_e,UserSex,UserCard,UserCardPicture_Address,UserCardPicture2_Address,UserWechat,UserEmail,UserPwd,UserState)" +
+                            " values('" + txtUserPhone.Text + "',1,'" + txtUserName.Text + "'," +
+                            DropDownList1.SelectedValue + ",'" + txtUserCardID.Text + "','" +
+                            "" + "','" + "" + "','" +
+                            txtUserName.Text + "','" + txtPwd.Text + "','" + txtPasswordOne.Text + "',10)";
+                        int Count = DB.CarryOutSqlSentence(sql);
+                        if (Count != 1)
+                        {
+                            MessaegBox("系统错误！请通知管理员！");
+                            return;
+                        }
+                        MessaegBox("已经注册！你可以登陆了！");
+                        Server.Transfer("../UserPage/UserPageLogin.aspx");                        
                     }
                 }
             }

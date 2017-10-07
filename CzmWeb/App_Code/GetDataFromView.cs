@@ -48,7 +48,14 @@ namespace CzmWeb.App_Code
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM vwCreateProjrctItem Where " + Where;
+            if (Where != "")
+            {
+                cmd.CommandText = "SELECT * FROM vwCreateProjrctItem Where " + Where;               
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM vwCreateProjrctItem";
+            }
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(td);
             return td;
@@ -87,7 +94,14 @@ namespace CzmWeb.App_Code
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM vwInvestProject Where " + Where;
+            if (Where != "")
+            {
+                cmd.CommandText = "SELECT * FROM vwInvestProject Where " + Where;
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM vwInvestProject";
+            }
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(td);
             return td;
@@ -126,7 +140,14 @@ namespace CzmWeb.App_Code
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM vwproductInfo Where " + Where;
+            if (Where != "")
+            {
+                cmd.CommandText = "SELECT * FROM vwproductInfo Where " + Where;
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM vwproductInfo";
+            }
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(td);
             return td;
@@ -165,7 +186,14 @@ namespace CzmWeb.App_Code
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM vwProvinceList Where " + Where;
+            if (Where != "")
+            {
+                cmd.CommandText = "SELECT * FROM vwProvinceList Where " + Where;
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM vwProvinceList";
+            }          
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(td);
             return td;
@@ -204,7 +232,14 @@ namespace CzmWeb.App_Code
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM vwRegionInfo Where " + Where;
+            if (Where != "")
+            {
+                cmd.CommandText = "SELECT * FROM vwRegionInfo Where " + Where;
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM vwRegionInfo";
+            }
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(td);
             return td;
@@ -243,7 +278,14 @@ namespace CzmWeb.App_Code
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM vwUserInfo Where " + Where;
+            if (Where != "")
+            {
+                cmd.CommandText = "SELECT * FROM vwUserInfo Where " + Where;
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM vwUserInfo";
+            }
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(td);
             return td;
@@ -282,7 +324,14 @@ namespace CzmWeb.App_Code
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT * FROM vwVideoList Where " + Where;
+            if (Where != "")
+            {
+                cmd.CommandText = "SELECT * FROM vwVideoList Where " + Where;
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM vwVideoList";
+            }
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             adapter.Fill(td);
             return td;

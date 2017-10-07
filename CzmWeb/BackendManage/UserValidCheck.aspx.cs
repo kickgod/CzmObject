@@ -44,13 +44,18 @@ namespace CzmWeb.BackendManage
                 item.Text = "-- 不选 --";
                 item.Value = "-1";
                 ddlAdmin.Items.Add(item);
-                GetDataFromTable tsd = new GetDataFromTable();
-                DataTable tds = tsd.GetAllDataFromtblAdministrator();
-                wuc_ListPager1.PageSize = 10;
-                wuc_ListPager1.GetDateBind(tds);
-                rpItem.DataSource = wuc_ListPager1.BindOutData;
-                rpItem.DataBind();
+                binds();
             }
+        }
+
+        private void binds()
+        {
+            GetDataFromTable tsd = new GetDataFromTable();
+            DataTable tds = tsd.GetAllDataFromtblAdministrator();
+            wuc_ListPager1.PageSize = 10;
+            wuc_ListPager1.GetDateBind(tds);
+            rpItem.DataSource = wuc_ListPager1.BindOutData;
+            rpItem.DataBind();
         }
         private void BinddataTable()
         {
@@ -254,6 +259,7 @@ namespace CzmWeb.BackendManage
                     string sql = "  UPDATE [XcXm].[dbo].[tblAdministrator] SET AdminId ='"+txtAdminID+"' ,Pwd='"+txtAdminPwd+"' ,Phone='"+txtPhone+"',AdminName='"+txtName+"'WHERE AdminId='"+lblIDLast.Text+"'";
                     DB.CarryOutSqlSentence(sql);
                     MessaegBox("修改完毕");
+                    Server.Transfer("../BackendManage/AdminLogin.aspx");
                     lblxiugai.Text = "10";
                     lblIDLast.Text = "";
                 }
@@ -316,6 +322,7 @@ namespace CzmWeb.BackendManage
                     string sql = "  UPDATE [XcXm].[dbo].[tblAdministrator] SET AdminId ='" + txtAdminID.Text + "' ,Pwd='" + txtAdminPwd.Text + "' ,Phone='" + txtPhone.Text + "',AdminName='" + txtName.Text + "'WHERE AdminId='" + lblIDLast.Text + "'";
                     DB.CarryOutSqlSentence(sql);
                     MessaegBox("修改完毕");
+                    Server.Transfer("../BackendManage/AdminLogin.aspx");
                     lblxiugai.Text = "10";
                     lblIDLast.Text = "";
                     Close();
@@ -348,15 +355,17 @@ namespace CzmWeb.BackendManage
             {
                 if (e.CommandName == "Delete")
                 {
-                    string sql = "  DELETE FROM [XcXm].[dbo].[tblAdministrator] WHERE AdminId ='" + e.CommandArgument + "'";
+                    string sql = "DELETE FROM [XcXm].[dbo].[tblAdministrator] WHERE AdminId ='" + e.CommandArgument + "'";
                     DB.CarryOutSqlSentence(sql);
                     MessaegBox("成功删除");
+                    binds();
                 }               
             }
             else
             {
                 MessaegBox("你的权限等级不够");
             }
+
 
         }
 

@@ -50,13 +50,13 @@
                         姓名
                     </td> 
                     <td>
-                        <asp:TextBox ID="txtName"  Enabled="False" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtName"  Enabled="False" runat="server" Width="215px" Height="23px" ></asp:TextBox>
                     </td>
                     <td class="TdClass">
                         电话号码
                     </td>
                     <td>
-                        <asp:TextBox ID="txtPhone"  Enabled="False" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtPhone"  Enabled="False" runat="server"  Width="215px" Height="23px" ></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
@@ -64,14 +64,14 @@
                         管理员ID
                     </td>
                     <td>
-                        <asp:TextBox ID="txtAdminID"  Enabled="False" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtAdminID"  Enabled="False" runat="server"   Width="215px" Height="23px" ></asp:TextBox>
                         <asp:Label ID="lblIDLast" Visible="False" runat="server" Text=""></asp:Label>
                     </td>
                     <td class="TdClass">
                         密码
                     </td>
                     <td>
-                        <asp:TextBox ID="txtAdminPwd"  Enabled="False" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtAdminPwd"  Enabled="False" runat="server"  Width="215px" Height="23px"  ></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
