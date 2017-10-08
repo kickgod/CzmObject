@@ -3,4 +3,5 @@
 <a href="javascript:;" class="file" style="border-radius: 13px">
     <asp:FileUpload ID="FlUpLoad" runat="server" />  选择文件
 </a>
+<asp:Label ID="lblWenjian" runat="server" Text=""></asp:Label>
 
