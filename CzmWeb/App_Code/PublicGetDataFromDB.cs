@@ -79,26 +79,7 @@ namespace CzmWeb.App_Code
             con.Close();
             return Result;
         }
-
-        public DataTable CarryOutSqlGeDataTable(string SentenceSql)
-        {
-            if (SentenceSql == "")
-            {
-                return null;
-            }
-            SqlConnection con = GetSqlConnection();
-            if (con.State != ConnectionState.Open)
-            {
-                con.Open();
-            }
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = SentenceSql;
-            SqlDataAdapter adapter= new SqlDataAdapter(cmd);
-            DataTable td =new DataTable();
-            adapter.Fill(td);
-            return td;
-        }
+        
         
     }
     

@@ -1,24 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using CzmObject.App_Code;
-using CzmWeb.App_Code;
-using CzmWeb;
 
 namespace CzmWeb.BackendManage
 {
     public partial class AddProductList : System.Web.UI.Page
     {
-        GetDataFromTable getTable = new GetDataFromTable();
-        GetDataFromView getView = new GetDataFromView();
-        PublicGetDataFromDB DB = new PublicGetDataFromDB();
-        SendPhoneMessage send = new SendPhoneMessage();
         protected void Page_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             if (!IsPostBack)
             {
                 binds();
@@ -378,6 +371,8 @@ namespace CzmWeb.BackendManage
 
                 }
             }
+=======
+>>>>>>> parent of f2750fd... 201710081811 Many Problem
 
         }
 

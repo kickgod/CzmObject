@@ -1,9 +1,12 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddProductList.aspx.cs" Inherits="CzmWeb.BackendManage.AddProductList" %>
 
+<<<<<<< HEAD
 <%@ Register Src="~/Common/wuc_FileUpload.ascx" TagPrefix="uc1" TagName="wuc_FileUpload" %>
 <%@ Register TagPrefix="uc1" TagName="wuc_ListPager" Src="~/Common/wuc_ListPager.ascx" %>
 
 
+=======
+>>>>>>> parent of f2750fd... 201710081811 Many Problem
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -22,6 +25,7 @@
         .txtBox{ width: 240px;height: 23px;line-height: 23px}
         .TdClass{text-align: center}
         .hs{ height: 28px;line-height: 28px}
+<<<<<<< HEAD
         .Save{height: 25px;	width: 60px; border: none; background: gainsboro;cursor: pointer;color: darkturquoise;border: solid 1px gainsboro;
             margin-top: 0px;
         }  
@@ -42,13 +46,28 @@
         .btnYes{ width: 50px;height: 25px;background-color: RGB(209, 148, 204);border: none;color: white;font-weight: 500 }
         .btnNo{width: 50px;height: 25px;background-color: inherit;border: none;color: gainsboro}
         .XiaoxiProduct{ height: 50px;line-height: 50px;}
+=======
+        .Save{margin-top: 5px;	height: 26px;width: 60px; border: none; background: none;cursor: pointer;background-color: gainsboro;color: darkturquoise;border: solid 1px gainsboro}   
+>>>>>>> parent of f2750fd... 201710081811 Many Problem
     </style>
 </head>
 <body> 
     <form id="form1" runat="server">
     <div id="23">
         <div class="Title TFS_Standardstyle">
-            添加产品类型
+            添加产品
+        </div>
+        <div>
+            <table width="100%" border="1" cellpadding="0" cellspacing="0" class="table4">
+                <tr>
+                    <td>
+                        
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="Title TFS_Standardstyle">
+            添加产品
         </div>
         <div>
             <table width="100%" border="1" cellpadding="0" cellspacing="0" class="table4">
@@ -56,39 +75,65 @@
                     <td align="center">
                         编号
                     </td>
-                    <td >
-                        自动编号<asp:Label ID="lblID" runat="server" Text="" Visible="False" ></asp:Label>
+                    <td>
+                       自动编号
                     </td>
                     <td align="center">
-                        选择查看
+                        产品名称
                     </td>
                     <td>
-                        <asp:DropDownList ID="ddlCheckType" AutoPostBack="True"  OnSelectedIndexChanged="ddlCheckType_OnSelectedIndexChanged" runat="server" CssClass="txtBox" ></asp:DropDownList>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center">
-                        类别名称
-                    </td>
-                    <td>
-                        <asp:TextBox ID="txtTypeNameChe" CssClass="txtBox"  runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtNameChinese" runat="server"  CssClass="txtBox"></asp:TextBox>
                     </td>
                     <td align="center">
                         英文名称
                     </td>
                     <td>
-                        <asp:TextBox ID="txtTypeNameEng" CssClass="txtBox"  runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtNameEnglish" runat="server"  CssClass="txtBox"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="4" align="center">
-                        <asp:Button ID="btnAdd" runat="server" Text="添加" CssClass="Save" OnClick="btnAdd_OnClick" />
-                        <asp:Button ID="btnEdit" runat="server" Text="编辑" CssClass="Save" OnClick="btnEdit_OnClick" />
-                        <asp:Button ID="btnSave" runat="server" Text="保存" CssClass="Save" OnClick="btnSave_OnClick"   />
+                    <td align="center">
+                        所属类别
+                    </td>
+                    <td>
+                        <asp:DropDownList ID="ddlProductType" runat="server" CssClass="txtBox" ></asp:DropDownList>
+                    </td>
+                    <td align="center">
+                        淘宝地址
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txttaobaoUrl" runat="server"  CssClass="txtBox"></asp:TextBox>
+                    </td>
+                    <td align="center" >
+                        关键字[空格分开]
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txtKetWords" runat="server"  CssClass="txtBox"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" >
+                        是否包邮
+                    </td>
+                    <td>
+                        <asp:CheckBox ID="chkBaoyou" runat="server" />包邮
+                    </td>
+                    <td align="center" >
+                        是否热卖
+                    </td>
+                    <td>
+                        <asp:CheckBox ID="chbremai" runat="server" />热卖
+                    </td>
+                    <td align="center" >
+                        是否新品
+                    </td>
+                    <td>
+                        <asp:CheckBox ID="chbIsNew" runat="server" />新品
                     </td>
                 </tr>
             </table>
         </div>
+<<<<<<< HEAD
         <br />
         <br/>
         <div class="Title TFS_Standardstyle">
@@ -388,6 +433,8 @@
                  </div>
              </div>
         </div>
+=======
+>>>>>>> parent of f2750fd... 201710081811 Many Problem
     </div>
     </form>
 </body>

@@ -609,7 +609,6 @@
     <Compile Include="App_Code\SendPhoneMessage.cs" />
     <Compile Include="App_Code\PublicGetDataFromDB.cs" />
     <Compile Include="App_Code\GetDataFromTable.cs" />
-    <Compile Include="App_Code\ValueJudge.cs" />
     <Compile Include="App_Code\VwProvinceList.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
