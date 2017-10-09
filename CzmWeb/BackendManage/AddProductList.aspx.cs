@@ -21,8 +21,54 @@ namespace CzmWeb.BackendManage
         {
             if (!IsPostBack)
             {
+                binds();
                 BindData();                
             }
+        }
+        /// <summary>
+        /// 你懂的排序 用户排序的控件
+        /// </summary>
+        private void binds()
+        {
+            if (lblWhere.Text == "")
+            {
+                DataTable tds = getView.GetAllDataFrom_vwproductInfo();
+                wuc_ListPager1.PageSize = 20;
+                wuc_ListPager1.GetDateBind(tds);
+                ProductCount.Text = wuc_ListPager1.BindOutData.Rows.Count.ToString();
+                rpItem.DataSource = wuc_ListPager1.BindOutData;
+                rpItem.DataBind();
+            }
+            else
+            {
+                DataTable tds = getView.GetAllDataFrom_vwproductInfo(lblWhere.Text);
+                wuc_ListPager1.PageSize = 10;
+                wuc_ListPager1.GetDateBind(tds);
+                ProductCount.Text = wuc_ListPager1.BindOutData.Rows.Count.ToString();
+                rpItem.DataSource = wuc_ListPager1.BindOutData;
+                rpItem.DataBind();
+            }
+        }
+        protected void wuc_ListPager1_OnBindList(object sender, EventArgs e)
+        {
+            wuc_ListPager1.PageSize = 20;
+            DataTable tds = new DataTable();
+            if (lblWhere.Text == "")
+            {
+                tds = getView.GetAllDataFrom_vwproductInfo(lblWhere.Text);
+            }
+            else
+            {
+                tds = getView.GetAllDataFrom_vwproductInfo();
+            }
+            wuc_ListPager1.BindData = tds;
+            ProductCount.Text = wuc_ListPager1.BindOutData.Rows.Count.ToString();
+            rpItem.DataSource = wuc_ListPager1.BindOutData;
+            if (wuc_ListPager1.BindOutData == null)
+            {
+                MessaegBox("HeiHei BindOutData is NULL");
+            }
+            rpItem.DataBind();
         }
         /// <summary>
         /// 绑定两个DropDownList数据
@@ -36,6 +82,7 @@ namespace CzmWeb.BackendManage
             item.Text = "-- 不选 --";
             ddlCheckType.Items.Add(item);
             ddlProductType.Items.Add(item);
+            ddlShoosProductTypes.Items.Add(item);
             DataTable td = getTable.GetAllDataFromtblProductTypeInfo();
             if (td.Rows.Count > 0)
             {
@@ -46,6 +93,7 @@ namespace CzmWeb.BackendManage
                     itemSItem.Text = row["typeName_c"].ToString();
                     ddlCheckType.Items.Add(itemSItem);
                     ddlProductType.Items.Add(itemSItem);
+                    ddlShoosProductTypes.Items.Add(itemSItem);
                 }
             }
         }
@@ -255,6 +303,11 @@ namespace CzmWeb.BackendManage
                     return;
                 }
             }
+            if (!wuc_FileUpload.IsHaveFile())
+            {
+                MessaegBoxConfrim("请选择图片文件！");
+                return;
+            }
             if (txtPriceLst.Text != "")
             {
                 if (!ValueJudge.IsNumberic(txtPriceLst.Text))
@@ -268,6 +321,11 @@ namespace CzmWeb.BackendManage
             {
                 priceLast = (Math.Floor(Convert.ToDouble(txtPriceNow.Text) * 1.2)).ToString();
             }
+            if (txtProductKeyWordsEnd.Text == "")
+            {
+                MessaegBoxConfrim("请填写英文关键词");
+                return;
+            }
             if (txtProductIntroDuct.Text == "")
             {
                 MessaegBoxConfrim("请填写产品中文简介");
@@ -276,11 +334,6 @@ namespace CzmWeb.BackendManage
             if (txtProductIntroDuctEng.Text == "")
             {
                 MessaegBoxConfrim("请填写产品英文简介");
-                return;
-            }
-            if (!wuc_FileUpload.IsHaveFile())
-            {
-                MessaegBoxConfrim("请选择图片文件！");
                 return;
             }
             string IsVisibly;
@@ -296,10 +349,10 @@ namespace CzmWeb.BackendManage
                 wuc_FileUpload.MapPaths="~/ProductImage/";
                 wuc_FileUpload.UpFile();
                 string ImgPath = wuc_FileUpload.ServerDianPath;
-                string sql = "  INSERT INTO [XcXm].[dbo].[tblProductInfo] ( [ProductName_c] ,[ProductName_e],[ProductType],[ProductDescription_c],[ProductDescription_e]  ,[IsVisiable],[IsNew],[ImgPatjh],[ProductKey],[taobaoUrl],[price_last],[Price_now],[IsBY],[IsRm],[ProductState])"+
+                string sql = "  INSERT INTO [XcXm].[dbo].[tblProductInfo] ( [ProductName_c] ,[ProductName_e],[ProductType],[ProductDescription_c],[ProductDescription_e]  ,[IsVisiable],[IsNew],[ImgPatjh],[ProductKey],[taobaoUrl],[price_last],[Price_now],[IsBY],[IsRm],[ProductState],ProductKeyEng)" +
                     " VALUES('" + txtNameChinese.Text + "','" + txtNameEnglish + "'," + ddlProductType.SelectedValue + " ,'" + txtProductIntroDuct.Text + "','" + txtProductIntroDuctEng.Text +
                     "'," + IsVisibly + "," + IsNew + ",'" + ImgPath + "'," + "'" + txtKetWords.Text + "', '" + txttaobaoUrl.Text + "' ," + priceLast + "," +
-                     txtPriceNow.Text + "," + IsBaoyou + "," + IsRemai + ",30" + ")";
+                     txtPriceNow.Text + "," + IsBaoyou + "," + IsRemai + ",30" + "," + txtProductKeyWordsEnd.Text+ ")";
                 DB.CarryOutSqlSentence(sql);
                 MessaegBoxConfrim("添加完成");
             }
@@ -318,7 +371,7 @@ namespace CzmWeb.BackendManage
                                  txtProductIntroDuctEng.Text + "',IsVisiable=" + IsVisibly + ",IsNew=" + IsNew +
                                  ",taobaoUrl='" + txttaobaoUrl.Text + "'"
                                  + ",price_last="+txtPriceNow.Text+",Price_now="+priceLast+",IsBY ="+IsBaoyou+",IsRm="+IsRemai+",ProductKey='"+txtKetWords.Text+"',ImgPatjh='"+imgPath+"'"+
-                    "WHERE ProductID=" + lblProductId.Text;
+                                 ",ProductKeyEng ='"+txtProductKeyWordsEnd.Text+"'"+"WHERE ProductID=" + lblProductId.Text;
                     Response.Write(sql);
                     //DB.CarryOutSqlSentence(sql);
                     MessaegBox("修改完毕");
@@ -326,6 +379,57 @@ namespace CzmWeb.BackendManage
                 }
             }
 
+        }
+
+        protected void rpItem_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+
+        }
+
+        protected void rpItem_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+
+        }
+
+        private void CheckSql()
+        {
+            string where = " ProductID >0";
+            if (ddlShoosProductTypes.SelectedValue != "-1")
+            {
+                where += " and ProductType =" + ddlShoosProductTypes.SelectedValue;
+            }
+            if (ddlIiBaoyou.SelectedValue != "-1")
+            {
+                where +=" and IsBY="   +ddlIiBaoyou.SelectedIndex;
+            }
+            if (ddlLiRemai.SelectedValue != "-1")
+            {
+                where +=" and IsRm"   +ddlLiRemai.SelectedIndex;
+            }
+            if (ddlIsXiajia.SelectedValue != "-1")
+            {
+                where +=" and IsVisiable"   +ddlIsXiajia.SelectedIndex;
+            }
+            if (ddlISnew.SelectedValue != "-1")
+            {
+                where +=" and IsNew"   +ddlISnew.SelectedIndex;
+            }
+            if (txtKeyMiaoshu.Text != "")
+            {
+                where += " and ProductDescription_c like '%" + txtKeyMiaoshu.Text + "%' or ProductDescription_e like '%" + txtKeyMiaoshu.Text + "%'";
+            }
+            if (txtProductKey.Text != "")
+            {
+                where += " and ProductKeyEng like '%" + txtProductKey.Text + "%' or ProductKey like '%" + txtProductKey.Text + "%'";
+            }
+            //lblWhere.Text = where;
+            //lblWhere.Visible = true;
+            binds();
+        }
+
+        protected void Button6_Click1(object sender, EventArgs e)
+        {
+            CheckSql();
         }
     }
 }

@@ -28,22 +28,11 @@ namespace CzmWeb.BackendManage
 
         private void binds()
         {
-            if (lblWhere.Text!="")
-            {
-                DataTable tds = getView.GetAllDataFrom_vwUserInfo(lblWhere.Text);
-                wuc_ListPager1.PageSize = 10;
-                wuc_ListPager1.GetDateBind(tds);
-                rpItem.DataSource = wuc_ListPager1.BindOutData;
-                rpItem.DataBind();               
-            }
-            else
-            {
-                DataTable tds = getView.GetAllDataFrom_vwUserInfo(lblWhere.Text);
-                wuc_ListPager1.PageSize = 10;
-                wuc_ListPager1.GetDateBind(tds);
-                rpItem.DataSource = wuc_ListPager1.BindOutData;
-                rpItem.DataBind();                    
-            }
+            DataTable tds = getView.GetAllDataFrom_vwUserInfo(lblWhere.Text);
+            wuc_ListPager1.PageSize = 1;
+            wuc_ListPager1.GetDateBind(tds);
+            rpItem.DataSource = wuc_ListPager1.BindOutData;
+            rpItem.DataBind();                    
         }
         /// <summary>
         /// 弹窗提醒
@@ -190,22 +179,13 @@ namespace CzmWeb.BackendManage
             {
                 sql += " and UserName_e ='" + txtName.Text + "'";
             }
-            lblWhere.Text = sql;
             binds();
         }
         protected void wuc_ListPager1_OnBindList(object sender, EventArgs e)
         {
-            wuc_ListPager1.PageSize = 10;
+            wuc_ListPager1.PageSize = 1;
             DataTable tds=new DataTable();
-            if (lblWhere.Text != "")
-            {
-               tds = getView.GetAllDataFrom_vwUserInfo(lblWhere.Text);               
-            }
-            else
-            {
-                tds = getView.GetAllDataFrom_vwUserInfo();       
-            }
-
+            tds = getView.GetAllDataFrom_vwUserInfo(lblWhere.Text);               
             wuc_ListPager1.BindData = tds;
             rpItem.DataSource = wuc_ListPager1.BindOutData;
             if (wuc_ListPager1.BindOutData == null)

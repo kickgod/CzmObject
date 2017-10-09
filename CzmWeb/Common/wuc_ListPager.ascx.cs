@@ -10,7 +10,7 @@ namespace CzmObject.Common
 {
     public partial class wuc_ListPager : System.Web.UI.UserControl
     {
-        public Int32 PageSize = 5; //分页每页行数目
+        public Int32 PageSize; //分页每页行数目
         public Int32 RowCount = 0;   //总函数
         public DataTable BindData;  //绑定数据 存入的数据
         public DataTable BindOutData; //对外数据; 

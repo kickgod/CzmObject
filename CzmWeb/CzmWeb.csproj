@@ -548,6 +548,10 @@
     <Content Include="Master\UserPageMaster.Master" />
     <Content Include="Content\锐字云姚体.TTF" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="ProductImage\2017108175537609.jpg" />
+    <Content Include="ProductImage\2017108175753719.jpg" />
+    <Content Include="ProductImage\201710817595495.jpg" />
+    <Content Include="ProductImage\20171081887953.jpg" />
     <Content Include="ProductImage\首页1.jpg" />
     <Content Include="ProductImage\首页10.jpg" />
     <Content Include="ProductImage\productType1.jpg" />

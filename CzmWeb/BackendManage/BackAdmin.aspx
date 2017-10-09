@@ -18,9 +18,9 @@
         .UpLower a{color: white}
         .Main{ width: 100%;}
         .Main::after{ content: "";display: block;clear: both}/*清楚浮动*/
-        .Main .LeftBoxs{float: left; width: 20%;background-color: RGB(206,71,136); height: 1000px;}
+        .Main .LeftBoxs{float: left; width: 15%;background-color: RGB(206,71,136); height: 1000px;}
         .Main .LeftBoxs .UpYouNo{ height: 50px;}
-        .Main .LeftBoxs .ChooseKa{ width: 70%;margin: auto;background-color:RGB(239,169,203) }
+        .Main .LeftBoxs .ChooseKa{ width: 80%;margin: auto;background-color:RGB(239,169,203) }
         .Main .LeftBoxs .ChooseKa ul{list-style: none}
         .Main .LeftBoxs .ChooseKa ul li { text-align: center;margin-bottom: 5px;font-size: 1.1em;font-weight: 500;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';line-height: 40px;height: 40px}
         .Main .LeftBoxs .ChooseKa ul li:hover{ background-color: purple;color: white }
@@ -30,7 +30,7 @@
         .Main .zhedie .ZheDieChoose img{ width: 100%;vertical-align: text-bottom}
         .Main .ZheDieChoose{ width: 100%;height: 50px;position: relative;top: 475px}
         .Main .ZheDieChoose:hover{cursor:pointer}
-        .Main .RightBoxs{ float: right; width: 79%;height: 1000px;background-color: white}
+        .Main .RightBoxs{ float: right; width: 84%;height: 1000px;background-color: white}
         .TFS_Font{font-style: italic;font-weight: 400;color: RGB(167,24,92) }
     </style>
     <script type="text/javascript">
@@ -60,7 +60,7 @@
             } else if (heihei.getAttribute('src') == "../Images/SystemPicture/折叠xiangzuo.png") {
                 heihei.setAttribute('src', '../Images/SystemPicture/折叠zhedie.png');
                 document.getElementById('leFtBoxsS').style.display = 'block';
-                document.getElementById('Righxbox').style.width = '79%';
+                document.getElementById('Righxbox').style.width = '84%';
             }          
         }
 
