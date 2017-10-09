@@ -12,6 +12,7 @@ namespace CzmWeb.BackendManage
         protected void Page_Load(object sender, EventArgs e)
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!IsPostBack)
             {
                 binds();
@@ -380,6 +381,8 @@ namespace CzmWeb.BackendManage
         {
 
         }
+=======
+>>>>>>> parent of f2750fd... 201710081811 Many Problem
 
         protected void rpItem_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {

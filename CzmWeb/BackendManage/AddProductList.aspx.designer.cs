@@ -23,6 +23,7 @@ namespace CzmWeb.BackendManage {
         
         /// <summary>
         /// txtNameChinese 控件。
+<<<<<<< HEAD
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
@@ -114,6 +115,8 @@ namespace CzmWeb.BackendManage {
         
         /// <summary>
         /// txtPriceLst 控件。
+=======
+>>>>>>> parent of f2750fd... 201710081811 Many Problem
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
@@ -182,6 +185,7 @@ namespace CzmWeb.BackendManage {
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
+<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.DropDownList ddlShoosProductTypes;
         
         /// <summary>
@@ -292,6 +296,9 @@ namespace CzmWeb.BackendManage {
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink hypLinkToTaoBao;
 =======
+>>>>>>> parent of f2750fd... 201710081811 Many Problem
+=======
+        protected global::System.Web.UI.WebControls.CheckBox chbIsNew;
 >>>>>>> parent of f2750fd... 201710081811 Many Problem
     }
 }
