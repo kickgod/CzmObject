@@ -12,14 +12,23 @@
     <link href="../CSS/button.css" type="text/css" rel="stylesheet"  />
     <link href="../CSS/table.css" rel="stylesheet" type="text/css"  />
     <title>用户管理</title>
-    <style type="text/css">  
-        .Div_Center{ width: 100%;}
+    <style type="text/css">
+        *{ padding: 0px;margin: 0px;text-decoration: none}  
+         .Div_Center{ width: 100%;}
         .Div_Center .Div_Main{ width: 70%;margin: 0 auto}
-        .Title{text-align: center; width: 100%;text-indent: 50px;color: RGB(153, 23, 85);font-weight: 600;font-size: 1.3em}
+        .Title{height: 40px;line-height: 40px; text-align: center; width: 100%;text-indent: 50px;background-color: RGB(153, 23, 85);color: white;font-weight: 400;font-size: 1.3em}
         .txtBox{ width: 200px;height: 30px;line-height: 30px}
         .TdClass{text-align: center}
         .hs{ height: 28px;line-height: 28px}
         .Save{margin-top: 5px;	height: 26px;width: 60px; border: none; background: none;cursor: pointer;background-color: gainsboro;color: darkturquoise;border: solid 1px gainsboro}
+        .auto-style1
+        {
+            height: 32px;
+        }
+        .A_p_item_0{background-color: RGB(248,232,235)}
+        .A_p_item_0:hover{ background-color: RGB(243,35,135);color: white }
+        .A_p_item_1{background-color: white}
+        .A_p_item_1:hover{ background-color: RGB(243,35,135);color: white }
     </style>
     <script type="text/javascript">
        
@@ -28,14 +37,15 @@
 <body>
     <form id="form1" runat="server">
     <div class="Div_Center">
-        <div class="Title TFS_Standardstyle">
-            系统管理员
-        </div>
         <div class="Div_Main">
+            <div class="Title TFS_Standardstyle">
+                管理员信息
+            </div>
+            <br/>
             <table class="table4" cellpadding="0px" cellspacing="0px" width="100%">
                 <tr>
                     <td class="TdClass">
-                        管理员设置
+                        管理员
                     </td>
                     <td>
                         <asp:DropDownList ID="ddlAdmin" runat="server" Height="25px" AutoPostBack="True" OnSelectedIndexChanged="ddlAdmin_SelectedIndexChanged" Width="220px">
@@ -98,6 +108,7 @@
                     </td>
                 </tr>
             </table>
+            <br/><br/>
             <div class="Title TFS_Standardstyle">
                 系统管理员列表
             </div>
@@ -129,8 +140,7 @@
                         </tr>
                     </HeaderTemplate>
                     <ItemTemplate>
-                        <tr class='p_item_<%# Container.ItemIndex % 2 %>' onmouseover="c=this.className;this.className='p_item_hover';"
-                            onmouseout="this.className=c">
+                        <tr class='A_p_item_<%# Container.ItemIndex % 2 %>' >
                             <td align="center">
                                 <%#(Container.ItemIndex + 1)%>
                             </td>
@@ -158,13 +168,6 @@
                         </tr>
                     </ItemTemplate>
                 </asp:Repeater>
-                <tr>
-                    <td colspan="7" align="center">
-                        
-                        <uc1:wuc_ListPager ID="wuc_ListPager1" runat="server"  OnBindList="wuc_ListPager1_OnBindList" />
-                        
-                    </td>
-                </tr>
             </table>  
         </div>
     </div>

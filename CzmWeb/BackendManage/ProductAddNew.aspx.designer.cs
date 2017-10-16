@@ -10,7 +10,7 @@
 namespace CzmWeb.BackendManage {
     
     
-    public partial class AddProductList {
+    public partial class ProductAddNew {
         
         /// <summary>
         /// form1 控件。
@@ -22,9 +22,34 @@ namespace CzmWeb.BackendManage {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// pnlProduct 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlProduct;
+        
+        /// <summary>
+        /// lblProductId 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblProductId;
+        
+        /// <summary>
+        /// chkIsDown 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkIsDown;
+        
+        /// <summary>
         /// txtNameChinese 控件。
-<<<<<<< HEAD
-<<<<<<< HEAD
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
@@ -94,7 +119,6 @@ namespace CzmWeb.BackendManage {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chbIsNew;
-<<<<<<< HEAD
         
         /// <summary>
         /// wuc_FileUpload 控件。
@@ -116,10 +140,6 @@ namespace CzmWeb.BackendManage {
         
         /// <summary>
         /// txtPriceLst 控件。
-=======
->>>>>>> parent of f2750fd... 201710081811 Many Problem
-=======
->>>>>>> parent of f2750fd... 201710081811 Many Problem
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
@@ -182,130 +202,12 @@ namespace CzmWeb.BackendManage {
         protected global::System.Web.UI.WebControls.Button btnSaveProduct;
         
         /// <summary>
-        /// ddlShoosProductTypes 控件。
+        /// Label1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        protected global::System.Web.UI.WebControls.DropDownList ddlShoosProductTypes;
-        
-        /// <summary>
-        /// ddlIiBaoyou 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlIiBaoyou;
-        
-        /// <summary>
-        /// ddlLiRemai 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlLiRemai;
-        
-        /// <summary>
-        /// ddlIsXiajia 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlIsXiajia;
-        
-        /// <summary>
-        /// ddlISnew 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlISnew;
-        
-        /// <summary>
-        /// txtKeyMiaoshu 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtKeyMiaoshu;
-        
-        /// <summary>
-        /// txtProductKey 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProductKey;
-        
-        /// <summary>
-        /// Button6 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button6;
-        
-        /// <summary>
-        /// ProductCount 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ProductCount;
-        
-        /// <summary>
-        /// rpItem 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rpItem;
-        
-        /// <summary>
-        /// wuc_ListPager1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::CzmObject.Common.wuc_ListPager wuc_ListPager1;
-        
-        /// <summary>
-        /// lblWhere 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblWhere;
-        
-        /// <summary>
-        /// hypLinkToTaoBao 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hypLinkToTaoBao;
-=======
->>>>>>> parent of f2750fd... 201710081811 Many Problem
-=======
-        protected global::System.Web.UI.WebControls.CheckBox chbIsNew;
->>>>>>> parent of f2750fd... 201710081811 Many Problem
-=======
-        protected global::System.Web.UI.WebControls.CheckBox chbIsNew;
->>>>>>> parent of f2750fd... 201710081811 Many Problem
+        protected global::System.Web.UI.WebControls.Label Label1;
     }
 }

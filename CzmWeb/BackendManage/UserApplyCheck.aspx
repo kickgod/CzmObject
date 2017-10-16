@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserApplyCheck.aspx.cs" Inherits="CzmWeb.BackendManage.UserApplyCheck" %>
+<%@ Register Src="~/Common/wucPager.ascx" TagPrefix="uc1" TagName="wucPager" %>
 
-<%@ Register src="../Common/wuc_ListPager.ascx" tagname="wuc_ListPager" tagprefix="uc1" %>
 
 <!DOCTYPE html>
 
@@ -16,11 +16,13 @@
     <style type="text/css">
         .Div_Center{ width: 100%;}
         .Div_Center .Div_Main{ width: 70%;margin: 0 auto}
-        .Title{text-align: center; width: 100%;text-indent: 50px;color: RGB(153, 23, 85);font-weight: 600;font-size: 1.3em}
+        .Title{text-align: center; width: 100%;text-indent: 50px;color: black;font-weight: 600;font-size: 1.3em}
         .txtBox{ width: 200px;height: 30px;line-height: 30px}
         .TdClass{text-align: center}
         .hs{ height: 28px;line-height: 28px}
-        .Save{margin-top: 5px;	height: 26px;width: 60px; border: none; background: none;cursor: pointer;background-color: gainsboro;color: darkturquoise;border: solid 1px gainsboro}   
+        .Save{height: 25px;	width: 60px; border: none; background: palevioletred;cursor: pointer;color: white;border: solid 1px gainsboro;
+            margin-top: 0px;
+        }  
     </style>
 </head>
 <body>
@@ -30,7 +32,7 @@
            用户申请审核
         </div>
         <div style="height: 40px;line-height: 26px">
-            <center>
+            <center style="font-family: 楷体,华文楷体,微软雅黑;">
                   性别:<asp:DropDownList ID="ddlSex" runat="server" AutoPostBack="True" Height="26px" OnSelectedIndexChanged="ddlSex_OnSelectedIndexChanged" >
                       <asp:ListItem Value="-1">-- 全部 --</asp:ListItem>
                       <asp:ListItem Value="1">男</asp:ListItem>
@@ -50,7 +52,7 @@
                   关键字[手机号码]:<asp:TextBox ID="txtPhone" runat="server" Height="26px"></asp:TextBox>
                   关键字[用户名]<asp:TextBox ID="txtName" runat="server" Height="26px"></asp:TextBox>
                  <asp:Button ID="Button1" runat="server" Text="查找"  CssClass="Save" OnClick="Button1_OnClick" ></asp:Button>
-            </center>
+            </cente>
         </div>
         <div>
             <table width="100%" border="1" cellpadding="0" cellspacing="0" class="table4">
@@ -149,12 +151,12 @@
                 </asp:Repeater>
                 <tr>
                     <td colspan="13" align="center"> 
-                        <uc1:wuc_ListPager ID="wuc_ListPager1" runat="server" OnBindList="wuc_ListPager1_OnBindList" />
+                        <uc1:wucPager runat="server" ID="wucPager1" OnBindList="wucPager_OnBindList" />
                     </td>
                 </tr>
                 <tr>
                     <td colspan="13" align="center"> 
-                        <asp:Label ID="lblWhere" runat="server" Text=""></asp:Label>
+                        <asp:Label ID="lblWhere" runat="server" Visible="False"  Text=""></asp:Label>
                     </td>
                 </tr>
             </table>              

@@ -7,99 +7,108 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace CzmWeb.BackendManage {
+namespace CzmWeb.Common {
     
     
-    public partial class UserApplyCheck {
+    public partial class wucPager {
         
         /// <summary>
-        /// form1 控件。
+        /// lblCurPageCount 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label lblCurPageCount;
         
         /// <summary>
-        /// ddlSex 控件。
+        /// lblTotalPageCount 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSex;
+        protected global::System.Web.UI.WebControls.Label lblTotalPageCount;
         
         /// <summary>
-        /// ddlUserType 控件。
+        /// lbtnFirst 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlUserType;
+        protected global::System.Web.UI.WebControls.LinkButton lbtnFirst;
         
         /// <summary>
-        /// ddlState 控件。
+        /// lbtnPre 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlState;
+        protected global::System.Web.UI.WebControls.LinkButton lbtnPre;
         
         /// <summary>
-        /// txtPhone 控件。
+        /// lbtnNext 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPhone;
+        protected global::System.Web.UI.WebControls.LinkButton lbtnNext;
         
         /// <summary>
-        /// txtName 控件。
+        /// lbtnLast 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
+        protected global::System.Web.UI.WebControls.LinkButton lbtnLast;
         
         /// <summary>
-        /// Button1 控件。
+        /// ddlChangePage 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlChangePage;
         
         /// <summary>
-        /// rpItem 控件。
+        /// lblTotalCount 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rpItem;
+        protected global::System.Web.UI.WebControls.Label lblTotalCount;
         
         /// <summary>
-        /// wucPager1 控件。
+        /// ddlChangePageSize 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::CzmWeb.Common.wucPager wucPager1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlChangePageSize;
         
         /// <summary>
-        /// lblWhere 控件。
+        /// lblPageSize 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblWhere;
+        protected global::System.Web.UI.WebControls.Label lblPageSize;
+        
+        /// <summary>
+        /// lblInfo 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblInfo;
     }
 }

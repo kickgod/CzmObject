@@ -52,9 +52,7 @@ namespace CzmWeb.BackendManage
         {
             GetDataFromTable tsd = new GetDataFromTable();
             DataTable tds = tsd.GetAllDataFromtblAdministrator();
-            wuc_ListPager1.PageSize = 10;
-            wuc_ListPager1.GetDateBind(tds);
-            rpItem.DataSource = wuc_ListPager1.BindOutData;
+            rpItem.DataSource = tds;
             rpItem.DataBind();
         }
         private void BinddataTable()
@@ -279,9 +277,9 @@ namespace CzmWeb.BackendManage
             }
             else
             {
-                MessaegBox("尚未选择！");
+                MessaegBox("尚未选择编辑！");
             }
-            wuc_ListPager1.Bind();
+            binds();
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
@@ -341,6 +339,7 @@ namespace CzmWeb.BackendManage
             {
                 MessaegBox("尚未选择！");
             }
+            binds();
         }
         private int MessaegBoxs()
         {
@@ -368,22 +367,7 @@ namespace CzmWeb.BackendManage
             {
                 MessaegBox("你的权限等级不够");
             }
-
-
         }
 
-        protected void wuc_ListPager1_OnBindList(object sender, EventArgs e)
-        {
-                wuc_ListPager1.PageSize = 10;
-                GetDataFromTable td = new GetDataFromTable();
-                DataTable tds = td.GetAllDataFromtblAdministrator();
-                wuc_ListPager1.BindData = tds;
-                rpItem.DataSource = wuc_ListPager1.BindOutData;
-                if (wuc_ListPager1.BindOutData == null)
-                {
-                    MessaegBox("HeiHei BindOutData is NULL");
-                }
-                rpItem.DataBind();
-        }
     }
 }

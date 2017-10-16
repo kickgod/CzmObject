@@ -2,10 +2,13 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <%@ Register Src="~/Common/wuc_FileUpload.ascx" TagPrefix="uc1" TagName="wuc_FileUpload" %>
 <%@ Register TagPrefix="uc1" TagName="wuc_ListPager" Src="~/Common/wuc_ListPager.ascx" %>
 
 
+=======
+>>>>>>> parent of f2750fd... 201710081811 Many Problem
 =======
 >>>>>>> parent of f2750fd... 201710081811 Many Problem
 =======
@@ -30,6 +33,7 @@
         .hs{ height: 28px;line-height: 28px}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         .Save{height: 25px;	width: 60px; border: none; background: gainsboro;cursor: pointer;color: darkturquoise;border: solid 1px gainsboro;
             margin-top: 0px;
         }  
@@ -50,6 +54,9 @@
         .btnYes{ width: 50px;height: 25px;background-color: RGB(209, 148, 204);border: none;color: white;font-weight: 500 }
         .btnNo{width: 50px;height: 25px;background-color: inherit;border: none;color: gainsboro}
         .XiaoxiProduct{ height: 50px;line-height: 50px;}
+=======
+        .Save{margin-top: 5px;	height: 26px;width: 60px; border: none; background: none;cursor: pointer;background-color: gainsboro;color: darkturquoise;border: solid 1px gainsboro}   
+>>>>>>> parent of f2750fd... 201710081811 Many Problem
 =======
         .Save{margin-top: 5px;	height: 26px;width: 60px; border: none; background: none;cursor: pointer;background-color: gainsboro;color: darkturquoise;border: solid 1px gainsboro}   
 >>>>>>> parent of f2750fd... 201710081811 Many Problem
@@ -108,6 +115,7 @@
                     <td align="center">
                         淘宝地址
 <<<<<<< HEAD
+<<<<<<< HEAD
                     </td>
                     <td>
                         <asp:TextBox ID="txttaobaoUrl" runat="server"  CssClass="txtBox"></asp:TextBox>
@@ -116,6 +124,16 @@
                         关键字[空格分开]
                     </td>
                     <td>
+=======
+                    </td>
+                    <td>
+                        <asp:TextBox ID="txttaobaoUrl" runat="server"  CssClass="txtBox"></asp:TextBox>
+                    </td>
+                    <td align="center" >
+                        关键字[空格分开]
+                    </td>
+                    <td>
+>>>>>>> parent of f2750fd... 201710081811 Many Problem
 =======
                     </td>
                     <td>
@@ -151,6 +169,7 @@
                 </tr>
             </table>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <br />
@@ -452,6 +471,8 @@
                  </div>
              </div>
         </div>
+=======
+>>>>>>> parent of f2750fd... 201710081811 Many Problem
 =======
 >>>>>>> parent of f2750fd... 201710081811 Many Problem
 =======

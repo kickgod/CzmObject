@@ -38,6 +38,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DoEasyClassLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DoEasyClassLib.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -131,14 +135,20 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
-    <Content Include="BackendManage\AddProductList.aspx" />
+    <Content Include="BackendManage\ProductDataList.aspx" />
     <Content Include="BackendManage\AdminLogin.aspx" />
     <Content Include="BackendManage\BackAdmin.aspx" />
+    <Content Include="BackendManage\ProductAddNew.aspx" />
+    <Content Include="BackendManage\ProductTypeAdd.aspx" />
     <Content Include="BackendManage\UserApplyCheck.aspx" />
     <Content Include="BackendManage\UserValidCheck.aspx" />
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\AspNet.ScriptManager.jQuery.dll" />
     <Content Include="bin\AspNet.ScriptManager.jQuery.UI.Combined.dll" />
+    <Content Include="bin\CzmWeb.dll" />
+    <Content Include="bin\CzmWeb.pdb" />
+    <Content Include="bin\DoEasyClassLib.dll" />
+    <Content Include="bin\DoEasyClassLib.pdb" />
     <Content Include="bin\DotNetOpenAuth.AspNet.dll" />
     <Content Include="bin\DotNetOpenAuth.Core.dll" />
     <Content Include="bin\DotNetOpenAuth.OAuth.Consumer.dll" />
@@ -155,6 +165,7 @@
     <Content Include="bin\System.Web.Optimization.dll" />
     <Content Include="bin\System.Web.Providers.dll" />
     <Content Include="bin\WebGrease.dll" />
+    <Content Include="Common\wucPager.ascx" />
     <Content Include="Common\wuc_FileUpload.ascx" />
     <Content Include="Common\wuc_ListPager.ascx" />
     <Content Include="Contact.aspx" />
@@ -468,6 +479,7 @@
     <Content Include="Images\SystemPicture\User_White.png" />
     <Content Include="Images\SystemPicture\validcoed.png" />
     <Content Include="Images\SystemPicture\zhedie.png" />
+    <Content Include="Images\SystemPicture\zhediexiangxia.png" />
     <Content Include="Images\SystemPicture\zhidinglanse.png" />
     <Content Include="Images\SystemPicture\zixunlanse.png" />
     <Content Include="Images\SystemPicture\二维码.png" />
@@ -480,6 +492,7 @@
     <Content Include="Images\SystemPicture\置顶.png" />
     <Content Include="Images\SystemPicture\Right.png" />
     <Content Include="Images\SystemPicture\Error.png" />
+    <Content Include="Images\SystemPicture\角标（下） - 副本.png" />
     <Content Include="Images\SystemPicture\退出.png" />
     <Content Include="Images\SystemPicture\阿里旺旺.png" />
     <Content Include="Images\tt_bg.png" />
@@ -609,6 +622,7 @@
     <Compile Include="App_Code\SendPhoneMessage.cs" />
     <Compile Include="App_Code\PublicGetDataFromDB.cs" />
     <Compile Include="App_Code\GetDataFromTable.cs" />
+    <Compile Include="App_Code\ValueJudge.cs" />
     <Compile Include="App_Code\VwProvinceList.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
@@ -655,12 +669,12 @@
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="BackendManage\AddProductList.aspx.cs">
-      <DependentUpon>AddProductList.aspx</DependentUpon>
+    <Compile Include="BackendManage\ProductDataList.aspx.cs">
+      <DependentUpon>ProductDataList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="BackendManage\AddProductList.aspx.designer.cs">
-      <DependentUpon>AddProductList.aspx</DependentUpon>
+    <Compile Include="BackendManage\ProductDataList.aspx.designer.cs">
+      <DependentUpon>ProductDataList.aspx</DependentUpon>
     </Compile>
     <Compile Include="BackendManage\AdminLogin.aspx.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
@@ -676,6 +690,20 @@
     <Compile Include="BackendManage\BackAdmin.aspx.designer.cs">
       <DependentUpon>BackAdmin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BackendManage\ProductAddNew.aspx.cs">
+      <DependentUpon>ProductAddNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackendManage\ProductAddNew.aspx.designer.cs">
+      <DependentUpon>ProductAddNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackendManage\ProductTypeAdd.aspx.cs">
+      <DependentUpon>ProductTypeAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackendManage\ProductTypeAdd.aspx.designer.cs">
+      <DependentUpon>ProductTypeAdd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BackendManage\UserApplyCheck.aspx.cs">
       <DependentUpon>UserApplyCheck.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -689,6 +717,13 @@
     </Compile>
     <Compile Include="BackendManage\UserValidCheck.aspx.designer.cs">
       <DependentUpon>UserValidCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\wucPager.ascx.cs">
+      <DependentUpon>wucPager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\wucPager.ascx.designer.cs">
+      <DependentUpon>wucPager.ascx</DependentUpon>
     </Compile>
     <Compile Include="Common\wuc_FileUpload.ascx.cs">
       <DependentUpon>wuc_FileUpload.ascx</DependentUpon>

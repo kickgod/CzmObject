@@ -14,7 +14,17 @@ namespace CzmObject.Common
         {
 
         }
-
+        public bool IsHaveFile()
+        {
+            if (FlUpLoad.HasFile)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public String GetImgServerPath()
         {
             if(String.IsNullOrEmpty(ServerShenNuePath))
@@ -58,7 +68,6 @@ namespace CzmObject.Common
                     }
                     FlUpLoad.PostedFile.SaveAs(Server.MapPath(MapPaths) + Path.GetFileName(FlUpLoad.PostedFile.FileName));
                     ChangeFileName(Server.MapPath(MapPaths) + Path.GetFileName(FlUpLoad.PostedFile.FileName), GetNewFileName());
-                    MessaegBox("上传成功！");
                 }
                 //如果没有文件则弹出对话框
                 else

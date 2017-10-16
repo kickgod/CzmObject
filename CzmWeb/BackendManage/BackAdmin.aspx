@@ -20,18 +20,24 @@
         .Main::after{ content: "";display: block;clear: both}/*清楚浮动*/
         .Main .LeftBoxs{float: left; width: 15%;background-color: RGB(206,71,136); height: 1000px;}
         .Main .LeftBoxs .UpYouNo{ height: 50px;}
-        .Main .LeftBoxs .ChooseKa{ width: 80%;margin: auto;background-color:RGB(239,169,203) }
+        .Main .LeftBoxs .ChooseKa{ width: 80%;margin: auto;color: white}
         .Main .LeftBoxs .ChooseKa ul{list-style: none}
-        .Main .LeftBoxs .ChooseKa ul li { text-align: center;margin-bottom: 5px;font-size: 1.1em;font-weight: 500;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';line-height: 40px;height: 40px}
-        .Main .LeftBoxs .ChooseKa ul li:hover{ background-color: purple;color: white }
-        .Main .LeftBoxs .ChooseKa ul li a:hover{color:white;}
-        .Main .LeftBoxs .ChooseKa ul li a{color: RGB(164,31,95);} 
+        .Main .LeftBoxs .ChooseKa ul li {text-align:center;margin-bottom: 5px;font-size: 1.2em;font-weight: 500;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';vertical-align: middle;margin-bottom: 15px;margin-top: 15px;}
+        .Main .LeftBoxs .ChooseKa ul li:hover{color: white }
+        .Main .LeftBoxs .ChooseKa ul li a:hover{color:red;}
+        .OpenInvert{font-size: 14px;font-weight: 500;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';display: none;color: gainsboro}
+        .OpenProduct{font-size: 14px;font-weight: 500;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';display: none;color: gainsboro}
+        .OpenProduct a:hover{color: crimson}
+        .OpenInvert a:hover{color: crimson}
+        .Main .LeftBoxs .ChooseKa ul li a{color: white;} 
         .Main .zhedie{ width: 1%;height: 1000px;float: left;}
         .Main .zhedie .ZheDieChoose img{ width: 100%;vertical-align: text-bottom}
         .Main .ZheDieChoose{ width: 100%;height: 50px;position: relative;top: 475px}
         .Main .ZheDieChoose:hover{cursor:pointer}
         .Main .RightBoxs{ float: right; width: 84%;height: 1000px;background-color: white}
         .TFS_Font{font-style: italic;font-weight: 400;color: RGB(167,24,92) }
+        .ImgShooseCk {height: 20px;  width: 20px;vertical-align: middle; }
+        .ImgShooseCk:hover{cursor: pointer}
     </style>
     <script type="text/javascript">
         function getNowFormatDate() {
@@ -64,6 +70,28 @@
             }          
         }
 
+        function OpenChooseKa() {
+            var Invest = document.getElementById("InverstShooseKa");
+            if (Invest.style.display == "block") {
+                Invest.style.display = "none";
+                InvestAdmin.style.backgroundColor = "inherit";
+            } else {
+                InvestAdmin.style.borderColor = "white";
+                InvestAdmin.style.backgroundColor = "RGB(229,107,166)";
+                Invest.style.display = "block";
+            }
+        }
+        function OpenProductChooseKa() {
+            var Invest = document.getElementById("ProductShooseKa");
+            if (Invest.style.display == "block") {
+                Invest.style.display = "none";
+                ProductAdmin.style.backgroundColor = "inherit";
+            } else {
+                ProductAdmin.style.borderColor = "white";
+                ProductAdmin.style.backgroundColor = "RGB(229,107,166)";
+                Invest.style.display = "block";
+            }
+        }
         function GetPage() {
             var div = document.getElementById('framGetPage');
             div.setAttribute('src',arguments[0].toString());
@@ -82,27 +110,40 @@
                     <h2 class="TFS_Standardstyle">创造门会员后台管理</h2>
                 </div>
             </div>
-            <div class="UpLower">
+            <div class="UpLower" style="color: white">
                 <p class="TFS_Standardstyle">
-                    <span>管理员</span><asp:Label ID="lblAdmin" CssClass="TFS_Standardstyle TFS_Font" runat="server" Text="admin"></asp:Label> 时间：<span id="DateTimeNow"></span>
+                    <span>管理员:</span><asp:Label ID="lblAdmin" CssClass="TFS_Standardstyle TFS_Font" runat="server" Text="admin"></asp:Label> 时间：<span id="DateTimeNow"></span>
                     <a href="../BackendManage/AdminLogin.aspx" title="退出登陆" ><img src="../Images/SystemPicture/退出.png" width="30px"  height="30px" />退出登录</a>
                     <a href="../Default.aspx"  title="返回首页"><img src="../Images/SystemPicture/生生世世.png"  width="30px"  height="30px" />返回首页</a> 
                     <asp:Label ID="lbladminpwd" runat="server" Text=""  Visible="False"></asp:Label>
                 </p>
             </div>
         </div>
-        <section class="Main" >
+        <section class="Main">
             <div class="LeftBoxs" id="leFtBoxsS">
                 <div class="UpYouNo"></div>
                 <div class="ChooseKa">
                     <ul>
-                        <li><a href="javascript:void(0)">首页管理</a></li>
-                        <li><a href="javascript:GetPage('../BackendManage/AddProductList.aspx')">产品管理</a></li>
-                        <li><a href="javascript:GetPage('../BackendManage/UserApplyCheck.aspx')">会员管理</a></li>
-                        <li><a href="javascript:void(0)">项目审核</a></li>
-                        <li><a href="javascript:void(0)">投资审核</a></li>
-                        <li><a href="javascript:void(0)">投诉建议</a></li>
-                        <li><asp:LinkButton ID="linkSession" runat="server" OnClick="linkSession_Click">管理设置</asp:LinkButton></li>
+                        <li><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><a href="javascript:void(0)">首页管理</a></li>
+                        <li id="ProductAdmin"><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk" onclick="OpenProductChooseKa()" /><a href="javascript:OpenProductChooseKa()">产品管理</a>
+                            <ul class="OpenProduct" id="ProductShooseKa">
+                                <li><a href="javascript:GetPage('../BackendManage/ProductTypeAdd.aspx')">A.产品类别</a></li>
+                                <li><a href="javascript:GetPage('../BackendManage/ProductAddNew.aspx')">B.添加产品</a></li>
+                                <li><a href="javascript:GetPage('../BackendManage/ProductDataList.aspx')">C.产品列表</a></li>
+                                <li><a href="javascript:void(0)">D.产品报表</a></li>
+                            </ul>
+                        </li>
+                        <li><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><a href="javascript:GetPage('../BackendManage/UserApplyCheck.aspx')">会员管理</a></li>
+                        <li><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><a href="javascript:void(0)">项目审核</a></li>
+                        <li id="InvestAdmin"><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"  onclick="OpenChooseKa();" /><a href="javascript:OpenChooseKa()">投资管理</a>
+                            <ul class="OpenInvert" id="InverstShooseKa">
+                                <li><a href="javascript:void(0)">A.投资地区</a></li>
+                                <li><a href="javascript:void(0)">B.投资项目</a></li>
+                                <li><a href="javascript:void(0)">C.投资建议</a></li>
+                            </ul>
+                        </li>
+                        <li><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><a href="javascript:void(0)">投诉建议</a></li>
+                        <li><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><asp:LinkButton ID="linkSession" runat="server" OnClick="linkSession_Click">管理设置</asp:LinkButton></li>
                     </ul>                    
                 </div>
             </div>

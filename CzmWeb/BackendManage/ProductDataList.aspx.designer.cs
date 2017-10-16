@@ -10,7 +10,7 @@
 namespace CzmWeb.BackendManage {
     
     
-    public partial class UserApplyCheck {
+    public partial class AddProductList {
         
         /// <summary>
         /// form1 控件。
@@ -22,58 +22,85 @@ namespace CzmWeb.BackendManage {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ddlSex 控件。
+        /// ddlShoosProductTypes 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSex;
+        protected global::System.Web.UI.WebControls.DropDownList ddlShoosProductTypes;
         
         /// <summary>
-        /// ddlUserType 控件。
+        /// ddlIiBaoyou 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlUserType;
+        protected global::System.Web.UI.WebControls.DropDownList ddlIiBaoyou;
         
         /// <summary>
-        /// ddlState 控件。
+        /// ddlLiRemai 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlState;
+        protected global::System.Web.UI.WebControls.DropDownList ddlLiRemai;
         
         /// <summary>
-        /// txtPhone 控件。
+        /// ddlIsXiajia 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPhone;
+        protected global::System.Web.UI.WebControls.DropDownList ddlIsXiajia;
         
         /// <summary>
-        /// txtName 控件。
+        /// ddlISnew 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
+        protected global::System.Web.UI.WebControls.DropDownList ddlISnew;
         
         /// <summary>
-        /// Button1 控件。
+        /// txtPRoductName 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.TextBox txtPRoductName;
+        
+        /// <summary>
+        /// txtKeyMiaoshu 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtKeyMiaoshu;
+        
+        /// <summary>
+        /// txtProductKey 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtProductKey;
+        
+        /// <summary>
+        /// Button6 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button6;
         
         /// <summary>
         /// rpItem 控件。
@@ -85,13 +112,13 @@ namespace CzmWeb.BackendManage {
         protected global::System.Web.UI.WebControls.Repeater rpItem;
         
         /// <summary>
-        /// wucPager1 控件。
+        /// wucPager 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::CzmWeb.Common.wucPager wucPager1;
+        protected global::CzmWeb.Common.wucPager wucPager;
         
         /// <summary>
         /// lblWhere 控件。
@@ -101,5 +128,14 @@ namespace CzmWeb.BackendManage {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblWhere;
+        
+        /// <summary>
+        /// hypLinkToTaoBao 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hypLinkToTaoBao;
     }
 }

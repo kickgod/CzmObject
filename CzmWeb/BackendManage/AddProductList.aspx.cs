@@ -13,6 +13,7 @@ namespace CzmWeb.BackendManage
         {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!IsPostBack)
             {
                 binds();
@@ -381,6 +382,8 @@ namespace CzmWeb.BackendManage
         {
 
         }
+=======
+>>>>>>> parent of f2750fd... 201710081811 Many Problem
 =======
 >>>>>>> parent of f2750fd... 201710081811 Many Problem
 

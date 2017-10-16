@@ -22,17 +22,8 @@ namespace CzmWeb.BackendManage
             if (!IsPostBack)
             {
                 /*绑定首页*/
-                binds();
+                wucPager1.Bind();
             }
-        }
-
-        private void binds()
-        {
-            DataTable tds = getView.GetAllDataFrom_vwUserInfo(lblWhere.Text);
-            wuc_ListPager1.PageSize = 1;
-            wuc_ListPager1.GetDateBind(tds);
-            rpItem.DataSource = wuc_ListPager1.BindOutData;
-            rpItem.DataBind();                    
         }
         /// <summary>
         /// 弹窗提醒
@@ -148,7 +139,6 @@ namespace CzmWeb.BackendManage
                     MessaegBox("系统故障！");
                 }
             }
-            wuc_ListPager1.Bind();
         }
 
         protected void rpItem_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -179,20 +169,8 @@ namespace CzmWeb.BackendManage
             {
                 sql += " and UserName_e ='" + txtName.Text + "'";
             }
-            binds();
-        }
-        protected void wuc_ListPager1_OnBindList(object sender, EventArgs e)
-        {
-            wuc_ListPager1.PageSize = 1;
-            DataTable tds=new DataTable();
-            tds = getView.GetAllDataFrom_vwUserInfo(lblWhere.Text);               
-            wuc_ListPager1.BindData = tds;
-            rpItem.DataSource = wuc_ListPager1.BindOutData;
-            if (wuc_ListPager1.BindOutData == null)
-            {
-                MessaegBox("HeiHei BindOutData is NULL");
-            }
-            rpItem.DataBind();
+            lblWhere.Text = sql;
+            wucPager1.Bind();
         }
 
         private void SendMessage(string msg,string state)
@@ -217,6 +195,24 @@ namespace CzmWeb.BackendManage
         protected void Button1_OnClick(object sender, EventArgs e)
         {
             ProducteSqlWhere();
+        }
+
+        protected void wucPager_OnBindList(object sender, EventArgs e)
+        {
+            //查询数据
+
+            DataTable dt = getView.GetAllDataFrom_vwUserInfo(lblWhere.Text);
+            int totalCount = 0;
+            if (dt != null)
+            {
+                totalCount = dt.Rows.Count;
+                //获取分页信息
+                wucPager1.LoadData(totalCount);
+
+                //绑定数据
+                DoEasyClassLib.WebForm.RepeaterHelper.DataBind(dt, rpItem, wucPager1.CurPageCount - 1,
+                    wucPager1.PageSize);
+            }
         }
     }
 }

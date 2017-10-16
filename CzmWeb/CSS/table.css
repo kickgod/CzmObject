@@ -82,13 +82,13 @@
 }
 .p_item_0
 {
-	background-color:#FFFFFF;
+	background-color:white;
 	color:#222;
 	vertical-align:middle;
 }
 .p_item_1
 {
-	background-color:#FAFAFA;
+	background-color:pink;
 	color:#222;
 	vertical-align:middle;
 }
@@ -100,7 +100,7 @@
 }
 .p_item_hover td,.p_item_hover th
 {
-	background-color:#0092C5;
+	background-color:RGB(235,106,168);
 	color:#FFF;
 }
 .table_title,.table_title td,.table_title th

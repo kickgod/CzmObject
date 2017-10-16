@@ -10,7 +10,7 @@
 namespace CzmWeb.BackendManage {
     
     
-    public partial class UserApplyCheck {
+    public partial class ProductTypeAdd {
         
         /// <summary>
         /// form1 控件。
@@ -22,58 +22,67 @@ namespace CzmWeb.BackendManage {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ddlSex 控件。
+        /// lblID 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSex;
+        protected global::System.Web.UI.WebControls.Label lblID;
         
         /// <summary>
-        /// ddlUserType 控件。
+        /// ddlCheckType 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlUserType;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCheckType;
         
         /// <summary>
-        /// ddlState 控件。
+        /// txtTypeNameChe 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlState;
+        protected global::System.Web.UI.WebControls.TextBox txtTypeNameChe;
         
         /// <summary>
-        /// txtPhone 控件。
+        /// txtTypeNameEng 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPhone;
+        protected global::System.Web.UI.WebControls.TextBox txtTypeNameEng;
         
         /// <summary>
-        /// txtName 控件。
+        /// btnAdd 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
+        protected global::System.Web.UI.WebControls.Button btnAdd;
         
         /// <summary>
-        /// Button1 控件。
+        /// btnEdit 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnEdit;
+        
+        /// <summary>
+        /// btnSave 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSave;
         
         /// <summary>
         /// rpItem 控件。
@@ -85,21 +94,12 @@ namespace CzmWeb.BackendManage {
         protected global::System.Web.UI.WebControls.Repeater rpItem;
         
         /// <summary>
-        /// wucPager1 控件。
+        /// wucPager 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::CzmWeb.Common.wucPager wucPager1;
-        
-        /// <summary>
-        /// lblWhere 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblWhere;
+        protected global::CzmWeb.Common.wucPager wucPager;
     }
 }
