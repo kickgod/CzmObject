@@ -15,9 +15,17 @@ namespace CzmWeb.UserPage
         GetDataFromView getView = new GetDataFromView();
         PublicGetDataFromDB DB = new PublicGetDataFromDB();
         SendPhoneMessage send = new SendPhoneMessage();
+        PublicUserJudge Judge =new PublicUserJudge();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Request.QueryString["ID"] != null)
+            {
+                MessaegBox(Request.QueryString["ID"].ToString());
+            }
+            else
+            {
+                MessaegBox("fuck");
+            }
         }
         private void MessaegBox(String msg)
         {

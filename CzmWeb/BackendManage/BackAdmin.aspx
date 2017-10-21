@@ -27,8 +27,12 @@
         .Main .LeftBoxs .ChooseKa ul li a:hover{color:red;}
         .OpenInvert{font-size: 14px;font-weight: 500;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';display: none;color: gainsboro}
         .OpenProduct{font-size: 14px;font-weight: 500;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';display: none;color: gainsboro}
+        .OpenAdvie{ font-size: 14px;font-weight: 500;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';display: none;color: gainsboro}
+        .OpenHome{font-size: 14px;font-weight: 500;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';display: none;color: gainsboro}
+        .OpenHome a:hover{color: crimson}
         .OpenProduct a:hover{color: crimson}
         .OpenInvert a:hover{color: crimson}
+        .OpenAdvie a:hover{color: crimson}
         .Main .LeftBoxs .ChooseKa ul li a{color: white;} 
         .Main .zhedie{ width: 1%;height: 1000px;float: left;}
         .Main .zhedie .ZheDieChoose img{ width: 100%;vertical-align: text-bottom}
@@ -92,6 +96,28 @@
                 Invest.style.display = "block";
             }
         }
+        function OpenAdviceChooseKa() {
+            var Invest = document.getElementById("AdviceShooseKa"); 
+            if (Invest.style.display == "block") {
+                Invest.style.display = "none";
+                AdviceAdmin.style.backgroundColor = "inherit";
+            } else {
+                AdviceAdmin.style.borderColor = "white";
+                AdviceAdmin.style.backgroundColor = "RGB(229,107,166)";
+                Invest.style.display = "block";
+            }
+        }
+        function OpenHomeChooseKa() {
+            var Invest = document.getElementById("HomeShooseKa");
+            if (Invest.style.display == "block") {
+                Invest.style.display = "none";
+                HomeAdmin.style.backgroundColor = "inherit";
+            } else {
+                HomeAdmin.style.borderColor = "white";
+                HomeAdmin.style.backgroundColor = "RGB(229,107,166)";
+                Invest.style.display = "block";
+            }
+        }
         function GetPage() {
             var div = document.getElementById('framGetPage');
             div.setAttribute('src',arguments[0].toString());
@@ -124,13 +150,17 @@
                 <div class="UpYouNo"></div>
                 <div class="ChooseKa">
                     <ul>
-                        <li><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><a href="javascript:void(0)">首页管理</a></li>
+                        <li id="HomeAdmin"><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><a href="javascript:OpenHomeChooseKa()">首页管理</a>
+                            <ul class="OpenHome" id="HomeShooseKa">
+                                <li><a href="javascript:GetPage('../Default.aspx')">A.首页查看</a></li>
+                            </ul>
+                        </li>
                         <li id="ProductAdmin"><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk" onclick="OpenProductChooseKa()" /><a href="javascript:OpenProductChooseKa()">产品管理</a>
                             <ul class="OpenProduct" id="ProductShooseKa">
                                 <li><a href="javascript:GetPage('../BackendManage/ProductTypeAdd.aspx')">A.产品类别</a></li>
                                 <li><a href="javascript:GetPage('../BackendManage/ProductAddNew.aspx')">B.添加产品</a></li>
                                 <li><a href="javascript:GetPage('../BackendManage/ProductDataList.aspx')">C.产品列表</a></li>
-                                <li><a href="javascript:void(0)">D.产品报表</a></li>
+                                <li><a href="javascript:GetPage('../BackendManage/ProductDataShow.aspx')">D.产品效果</a></li>
                             </ul>
                         </li>
                         <li><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><a href="javascript:GetPage('../BackendManage/UserApplyCheck.aspx')">会员管理</a></li>
@@ -139,11 +169,16 @@
                             <ul class="OpenInvert" id="InverstShooseKa">
                                 <li><a href="javascript:void(0)">A.投资地区</a></li>
                                 <li><a href="javascript:void(0)">B.投资项目</a></li>
-                                <li><a href="javascript:void(0)">C.投资建议</a></li>
+                                <li><a href="javascript:void(0)">C.投资审核</a></li>
                             </ul>
                         </li>
-                        <li><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><a href="javascript:void(0)">投诉建议</a></li>
-                        <li><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><asp:LinkButton ID="linkSession" runat="server" OnClick="linkSession_Click">管理设置</asp:LinkButton></li>
+                        <li id="AdviceAdmin"><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><a href="javascript:OpenAdviceChooseKa()">投诉建议</a>
+                            <ul class="OpenAdvie" id="AdviceShooseKa">
+                                <li><a href="javascript:GetPage('../BackendManage/UserSuggestionsList.aspx')">A.英文版</a></li>
+                                <li><a href="javascript:GetPage('../BackendManage/UserSuggestionListChinese.aspx')">B.中文版</a></li>
+                            </ul>
+                        </li>
+                        <li><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><a href="javascript:GetPage('../BackendManage/UserValidCheck.aspx')">投诉建议</a></li>
                     </ul>                    
                 </div>
             </div>

@@ -59,8 +59,9 @@ namespace CzmWeb.BackendManage
             {
                 HttpCookie cokiecName =new HttpCookie("ProductID");
                 cokiecName.Value = e.CommandArgument.ToString();
-                cokiecName.Expires=DateTime.Now.AddSeconds(3);
-                Response.Redirect("ProductAddNew.aspx?ProId ="+e.CommandArgument);
+                cokiecName.Expires=DateTime.Now.AddSeconds(15);
+                Response.Cookies.Add(cokiecName);
+                Response.Redirect("~/BackendManage/ProductAddNew.aspx?");
             }
         }
 

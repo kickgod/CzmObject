@@ -23,7 +23,7 @@ namespace CzmWeb.UserPage
             string Phone = txtUserID.Text;
             string Pwd = txtUserPwds.Text;
             string Sql = "SELECT COUNT(*) FROM [XcXm].[dbo].[vwUserInfo] WHERE UserId='" + Phone + "'";  /*检测用户是否存在语句*/
-            string SqlIsRight = "SELECT COUNT(*) FROM [XcXm].[dbo].[vwUserInfo] WHERE UserId='" + Phone + "' and UserPwd ='"+Pwd+"'";  /*检测用户密码是否正确存在语句*/
+            string SqlIsRight = "SELECT COUNT(*) FROM [XcXm].[dbo].[vwUserInfo]  WHERE UserState=30 or UserState =-30 and  UserId='" + Phone + "' and UserPwd ='" + Pwd + "'";  /*检测用户密码是否正确存在语句*/
             int IsExist = Convert.ToInt32(Counter.CarryOutSqlGetFirstColmun(Sql));
             if (IsExist != 1)
             {
@@ -70,14 +70,17 @@ namespace CzmWeb.UserPage
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            if (ViewState["Code"] != null && ViewState["Code"].ToString() == txtVaildCode.Text)
+            if (CheckIsNumber())
             {
-                Session["User"] = txtUserID.Text;
-                Response.Redirect("../Default.aspx");
-            }
-            else
-            {
-                MessaegBox("验证码错误！");
+                if (ViewState["Code"] != null && ViewState["Code"].ToString() == txtVaildCode.Text)
+                {
+                    Session["User"] = txtUserID.Text;
+                    Response.Redirect("../Default.aspx");
+                }
+                else
+                {
+                    MessaegBox("验证码错误！");
+                }                
             }
         }
     }

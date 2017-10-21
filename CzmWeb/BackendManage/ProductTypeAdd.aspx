@@ -1,6 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ProductTypeAdd.aspx.cs" Inherits="CzmWeb.BackendManage.ProductTypeAdd" %>
 
 <%@ Register Src="~/Common/wucPager.ascx" TagPrefix="uc1" TagName="wucPager" %>
+<%@ Register Src="~/Common/wuc_FileUpload.ascx" TagPrefix="uc1" TagName="wuc_FileUpload" %>
+
 
 
 <!DOCTYPE html>
@@ -86,6 +88,14 @@
                     </td>
                 </tr>
                 <tr>
+                    <td align="center">
+                        图片上传
+                    </td>
+                    <td>
+                        <uc1:wuc_FileUpload runat="server" ID="wuc_FileUpload" />
+                    </td>
+                </tr>
+                <tr>
                     <td colspan="4" align="center">
                         <asp:Button ID="btnAdd" runat="server" Text="添加" CssClass="Save" OnClick="btnAdd_OnClick" />
                         <asp:Button ID="btnEdit" runat="server" Text="编辑" CssClass="Save" OnClick="btnEdit_OnClick" />
@@ -112,6 +122,9 @@
                             <td width="160px" align="center">
                                 添加时间
                             </td>
+                            <td width="160px" align="center">
+                                图片查看
+                            </td>
                             <td width="80px"  align="center">
                                 状态
                             </td>
@@ -134,6 +147,9 @@
                             </td>
                             <td align="center">
                                 <%#Eval("InsertTime")%>
+                            </td>
+                            <td align="center">
+                                <a href=<%#Eval("TypePicture") %> >图片查看</a>  
                             </td>
                             <td align="center">
                                 正常

@@ -58,11 +58,6 @@ namespace CzmWeb.BackendManage
             }
             return true;
         }
-        protected void linkSession_Click(object sender, EventArgs e)
-        {
-            string url = "../BackendManage/UserValidCheck.aspx" + "?Admin=" + lblAdmin.Text + "& AdminPassword ="+lbladminpwd.Text;
-            CarryGetPage(url);
-        }
         private void CarryGetPage(String msg)
         {
             Page.ClientScript.RegisterStartupScript(this.GetType(), "", "<script>GetPage('"+msg+"')</script>");

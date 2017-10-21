@@ -170,7 +170,7 @@
                     </tr>
                     <tr>
                         <td colspan="6">
-                            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                            <asp:Label ID="Label1"  Visible="False" runat="server" Text="Label"></asp:Label>
                         </td>
                     </tr>
                 </table>

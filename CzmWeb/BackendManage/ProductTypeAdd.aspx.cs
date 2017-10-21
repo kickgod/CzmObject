@@ -77,17 +77,43 @@ namespace CzmWeb.BackendManage
                 MessaegBoxConfrim("请填写英文名称！");
                 return;
             }
+            string ss = "\'\'";
             string ChineseseName = txtTypeNameChe.Text;
             string EnglishName = txtTypeNameEng.Text;
             if (IsModitify)
             {
-                string sqlUpdate = "UPDATE [XcXm].[dbo].[tblProductTypeInfo] SET typeName_c ='" + ChineseseName + "' ,typeName_e='" + EnglishName + "' WHERE typeID=" + ddlCheckType.SelectedValue;
+                string FineName ="";
+                string sqlUpdate = "";
+                if (wuc_FileUpload.IsHaveFile())
+                {
+                    wuc_FileUpload.UpFile();
+                    FineName = wuc_FileUpload.ServerDianPath;
+                }
+                if (FineName == "")
+                {
+                    sqlUpdate = "UPDATE [XcXm].[dbo].[tblProductTypeInfo] SET  typeName_c ='" + ChineseseName + "' ,typeName_e='" + EnglishName.Replace("\'", ss) + "'  WHERE typeID=" + ddlCheckType.SelectedValue;
+                 
+                }
+                else
+                {
+                    sqlUpdate = "UPDATE [XcXm].[dbo].[tblProductTypeInfo] SET TypePicture='" + FineName + "' , typeName_c ='" + ChineseseName + "' ,typeName_e='" + EnglishName.Replace("\'", ss) + "'  WHERE typeID=" + ddlCheckType.SelectedValue;
+                   
+                }
                 DB.CarryOutSqlSentence(sqlUpdate);
                 MessaegBox("修改完成");
             }
             else
             {
-                string sqlInsert = "INSERT INTO [XcXm].[dbo].[tblProductTypeInfo](typeName_c,typeName_e,TypeState,TypeIsVisiable) VALUES('" + ChineseseName + "','" + EnglishName + "',30,1) ";
+                if (!wuc_FileUpload.IsHaveFile())
+                {
+                    MessaegBox("请上传图片");
+                    return;
+                }
+                string FineName = "";
+                wuc_FileUpload.UpFile();
+                FineName = wuc_FileUpload.ServerDianPath;
+                string sqlInsert = "INSERT INTO [XcXm].[dbo].[tblProductTypeInfo](typeName_c,typeName_e,TypeState,TypeIsVisiable,TypePicture) VALUES('" + ChineseseName + "','" + EnglishName.Replace("\'", ss) + "',30,1,'" + FineName + "') ";
+                //lblID.Text = sqlInsert;
                 DB.CarryOutSqlSentence(sqlInsert);
                 MessaegBox("添加完成");
             }

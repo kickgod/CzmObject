@@ -20,9 +20,10 @@
         .txtBox{ width: 200px;height: 30px;line-height: 30px}
         .TdClass{text-align: center}
         .hs{ height: 28px;line-height: 28px}
-        .Save{height: 25px;	width: 60px; border: none; background: palevioletred;cursor: pointer;color: white;border: solid 1px gainsboro;
+        .Save{text-align: center;height: 25px;	width: 65px; border: none; background: palevioletred;cursor: pointer;color: white;border: solid 1px gainsboro;
             margin-top: 0px;
         }  
+        .Save:hover{ background-color: RGB(238, 12, 121); }
     </style>
 </head>
 <body>

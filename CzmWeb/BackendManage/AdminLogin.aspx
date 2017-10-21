@@ -8,6 +8,9 @@
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
     <title></title>
     <script>
+        if (!navigator.cookieEnabled) {
+            printf("请启用浏览器Cookie！禁用Cookie会导致业务无法进行。");
+        }
         function isempty() {
             var ch = document.getElementById("txtID");
             var sh2 = document.getElementById("txtpwd");
