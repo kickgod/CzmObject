@@ -10,7 +10,16 @@
 namespace CzmWeb.UserPage {
     
     
-    public partial class UserPageRegister1 {
+    public partial class UserPageRegister2 {
+        
+        /// <summary>
+        /// Head1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
         
         /// <summary>
         /// form1 控件。
@@ -184,15 +193,6 @@ namespace CzmWeb.UserPage {
         protected global::System.Web.UI.WebControls.Label lblUserName_C;
         
         /// <summary>
-        /// lblUserName_E 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUserName_E;
-        
-        /// <summary>
         /// txtUserName 控件。
         /// </summary>
         /// <remarks>
@@ -209,15 +209,6 @@ namespace CzmWeb.UserPage {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblUserPwd_C;
-        
-        /// <summary>
-        /// lblUserPwd_E 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUserPwd_E;
         
         /// <summary>
         /// txtUserRealName 控件。
@@ -238,15 +229,6 @@ namespace CzmWeb.UserPage {
         protected global::System.Web.UI.WebControls.Label lblSex_C;
         
         /// <summary>
-        /// lblSex_E 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSex_E;
-        
-        /// <summary>
         /// DropDownList1 控件。
         /// </summary>
         /// <remarks>
@@ -263,15 +245,6 @@ namespace CzmWeb.UserPage {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPwd_C;
-        
-        /// <summary>
-        /// lblPwd_E 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPwd_E;
         
         /// <summary>
         /// txtPwd 控件。
@@ -319,15 +292,6 @@ namespace CzmWeb.UserPage {
         protected global::System.Web.UI.WebControls.Label Code_C;
         
         /// <summary>
-        /// Code_E 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Code_E;
-        
-        /// <summary>
         /// txtCode 控件。
         /// </summary>
         /// <remarks>
@@ -346,87 +310,6 @@ namespace CzmWeb.UserPage {
         protected global::System.Web.UI.WebControls.Button btnSendCode;
         
         /// <summary>
-        /// IDNumber_C 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label IDNumber_C;
-        
-        /// <summary>
-        /// IDNumber_E 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label IDNumber_E;
-        
-        /// <summary>
-        /// txtUserCardID 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUserCardID;
-        
-        /// <summary>
-        /// pictureUp_C 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label pictureUp_C;
-        
-        /// <summary>
-        /// pictureUp_E 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label pictureUp_E;
-        
-        /// <summary>
-        /// wuc_FileUpload1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::CzmObject.Common.wuc_FileUpload wuc_FileUpload1;
-        
-        /// <summary>
-        /// pictureDown_C 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label pictureDown_C;
-        
-        /// <summary>
-        /// pictureDown_E 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label pictureDown_E;
-        
-        /// <summary>
-        /// wuc_FileUpload2 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::CzmObject.Common.wuc_FileUpload wuc_FileUpload2;
-        
-        /// <summary>
         /// LblPwdW_C 控件。
         /// </summary>
         /// <remarks>
@@ -434,15 +317,6 @@ namespace CzmWeb.UserPage {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LblPwdW_C;
-        
-        /// <summary>
-        /// LblPwdW_E 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LblPwdW_E;
         
         /// <summary>
         /// txtPasswordOne 控件。
@@ -461,15 +335,6 @@ namespace CzmWeb.UserPage {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPwds_C;
-        
-        /// <summary>
-        /// lblPwds_E 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPwds_E;
         
         /// <summary>
         /// txtPasswordTwo 控件。

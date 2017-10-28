@@ -82,47 +82,48 @@
         </div>
         <hr width="80%" align="center" style="margin: 0px auto" />
     <br/>
-    <div>
-        <table width="100%" border="1" cellpadding="0" cellspacing="0" class="table4">
-            <asp:Repeater ID="rpItem" runat="server" OnItemDataBound="rpItem_ItemDataBound" OnItemCommand="rpItem_ItemCommand">
-                <ItemTemplate>
-                    <div class="ProductShowNow" id="1">
-                        <div  class="PictureShowLeft" style="background-image: url('<%#Eval("ImgPatjh")%>'); opacity: 0.5; filter: alpha(opacity=50); z-index: 1;">
+        <div>
+            <table width="100%" border="1" cellpadding="0" cellspacing="0" class="table4">
+                <asp:Repeater ID="rpItem" runat="server" OnItemDataBound="rpItem_ItemDataBound" OnItemCommand="rpItem_ItemCommand">
+                    <ItemTemplate>
+                        <div class="ProductShowNow" id="1">
+                            <div  class="PictureShowLeft" style="background-image: url('<%#Eval("ImgPatjh")%>'); opacity: 0.5; filter: alpha(opacity=50); z-index: 1;">
+                            </div>
+                            <div class="PitrueNotOpcity">
+                                <img src='<%#Eval("ImgPatjh")%>'  alt="加载中..." width="100%" height="100%" />
+                            </div>
+                            <div class="Right"> 
+                                <div class="ProductNametitle"><h1><%#Eval("ProductName_c")%></h1></div>
+                                <h2 style="font-weight: 400;">[关 键 字]<%#Eval("ProductKey")%></h2>
+                                <p class="Jnjieia">
+                                    [介绍] <%#Eval("ProductDescription_c")%>
+                                </p>
+                                <p class="DownGoumai">
+                                    <span class="MeonyChar">¥</span><span class="Meony"><%#Eval("Price_now")%></span> <span class="MeonyLastChar">¥<%#Eval("price_last")%></span>
+                                    <span><asp:HyperLink ID="hypLinkToTaoBao" runat="server"  CssClass="ButtonCheck" NavigateUrl='<%#Eval("taobaoUrl")%>'>购买</asp:HyperLink></span>
+                                </p>
+                                <p style="height:50px;line-height:50px">
+                                    <button class="btn<%#(Eval("IsBY").ToString()==null ||Eval("IsBY").ToString()=="")? "No":(Convert.ToBoolean(Eval("IsBY"))?"Yes":"No") %>">包邮</button>
+                                    <button class="btn<%#(Eval("IsRm").ToString()==null ||Eval("IsRm").ToString()=="")? "No":(Convert.ToBoolean(Eval("IsRm"))?"Yes":"No") %>">热卖</button>
+                                    <button class="btn<%#(Eval("IsNew").ToString()==null||Eval("IsNew").ToString()=="")? "No":(Convert.ToBoolean(Eval("IsNew"))?"Yes":"No") %>">新品</button>
+                                </p>
+                            </div>
                         </div>
-                        <div class="PitrueNotOpcity">
-                            <img src='<%#Eval("ImgPatjh")%>'  alt="加载中..." width="100%" height="100%" />
-                        </div>
-                        <div class="Right"> 
-                            <div class="ProductNametitle"><h1><%#Eval("ProductName_c")%></h1></div>
-                            <h2 style="font-weight: 400;">[关 键 字]<%#Eval("ProductKey")%></h2>
-                            <p class="Jnjieia">
-                                [介绍] <%#Eval("ProductDescription_c")%>
-                            </p>
-                            <p class="DownGoumai">
-                                <span class="MeonyChar">¥</span><span class="Meony"><%#Eval("Price_now")%></span> <span class="MeonyLastChar">¥<%#Eval("price_last")%></span>
-                                <span><asp:HyperLink ID="hypLinkToTaoBao" runat="server"  CssClass="ButtonCheck" NavigateUrl='<%#Eval("taobaoUrl")%>'>购买</asp:HyperLink></span>
-                            </p>
-                            <p style="height:50px;line-height:50px">
-                                <button class="btn<%#(Eval("IsBY").ToString()==null ||Eval("IsBY").ToString()=="")? "No":(Convert.ToBoolean(Eval("IsBY"))?"Yes":"No") %>">包邮</button>
-                                <button class="btn<%#(Eval("IsRm").ToString()==null ||Eval("IsRm").ToString()=="")? "No":(Convert.ToBoolean(Eval("IsRm"))?"Yes":"No") %>">热卖</button>
-                                <button class="btn<%#(Eval("IsNew").ToString()==null||Eval("IsNew").ToString()=="")? "No":(Convert.ToBoolean(Eval("IsNew"))?"Yes":"No") %>">新品</button>
-                            </p>
-                        </div>
-                    </div>
-                    <hr width="80%" align="center" style="margin: 0px auto" />
-                </ItemTemplate>
-            </asp:Repeater>
-            <tr>
-                <td colspan="14" align="center"> 
-                    <uc1:wucPager runat="server" ID="wucPager" OnBindList="wucPager_OnBindList" />
-                </td>
-            </tr>
-            <tr>
-                <td colspan="14" align="center"> 
-                    <asp:Label ID="lblWhere" runat="server" Visible="false" Text=""></asp:Label>
-                </td>
-            </tr>
-        </table>              
+                        <hr width="80%" align="center" style="margin: 0px auto" />
+                    </ItemTemplate>
+                </asp:Repeater>
+                <tr>
+                    <td colspan="14" align="center"> 
+                        <uc1:wucPager runat="server" ID="wucPager" OnBindList="wucPager_OnBindList" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="14" align="center"> 
+                        <asp:Label ID="lblWhere" runat="server" Visible="false" Text=""></asp:Label>
+                    </td>
+                </tr>
+            </table>              
+        </div>
     </div>
     </form>
 </body>

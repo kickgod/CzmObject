@@ -4,7 +4,7 @@
         .Mainpage{ width: 100%;background-color: RGB(245, 234, 240); }
         .Mainpage .LoginUp{ width: 100%;height: 100px;background-color: inherit}
         .Mainpage .Login {background-color: inherit; width: 400px;margin: auto;height: 600px;margin-top: 50px}
-        .Mainpage .Login .Ttile{height: 50px;line-height: 50px; color: RGB(176, 53, 112);font-size: 2em;text-align: center;font-style: italic;font-weight: bold;letter-spacing: 10px}
+        .Mainpage .Login .Ttile{height: 50px;line-height: 50px; color: RGB(176, 53, 112);font-size: 20px;text-align: center;font-style: italic;font-weight: bold;}
         .Mainpage .Login .Headsummary{ height: 40px;height: 40px;font-family: '华文楷体', '楷体', '微软雅黑','宋体';color: RGB(246, 139, 209);text-align:center  }
         .Mainpage .Login .UserID { height: 44px;width: 100%;line-height: 44px;}
         .Mainpage .Login .UserID img{ width: 40px;height: 40px;border: RGB(245,234,240) 3px solid;vertical-align: bottom}
@@ -18,7 +18,7 @@
         .Mainpage .Login .LoginBtn{ margin-top: 10px;}
         .Mainpage .Login .LoginBtn .BtnLogin{ width: 288px;height: 46px;margin-left: 50px;background-color: RGB(176, 53, 112);border: RGB(176, 53, 112);color: white;font-weight: 300;letter-spacing: 3px;font-size: large; }
         .Mainpage .Login .LoginError{margin-top: 12px}
-        .Mainpage .Login .LoginError .FontCss{ color: RGB(244, 113, 176);margin-left: 190px; }
+        .Mainpage .Login .LoginError .FontCss{ color: RGB(244, 113, 176);margin-left: 100px; }
         .Mainpage .Login .LoginError .FontCss:hover{color: red}
         .Mainpage .Login .LoginError .FontCssRight{color: RGB(244, 113, 176);margin-left: 10px;}
         .Mainpage .Login .LoginError .FontCssRight:hover{color: red}
@@ -32,7 +32,7 @@
             .Mainpage .LoginUp{ width: 100%;height: 70px;background-color: inherit}
             .Mainpage{ width: 100%;background-color: RGB(245, 234, 240);}
             .Mainpage .Login {background-color: inherit; width: 320px;margin: auto;height: 400px;margin-top: 80px}
-            .Mainpage .Login .Ttile{height: 50px;line-height: 50px; color: RGB(176, 53, 112);font-size: 2em;text-align: center;font-style: italic;font-weight: bold;letter-spacing: 10px}
+            .Mainpage .Login .Ttile{height: 50px;line-height: 50px; color: RGB(176, 53, 112);font-size: 20px;text-align: center;font-style: italic;font-weight: bold;}
             .Mainpage .Login .Headsummary{ height: 40px;height: 40px;font-family: '华文楷体', '楷体', '微软雅黑','宋体';color: RGB(246, 139, 209);text-align:center  }
             .Mainpage .Login .UserID {text-indent: 20px; height: 34px;width: 100%;line-height: 34px;}
             .Mainpage .Login .UserID img{ width: 30px;height: 30px;border: RGB(245,234,240) 3px solid;vertical-align: bottom}
@@ -46,7 +46,7 @@
             .Mainpage .Login .LoginBtn{ margin-top: 10px;}
             .Mainpage .Login .LoginBtn .BtnLogin{ width: 226px;height: 36px;margin-left: 60px;background-color: RGB(176, 53, 112);border: RGB(176, 53, 112);color: white;font-weight: 300;letter-spacing: 6px;font-size: large; }
             .Mainpage .Login .LoginError{margin-top: 12px}
-            .Mainpage .Login .LoginError .FontCss{ color: RGB(244, 113, 176);margin-left: 150px; }
+            .Mainpage .Login .LoginError .FontCss{ color: RGB(244, 113, 176);margin-left: 100px;  }
             .Mainpage .Login .LoginError .FontCssRight{color: RGB(244, 113, 176);margin-left: 10px;}
             .Foot{ width: 100%;background-color: red;height: 120px;}
         }
@@ -117,11 +117,11 @@
             var UserID = document.getElementById("<%=txtUserID.ClientID%>");
             var UserPwd = document.getElementById("<%=txtUserPwds.ClientID%>");
             if (UserID.value == "") {
-                alert("请输入你的ID");
+                alert("Please enter your ID");
                 return false;
             }
             if (UserPwd.value == "") {
-                alert("请输入你的密码");
+                alert("Please enter your password");
                 return false;
             }
             return true;
@@ -131,60 +131,49 @@
             var UserPwd = document.getElementById("<%=txtUserPwds.ClientID%>");
             var VaildCode = document.getElementById("<%=txtVaildCode.ClientID%>");
             if (UserID.value == "") {
-                alert("请输入你的ID");
+                alert("Please enter your ID");
                 return false;
             }
             if (UserPwd.value == "") {
-                alert("请输入你的密码");
+                alert("Please enter your password");
                 return false;
             }
             if (VaildCode.value == "") {
-                alert("请输入验证码");
+                alert("please enter verification code");
                 return false;
             }
             return true;
         }
     </script>
+    <div>
     <div class="Mainpage" id="MainPageLogin">
         <div class="LoginUp"></div>
-        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-            <ContentTemplate>
                 <div class="Login">
-                    <p class="Ttile">  创造门 </p>
-                    <p class="Headsummary"> 凝聚思想,开放思维,创造价值</p>
+                    <p class="Ttile">Creation Door</p>
+                    <p class="Headsummary"> Gather Ideas, Open Thinking, Create Value</p>
                     <p class="UserID">
                         <img src="../Images/SystemPicture/User.png"/>
-                        <asp:TextBox ID="txtUserID" CssClass="txtUserIDs" placeholder="请输入账号(绑定手机号)" runat="server" OnTextChanged="txtUserID_TextChanged">
+                        <asp:TextBox ID="txtUserID" CssClass="txtUserIDs" placeholder="Please enter the account number (binding phone number)" runat="server" OnTextChanged="txtUserID_TextChanged1">
                         </asp:TextBox>
                     </p>
                     <p class="UserID">
                         <img src="../Images/SystemPicture/Userpwd.png"/>
-                        <asp:TextBox ID="txtUserPwds" CssClass="txtUserIDs" TextMode="Password" placeholder="请输入密码" runat="server" OnTextChanged="txtUserPwds_TextChanged"></asp:TextBox>
+                        <asp:TextBox ID="txtUserPwds" CssClass="txtUserIDs" TextMode="Password" placeholder="Please enter your password" runat="server"></asp:TextBox>
                     </p>
                     <p class="ValidCode">
                         <img src="../Images/SystemPicture/validcoed.png"/>
-                        <asp:TextBox ID="txtVaildCode" CssClass="txtUserpwds" placeholder="请输入验证码" runat="server"></asp:TextBox>
-                        <asp:Button ID="BtnSendCode" CssClass="BtnSendCodes" runat="server" Text="发送" OnClick="BtnSendCode_Click" OnClientClick="return SendCode() "  />
+                        <asp:TextBox ID="txtVaildCode" CssClass="txtUserpwds" placeholder="Code" runat="server"></asp:TextBox>
+                        <asp:Button ID="BtnSendCode" CssClass="BtnSendCodes" runat="server" Text="Send" OnClick="BtnSendCode_Click" OnClientClick="return SendCode() "  />
                     </p>
                     <p class="LoginBtn">
-                        <asp:Button ID="btnLogin" CssClass="BtnLogin TFS_Standardstyle" runat="server" Text="登陆" OnClick="btnLogin_Click" />
+                        <asp:Button ID="btnLogin" CssClass="BtnLogin TFS_Standardstyle" runat="server" Text="Landing" OnClick="btnLogin_Click" />
                     </p>
                     <p class="LoginError">
-                        <asp:LinkButton ID="likbtnForgetPwd" CssClass="TFS_Standardstyle FontCss" runat="server" PostBackUrl="~/UserPage/UserForgetCode.aspx">忘记密码</asp:LinkButton>
-                        <asp:LinkButton ID="likbtnRegister" CssClass="TFS_Standardstyle FontCssRight" runat="server" PostBackUrl="~/UserPage/UserPageRegister.aspx">立即注册</asp:LinkButton>
+                        <asp:LinkButton ID="likbtnForgetPwd" CssClass="TFS_Standardstyle FontCss" runat="server" PostBackUrl="~/UserPage/UserForgetCode.aspx">forget password</asp:LinkButton>
+                        <asp:LinkButton ID="likbtnRegister" CssClass="TFS_Standardstyle FontCssRight" runat="server" PostBackUrl="~/UserPage/UserPageRegister.aspx">Sign up now</asp:LinkButton>
                     </p>
                 </div>
                 </div>               
-            </ContentTemplate>
-            <Triggers>
-                <asp:AsyncPostBackTrigger ControlID="BtnSendCode" EventName="Click" />
-                <asp:AsyncPostBackTrigger ControlID="btnLogin" EventName="Click" />
-                <asp:AsyncPostBackTrigger ControlID="likbtnForgetPwd" EventName="Click" />
-                <asp:AsyncPostBackTrigger ControlID="likbtnRegister" EventName="Click" />
-                <asp:AsyncPostBackTrigger ControlID="txtUserID" EventName="TextChanged" />
-                <asp:AsyncPostBackTrigger ControlID="txtUserPwds" EventName="TextChanged" />
-            </Triggers>
-        </asp:UpdatePanel>
     <script type="text/javascript">
         /*获得页面的可视区域*/
         var scrennPhone = window.matchMedia('(max-width: 767px)');

@@ -161,7 +161,7 @@ namespace CzmWeb.BackendManage
             lblxiugai.Text = "10";
             String Id = ddlAdmin.SelectedItem.Text;
             lblIDLast.Text = Id;
-            DataTable td = getTable.GetAllDataFromtblAdministrator("AdminId='" + Id + "'");
+            DataTable td = getTable.GetAllDataFromtblAdministrator("AdminId= '" + Id + "'");
             if (td.Rows.Count == 1)
             {
                 string Name = td.Rows[0]["AdminName"].ToString();

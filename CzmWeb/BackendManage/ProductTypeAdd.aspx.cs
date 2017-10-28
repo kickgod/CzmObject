@@ -41,7 +41,7 @@ namespace CzmWeb.BackendManage
         }
         protected void btnAdd_OnClick(object sender, EventArgs e)
         {
-            lblID.Text = "自动编号";
+            
             ChengNull();
             ChengEnableTrue();
         }
@@ -77,6 +77,16 @@ namespace CzmWeb.BackendManage
                 MessaegBoxConfrim("请填写英文名称！");
                 return;
             }
+            if(txtDecriptionCHN.Text=="")
+            {
+                MessaegBoxConfrim("请填写中文简介！");
+                return;               
+            }
+            if (txtDecriptionENG.Text == "")
+            {
+                MessaegBoxConfrim("请填写英文简介！");
+                return;
+            }
             string ss = "\'\'";
             string ChineseseName = txtTypeNameChe.Text;
             string EnglishName = txtTypeNameEng.Text;
@@ -91,12 +101,19 @@ namespace CzmWeb.BackendManage
                 }
                 if (FineName == "")
                 {
-                    sqlUpdate = "UPDATE [XcXm].[dbo].[tblProductTypeInfo] SET  typeName_c ='" + ChineseseName + "' ,typeName_e='" + EnglishName.Replace("\'", ss) + "'  WHERE typeID=" + ddlCheckType.SelectedValue;
+                    sqlUpdate = "UPDATE [XcXm].[dbo].[tblProductTypeInfo] SET  typeName_c ='" + ChineseseName + "'" +
+                                " ,typeName_e='" + EnglishName.Replace("\'", ss) + "', TypeDecription_c = '" +txtDecriptionCHN.Text.Replace("\'", ss)
+                                +"', TypeDecription_e = '"+txtDecriptionENG.Text.Replace("\'", ss)+
+                                "' WHERE typeID= " + ddlCheckType.SelectedValue;
                  
                 }
                 else
                 {
-                    sqlUpdate = "UPDATE [XcXm].[dbo].[tblProductTypeInfo] SET TypePicture='" + FineName + "' , typeName_c ='" + ChineseseName + "' ,typeName_e='" + EnglishName.Replace("\'", ss) + "'  WHERE typeID=" + ddlCheckType.SelectedValue;
+                    sqlUpdate = "UPDATE [XcXm].[dbo].[tblProductTypeInfo]" +
+                                " SET TypePicture='" + FineName + "' , typeName_c ='" + ChineseseName +
+                                "' ,typeName_e='" + EnglishName.Replace("\'", ss) + "', TypeDecription_c = '" +txtDecriptionCHN.Text.Replace("\'", ss)
+                        +"', TypeDecription_e = '"+txtDecriptionENG.Text.Replace("\'", ss)+
+                        "'  WHERE typeID= " + ddlCheckType.SelectedValue;
                    
                 }
                 DB.CarryOutSqlSentence(sqlUpdate);
@@ -112,11 +129,13 @@ namespace CzmWeb.BackendManage
                 string FineName = "";
                 wuc_FileUpload.UpFile();
                 FineName = wuc_FileUpload.ServerDianPath;
-                string sqlInsert = "INSERT INTO [XcXm].[dbo].[tblProductTypeInfo](typeName_c,typeName_e,TypeState,TypeIsVisiable,TypePicture) VALUES('" + ChineseseName + "','" + EnglishName.Replace("\'", ss) + "',30,1,'" + FineName + "') ";
+                string sqlInsert = "INSERT INTO [XcXm].[dbo].[tblProductTypeInfo](typeName_c,typeName_e,TypeState,TypeIsVisiable,TypePicture,TypeDecription_c,TypeDecription_e) VALUES('" + ChineseseName + "','" +
+                    EnglishName.Replace("\'", ss) + "',30,1,'" + FineName + "','"+txtDecriptionCHN.Text+"','"+txtDecriptionENG.Text+"') ";
                 //lblID.Text = sqlInsert;
                 DB.CarryOutSqlSentence(sqlInsert);
                 MessaegBox("添加完成");
             }
+            ChengNull();
             BindData();
         }
         private void BindData()
@@ -140,19 +159,26 @@ namespace CzmWeb.BackendManage
         }
         private void ChengNull()
         {
+            lblID.Text = "自动编号";
             ddlCheckType.SelectedValue = "-1";
             txtTypeNameChe.Text = "";
             txtTypeNameEng.Text = "";
+            txtDecriptionCHN.Text = "";
+            txtDecriptionENG.Text = "";
         }
         private void ChengEnableFalse()
         {
             txtTypeNameChe.Enabled = false;
             txtTypeNameEng.Enabled = false;
+            txtDecriptionCHN.Enabled = false;
+            txtDecriptionENG.Enabled = false;
         }
         private void ChengEnableTrue()
         {
             txtTypeNameChe.Enabled = true;
             txtTypeNameEng.Enabled = true;
+            txtDecriptionCHN.Enabled = true;
+            txtDecriptionENG.Enabled = true;
         }
         protected void ddlCheckType_OnSelectedIndexChanged(object sender, EventArgs e)
         {
@@ -166,10 +192,13 @@ namespace CzmWeb.BackendManage
                 DataTable td = getTable.GetAllDataFromtblProductTypeInfo("typeID =" + ddlCheckType.SelectedValue);
                 if (td.Rows.Count == 1)
                 {
-                    txtTypeNameChe.Text = td.Rows[0]["typeName_c"].ToString();
-                    txtTypeNameEng.Text = td.Rows[0]["typeName_e"].ToString();
-                    ChengEnableFalse();
-                    lblID.Text = td.Rows[0]["typeID"].ToString();
+
+                        txtTypeNameChe.Text = td.Rows[0]["typeName_c"].ToString();                     
+                        txtTypeNameEng.Text = td.Rows[0]["typeName_e"].ToString();
+                        txtDecriptionCHN.Text = td.Rows[0]["TypeDecription_c"].ToString();
+                        txtDecriptionENG.Text = td.Rows[0]["TypeDecription_e"].ToString();
+                        lblID.Text = td.Rows[0]["typeID"].ToString();
+                    ChengEnableFalse();              
                 }
             }
         }

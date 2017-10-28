@@ -76,8 +76,8 @@ namespace CzmWeb.BackendManage
                 DB.CarryOutSqlSentence(sql);
                 MessaegBox("Success!");
             }
-            ChangeItToNull();
             wuc_PagerEng.Bind();
+            ChangeItToNull();
         }
 
         private void ChangeItToNull()
@@ -100,7 +100,7 @@ namespace CzmWeb.BackendManage
                 String TimeHourSecond = SecondPartTwo.Text;
                 string TimeFirst="";
                 string TimeSecond="";
-                string SqlWhere = "AdviceID >0";
+                string SqlWhere = "AdviceID >0 ";
                 if (TimeNianFirst != "")
                 {
                     if (TimeHourFirst != "")
@@ -111,32 +111,29 @@ namespace CzmWeb.BackendManage
                     {
                         TimeFirst = TimeNianFirst;
                     }
+                    DateTime dt = Convert.ToDateTime(TimeFirst);
+                    SqlWhere += " and LeaveTime >= '" + dt.ToString() + "'";
+
                 }
                 if (TimeNianSecond != "")
                 {
                     if (TimeHourSecond != "")
                     {
-                        TimeSecond = TimeNianFirst + " " + TimeHourFirst;
+                        TimeSecond = TimeNianSecond + " " + TimeHourSecond;
                     }
                     else
                     {
-                        TimeSecond = TimeNianFirst;
+                        TimeSecond = TimeNianSecond;
                     }
+                    DateTime dt = Convert.ToDateTime(TimeSecond);
+                    SqlWhere += " and LeaveTime <= '" + dt.ToString() + "'";
                 }
                 if (txtPhone.Text != "")
                 {
                     SqlWhere += " and  Phone ='"+txtPhone.Text+"'";
                 }
-                /*开始时间不为空的话*/
-                if (TimeFirst != "")
-                {
-                    SqlWhere += " and LeaveTime >= '" + TimeFirst+"'";
-                }
-                if (TimeSecond != "")
-                {
-                    SqlWhere += " and LeaveTime <= '" + TimeSecond + "'";
-                }
                 lblWhere.Text = SqlWhere;
+                //Response.Write(lblWhere.Text);
                 wuc_PagerEng.Bind();
             }
             catch (Exception exception)

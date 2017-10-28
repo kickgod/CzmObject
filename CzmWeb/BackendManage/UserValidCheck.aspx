@@ -51,7 +51,7 @@
                         <asp:DropDownList ID="ddlAdmin" runat="server" Height="25px" AutoPostBack="True" OnSelectedIndexChanged="ddlAdmin_SelectedIndexChanged" Width="220px">
                         </asp:DropDownList>
                     </td>
-                   <td colspan="2" class="TdClass" >
+                   <td colspan="2" class="TdClass" align="left" >
                        [这里你可以对管理进行修改操作]
                    </td>
                 </tr>

@@ -136,6 +136,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="BackendManage\InvertRegionList.aspx" />
+    <Content Include="BackendManage\InvestPlaceAdd.aspx" />
     <Content Include="BackendManage\ProductDataList.aspx" />
     <Content Include="BackendManage\AdminLogin.aspx" />
     <Content Include="BackendManage\BackAdmin.aspx" />
@@ -146,6 +147,7 @@
     <Content Include="BackendManage\UserSuggestionListChinese.aspx" />
     <Content Include="BackendManage\UserSuggestionsList.aspx" />
     <Content Include="BackendManage\UserValidCheck.aspx" />
+    <Content Include="BackendManage\VedioListAndUp.aspx" />
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\AspNet.ScriptManager.jQuery.dll" />
     <Content Include="bin\AspNet.ScriptManager.jQuery.UI.Combined.dll" />
@@ -184,6 +186,7 @@
     <Content Include="bootstrap337\js\npm.js" />
     <Content Include="Common\wucPager.ascx" />
     <Content Include="Common\wuc_FileUpload.ascx" />
+    <Content Include="Common\wuc_FileVedio.ascx" />
     <Content Include="Common\wuc_ListPager.ascx" />
     <Content Include="Common\wuc_PagerEng.ascx" />
     <Content Include="Contact.aspx" />
@@ -249,6 +252,9 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="CradIDPictureDB\2017104162454686.jpg" />
     <Content Include="CradIDPictureDB\201710416920339.jpg" />
+    <Content Include="CSS\BootsrapDefaultCHN.css" />
+    <Content Include="CSS\BootsrapDefaultENG.css" />
+    <Content Include="CSS\BootsrapMuBan.css" />
     <Content Include="CSS\button.css" />
     <Content Include="CSS\Demo.css" />
     <Content Include="CSS\index.css" />
@@ -277,13 +283,12 @@
     <Content Include="CSS\WebTable.css" />
     <Content Include="DefalutEng.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="FirstImage\1_CompanyName_c.jpg" />
+    <Content Include="FirstImage\2_CompanyIntro_c.jpg" />
+    <Content Include="FirstImage\3_CompanyTitle_c.jpg" />
+    <Content Include="FirstImage\4_CompanyFocus_c.jpg" />
+    <Content Include="FirstImage\5_CompanyFeture_c.jpg" />
     <Content Include="FirstImage\diaoyu.png" />
-    <Content Include="FirstImage\7.jpg" />
-    <Content Include="FirstImage\2.jpg" />
-    <Content Include="FirstImage\3.jpg" />
-    <Content Include="FirstImage\4.jpg" />
-    <Content Include="FirstImage\1.jpg" />
-    <Content Include="FirstImage\5.jpg" />
     <Content Include="FirstImage\row.png" />
     <Content Include="FirstImage\row2.png" />
     <Content Include="FirstImage\kuaishou.png" />
@@ -291,6 +296,11 @@
     <Content Include="FirstImage\yihui.png" />
     <Content Include="FirstImage\yinke.png" />
     <Content Include="FirstImage\shangyu.png" />
+    <Content Include="FirstImage\图1.png" />
+    <Content Include="FirstImage\图2.png" />
+    <Content Include="FirstImage\图3.png" />
+    <Content Include="FirstImage\图4.png" />
+    <Content Include="FirstImage\图5.png" />
     <Content Include="FirstImage\图标1.png" />
     <Content Include="FirstImage\图标10.png" />
     <Content Include="FirstImage\图标11.png" />
@@ -590,6 +600,7 @@
     <Content Include="bootstrap337\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="bootstrap337\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="bootstrap337\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Master\UserPageMasters.Master" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="ProductImage\2017108175537609.jpg" />
     <Content Include="ProductImage\2017108175753719.jpg" />
@@ -629,11 +640,22 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="UserPage\UserConmunicationApace.aspx" />
+    <Content Include="UserPage\UserConmunicationApaceCHN.aspx" />
+    <Content Include="UserPage\UserCreateProject.aspx" />
     <Content Include="UserPage\UserForgetCode.aspx" />
     <Content Include="UserPage\UserNewProductShow.aspx" />
+    <Content Include="UserPage\UserNewProductShowCHN.aspx" />
     <Content Include="UserPage\UserPageLogin.aspx" />
-    <Content Include="UserPage\muban.aspx" />
+    <Content Include="UserPage\UserMuBan.aspx" />
+    <Content Include="UserPage\UserPageLoginCHN.aspx" />
     <Content Include="UserPage\UserPageRegister.aspx" />
+    <Content Include="UserPage\UserPageRegisterCHN.aspx" />
+    <Content Include="UserPage\UserProductTypeShow.aspx" />
+    <Content Include="UserPage\UserProductTypeShowCHN.aspx" />
+    <Content Include="UserPage\UserVedioShowList.aspx" />
+    <Content Include="UserPage\UserVedioShowListCHE.aspx" />
+    <Content Include="VedioList\2017102413124848.jpg" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -643,6 +665,8 @@
   <ItemGroup>
     <None Include="Scripts\_references.js" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="VedioList\招聘.webm" />
+    <Content Include="VedioList\2017102413124848.webm" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -709,6 +733,13 @@
     </Compile>
     <Compile Include="BackendManage\InvertRegionList.aspx.designer.cs">
       <DependentUpon>InvertRegionList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackendManage\InvestPlaceAdd.aspx.cs">
+      <DependentUpon>InvestPlaceAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackendManage\InvestPlaceAdd.aspx.designer.cs">
+      <DependentUpon>InvestPlaceAdd.aspx</DependentUpon>
     </Compile>
     <Compile Include="BackendManage\ProductDataList.aspx.cs">
       <DependentUpon>ProductDataList.aspx</DependentUpon>
@@ -780,6 +811,13 @@
     <Compile Include="BackendManage\UserValidCheck.aspx.designer.cs">
       <DependentUpon>UserValidCheck.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BackendManage\VedioListAndUp.aspx.cs">
+      <DependentUpon>VedioListAndUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackendManage\VedioListAndUp.aspx.designer.cs">
+      <DependentUpon>VedioListAndUp.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Common\wucPager.ascx.cs">
       <DependentUpon>wucPager.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -793,6 +831,13 @@
     </Compile>
     <Compile Include="Common\wuc_FileUpload.ascx.designer.cs">
       <DependentUpon>wuc_FileUpload.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\wuc_FileVedio.ascx.cs">
+      <DependentUpon>wuc_FileVedio.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\wuc_FileVedio.ascx.designer.cs">
+      <DependentUpon>wuc_FileVedio.ascx</DependentUpon>
     </Compile>
     <Compile Include="Common\wuc_ListPager.ascx.cs">
       <DependentUpon>wuc_ListPager.ascx</DependentUpon>
@@ -839,6 +884,13 @@
     <Compile Include="Master\UserPageMaster.Master.designer.cs">
       <DependentUpon>UserPageMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="Master\UserPageMasters.Master.cs">
+      <DependentUpon>UserPageMasters.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\UserPageMasters.Master.designer.cs">
+      <DependentUpon>UserPageMasters.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -854,6 +906,27 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="UserPage\UserConmunicationApace.aspx.cs">
+      <DependentUpon>UserConmunicationApace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\UserConmunicationApace.aspx.designer.cs">
+      <DependentUpon>UserConmunicationApace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage\UserConmunicationApaceCHN.aspx.cs">
+      <DependentUpon>UserConmunicationApaceCHN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\UserConmunicationApaceCHN.aspx.designer.cs">
+      <DependentUpon>UserConmunicationApaceCHN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage\UserCreateProject.aspx.cs">
+      <DependentUpon>UserCreateProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\UserCreateProject.aspx.designer.cs">
+      <DependentUpon>UserCreateProject.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserPage\UserForgetCode.aspx.cs">
       <DependentUpon>UserForgetCode.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -868,6 +941,13 @@
     <Compile Include="UserPage\UserNewProductShow.aspx.designer.cs">
       <DependentUpon>UserNewProductShow.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserPage\UserNewProductShowCHN.aspx.cs">
+      <DependentUpon>UserNewProductShowCHN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\UserNewProductShowCHN.aspx.designer.cs">
+      <DependentUpon>UserNewProductShowCHN.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserPage\UserPageLogin.aspx.cs">
       <DependentUpon>UserPageLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -875,12 +955,19 @@
     <Compile Include="UserPage\UserPageLogin.aspx.designer.cs">
       <DependentUpon>UserPageLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserPage\muban.aspx.cs">
-      <DependentUpon>muban.aspx</DependentUpon>
+    <Compile Include="UserPage\UserMuBan.aspx.cs">
+      <DependentUpon>UserMuBan.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserPage\muban.aspx.designer.cs">
-      <DependentUpon>muban.aspx</DependentUpon>
+    <Compile Include="UserPage\UserMuBan.aspx.designer.cs">
+      <DependentUpon>UserMuBan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage\UserPageLoginCHN.aspx.cs">
+      <DependentUpon>UserPageLoginCHN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\UserPageLoginCHN.aspx.designer.cs">
+      <DependentUpon>UserPageLoginCHN.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserPage\UserPageRegister.aspx.cs">
       <DependentUpon>UserPageRegister.aspx</DependentUpon>
@@ -888,6 +975,41 @@
     </Compile>
     <Compile Include="UserPage\UserPageRegister.aspx.designer.cs">
       <DependentUpon>UserPageRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage\UserPageRegisterCHN.aspx.cs">
+      <DependentUpon>UserPageRegisterCHN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\UserPageRegisterCHN.aspx.designer.cs">
+      <DependentUpon>UserPageRegisterCHN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage\UserProductTypeShow.aspx.cs">
+      <DependentUpon>UserProductTypeShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\UserProductTypeShow.aspx.designer.cs">
+      <DependentUpon>UserProductTypeShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage\UserProductTypeShowCHN.aspx.cs">
+      <DependentUpon>UserProductTypeShowCHN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\UserProductTypeShowCHN.aspx.designer.cs">
+      <DependentUpon>UserProductTypeShowCHN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage\UserVedioShowList.aspx.cs">
+      <DependentUpon>UserVedioShowList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\UserVedioShowList.aspx.designer.cs">
+      <DependentUpon>UserVedioShowList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage\UserVedioShowListCHE.aspx.cs">
+      <DependentUpon>UserVedioShowListCHE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\UserVedioShowListCHE.aspx.designer.cs">
+      <DependentUpon>UserVedioShowListCHE.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -900,6 +1022,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="ForePage\" />
+    <Folder Include="ProjectFile\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />

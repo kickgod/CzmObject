@@ -2,11 +2,7 @@
 
 <%@ Register Src="~/Common/wucPager.ascx" TagPrefix="uc1" TagName="wucPager" %>
 <%@ Register Src="~/Common/wuc_FileUpload.ascx" TagPrefix="uc1" TagName="wuc_FileUpload" %>
-
-
-
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -91,8 +87,24 @@
                     <td align="center">
                         图片上传
                     </td>
-                    <td>
+                    <td colspan="3">
                         <uc1:wuc_FileUpload runat="server" ID="wuc_FileUpload" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        产品描述[中文]
+                    </td>
+                    <td colspan="3"> 
+                        <asp:TextBox ID="txtDecriptionCHN" CssClass="txtBox"  runat="server" Width="99%"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        产品描述[英文]
+                    </td>
+                    <td colspan="3"> 
+                        <asp:TextBox ID="txtDecriptionENG" CssClass="txtBox"  runat="server" Width="99%"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>

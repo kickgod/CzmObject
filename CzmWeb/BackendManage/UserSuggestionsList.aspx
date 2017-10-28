@@ -56,7 +56,7 @@
         .container .row .col-md-6 img{width:25px;height:25px;}
         #txtMessageContent{resize:none}
         #BtnSaveMessage{text-align:right}
-        .tabletdBGc{ background-color: gainsboro;}
+        .tabletdBGc{ background-color: gainsboro;word-break: break-all;overflow: hidden}
     </style>
 </head>
 <body>

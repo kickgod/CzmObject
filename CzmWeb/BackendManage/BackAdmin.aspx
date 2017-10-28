@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <script src="../Scripts/jquery-1.8.2.min.js"></script>
+    <link rel="icon" href="../Images/SystemPicture/创造力.ico" />
     <link href="../CSS/TraditionalFontStyle.css" type="text/css" rel="stylesheet"/>
     <title>事务管理</title>
     <style type="text/css">
@@ -155,6 +156,9 @@
                                 <li><a href="javascript:GetPage('../Default.aspx')">A.首页查看</a></li>
                             </ul>
                         </li>
+                        <li id="VideoList">
+                            <img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><a href="javascript:GetPage('../BackendManage/VedioListAndUp.aspx')">视频管理</a>
+                       </li>
                         <li id="ProductAdmin"><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk" onclick="OpenProductChooseKa()" /><a href="javascript:OpenProductChooseKa()">产品管理</a>
                             <ul class="OpenProduct" id="ProductShooseKa">
                                 <li><a href="javascript:GetPage('../BackendManage/ProductTypeAdd.aspx')">A.产品类别</a></li>
@@ -167,7 +171,7 @@
                         <li><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><a href="javascript:void(0)">项目审核</a></li>
                         <li id="InvestAdmin"><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"  onclick="OpenChooseKa();" /><a href="javascript:OpenChooseKa()">投资管理</a>
                             <ul class="OpenInvert" id="InverstShooseKa">
-                                <li><a href="javascript:void(0)">A.投资地区</a></li>
+                                <li><a href="javascript:GetPage('../BackendManage/InvestPlaceAdd.aspx')">A.投资地区</a></li>
                                 <li><a href="javascript:void(0)">B.投资项目</a></li>
                                 <li><a href="javascript:void(0)">C.投资审核</a></li>
                             </ul>
@@ -178,7 +182,7 @@
                                 <li><a href="javascript:GetPage('../BackendManage/UserSuggestionListChinese.aspx')">B.中文版</a></li>
                             </ul>
                         </li>
-                        <li><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><a href="javascript:GetPage('../BackendManage/UserValidCheck.aspx')">投诉建议</a></li>
+                        <li><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><a href="javascript:GetPage('../BackendManage/UserValidCheck.aspx')">人员管理</a></li>
                     </ul>                    
                 </div>
             </div>

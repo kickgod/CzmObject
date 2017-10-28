@@ -49,7 +49,6 @@
         <div style="height: 1025px; width: 100%;">
             <div style="width: 15%; float: left; height: 1021px; background-color:RGB(176,53,112);" >
                 <div style="height: 146px; background-color:RGB(176,53,112);">
-             
                 </div>
             </div>
             <div style="width: 68%; float: left; height: 914px; margin-bottom: 0px;">

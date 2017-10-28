@@ -20,11 +20,11 @@ namespace CzmWeb
         {
             if (!IsPostBack)
             {
-                DataBind();                
+                DataBindt();                
             }
         }
 
-        private void DataBind()
+        private void DataBindt()
         {
             //绑定产品种类
             DataTable td= new DataTable();
@@ -35,6 +35,7 @@ namespace CzmWeb
             DataTable tdNewProduct=new DataTable();
             tdNewProduct = DB.CarryOutSqlGeDataTable("SELECT TOP 8 * FROM [XcXm].[dbo].[tblProductInfo] WHERE [IsNew] =1 AND IsVisiable=0  order by ImgUplodetime desc");
             reptemNewProduct.DataSource = tdNewProduct;
+           
             reptemNewProduct.DataBind();
         }
     }

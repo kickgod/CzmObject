@@ -132,10 +132,10 @@
                                 <%#Eval("UserCard") %>
                             </td>
                             <td align="center">
-                               <a href="../CradIDPictureDB/201710416920339.jpg">图片查看</a>  
+                               <a href=<%#Eval("UserCardPicture_Address") %>>图片查看</a>  
                             </td>
                             <td align="center">
-                                <a href=‘<%#Eval("UserCardPicture2_Address") %>’>图片查看</a>  
+                                <a href=<%#Eval("UserCardPicture2_Address") %> >图片查看</a>  
                             </td>
                             <td align="center">
                                 <%#Eval("UserStateFlag") %>
