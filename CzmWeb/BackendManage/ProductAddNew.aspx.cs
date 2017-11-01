@@ -18,6 +18,18 @@ namespace CzmWeb.BackendManage
         SendPhoneMessage send = new SendPhoneMessage();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.Cookies["administator"] == null)
+            {
+                MessageBoxResponse("登录超时");
+                return;
+            }
+            else
+            {
+                if (Request.Cookies["administator"] != null)
+                {
+                    Response.Cookies["administator"].Expires = DateTime.Now.AddHours(1);
+                }
+            }
             if (!IsPostBack)
             {
                 btnAddProduct.Visible = false;
@@ -30,6 +42,10 @@ namespace CzmWeb.BackendManage
                     BindDataOfProduct(Request.Cookies["ProductID"].Value.ToString());
                 }
             }
+        }
+        private void MessageBoxResponse(string msg)
+        {
+            Response.Write("<script>alert('" + msg + "');location.href='../BackendManage/AdminLogin.aspx';</script>");
         }
         private void BindDataOfProduct(string ProductId)
         {

@@ -38,6 +38,22 @@ namespace CzmWeb
             tdNewProduct = DB.CarryOutSqlGeDataTable("SELECT TOP 8 * FROM [XcXm].[dbo].[tblProductInfo] WHERE [IsNew] =1 AND IsVisiable=0  order by ImgUplodetime desc");
             reptemNewProduct.DataSource = tdNewProduct;
             reptemNewProduct.DataBind();
+            reptmInvset.DataSource = getView.GetAllDataFrom_vwUserInvsertProject("PiiState =30");
+            reptmInvset.DataBind();
+            reptmProject.DataSource = getView.GetAllDataFrom_vwCreateProjrctItem();
+            reptmProject.DataBind();
+            Repeater1.DataSource = DB.CarryOutSqlGeDataTable("SELECT TOP 4 * FROM [XcXm].[dbo].[tblProjectCreate] WHERE PciState = 30 order by PciTime");
+            Repeater1.DataBind();
+        }
+
+        protected void Repeater1_OnItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+                if (e.CommandName == "Invest")
+                {
+                    string QueryName = e.CommandArgument.ToString();
+                    Response.Redirect("~/UserPage/UserInvestProject.aspx?QueryName=" + QueryName);
+                }
+           
         }
     }
 }

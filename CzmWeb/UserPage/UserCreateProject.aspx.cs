@@ -18,15 +18,30 @@ namespace CzmWeb.UserPage
         PublicUserJudge Judge = new PublicUserJudge();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["User"] = "15982690985";
+            if (Session["User"] == null)
+            {
+                MessageBoxResponse("You are not logged in, login timeout");
+            }
         }
         private void MessageBoxResponse(string msg)
         {
-            Response.Write("<script>alert('" + msg + "');location.href='../UserPage/UserPageLogin.aspx';</script>");
+            Response.Write("<script>alert('" + msg + "');location.href='../DefalutEng.aspx';</script>");
         }
         private void MessaegBox(String msg)
         {
             Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('" + msg + "')</script>");
+        }
+
+        private void ChangeIsNUll()
+        {
+            txtAdress.Text = "success！Please wait for the audit! We'll notify you by SMS";
+            txtAmount.Text = "";
+            txtApplyName.Text = "success！Please wait for the audit! We'll notify you by SMS";
+            txtPhone.Text = "success！Please wait for the audit! We'll notify you by SMS";
+            txtBilieShuoming.Text = "success！Please wait for the audit! We'll notify you by SMS";
+            txtZlH.Text = "success！Please wait for the audit! We'll notify you by SMS";
+            txtProjectName.Text = "success！Please wait for the audit! We'll notify you by SMS";
+            txtProjectIntroDuction.Text = "success！Please wait for the audit! We'll notify you by SMS";
         }
         protected void btnSave_Click(object sender, EventArgs e)
         {
@@ -88,6 +103,8 @@ namespace CzmWeb.UserPage
                 MessaegBox("Please enter your unit address");
                 return;                 
             }
+            wuc_FileVedio.MapPaths = "~/ProjectFile/";
+            wuc_FileUpload_Piture.MapPaths = "~/ProjectFile/";
             string pciName = txtProjectName.Text.Replace("\'", "\'\'");
             string PatentNumber=txtZlH.Text.Replace("\'", "\'\'");
             string Description = txtProjectIntroDuction.Text.Replace("\'", "\'\'");
@@ -112,8 +129,10 @@ namespace CzmWeb.UserPage
             string sqlValues = "('" + pciName + "','" + PatentNumber + "','" + Description + "','" + PictureAddress +
                                "','" + FileAddress + "','" + PciInvestMeony + "','" + shareRadio + "','" + Applicant +
                                "','" + Phone + "','" + Address + "'," + AddUser+")";
+            int count=DB.CarryOutSqlSentence(sql + sqlValues);
+            ChangeIsNUll();
             MessaegBox("success！Please wait for the audit! We'll notify you by SMS");
-            DB.CarryOutSqlSentence(sql + sqlValues);
+
         }
     }
 }

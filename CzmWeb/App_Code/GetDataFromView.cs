@@ -336,5 +336,51 @@ namespace CzmWeb.App_Code
             adapter.Fill(td);
             return td;
         }
+        /// <summary>
+        /// 返回视图vwUserInvsertProject里面所有的数据
+        /// </summary>
+        /// <returns></returns>
+        public DataTable GetAllDataFrom_vwUserInvsertProject()
+        {
+            SqlConnection con = GetSqlConnection();
+            DataTable td = new DataTable();
+            if (con.State != ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM vwUserInvsertProject";
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(td);
+            return td;
+        }
+        /// <summary>
+        /// 返回视图vwUserInvsertProject里面加上where条件的所有数据
+        /// </summary>
+        /// <param name="Where"></param>
+        /// <returns></returns>
+        public DataTable GetAllDataFrom_vwUserInvsertProject(String Where)
+        {
+            SqlConnection con = GetSqlConnection();
+            DataTable td = new DataTable();
+            if (con.State != ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            if (Where != "")
+            {
+                cmd.CommandText = "SELECT * FROM vwUserInvsertProject  Where " + Where;
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM vwUserInvsertProject";
+            }
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(td);
+            return td;
+        }
     }
 }

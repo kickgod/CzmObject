@@ -7,14 +7,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <title>创造门</title>
+    <script src="../bootstrap337/js/jquery-3.2.1.min.js"></script>
+    <script src="../bootstrap337/js/bootstrap.min.js"></script>
     <link rel="icon" href="../Images/SystemPicture/创造力.ico" />
     <link href="../bootstrap337/css/style.css" rel="stylesheet" />
     <link href="../bootstrap337/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../Content/FontBindData.css" rel="stylesheet" />
-    <script src="../bootstrap337/js/jquery-3.2.1.min.js"></script>
-    <script src="../bootstrap337/js/bootstrap.min.js"></script>
-    <script src="../bootstrap337/js/holder.min.js"></script>
-    <script src="../Js/scroll.js"></script>
     <link href="../CSS/BootsrapMuBan.css" rel="stylesheet" />
     <style type="text/css">
         .ProductNameType{color: white;font-weight: 500;background-color: RGB(174, 105, 130);padding: 5px 20px;word-spacing: 5px;font-size: 16px}
@@ -170,7 +168,9 @@
         <asp:LinkButton ID="LkBtnGetAll" CssClass="btn btn-primary" runat="server" OnClick="LkBtnGetAll_Click">更多</asp:LinkButton>
     </div>
 </form>
-<div class="zixun">
+    <br/><br/>
+<br/><br/>
+   <div class="zixun">
     <div class="showDiv">
         <p style="font-size: 8px">微信二维码</p>
         <img src="../Images/SystemPicture/timg.jpg"/>
@@ -185,7 +185,7 @@
         <a href="#"><img src="../Images/SystemPicture/zhidinglanse.png" title="首页" /></a>
     </div>
 </div>
-<div class="JiaoBen" Id="Adminsrator">
+<div class="JiaoBen" Id="Adminsrator" style="position: absolute; bottom: 0px;">
     <p style="text-align: center;padding-top: 5px">
         <a href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="../Images/SystemPicture/阿里旺旺.png" width="20px" height="20px"/>阿里旺旺</a>
         <a href="http://wpa.qq.com/msgrd?v=1&uin=544956252"><img src="../Images/SystemPicture/qq.png" width="20px" height="20px"/>QQ服务</a>Copyright © 2017-至今|四川创造门高新技术开发有限公司|客服电话：15698259380|企业邮箱:chuangzaomen@163.com|热线电话：15826121

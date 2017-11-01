@@ -3,7 +3,7 @@
     <style type="text/css">
         .Mainpage{ width: 100%;background-color: RGB(245, 234, 240); }
         .Mainpage .LoginUp{ width: 100%;height: 100px;background-color: inherit}
-        .Mainpage .Login {background-color: inherit; width: 400px;margin: auto;height: 600px;margin-top: 50px}
+        .Mainpage .Login {background-color: inherit; width: 400px;margin: auto;margin-top: 50px}
         .Mainpage .Login .Ttile{height: 50px;line-height: 50px; color: RGB(176, 53, 112);font-size: 20px;text-align: center;font-style: italic;font-weight: bold;}
         .Mainpage .Login .Headsummary{ height: 40px;height: 40px;font-family: '华文楷体', '楷体', '微软雅黑','宋体';color: RGB(246, 139, 209);text-align:center  }
         .Mainpage .Login .UserID { height: 44px;width: 100%;line-height: 44px;}

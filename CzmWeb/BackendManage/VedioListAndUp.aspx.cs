@@ -18,12 +18,27 @@ namespace CzmWeb.BackendManage
         SendPhoneMessage send = new SendPhoneMessage();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.Cookies["administator"] == null)
+            {
+                MessageBoxResponse("登录超时");
+                return;
+            }
+            else
+            {
+                if (Request.Cookies["administator"] != null)
+                {
+                    Response.Cookies["administator"].Expires = DateTime.Now.AddHours(1);
+                }
+            }
             if (!IsPostBack)
             {
                 DataBand();
             }
         }
-
+        private void MessageBoxResponse(string msg)
+        {
+            Response.Write("<script>alert('" + msg + "');location.href='../BackendManage/AdminLogin.aspx';</script>");
+        }
         private void ChangeNull()
         {
             lblVedioId.Text = "自动编号";

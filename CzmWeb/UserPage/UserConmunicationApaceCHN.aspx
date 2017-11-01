@@ -251,21 +251,20 @@
 <br/><br/><br/><br/><br/><br/>
 <div class="zixun">
     <div class="showDiv">
-        <p>微信二维码</p>
+        <p style="font-size: 8px">微信二维码</p>
         <img src="../Images/SystemPicture/timg.jpg"/>
-        <p>扫码咨询关注</p>
-        <p>惊喜连连更多</p>
+        <p>扫描关注</p>
+        <p>更多惊喜</p>
     </div>
     <div class="lanmu">
-        <a href="javascript:void(0)"><img src="../Images/SystemPicture/userLanse.png" title="用户登录"/></a>
-        <a href="javascript:void(0)"><img src="../Images/SystemPicture/zixunlanse.png" title="在线咨询"/></a>
+        <a href="javascript:void(0)"><img src="../Images/SystemPicture/userLanse.png" title="User Login"/></a>
+        <a href="javascript:void(0)"><img src="../Images/SystemPicture/zixunlanse.png" title="Online"/></a>
         <a href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="../Images/SystemPicture/阿里旺旺.png" title="阿里旺旺" /></a>
         <a href="javascript:void(0)"><img src="../Images/SystemPicture/qqlanse.png" title="QQ咨询" /></a>
         <a href="#"><img src="../Images/SystemPicture/zhidinglanse.png" title="首页" /></a>
     </div>
-       
 </div>
-<div class="JiaoBen" Id="Adminsrator">
+<div class="JiaoBen" Id="Adminsrator" style="position: absolute; bottom: 0px;">
     <p style="text-align: center;padding-top: 5px">
         <a href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="../Images/SystemPicture/阿里旺旺.png" width="20px" height="20px"/>阿里旺旺</a>
         <a href="http://wpa.qq.com/msgrd?v=1&uin=544956252"><img src="../Images/SystemPicture/qq.png" width="20px" height="20px"/>QQ服务</a>Copyright © 2017-至今|四川创造门高新技术开发有限公司|客服电话：15698259380|企业邮箱:chuangzaomen@163.com|热线电话：15826121

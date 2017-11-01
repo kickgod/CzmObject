@@ -59,7 +59,8 @@
         .Register .MainRegister .UserName .BtnTextForm{margin-left: 70px; width: 400px;height: 30px;} 
         .Register .MainRegister .UserRealName .BtnTextFormS{margin-left: 48px; width: 400px;height: 30px;} 
         .Register .MainRegister .UserSex .BtnTextFormSex{margin-left: 96px; width: 405px;height: 35px;} 
-        .Register .MainRegister .UserPwd .BtnTextFormPwd{margin-left: 55px; width: 400px;height: 30px;} 
+        .Register .MainRegister .UserPwd .BtnTextFormPwd{margin-left: 55px; width: 400px;height: 30px;}
+        .Register .MainRegister .UserPwds .BtnTextFormPwd{margin-left: 55px; width: 400px;height: 30px;} 
         .Register .MainRegister .UserPhone .BtnTextFormPhone{margin-left: 17px; width: 400px;height: 30px;} 
         .Register .MainRegister .VaildCodes .BtnTextFormCode{margin-left: 83px; width: 300px;height: 30px;} 
         .Register .MainRegister .VaildCodes .BtnSendCodes{font-family: '华文楷体', '楷体', '微软雅黑', '宋体';height: 30px;width: 90px;background-color: RGB(176, 53, 112);border: RGB(176, 53, 112);color:
@@ -111,15 +112,16 @@
         .Register .MainRegister .FistHange span{ font-size: 1.1em;font-weight: 600;color: RGB(89, 2, 86);font-family: '华文楷体', '微软雅黑', '宋体';border-bottom: solid 2px purple;padding-bottom: 8px;}
         .Register .MainRegister .Sheck{ text-indent: 20px;}
         .Register .MainRegister p{ height: 70px;}
-        .Register .MainRegister .UserName .BtnTextForm{margin-left: 50px; width: 400px;height: 30px;} 
-        .Register .MainRegister .UserRealName .BtnTextFormS{margin-left: 35px; width: 400px;height: 30px;} 
-        .Register .MainRegister .UserSex .BtnTextFormSex{margin-left: 67px; width: 405px;height: 35px;} 
-        .Register .MainRegister .UserPwd .BtnTextFormPwd{margin-left: 35px; width: 400px;height: 30px;} 
-        .Register .MainRegister .UserPhone .BtnTextFormPhone{margin-left: 50px; width: 400px;height: 30px;} 
-        .Register .MainRegister .VaildCodes .BtnTextFormCode{margin-left: 67px; width: 300px;height: 30px;} 
+        .Register .MainRegister .UserName .BtnTextForm{margin-left: 65px; width: 400px;height: 30px;} 
+        .Register .MainRegister .UserRealName .BtnTextFormS{margin-left: 45px; width: 400px;height: 30px;} 
+        .Register .MainRegister .UserSex .BtnTextFormSex{margin-left: 93px; width: 405px;height: 35px;} 
+        .Register .MainRegister .UserPwd .BtnTextFormPwd{margin-left: 55px; width: 400px;height: 30px;}
+        .Register .MainRegister .UserPwds .BtnTextFormPwd{margin-left: 50px; width: 400px;height: 30px;} 
+        .Register .MainRegister .UserPhone .BtnTextFormPhone{margin-left: 15px; width: 400px;height: 30px;} 
+        .Register .MainRegister .VaildCodes .BtnTextFormCode{margin-left: 80px; width: 300px;height: 30px;} 
         .Register .MainRegister .VaildCodes .BtnSendCodes{font-family: '华文楷体', '楷体', '微软雅黑', '宋体';height: 30px;width: 90px;background-color: RGB(176, 53, 112);border: RGB(176, 53, 112);color:white;font-weight: 300;letter-spacing: 3px;font-size: large;margin-left: 10px;border-radius: 12px}
-        .Register .MainRegister .CradIdNumber .BtnTextFormIDNumber {margin-left: 35px; width: 400px;height: 30px;}
-        .Register .MainRegister .CradIdPicture .BtnTextFormIDPicture {margin-left: 35px; width: 400px;height: 30px;}
+        .Register .MainRegister .CradIdNumber .BtnTextFormIDNumber {margin-left: 45px; width: 400px;height: 30px;}
+        .Register .MainRegister .CradIdPicture .BtnTextFormIDPicture {margin-left: 45px; width: 400px;height: 30px;}
         .Register .MainRegister .LoginNow .btnLoginNowTime{font-family: '华文楷体', '楷体', '微软雅黑', '宋体';height: 30px;width: 90px;background-color: RGB(196, 22, 222);border: RGB(176, 53, 112);color:white;font-weight: 300;letter-spacing: 3px;font-size: large;margin-left: 10px;margin-left: 100px;transform: skew(-25deg, 0deg);-ms-transform: skew(-25deg, 0deg);-webkit-transform: skew(-25deg, 0deg);}
         .TFS_FormFont{ color: RGB(242,22,151);font-weight: 600;font-size: medium;font-family: '华文楷体', '楷体', '微软雅黑', '宋体';}
         .biaozhu{ font-size: smaller;color: RGB(196, 22, 222);padding-left: 40px;display: none}
@@ -152,12 +154,13 @@
         .Register .MainRegister .FistHange span{ font-size: 1.1em;font-weight: 600;color: RGB(89, 2, 86);font-family: '华文楷体', '微软雅黑', '宋体';border-bottom: solid 2px purple;padding-bottom: 8px;}
         .Register .MainRegister .Sheck{ text-indent: 20px;}
         .Register .MainRegister p{ height: 50px;}
-        .Register .MainRegister .UserName .BtnTextForm{margin-left: 20px; width: 220px;height: 30px;} 
-        .Register .MainRegister .UserRealName .BtnTextFormS{margin-left: 5px; width: 220px;height: 30px;} 
-        .Register .MainRegister .UserSex .BtnTextFormSex{margin-left: 39px; width: 225px;height: 35px;} 
-        .Register .MainRegister .UserPwd .BtnTextFormPwd{margin-left: 5px; width: 225px;height: 30px;} 
-        .Register .MainRegister .UserPhone .BtnTextFormPhone{margin-left: 20px; width: 225px;height: 30px;} 
-        .Register .MainRegister .VaildCodes .BtnTextFormCode{margin-left: 20px; width: 120px;height: 30px;} 
+        .Register .MainRegister .UserName .BtnTextForm{margin-left: 50px; width: 220px;height: 30px;} 
+        .Register .MainRegister .UserRealName .BtnTextFormS{margin-left: 20px; width: 220px;height: 30px;} 
+        .Register .MainRegister .UserSex .BtnTextFormSex{margin-left: 68px; width: 225px;height: 35px;} 
+        .Register .MainRegister .UserPwd .BtnTextFormPwd{margin-left: 15px; width: 225px;height: 30px;} 
+        .Register .MainRegister .UserPwds .BtnTextFormPwd{margin-left: 35px; width: 225px;height: 30px;} 
+        .Register .MainRegister .UserPhone .BtnTextFormPhone{margin-left: 0px; width: 225px;height: 30px;} 
+        .Register .MainRegister .VaildCodes .BtnTextFormCode{margin-left: 30px; width: 120px;height: 30px;} 
         .Register .MainRegister .VaildCodes .BtnSendCodes{font-family: '华文楷体', '楷体', '微软雅黑', '宋体';height: 30px;width: 90px;background-color: RGB(176, 53, 112);border: RGB(176, 53, 112);color:white;font-weight: 300;letter-spacing: 3px;font-size: large;margin-left: 10px;border-radius: 12px}
         .Register .MainRegister .CradIdNumber .BtnTextFormIDNumber {margin-left: 5px; width: 225px;height: 30px;}
         .Register .MainRegister .CradIdPicture .BtnTextFormIDPicture {margin-left: 35px; width: 400px;height: 30px;}
@@ -377,7 +380,7 @@
                     <asp:ListItem value="0">女（female）</asp:ListItem>
                 </asp:DropDownList>
             </p>
-            <p class="Sheck UserPwd">
+            <p class="Sheck UserPwds">
                 <asp:Label ID="lblPwd_C" CssClass="TFS_FormFont" runat="server" Text="Your mail:" Visible="True"></asp:Label>
                 <asp:TextBox ID="txtPwd" CssClass="BtnTextFormPwd"  runat="server"  placeholder="E-mail Address"></asp:TextBox>
                 <span class="biaozhu">please input your email</span>

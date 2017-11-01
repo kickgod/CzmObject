@@ -135,14 +135,16 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
-    <Content Include="BackendManage\InvertRegionList.aspx" />
     <Content Include="BackendManage\InvestPlaceAdd.aspx" />
+    <Content Include="BackendManage\InvestProjectList.aspx" />
     <Content Include="BackendManage\ProductDataList.aspx" />
     <Content Include="BackendManage\AdminLogin.aspx" />
     <Content Include="BackendManage\BackAdmin.aspx" />
     <Content Include="BackendManage\ProductAddNew.aspx" />
     <Content Include="BackendManage\ProductDataShow.aspx" />
     <Content Include="BackendManage\ProductTypeAdd.aspx" />
+    <Content Include="BackendManage\ProjectInformation.aspx" />
+    <Content Include="BackendManage\ProjectValidCheck.aspx" />
     <Content Include="BackendManage\UserApplyCheck.aspx" />
     <Content Include="BackendManage\UserSuggestionListChinese.aspx" />
     <Content Include="BackendManage\UserSuggestionsList.aspx" />
@@ -485,6 +487,7 @@
     <Content Include="Images\SystemPicture\again_hover.png" />
     <Content Include="Images\SystemPicture\firstpage.png" />
     <Content Include="Images\SystemPicture\IsRight.png" />
+    <Content Include="Images\SystemPicture\mmexport1509186467240.jpg" />
     <Content Include="Images\SystemPicture\NavPhoneConection20171001.png" />
     <Content Include="Images\SystemPicture\NavPhoneCreate20171001.png" />
     <Content Include="Images\SystemPicture\NavPhoneFirstPage20171001.png" />
@@ -643,7 +646,11 @@
     <Content Include="UserPage\UserConmunicationApace.aspx" />
     <Content Include="UserPage\UserConmunicationApaceCHN.aspx" />
     <Content Include="UserPage\UserCreateProject.aspx" />
+    <Content Include="UserPage\UserCreateProjectCHN.aspx" />
     <Content Include="UserPage\UserForgetCode.aspx" />
+    <Content Include="UserPage\UserInvestProject.aspx" />
+    <Content Include="UserPage\UserInvestProjectCHN.aspx" />
+    <Content Include="UserPage\UserProjectShow.aspx" />
     <Content Include="UserPage\UserNewProductShow.aspx" />
     <Content Include="UserPage\UserNewProductShowCHN.aspx" />
     <Content Include="UserPage\UserPageLogin.aspx" />
@@ -653,6 +660,7 @@
     <Content Include="UserPage\UserPageRegisterCHN.aspx" />
     <Content Include="UserPage\UserProductTypeShow.aspx" />
     <Content Include="UserPage\UserProductTypeShowCHN.aspx" />
+    <Content Include="UserPage\UserProjectShowCHN.aspx" />
     <Content Include="UserPage\UserVedioShowList.aspx" />
     <Content Include="UserPage\UserVedioShowListCHE.aspx" />
     <Content Include="VedioList\2017102413124848.jpg" />
@@ -727,19 +735,19 @@
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="BackendManage\InvertRegionList.aspx.cs">
-      <DependentUpon>InvertRegionList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="BackendManage\InvertRegionList.aspx.designer.cs">
-      <DependentUpon>InvertRegionList.aspx</DependentUpon>
-    </Compile>
     <Compile Include="BackendManage\InvestPlaceAdd.aspx.cs">
       <DependentUpon>InvestPlaceAdd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BackendManage\InvestPlaceAdd.aspx.designer.cs">
       <DependentUpon>InvestPlaceAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackendManage\InvestProjectList.aspx.cs">
+      <DependentUpon>InvestProjectList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackendManage\InvestProjectList.aspx.designer.cs">
+      <DependentUpon>InvestProjectList.aspx</DependentUpon>
     </Compile>
     <Compile Include="BackendManage\ProductDataList.aspx.cs">
       <DependentUpon>ProductDataList.aspx</DependentUpon>
@@ -782,6 +790,20 @@
     </Compile>
     <Compile Include="BackendManage\ProductTypeAdd.aspx.designer.cs">
       <DependentUpon>ProductTypeAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackendManage\ProjectInformation.aspx.cs">
+      <DependentUpon>ProjectInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackendManage\ProjectInformation.aspx.designer.cs">
+      <DependentUpon>ProjectInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackendManage\ProjectValidCheck.aspx.cs">
+      <DependentUpon>ProjectValidCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackendManage\ProjectValidCheck.aspx.designer.cs">
+      <DependentUpon>ProjectValidCheck.aspx</DependentUpon>
     </Compile>
     <Compile Include="BackendManage\UserApplyCheck.aspx.cs">
       <DependentUpon>UserApplyCheck.aspx</DependentUpon>
@@ -927,12 +949,40 @@
     <Compile Include="UserPage\UserCreateProject.aspx.designer.cs">
       <DependentUpon>UserCreateProject.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserPage\UserCreateProjectCHN.aspx.cs">
+      <DependentUpon>UserCreateProjectCHN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\UserCreateProjectCHN.aspx.designer.cs">
+      <DependentUpon>UserCreateProjectCHN.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserPage\UserForgetCode.aspx.cs">
       <DependentUpon>UserForgetCode.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserPage\UserForgetCode.aspx.designer.cs">
       <DependentUpon>UserForgetCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage\UserInvestProject.aspx.cs">
+      <DependentUpon>UserInvestProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\UserInvestProject.aspx.designer.cs">
+      <DependentUpon>UserInvestProject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage\UserInvestProjectCHN.aspx.cs">
+      <DependentUpon>UserInvestProjectCHN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\UserInvestProjectCHN.aspx.designer.cs">
+      <DependentUpon>UserInvestProjectCHN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage\UserProjectShow.aspx.cs">
+      <DependentUpon>UserProjectShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\UserProjectShow.aspx.designer.cs">
+      <DependentUpon>UserProjectShow.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserPage\UserNewProductShow.aspx.cs">
       <DependentUpon>UserNewProductShow.aspx</DependentUpon>
@@ -996,6 +1046,13 @@
     </Compile>
     <Compile Include="UserPage\UserProductTypeShowCHN.aspx.designer.cs">
       <DependentUpon>UserProductTypeShowCHN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage\UserProjectShowCHN.aspx.cs">
+      <DependentUpon>UserProjectShowCHN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\UserProjectShowCHN.aspx.designer.cs">
+      <DependentUpon>UserProjectShowCHN.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserPage\UserVedioShowList.aspx.cs">
       <DependentUpon>UserVedioShowList.aspx</DependentUpon>

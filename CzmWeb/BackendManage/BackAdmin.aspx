@@ -168,12 +168,11 @@
                             </ul>
                         </li>
                         <li><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><a href="javascript:GetPage('../BackendManage/UserApplyCheck.aspx')">会员管理</a></li>
-                        <li><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><a href="javascript:void(0)">项目审核</a></li>
+                        <li><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><a href="javascript:GetPage('../BackendManage/ProjectValidCheck.aspx')">项目审核</a></li>
                         <li id="InvestAdmin"><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"  onclick="OpenChooseKa();" /><a href="javascript:OpenChooseKa()">投资管理</a>
                             <ul class="OpenInvert" id="InverstShooseKa">
                                 <li><a href="javascript:GetPage('../BackendManage/InvestPlaceAdd.aspx')">A.投资地区</a></li>
-                                <li><a href="javascript:void(0)">B.投资项目</a></li>
-                                <li><a href="javascript:void(0)">C.投资审核</a></li>
+                                <li><a href="javascript:GetPage('../BackendManage/InvestProjectList.aspx')">B.投资审核</a></li>
                             </ul>
                         </li>
                         <li id="AdviceAdmin"><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><a href="javascript:OpenAdviceChooseKa()">投诉建议</a>

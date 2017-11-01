@@ -65,8 +65,8 @@
                             Login <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#"><span class="glyphicon glyphicon-user"></span> log in immediately</a></li>
-                            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign up now</a></li>
+                            <li><a href="../UserPage/UserPageLogin.aspx"><span class="glyphicon glyphicon-user"></span>log In Immediately</a></li>
+                            <li><a href="../UserPage/UserPageRegister.aspx"><span class="glyphicon glyphicon-log-in"></span>Sign up now</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -74,11 +74,12 @@
                             User function <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="active"><a href="DefalutEng.aspx" >Home Page</a></li>
-                            <li><a href="#">Product Catagory</a></li>
+                            <li class="active"><a href="DefalutEng.aspx">Home Page</a></li>
+                            <li><a href="../UserPage/UserProductTypeShow.aspx">Product Catagory</a></li>
                             <li><a href="../UserPage/UserNewProductShow.aspx">New</a></li>
-                            <li><a href="#">Project Applay</a></li>
-                            <li><a href="#">Invest</a></li>
+                            <li><a href="../UserPage/UserCreateProject.aspx">Project Applay</a></li>
+                            <li><a href="../UserPage/UserInvestProject.aspx">Invest</a></li>
+                            <li><a href="../UserPage/UserProjectShow.aspx">Display</a></li>
                             <li><a href="#Watchlive">Live Webcast</a></li>
                             <li><a href="../UserPage/UserVedioShowList.aspx">Video List</a></li>
                             <li><a href="../UserPage/UserConmunicationApace.aspx">Communication</a></li>
@@ -102,12 +103,12 @@
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="active"><a href="../DefalutEng.aspx">Home Page</a></li>
+                            <li class="active"><a href="DefalutEng.aspx">Home Page</a></li>
                             <li><a href="../UserPage/UserProductTypeShow.aspx">Product Catagory</a></li>
                             <li><a href="../UserPage/UserNewProductShow.aspx">New</a></li>
-                            <li><a href="#">Project Applay</a></li>
-                            <li><a href="#">Invest</a></li>
-                            <li><a href="#">Project Display</a></li>
+                            <li><a href="../UserPage/UserCreateProject.aspx">Project Applay</a></li>
+                            <li><a href="../UserPage/UserInvestProject.aspx">Invest</a></li>
+                            <li><a href="../UserPage/UserProjectShow.aspx">Display</a></li>
                             <li><a href="#Watchlive">Live Webcast</a></li>
                             <li><a href="../UserPage/UserVedioShowList.aspx">Video List</a></li>
                             <li><a href="../UserPage/UserConmunicationApace.aspx">Communication</a></li>

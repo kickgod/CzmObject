@@ -245,7 +245,7 @@
         <a href="#"><img src="../Images/SystemPicture/zhidinglanse.png" title="首页" /></a>
     </div>
 </div>
-<div class="JiaoBen" Id="Adminsrator">
+<div class="JiaoBen" Id="Adminsrator" style="position: absolute; bottom: 0px;">
     <p style="text-align: center;padding-top: 5px">
         <a href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="../Images/SystemPicture/阿里旺旺.png" width="20px" height="20px"/>Ali Want</a>
         <a href="http://wpa.qq.com/msgrd?v=1&uin=544956252"><img src="../Images/SystemPicture/qq.png" width="20px" height="20px"/>QQ service</a>Copyright © 2017-Today|SiChuan ChuangZaoMen High - tech Development Co. Ltd|Consumer hotline：15698259380|Enterprise Mail:chuangzaomen@163.com|hotline：15826121

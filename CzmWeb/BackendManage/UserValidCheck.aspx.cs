@@ -22,6 +22,18 @@ namespace CzmWeb.BackendManage
         SendPhoneMessage send = new SendPhoneMessage();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.Cookies["administator"] == null)
+            {
+                MessageBoxResponse("登录超时");
+                return;
+            }
+            else
+            {
+                if (Request.Cookies["administator"] != null)
+                {
+                    Response.Cookies["administator"].Expires = DateTime.Now.AddHours(1);
+                }
+            }
             if (!IsPostBack)
             {
                 if (Request.Cookies["administator"] == null)
@@ -47,7 +59,10 @@ namespace CzmWeb.BackendManage
                 binds();
             }
         }
-
+        private void MessageBoxResponse(string msg)
+        {
+            Response.Write("<script>alert('" + msg + "');location.href='../BackendManage/AdminLogin.aspx';</script>");
+        }
         private void binds()
         {
             GetDataFromTable tsd = new GetDataFromTable();
@@ -65,7 +80,7 @@ namespace CzmWeb.BackendManage
         {
             DataTable td= new DataTable();
             /*查询账号级别*/
-            string Sql = "SELECT state FROM [XcXm].[dbo].[tblAdministrator] WHERE AdminId='" + ViewState["AdminId"].ToString() + "'";
+            string Sql = "SELECT state FROM [XcXm].[dbo].[tblAdministrator] WHERE AdminId='" + Response.Cookies["administator"].ToString() + "'";
             int Jibie = Convert.ToInt32(DB.CarryOutSqlGetFirstColmun(Sql));
             ViewState["Grade"] = Jibie;
             if (Jibie == 30)

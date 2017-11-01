@@ -21,14 +21,25 @@ namespace CzmWeb.BackendManage
         {
             if (Request.Cookies["administator"] == null)
             {
-                throw new Exception("非法登录！");
-                Server.Transfer("../Default.aspx");
+                MessageBoxResponse("登录超时");
+                return;
+            }
+            else
+            {
+                if (Request.Cookies["administator"] != null)
+                {
+                    Response.Cookies["administator"].Expires = DateTime.Now.AddHours(1);
+                }
             }
             if (!IsPostBack)
             {
                 BindData();
                 wucPager.Bind();
             }
+        }
+        private void MessageBoxResponse(string msg)
+        {
+            Response.Write("<script>alert('" + msg + "');location.href='../BackendManage/AdminLogin.aspx';</script>");
         }
         private void BindData()
         {

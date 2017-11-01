@@ -60,8 +60,8 @@ namespace CzmWeb.UserPage
             if (CheckIsNumber())
             {
                 ViewState["Code"] = this.sender.GenerateVerificationCode();
-               this.sender.SendMessage(txtUserID.Text, "你的验证码为：" + ViewState["Code"].ToString());
-                MessaegBoxResp("已结发送！");
+               //this.sender.SendMessage(txtUserID.Text, "你的验证码为：" + ViewState["Code"].ToString());
+                MessaegBoxResp("已结发送！" + ViewState["Code"].ToString());
             }
         }
         private void MessaegBoxResp(String msg)

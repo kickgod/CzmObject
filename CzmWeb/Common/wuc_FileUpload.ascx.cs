@@ -41,7 +41,7 @@ namespace CzmObject.Common
 
         public String ServerDianPath;
         public String ServerShenNuePath ="";
-        public string MapPaths = "~/Images/";
+        public string MapPaths = "~/Images/";  
         public void UpFile()
         {
             //判断是否有文件

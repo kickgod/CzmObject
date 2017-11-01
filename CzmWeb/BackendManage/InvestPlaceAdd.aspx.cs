@@ -24,6 +24,13 @@ namespace CzmWeb.BackendManage
                 MessageBoxResponse("登录超时");
                 return;
             }
+            else
+            {
+                if (Request.Cookies["administator"] != null)
+                {
+                    Response.Cookies["administator"].Expires = DateTime.Now.AddHours(1);
+                }
+            }
             if (!IsPostBack)
             {
                 btnDelete.Visible = false;
@@ -208,8 +215,10 @@ namespace CzmWeb.BackendManage
                 char strChar = lblProvinceId.Text.First();
                 if (strChar=='P')
                 {
-                    string sql = "  DELETE FROM [XcXm].[dbo].[tblProvinceRegionList] WHERE ProvinceID="+str.Replace('P',' ');
+                    string sqls = "  DELETE FROM [XcXm].[dbo].[tblProvinceRegionList] WHERE ProvinceID=" + str.Replace('P', ' ');
+                    string sql = "  DELETE FROM [XcXm].[dbo].[tblDowntownRegionList] WHERE ProvinceID=" + str.Replace('P', ' ');
                     int count = DB.CarryOutSqlSentence(sql);
+                    int count2 = DB.CarryOutSqlSentence(sqls);
                     if (count == 1)
                     {
                         MessaegBox("已经删除！");

@@ -80,11 +80,27 @@
                 alert("Please enter your unit address");
                 return false;
             }
+            var sHeight = document.documentElement.scrollHeight;
+            var sWidth = document.documentElement.scrollWidth;
+            /*alert(sHeight+"  "+sWidth);*/
+            //获取页面的可视区域
+            var wHeight = document.documentElement.clientHeight;
+            var wWidth = document.documentElement.clientWidth;
+            alert(wHeight + "  " + wWidth);
+            var oMask = document.createElement("div");
+            oMask.id = "mask";
+            oMask.innerHTML = "加载中";
+            oMask.className = "Make";
+            oMask.style.height = sHeight + "px";
+            oMask.style.width = sWidth + "px";
+            /*在页面尾部追加标签*/
+            document.body.appendChild(oMask);
             return true;
         }
     </script>
     <style type="text/css">
         .NoResize{resize: none}
+        .Make{ background: #000000;		opacity: 0.30;filter:alpha(opacity=30);position: absolute;top: 0px;left: 0px;z-index: 10;}
     </style>
 </head>
 <body>
