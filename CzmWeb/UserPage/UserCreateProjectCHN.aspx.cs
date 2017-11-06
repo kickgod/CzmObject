@@ -20,12 +20,12 @@ namespace CzmWeb.UserPage
         {
             if (Session["User"] == null)
             {
-                MessageBoxResponse("You are not logged in, login timeout");
+                MessageBoxResponse("你尚未登录或登录超时！");
             }
         }
         private void MessageBoxResponse(string msg)
         {
-            Response.Write("<script>alert('" + msg + "');location.href='../Default.aspx';</script>");
+            Response.Write("<script>alert('" + msg + "');location.href='../UserPage/UserPageLoginCHN.aspx';</script>");
         }
         private void MessaegBox(String msg)
         {
@@ -44,60 +44,68 @@ namespace CzmWeb.UserPage
             txtProjectIntroDuction.Text = "成功！请等待审核! 我们将以短信的方式通知你";
         }
 
-        private void SaveData()
+        private int SaveData()
         {
+            /*检测权限*/
+            string UserIdPhone = Session["User"].ToString();
+            bool IsPingbi=Judge.JudgeUserPowerCountIs_30(UserIdPhone);
+            if (IsPingbi)
+            {
+                MessaegBox("你已经被屏蔽！暂时无法进行业务操作！请及时联系管理员！了解情况.");
+                return 0;                
+            }
             if (txtProjectName.Text == "")
             {
                 MessaegBox("请填写项目名称");
-                return;
+                return 0;
             }
             if (txtZlH.Text == "")
             {
                 MessaegBox("请填写专利号");
-                return;
+                return 0;
             }
             if (txtProjectIntroDuction.Text == "")
             {
                 MessaegBox("请填写简介");
-                return;
+                return 0;
             }
             if (!wuc_FileUpload_Piture.IsHaveFile())
             {
                 MessaegBox("请上传图片");
-                return;
+                return 0;
             }
             if (!wuc_FileVedio.IsHaveFile())
             {
                 MessaegBox("请上传证书");
-                return;
+                return 0;
             }
 
             if (txtAmount.Text == "")
             {
                 MessaegBox("请输入投资金额");
-                return;
+                return 0;
             }
 
             if (txtBilieShuoming.Text == "")
             {
                 MessaegBox("请说明持股比例");
-                return;
+                return 0;
             }
 
             if (txtApplyName.Text == "")
             {
                 MessaegBox("请输入申请人名称");
-                return;
+                return 0;
             }
             if (txtPhone.Text == "")
             {
                 MessaegBox("请输入联系电话");
-                return;
+                return 0;
             }
             if (txtAdress.Text == "")
             {
                 MessaegBox("请填写你的地址");
-                return;
+                return 0;
             }
             wuc_FileVedio.MapPaths = "~/ProjectFile/";
             wuc_FileUpload_Piture.MapPaths = "~/ProjectFile/";
@@ -126,12 +134,13 @@ namespace CzmWeb.UserPage
                                "','" + FileAddress + "','" + PciInvestMeony + "','" + shareRadio + "','" + Applicant +
                                "','" + Phone + "','" + Address + "'," + AddUser + ")";
             DB.CarryOutSqlSentence(sql + sqlValues);
-            ChangeIsNUll();           
+            ChangeIsNUll();
+            return 1;
         }
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            SaveData();
-            Show(this,"成功！请等待审核! 我们将以短信的方式通知你");
+            int Count=SaveData();
+            if (Count==1) Show(this, "成功！请等待审核! 我们将以短信的方式通知你");
             return;
         }
         public static void Show(System.Web.UI.Page page, string msg)

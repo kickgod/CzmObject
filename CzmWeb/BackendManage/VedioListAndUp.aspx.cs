@@ -23,13 +23,6 @@ namespace CzmWeb.BackendManage
                 MessageBoxResponse("登录超时");
                 return;
             }
-            else
-            {
-                if (Request.Cookies["administator"] != null)
-                {
-                    Response.Cookies["administator"].Expires = DateTime.Now.AddHours(1);
-                }
-            }
             if (!IsPostBack)
             {
                 DataBand();
@@ -132,6 +125,7 @@ namespace CzmWeb.BackendManage
             {
                 string sql = "  DELETE FROM [XcXm].[dbo].[tblVideoInfo] WHERE VidioID=" + e.CommandArgument;
                 DB.CarryOutSqlSentence(sql);
+                DataBand();
                 MessaegBox("删除成功");
                 return;
             }
@@ -148,11 +142,13 @@ namespace CzmWeb.BackendManage
             {
                 string sql = "UPDATE [XcXm].[dbo].[tblVideoInfo] SET IsShow =0 WHERE VidioID ="+e.CommandArgument;
                 DB.CarryOutSqlSentence(sql);
+                DataBand();
                 MessaegBox("下线成功");                
             }else if (e.CommandName == "ShangXian")
             {
                 string sql = "UPDATE [XcXm].[dbo].[tblVideoInfo] SET IsShow =1 WHERE VidioID =" + e.CommandArgument;
                 DB.CarryOutSqlSentence(sql);
+                DataBand();
                 MessaegBox("上线成功");                 
             }
             DataBand();

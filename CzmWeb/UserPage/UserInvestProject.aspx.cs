@@ -88,6 +88,13 @@ namespace CzmWeb.UserPage
         }
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            string UserIdPhone = Session["User"].ToString();
+            bool IsPingbi = Judge.JudgeUserPowerCountIs_30(UserIdPhone);
+            if (IsPingbi)
+            {
+                MessaegBox("You have been shielded! Temporarily unable to conduct business operations! Please contact the administrator! understand situation.");
+                return;
+            }
             if (ddlDataRegiom.Items.Count<=0)
             {
                 MessaegBox("You have not selected a region yet");

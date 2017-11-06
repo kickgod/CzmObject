@@ -1,0 +1,115 @@
+﻿body
+{
+    padding: 0px;
+    margin: 0px;
+    background-image: url(../Images/Login/bg_body.png);
+    background-repeat: repeat-x;
+    font-size: 12px;
+}
+/*********************head*********************/
+#HeadWrap
+{
+    width: 968px;
+    height: 32px;
+    margin: 0 auto;
+}
+#HeadWrap .Banner
+{
+    width: 240px;
+    line-height: 32px;
+    /*background-image: url(../Images/Login/bg_main.png);
+    background-repeat: no-repeat;*/
+}
+/*********logo***********/
+#Container
+{
+    width: 968px;
+    height: 480px;
+    margin: 0 auto;
+}
+#Container .Logo
+{
+    height: 110px;
+    width: 100%;
+    margin: 0;
+    background-image: url(../Images/Login/ico_logo.png);
+    background-repeat: no-repeat;
+}
+#Container .Content
+{
+    height: 416px;
+    width: 100%;
+    border: 1px solid #C1C1C1; 
+    /*
+    background-image: url(../Images/Login/bg_main.png);
+    background-repeat:repeat-x;
+    */
+    background-color:#FFF;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+#Left
+{
+    margin:16px;
+    width: 568px;
+    height: 384px;
+    float: left;
+}
+#Right
+{
+    margin-top:64px;
+    margin-right:16px;
+    width: 304px;
+    height: 288px;
+    border-left: 1px dashed #C1C1C1; 
+    padding-left:32px;
+    float: right;
+}
+#Right .LoginTD
+{
+    height:48px;
+}
+#Right .LoginTD input
+{
+    top: 6px;
+    left: 1px;
+    width: 160px;
+    height: 32px;
+    padding: 0 7px;
+    line-height: 32px;
+    color: #4D4D4C;
+    font-size: 18px;
+    border: 1px solid #C1C1C1;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+#Footer
+{
+    width: 968px;
+    height: 88px;
+    margin: 0 auto;
+    text-align: center;
+    color: Gray;
+    font-size: 12px;
+}
+.Info_Title
+{
+    font-size: 14px;
+    font-weight: bold;
+    background-position: center center;
+    padding: 0px;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+}
+.Info_Text
+{
+    padding: 10px;
+    background-color: #FCFCFC;
+    border: dotted 1px #CDCDCD;
+    font-size: 12px;
+    background-position: center center;
+    height: 24px;
+    line-height: 24px;
+    text-align: left;
+}

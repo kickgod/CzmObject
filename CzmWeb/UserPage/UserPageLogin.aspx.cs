@@ -14,6 +14,7 @@ namespace CzmWeb.UserPage
     {
         SendPhoneMessage sender =new SendPhoneMessage();
         PublicGetDataFromDB Counter= new GetDataFromTable();
+        PublicUserJudge Judge = new PublicUserJudge();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (this.txtUserPwds.Text != "")//防止页面刷新，密码文本被清空
@@ -22,6 +23,10 @@ namespace CzmWeb.UserPage
             }
             if (!IsPostBack)
             {
+                if (Session["User"] != null)
+                {
+                    MessaegBox("You are already logged in！");
+                }
                 txtUserPwds.Text = "";
                 txtUserID.Text = "";
             }
@@ -33,7 +38,6 @@ namespace CzmWeb.UserPage
             string Sql = "SELECT COUNT(*) FROM [XcXm].[dbo].[vwUserInfo] WHERE UserId='" + Phone + "'";  /*检测用户是否存在语句*/
 
             string SqlIsRight = "SELECT COUNT(*) FROM [XcXm].[dbo].[vwUserInfo]  WHERE UserState!=10 and  UserId='" + Phone + "' and UserPwd ='" + Pwd + "'";  /*检测用户密码是否正确存在语句*/
-            MessaegBoxResp(SqlIsRight);
             int IsExist = Convert.ToInt32(Counter.CarryOutSqlGetFirstColmun(Sql));
             if (IsExist != 1)
             {
@@ -46,8 +50,7 @@ namespace CzmWeb.UserPage
                 int IsRight = Convert.ToInt32(Counter.CarryOutSqlGetFirstColmun(SqlIsRight));
                 if (IsRight != 1)
                 {
-                    txtUserPwds.Text = "wrong password! re-enter！";
-                    MessaegBoxResp("Psaaword Error");
+                    MessaegBoxResp("Psaaword Error! OR !Your information is under review");
                     txtUserPwds.ForeColor = Color.OrangeRed;
                     return false;
                 }
@@ -60,8 +63,8 @@ namespace CzmWeb.UserPage
             if (CheckIsNumber())
             {
                 ViewState["Code"]=this.sender.GenerateVerificationCode();
-                //this.sender.SendMessage(txtUserID.Text, "你的验证码为：" + ViewState["Code"].ToString());
-                MessaegBoxResp("Has been sent" + ViewState["Code"].ToString());
+                this.sender.SendMessage(txtUserID.Text, "你的验证码为：" + ViewState["Code"].ToString());
+                MessaegBoxResp("Has been sent");
             }
         }
         private void MessaegBox(String msg)
@@ -79,7 +82,7 @@ namespace CzmWeb.UserPage
         }
         private void MessageBoxResponse(string msg)
         {
-            Response.Write("<script>alert('" + msg + "');location.href='../Default.aspx';</script>");
+            Response.Write("<script>alert('" + msg + "');location.href='../DefalutEng.aspx';</script>");
         }
         protected void btnLogin_Click(object sender, EventArgs e)
         {
@@ -88,6 +91,13 @@ namespace CzmWeb.UserPage
             {
                 if (ViewState["Code"] != null && ViewState["Code"].ToString() == txtVaildCode.Text)
                 {
+                    String UserID = txtUserID.Text;
+                    bool IsOlUser= Judge.JudgeUserPowerCountIs10(UserID);
+                    if (IsOlUser)
+                    {
+                        MessageBoxResponse("Your information is under review");     
+                        return;
+                    }
                     Session["User"] = txtUserID.Text;
                     MessageBoxResponse("login successful");
                 }

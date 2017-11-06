@@ -23,13 +23,6 @@ namespace CzmWeb.BackendManage
                 MessageBoxResponse("登录超时");
                 return;
             }
-            else
-            {
-                if (Request.Cookies["administator"] != null)
-                {
-                    Response.Cookies["administator"].Expires = DateTime.Now.AddHours(1);
-                }
-            }
             if (!IsPostBack)
             {
                 if (Request.Cookies["ProjectName"] != null)
@@ -69,6 +62,9 @@ namespace CzmWeb.BackendManage
             txtPhone.Text = td.Rows[0]["NewPhone"].ToString();
             hylicture.NavigateUrl = td.Rows[0]["ImgPicturPath"].ToString();
             hylZs.NavigateUrl = td.Rows[0]["PciRemark"].ToString();
+            DataTable tdInsert = getView.GetAllDataFrom_vwProjectInvestInfor("InsertProjectName ='" + txtProjectName.Text+"'");
+            Repert.DataSource = tdInsert;
+            Repert.DataBind();
         }
     }
 }

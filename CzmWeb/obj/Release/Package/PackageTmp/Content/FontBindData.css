@@ -1,0 +1,71 @@
+﻿body {
+    padding: 0px;
+    margin: 0px;
+}
+/*字体*/
+@font-face {font-family: '创造们';
+    src: url('../Font/webfont.eot'); /* IE9*/
+    src: url('../Font/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../Font/webfont.woff') format('woff'), /* chrome、firefox */
+         url('../Font/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+         url('../Font/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
+@font-face {font-family: 'navFont';
+    src: url('../Font/webfont_pnqaxdsleaaqyqfr/webfont.eot'); /* IE9*/
+    src: url('../Font/webfont_pnqaxdsleaaqyqfr/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../Font/webfont_pnqaxdsleaaqyqfr/webfont.woff') format('woff'), /* chrome、firefox */
+         url('../Font/webfont_pnqaxdsleaaqyqfr/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+         url('../Font/webfont_pnqaxdsleaaqyqfr/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
+@font-face {
+    font-family: 'ProductFontStyle';
+    src: url('../Content/锐字云姚体.TTF');
+}
+@font-face{
+    font-family: wuyongti;
+    src: url('../Font/RTWSYueGoTrial-ExLight.otf');
+}
+.Font_Title{
+    font-family:"创造们" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+.Font_Nav_Pc{
+    font-family:"navFont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+
+/*图片 iconfont*/ /*使得的是unicode引入 引入方法 <i class="iconfont">&#x33;</i> */
+@font-face {
+    font-family: 'iconfontUser';
+    src: url('../Font/font_yz1d77s34lzt1emi/iconfont.eot');
+    src: url('../Font/font_yz1d77s34lzt1emi/iconfont.eot?#iefix') format('embedded-opentype'),
+         url('../Font/font_yz1d77s34lzt1emi/iconfont.woff') format('woff'),
+         url('../Font/font_yz1d77s34lzt1emi/iconfont.ttf') format('truetype'),
+         url('../Font/font_yz1d77s34lzt1emi/iconfont.svg#iconfont') format('svg');
+}
+@font-face {
+    font-family: 'iconfontarrows';
+    src: url('../Font/font_ppbzixtnuahsemi/iconfont.eot');
+    src: url('../Font/font_ppbzixtnuahsemi/iconfont.eot?#iefix') format('embedded-opentype'),
+         url('../Font/font_ppbzixtnuahsemi/iconfont.woff') format('woff'),
+         url('../Font/font_ppbzixtnuahsemi/iconfont.ttf') format('truetype'),
+         url('../Font/font_ppbzixtnuahsemi/iconfont.svg#iconfont') format('svg');
+}
+.UserIcon{
+    font-family:"iconfontUser" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.iconfontarrows{
+    font-family:"iconfontarrows" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}

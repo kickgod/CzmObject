@@ -21,7 +21,7 @@ namespace CzmWeb.UserPage
         {
             if (Session["User"] == null)
             {
-                MessageBoxResponses("You are not logged in, login timeout");
+                MessageBoxResponses("你尚未登录或登录超时！");
                 return;
             }
             if (!IsPostBack)
@@ -35,7 +35,7 @@ namespace CzmWeb.UserPage
         }
         private void MessageBoxResponses(string msg)
         {
-            Response.Write("<script>alert('" + msg + "');location.href='../Default.aspx';</script>");
+            Response.Write("<script>alert('" + msg + "');location.href='../UserPage/UserPageLoginCHN.aspx';</script>");
         }
         private void MessaegBox(String msg)
         {
@@ -61,7 +61,7 @@ namespace CzmWeb.UserPage
             {
                 ListItem item = new ListItem();
                 item.Value = td.Rows[i]["ProvinceID"].ToString();
-                item.Text = td.Rows[i]["ProvinceName_e"].ToString();
+                item.Text = td.Rows[i]["ProvinceName_c"].ToString();
                 ddlProvince.Items.Add(item);
             }
         }
@@ -74,7 +74,7 @@ namespace CzmWeb.UserPage
             {
                 ListItem item = new ListItem();
                 item.Value = td.Rows[i]["RegionID"].ToString();
-                item.Text = td.Rows[i]["RegionName_e"].ToString();
+                item.Text = td.Rows[i]["RegionName_c"].ToString();
                 ddlDataRegiom.Items.Add(item);
             }
         }
@@ -89,6 +89,13 @@ namespace CzmWeb.UserPage
         }
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            string UserIdPhone = Session["User"].ToString();
+            bool IsPingbi = Judge.JudgeUserPowerCountIs_30(UserIdPhone);
+            if (IsPingbi)
+            {
+                MessaegBox("你已经被屏蔽！暂时无法进行业务操作！请及时联系管理员！了解情况.");
+                return ;
+            }
             if (ddlDataRegiom.Items.Count <= 0)
             {
                 MessaegBox("你尚未选择地区！");
@@ -106,8 +113,18 @@ namespace CzmWeb.UserPage
                          "[UserId],[Province],[InsertDwName],[NewPhone],[NewAdress],[PiiState]) VALUES";
             string sqlValue = "( '" + ProjectName + "','" + Account + "','" + UserID
                               + "','" + Province + "','" + InsertDwName + "','" + Phone + "','" + Address + "',10)";
-            DB.CarryOutSqlSentence(sql + sqlValue);
-            ChangeNULL();
+            int Count= DB.CarryOutSqlSentence(sql + sqlValue);
+            if (Count == 1)
+            {
+                ChangeNULL();
+                MessaegBox("成功！请等待审核! 我们将以短信的方式通知你");
+            }
+            else
+            {
+                MessaegBox("系统错误！");
+            }
+            
+
         }
     }
 }

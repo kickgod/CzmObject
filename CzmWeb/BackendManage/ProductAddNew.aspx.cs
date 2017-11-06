@@ -23,13 +23,6 @@ namespace CzmWeb.BackendManage
                 MessageBoxResponse("登录超时");
                 return;
             }
-            else
-            {
-                if (Request.Cookies["administator"] != null)
-                {
-                    Response.Cookies["administator"].Expires = DateTime.Now.AddHours(1);
-                }
-            }
             if (!IsPostBack)
             {
                 btnAddProduct.Visible = false;

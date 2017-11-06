@@ -27,7 +27,7 @@ namespace CzmWeb.UserPage
 
         private void MessageBoxResponse(string msg)
         {
-            Response.Write("<script>alert('" + msg + "');location.href='../DefalutEng.aspx';</script>");
+            Response.Write("<script>alert('" + msg + "');location.href='../UserPage/UserPageLogin.aspx';</script>");
         }
         private void MessaegBox(String msg)
         {

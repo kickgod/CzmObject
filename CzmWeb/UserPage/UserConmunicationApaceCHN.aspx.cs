@@ -25,22 +25,11 @@ namespace CzmWeb.UserPage
         }
         private void MessageBoxResponse(string msg)
         {
-            Response.Write("<script>alert('" + msg + "');location.href='../Default.aspx';</script>");
+            Response.Write("<script>alert('" + msg + "');location.href='../UserPage/UserPageLoginCHN.aspx';</script>");
         }
         private void MessaegBox(String msg)
         {
             Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('" + msg + "')</script>");
-        }
-        private void MessageBoxLanguge(string Chinese, string English)
-        {
-            if (Session["Lang"].ToString() == "CHE" || Session["Lang"] == null)
-            {
-                MessaegBox(Chinese);
-            }
-            else
-            {
-                MessaegBox(English);
-            }
         }
         private void ChangeItToNull()
         {
@@ -50,16 +39,23 @@ namespace CzmWeb.UserPage
         }
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            string UserIdPhone = Session["User"].ToString();
+            bool IsPingbi = Judge.JudgeUserPowerCountIs_30(UserIdPhone);
+            if (IsPingbi)
+            {
+                MessaegBox("你已经被屏蔽！暂时无法进行业务操作！请及时联系管理员！了解情况.");
+                return ;
+            }
             string lblEmail = "";
             string sql;
             if (txtboxPhone.Text == "")
             {
-                MessaegBox("Please leave the contact information so that we can contact you");
+                MessaegBox("请填写你的电话联系方式");
                 return;
             }
             if (txtMessageContent.Text == "")
             {
-                MessaegBox("Please enter text");
+                MessaegBox("请输入文本");
                 return;
             }
             if (txtEmailText.Text == "")
@@ -72,7 +68,7 @@ namespace CzmWeb.UserPage
             {
                 sql = "INSERT INTO [XcXm].[dbo].[tblAdviceInfo](Phone,userEmail,AdviceContent) values('" + txtboxPhone.Text + "','" + txtEmailText.Text + "','" + txtMessageContent.Text + "')";
                 DB.CarryOutSqlSentence(sql);
-                MessaegBox("Success!");
+                MessaegBox("留言成功!");
             }
             ChangeItToNull();
         }

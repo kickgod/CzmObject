@@ -28,7 +28,7 @@ namespace CzmWeb.UserPage
         {
             //绑定新品八个/四个/六个
             DataTable tdNewProduct = new DataTable();
-            tdNewProduct = DB.CarryOutSqlGeDataTable("SELECT TOP 12 * FROM [XcXm].[dbo].[tblProductInfo] WHERE [IsNew] =1 AND IsVisiable=0  order by ImgUplodetime desc");
+            tdNewProduct = DB.CarryOutSqlGeDataTable("SELECT TOP 8 * FROM [XcXm].[dbo].[tblProductInfo] WHERE [IsNew] =1 AND IsVisiable=0 and ProductType not in (select typeID from tblProductTypeInfo where TypeState !=30 )  order by ImgUplodetime desc ");
             reptemNewProduct.DataSource = tdNewProduct;
             reptemNewProduct.DataBind();
         }

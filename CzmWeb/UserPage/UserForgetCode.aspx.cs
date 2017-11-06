@@ -60,7 +60,6 @@ namespace CzmWeb.UserPage
             lbl_CreateProject.Text = "我要创造";
             lbl_Create_Invert.Text = "我要投资";
             lbl_Project_show.Text = "项目展示";
-            lbl_Look_OnlineVedio.Text = "观看直播";
             lbl_Look_Vedio.Text = "视频专区";
             lblChangeSpace.Text = "交流空间";
             lblUserLog.Text = "用户登录";
@@ -79,7 +78,6 @@ namespace CzmWeb.UserPage
             lbl_CreateProject.Text = "Project Apply";
             lbl_Create_Invert.Text = "Invest";
             lbl_Project_show.Text = "Display";
-            lbl_Look_OnlineVedio.Text = "Live Webcast";
             lbl_Look_Vedio.Text = "Video";
             lblChangeSpace.Text = "Communication";
             lblUserLog.Text = "Login";

@@ -1,0 +1,5 @@
+F:\Repository GitHub\fuben\CzmWeb\bin\CzmWeb.dll
+F:\Repository GitHub\fuben\CzmWeb\bin\CzmWeb.pdb
+F:\Repository GitHub\fuben\CzmWeb\bin\DoEasyClassLib.pdb
+F:\Repository GitHub\fuben\CzmWeb\obj\Release\CzmWeb.dll
+F:\Repository GitHub\fuben\CzmWeb\obj\Release\CzmWeb.pdb

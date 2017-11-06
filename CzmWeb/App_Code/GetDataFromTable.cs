@@ -558,5 +558,53 @@ namespace CzmWeb.App_Code
             adapter.Fill(td);
             return td;
         }
+        /// <summary>
+        /// 返回表tblLiveInfo所有数据
+        /// 表中信息为直播地址信息 
+        /// 修改人：蒋星 2017 /11/3 16:34
+        /// </summary>
+        /// <returns>返回数据集DataTable</returns>
+        public DataTable GetAllDataFromtblLiveInfo()
+        {
+            SqlConnection con = GetSqlConnection();
+            DataTable td = new DataTable();
+            if (con.State != ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM tblLiveInfo";
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(td);
+            return td;
+        }
+        /// <summary>
+        /// 返回表tblLiveInfo所有数据
+        /// 表中信息为直播地址信息 
+        /// 修改人：蒋星 2017 /11/3 16:34
+        /// <returns>返回数据集DataTable</returns>
+        public DataTable GetAllDataFromtblLiveInfo(String Where)
+        {
+            SqlConnection con = GetSqlConnection();
+            DataTable td = new DataTable();
+            if (con.State != ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            if (Where == "")
+            {
+                cmd.CommandText = "SELECT * FROM tblLiveInfo";
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM tblLiveInfo Where " + Where;
+            }
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(td);
+            return td;
+        }
     }
 }

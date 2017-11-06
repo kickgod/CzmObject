@@ -27,13 +27,6 @@ namespace CzmWeb.BackendManage
                 MessageBoxResponse("登录超时");
                 return;
             }
-            else
-            {
-                if (Request.Cookies["administator"] != null)
-                {
-                    Response.Cookies["administator"].Expires = DateTime.Now.AddHours(1);
-                }
-            }
             if (!IsPostBack)
             {
                 if (Request.Cookies["administator"] == null)
@@ -70,17 +63,15 @@ namespace CzmWeb.BackendManage
             rpItem.DataSource = tds;
             rpItem.DataBind();
         }
-        private void BinddataTable()
-        {
-            DataTable td = getTable.GetAllDataFromtblAdministrator();
-            rpItem.DataSource = td;
-            rpItem.DataBind();
-        }
         private DataTable DataBindNow()
         {
             DataTable td= new DataTable();
             /*查询账号级别*/
-            string Sql = "SELECT state FROM [XcXm].[dbo].[tblAdministrator] WHERE AdminId='" + Response.Cookies["administator"].ToString() + "'";
+            string Sql="";
+            if (Request.Cookies["administator"]["ID"]!= null)
+            {
+                Sql = "SELECT state FROM [XcXm].[dbo].[tblAdministrator] WHERE AdminId='" + Request.Cookies["administator"]["ID"].ToString() + "'";               
+            }
             int Jibie = Convert.ToInt32(DB.CarryOutSqlGetFirstColmun(Sql));
             ViewState["Grade"] = Jibie;
             if (Jibie == 30)
@@ -146,18 +137,6 @@ namespace CzmWeb.BackendManage
             Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.confirm('" + msg + "')</script>");
             return 1;
         }
-        private void MessageBoxLanguge(string Chinese, string English)
-        {
-            if (Session["Lang"].ToString() == "CHE" || Session["Lang"] == null)
-            {
-                MessaegBox(Chinese);
-            }
-            else
-            {
-                MessaegBox(English);
-            }
-        }
-
         private void ChangeNull()
         {
             txtName.Text = "";

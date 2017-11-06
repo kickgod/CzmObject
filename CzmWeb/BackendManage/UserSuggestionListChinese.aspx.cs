@@ -24,15 +24,9 @@ namespace CzmWeb.BackendManage
                 MessageBoxResponse("登录超时");
                 return;
             }
-            else
-            {
-                if (Request.Cookies["administator"] != null)
-                {
-                    Response.Cookies["administator"].Expires = DateTime.Now.AddHours(1);
-                }
-            }
             if (!IsPostBack)
             {
+                lblWhere.Text = "AdviceID >0 order by LeaveTime DESC";
                 wucPager.Bind();
             }
         }
@@ -149,6 +143,7 @@ namespace CzmWeb.BackendManage
                 {
                     SqlWhere += " and  Phone ='" + txtPhone.Text + "'";
                 }
+                SqlWhere += " order by LeaveTime DESC";
                 lblWhere.Text = SqlWhere;
                 //Response.Write(lblWhere.Text);
                 wucPager.Bind();

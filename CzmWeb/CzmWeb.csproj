@@ -137,6 +137,7 @@
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="BackendManage\InvestPlaceAdd.aspx" />
     <Content Include="BackendManage\InvestProjectList.aspx" />
+    <Content Include="BackendManage\LiveListUrlAdd.aspx" />
     <Content Include="BackendManage\ProductDataList.aspx" />
     <Content Include="BackendManage\AdminLogin.aspx" />
     <Content Include="BackendManage\BackAdmin.aspx" />
@@ -261,6 +262,7 @@
     <Content Include="CSS\Demo.css" />
     <Content Include="CSS\index.css" />
     <Content Include="CSS\PrintPage.css" />
+    <Content Include="CSS\Refister.css" />
     <Content Include="CSS\resetStyle.css" />
     <Content Include="CSS\superfish-navbar.css" />
     <Content Include="CSS\superfish-vertical.css" />
@@ -604,19 +606,17 @@
     <Content Include="bootstrap337\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="bootstrap337\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Master\UserPageMasters.Master" />
+    <Content Include="ForePage\使用文档.docx" />
+    <None Include="Properties\PublishProfiles\CzmWeb.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="ProductImage\2017108175537609.jpg" />
-    <Content Include="ProductImage\2017108175753719.jpg" />
-    <Content Include="ProductImage\201710817595495.jpg" />
+    <Content Include="ProductImage\201710142133037.jpg" />
+    <Content Include="ProductImage\20171021121630848.jpg" />
+    <Content Include="ProductImage\2017102113219253.jpg" />
     <Content Include="ProductImage\20171081887953.jpg" />
-    <Content Include="ProductImage\首页1.jpg" />
-    <Content Include="ProductImage\首页10.jpg" />
     <Content Include="ProductImage\productType1.jpg" />
     <Content Include="ProductImage\productType2.jpg" />
     <Content Include="ProductImage\productType3.jpg" />
     <Content Include="ProductImage\productType4.jpg" />
-    <Content Include="ProductImage\首页8.jpg" />
-    <Content Include="ProductImage\首页9.jpg" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
@@ -748,6 +748,13 @@
     </Compile>
     <Compile Include="BackendManage\InvestProjectList.aspx.designer.cs">
       <DependentUpon>InvestProjectList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackendManage\LiveListUrlAdd.aspx.cs">
+      <DependentUpon>LiveListUrlAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackendManage\LiveListUrlAdd.aspx.designer.cs">
+      <DependentUpon>LiveListUrlAdd.aspx</DependentUpon>
     </Compile>
     <Compile Include="BackendManage\ProductDataList.aspx.cs">
       <DependentUpon>ProductDataList.aspx</DependentUpon>
@@ -1078,7 +1085,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ForePage\" />
     <Folder Include="ProjectFile\" />
   </ItemGroup>
   <ItemGroup>

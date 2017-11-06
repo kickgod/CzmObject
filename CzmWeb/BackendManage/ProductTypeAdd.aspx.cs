@@ -23,13 +23,6 @@ namespace CzmWeb.BackendManage
                 MessageBoxResponse("登录超时");
                 return;
             }
-            else
-            {
-                if (Request.Cookies["administator"] != null)
-                {
-                    Response.Cookies["administator"].Expires = DateTime.Now.AddHours(1);
-                }
-            }
             if (!IsPostBack)
             {
                 BindData();
@@ -236,11 +229,28 @@ namespace CzmWeb.BackendManage
         {
             if (e.CommandName == "Delete")
             {
+                string sqlString = "delete from  tblProductInfo where [ProductType]= " + e.CommandArgument;
                 string sql = "DELETE FROM [XcXm].[dbo].[tblProductTypeInfo] WHERE typeID =" + e.CommandArgument;
                 DB.CarryOutSqlSentence(sql);
+                DB.CarryOutSqlSentence(sqlString);
+                BindData();
                 MessaegBox("成功删除");
             }
-            BindData();
+            else if (e.CommandName == "XiaJia")
+            {
+                string sql = "  update [XcXm].[dbo].[tblProductTypeInfo] set TypeState =-30 where typeID =" + e.CommandArgument;
+                DB.CarryOutSqlSentence(sql);
+                BindData();
+                MessaegBox("成功下架！");                
+            }
+            else if (e.CommandName == "ShangeJia")
+            {
+                string sql = "  update [XcXm].[dbo].[tblProductTypeInfo] set TypeState =30 where typeID =" + e.CommandArgument;
+                DB.CarryOutSqlSentence(sql);
+                BindData();
+                MessaegBox("成功下架！");
+            }
+            wucPager.Bind();
         }
 
         protected void rpItem_ItemDataBound(object sender, RepeaterItemEventArgs e)

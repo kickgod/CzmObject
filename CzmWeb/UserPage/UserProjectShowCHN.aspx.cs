@@ -21,7 +21,7 @@ namespace CzmWeb.UserPage
         {
             if (Session["User"] == null)
             {
-                MessageBoxResponseT("你尚未登录！或者注册！");
+                MessageBoxResponse("你尚未登录！或者注册！");
                 return;
             }
             if (!IsPostBack)
@@ -29,9 +29,9 @@ namespace CzmWeb.UserPage
                 BingData();
             }
         }
-        private void MessageBoxResponseT(string msg)
+        private void MessageBoxResponse(string msg)
         {
-            Response.Write("<script>alert('" + msg + "');location.href='../Default.aspx';</script>");
+            Response.Write("<script>alert('" + msg + "');location.href='../UserPage/UserPageLoginCHN.aspx';</script>");
         }
         private void BingData()
         {
@@ -44,10 +44,6 @@ namespace CzmWeb.UserPage
             }
             Repeater1.DataSource = getTable.GetAllDataFromtblProjectInvestInfo("UserId ='" + Session["User"].ToString() + "'");
             Repeater1.DataBind();
-        }
-        private void MessageBoxResponse(string msg)
-        {
-            Response.Write("<script>alert('" + msg + "');location.href='../UserPage/UserPageLogin.aspx';</script>");
         }
         private void MessaegBox(String msg)
         {
@@ -90,10 +86,9 @@ namespace CzmWeb.UserPage
             if (e.CommandName == "Invest")
             {
                 string QueryName = e.CommandArgument.ToString();
-                Response.Redirect("../UserPage/UserInvestProject.aspx?QueryName=" + QueryName);
+                Response.Redirect("../UserPage/UserInvestProjectCHN.aspx?QueryName=" + QueryName);
             }
         }
-
         protected void Button2_Click(object sender, EventArgs e)
         {
             if (txtSearch.Text != "")

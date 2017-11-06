@@ -25,7 +25,7 @@ namespace CzmWeb.UserPage
         }
         private void MessageBoxResponse(string msg)
         {
-            Response.Write("<script>alert('" + msg + "');location.href='../DefalutEng.aspx';</script>");
+            Response.Write("<script>alert('" + msg + "');location.href='../UserPage/UserPageLogin.aspx';</script>");
         }
         private void MessaegBox(String msg)
         {
@@ -45,6 +45,13 @@ namespace CzmWeb.UserPage
         }
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            string UserIdPhone = Session["User"].ToString();
+            bool IsPingbi = Judge.JudgeUserPowerCountIs_30(UserIdPhone);
+            if (IsPingbi)
+            {
+                MessaegBox("You have been shielded! Temporarily unable to conduct business operations! Please contact the administrator! understand situation.");
+                return ;
+            }
             /*项目名称*/
             if (txtProjectName.Text == "")
             {

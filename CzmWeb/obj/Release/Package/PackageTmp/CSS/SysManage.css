@@ -1,0 +1,410 @@
+﻿html
+{
+    overflow: hidden; /*这个可以去掉IE6,7的滚动*/
+    _overflow-x: hidden; /*去掉IE6横向滚动*/
+    _overflow-y: hidden;
+}
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+    background-color: #F1F1F1;
+    overflow: hidden; /*这个可去掉IE5.5的滚动*/
+    _overflow-x: hidden; /*去掉IE6横向滚动*/
+    _overflow-y: hidden;
+    _margin-left: -8px; /*去掉IE6的左边框空白*/
+}
+
+.container
+{
+    text-align: left;
+    background-color: #417EB7;
+}
+/*********************************************header***********************************************/
+.header
+{
+    z-index: 100;
+    height: 68px;
+    background-image: url(../Images/index/bg_Top.png);
+    background-repeat: repeat-x;
+    overflow: hidden;
+}
+.header .logo
+{
+    height: 68px;
+    width: 168px;
+    background-image: url(../Images/index/logo.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    float: left;
+    text-align: right;
+}
+.header .toolBar
+{
+    float: left;
+    height: 68px;
+    overflow: hidden;
+}
+.header .help
+{
+    margin-right:16px;
+    height: 22px;
+    width: 160px;
+    line-height:22px;
+    background-image: url(../Images/index/bg_help.png);
+    background-repeat:no-repeat;
+    float: right;
+    text-align: center;
+}
+.header .help a:link
+{
+    width: 50px;
+    color: #666666;
+    text-decoration: none;
+}
+.header .help a:visited
+{
+    text-decoration: none;
+    color: #666666;
+}
+.header .help a:hover
+{
+    text-decoration: none;
+    color: #FF0000;
+}
+.header .help a:active
+{
+    text-decoration: none;
+}
+.header .toolBar .main_button
+{
+    margin-top: 36px;
+    _margin-top: 35px;
+    *margin-top: 35px;
+    width: 85%;
+    height: 32px;
+    line-height: 26px;
+    position: absolute;
+    display: inline;
+    z-index: 200;
+    float: left;
+    background-image: url(../Images/index/bg_MainMenu.png);
+    background-repeat: repeat-x;
+}
+
+/*Start	顶部菜单////////////////////////////////////////////////////////////************/
+
+#TopMenu
+{
+    float: left;
+}
+#TopMenu ul
+{
+    height: 32px;
+    line-height: 32px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    text-align: left;
+}
+#TopMenu li
+{
+    width: 80px;
+    height: 32px;
+    line-height: 32px;
+    float: left;
+    text-align: center;
+    display: block;
+}
+#TopMenu li a
+{
+    text-decoration: none;
+    color: #333;
+}
+#TopMenu li .hover
+{
+    height: 32px;
+    line-height: 28px;
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+    background-image: url(../Images/index/bg_MainMenu_Hover.png);
+}
+#TopMenu li a:hover
+{
+    height: 32px;
+    line-height: 28px;
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+    background-image: url(../Images/index/bg_MainMenu_Hover.png);
+}
+.TopMenuSelectedItem
+{
+    height: 32px;
+    line-height: 28px;
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+    background-image: url(../Images/index/bg_MainMenu_Hover.png);
+}
+/*End	顶部菜单////////////////////////////////////////////////////////////************/
+
+/********************************************* left ***********************************************/
+.left
+{
+    position: relative;
+    margin-top: 0px;
+    width: 210px;
+    float: left;
+}
+.left .leftBar
+{
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 15px;
+    border: none; /* 	background-image: url( "../Images/index/bg_leftBar.png" ); 	*/
+    cursor: pointer;
+}
+.left .leftBarTop
+{
+    width: 15px;
+    height: 44px;
+    border: none;
+    background-image: url( "../Images/index/leftbar_top.png" );
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.left .leftBarButton
+{
+    width: 15px;
+    border: none;
+    float: right;
+    background-image: url( "../Images/index/bg_leftBar.png" );
+    background-repeat: repeat-y;
+    cursor: pointer;
+}
+.left .leftBarButton_left
+{
+    width: 15px;
+    border: none;
+    float: right;
+    background-image: url( "../Images/index/leftbar_left.png" );
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.left .leftBarButton_right
+{
+    width: 15px;
+    border: none;
+    float: right;
+    background-image: url( "../Images/index/leftbar_right.png" );
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.left .leftContent
+{
+    width: 200px;
+    float: left;
+}
+.left .leftContent .leftContentTop
+{
+    height: 16px;
+    background-color: #417EB7;
+}
+.left .leftContent .leftContentMenu
+{
+    background-color: #417EB7;
+}
+.left .leftContent .leftContentMenu .SubMenuTitle
+{
+    height: 32px;
+    background-image: url( "../Images/index/bg_SubMenuTitle.png" );
+    background-repeat: no-repeat;
+    text-align: left;
+    color: #FFF;
+    font-weight: bold;
+    padding-left: 48px;
+    line-height: 32px;
+    cursor: pointer;
+}
+.left .leftContent .leftContentMenu .SubMenuTitle span img
+{
+    vertical-align: middle;
+}
+.left .leftContent .leftContentMenu .SubMenuTitle span
+{
+    font-size: 12px;
+    line-height: 36px;
+    cursor: pointer;
+}
+.left .leftContent .leftContentMenu .SubMenuList
+{
+    margin-left: 9px;
+    width: 184px;
+    border: solid 1px #CDCDCD;
+    background-color: #FAFAFA;
+    border-radius: 0 0 5px 5px;
+    box-shadow: inset 1px 1px 4px #d9d9d9;
+    -webkit-box-shadow: inset 1px 1px 4px #d9d9d9;
+    -moz-box-shadow: inset 1px 1px 4px #d9d9d9;
+}
+.left .leftContent .leftContentMenu .SubMenuList a
+{
+    text-decoration: none;
+    color: #222222;
+    padding-left: 32px;
+}
+.left .leftContent .leftContentMenu .SubMenuList ul
+{
+    height: 30px;
+    line-height: 30px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    text-align: left;
+    background-color: #FAFAFA;
+}
+.left .leftContent .leftContentMenu .SubMenuList li
+{
+    width: 184px;
+    height: 32px;
+    line-height: 30px;
+    float: left;
+    text-align: left;
+    display: block;
+}
+.left .leftContent .leftContentMenu .SubMenuList li.now a:link, .left .leftContent .leftContentMenu .SubMenuList li.now a:visited
+{
+    height: 32px;
+    border-left: none;
+    border-right: none;
+    font-size: 12px;
+    font-weight: 700;
+}
+.left .leftContent .leftContentMenu .SubMenuList a:link, .left .leftContent .leftContentMenu .SubMenuList a:visited
+{
+    line-height: 30px;
+    display: block;
+}
+.left .leftContent .leftContentMenu .SubMenuList a:hover, .left .leftContent .leftContentMenu .SubMenuList a:active
+{
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    text-decoration: none;
+    border-top: solid 1px #CDCDCD;
+    border-bottom: solid 1px #FFF;
+    background: #E5E5E5;
+}
+/*********************************************content***********************************************/
+.content
+{
+    z-index: 0;
+    margin-top: -4px;
+    margin-left: 210px;
+}
+.content .content_top
+{
+    height: 34px;
+    padding-top: 10px;
+    background-image: url( "../Images/index/bg_system_op.png" );
+    background-repeat: repeat-x;
+}
+.content .content_top .topText
+{
+    margin-left: 20px;
+    float: left;
+}
+.content .content_top .topText .user_role
+{
+    height: 28px;
+    line-height: 28px;
+    color: #265D87;
+}
+.content .content_top .topButton
+{
+    margin-left: 20px;
+    float: left;
+}
+.content .content_top .topButton input
+{
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+.content .content_top .topButton .exit
+{
+    height: 28px;
+    width: 28px;
+    margin-left: 20px;
+    border: none;
+    background: none;
+    background-image: url("../Images/button/btn_ico_exit.png");
+    cursor: pointer;
+}
+.content .content_top .topButton .home
+{
+    height: 28px;
+    width: 28px;
+    margin-left: 20px;
+    border: none;
+    background: none;
+    background-image: url("../Images/button/btn_ico_home.png");
+    cursor: pointer;
+}
+.content .content_top .topButton .refresh
+{
+    height: 28px;
+    width: 28px;
+    margin-left: 20px;
+    border: none;
+    background: none;
+    background-image: url( "../Images/button/btn_ico_refresh.png" );
+    cursor: pointer;
+}
+.content .content_top .topButton .back
+{
+    height: 28px;
+    width: 28px;
+    margin-left: 20px;
+    border: none;
+    background: none;
+    background-image: url( "../Images/button/btn_ico_back.png" );
+    cursor: pointer;
+}
+.content .content_top .MeassageBox
+{
+    margin-right: 64px;
+    width: 240px;
+    height: 28px;
+    float: right;
+    border: none;
+    background: none;
+}
+.content .content_main
+{
+    margin: 0px;
+    background-color: #FFF;
+}
+/*********************************************footer***********************************************/
+.footer
+{
+    height: 40px;
+    line-height: 40px;
+    clear: both;
+    color: #FFF;
+    text-align: right;
+    padding-right: 20px;
+    background-image: url( "../Images/index/bg_footer_1.png" );
+}

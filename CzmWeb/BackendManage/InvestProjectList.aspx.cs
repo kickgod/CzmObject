@@ -23,13 +23,6 @@ namespace CzmWeb.BackendManage
                 MessageBoxResponse("登录超时");
                 return;
             }
-            else
-            {
-                if (Request.Cookies["administator"] != null)
-                {
-                    Response.Cookies["administator"].Expires = DateTime.Now.AddHours(1);
-                }
-            }
             if (!IsPostBack)
             {
                 lblWhere.Text = "PiiID > 0 order by PiiState,InvestTime Desc";
@@ -121,7 +114,7 @@ namespace CzmWeb.BackendManage
             }
             if (txtUserId.Text != "")
             {
-                sqlString += " and  PiiID = " + txtUserId.Text + " ";
+                sqlString += " and  UserId = '" + txtUserId.Text + "' ";
             }
             if (ddlState.SelectedItem.Value != "-1")
             {
@@ -134,7 +127,7 @@ namespace CzmWeb.BackendManage
         protected void wucPager_OnBindList(object sender, EventArgs e)
         {
             //查询数据
-            DataTable dt = getTable.GetAllDataFromtblProjectInvestInfo(lblWhere.Text);
+            DataTable dt = getView.GetAllDataFrom_vwProjectInvestInfor(lblWhere.Text);
             int totalCount = 0;
             if (dt != null)
             {

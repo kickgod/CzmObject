@@ -10,11 +10,11 @@ namespace CzmObject.App_Code
 {
     public class SendPhoneMessage
     {
-        
-        //private string THE_UID = "544956252@qq.com"; //用户名
-        //private string THE_KEY = "c8cd9edc71dbe46db40a"; //接口秘钥
-        private string THE_UID = "jiangxing"; //用户名
-        private string THE_KEY = "2609a1daba95ee51dd6d"; //接口秘钥
+
+        private string THE_UID = "544956252@qq.com"; //用户名
+        private string THE_KEY = "c8cd9edc71dbe46db40a"; //接口秘钥
+        //private string THE_UID = "jiangxing"; //用户名
+        //private string THE_KEY = "2609a1daba95ee51dd6d"; //接口秘钥
         /// <summary>返回UTF-8编码发送接口地址</summary>
         /// <param name="receivePhoneNumber">目的手机号码（多个手机号请用半角逗号隔开）</param>
         /// <param name="receiveSms">短信内容，最多支持400个字，普通短信70个字/条，长短信64个字/条计费</param>

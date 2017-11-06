@@ -22,6 +22,10 @@ namespace CzmWeb.UserPage
             }
             if (!IsPostBack)
             {
+                if (Session["User"] != null)
+                {
+                    MessaegBox("你已经登录！");
+                }
                 txtUserPwds.Text = "";
                 txtUserID.Text = "";
             }
@@ -47,7 +51,7 @@ namespace CzmWeb.UserPage
                 {
                     txtUserPwds.Text = "密码错误！再次输入！";
                     txtUserID.ForeColor = Color.OrangeRed;
-                    MessaegBoxResp("密码错误1");
+                    MessaegBoxResp("密码错误或者你的资料还在审核中！");
                     return false;
                 }
             }
@@ -60,8 +64,8 @@ namespace CzmWeb.UserPage
             if (CheckIsNumber())
             {
                 ViewState["Code"] = this.sender.GenerateVerificationCode();
-               //this.sender.SendMessage(txtUserID.Text, "你的验证码为：" + ViewState["Code"].ToString());
-                MessaegBoxResp("已结发送！" + ViewState["Code"].ToString());
+               this.sender.SendMessage(txtUserID.Text, "你的验证码为：" + ViewState["Code"].ToString());
+                MessaegBoxResp("已结发送！");
             }
         }
         private void MessaegBoxResp(String msg)
@@ -78,7 +82,7 @@ namespace CzmWeb.UserPage
         }
         private void MessageBoxResponse(string msg)
         {
-            Response.Write("<script>alert('" + msg + "');location.href='../DefalutEng.aspx';</script>");
+            Response.Write("<script>alert('" + msg + "');location.href='../Default.aspx';</script>");
         }
         protected void btnLogin_Click(object sender, EventArgs e)
         {
