@@ -43,6 +43,7 @@
       <HintPath>bin\DoEasyClassLib.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -149,6 +150,7 @@
     <Content Include="BackendManage\UserApplyCheck.aspx" />
     <Content Include="BackendManage\UserSuggestionListChinese.aspx" />
     <Content Include="BackendManage\UserSuggestionsList.aspx" />
+    <Content Include="BackendManage\UserUpradeList.aspx" />
     <Content Include="BackendManage\UserValidCheck.aspx" />
     <Content Include="BackendManage\VedioListAndUp.aspx" />
     <Content Include="bin\Antlr3.Runtime.dll" />
@@ -292,6 +294,11 @@
     <Content Include="FirstImage\3_CompanyTitle_c.jpg" />
     <Content Include="FirstImage\4_CompanyFocus_c.jpg" />
     <Content Include="FirstImage\5_CompanyFeture_c.jpg" />
+    <Content Include="FirstImage\Cmp_1.png" />
+    <Content Include="FirstImage\Cmp_2.png" />
+    <Content Include="FirstImage\Cmp_3.png" />
+    <Content Include="FirstImage\Cmp_4.png" />
+    <Content Include="FirstImage\Cmp_5.png" />
     <Content Include="FirstImage\diaoyu.png" />
     <Content Include="FirstImage\row.png" />
     <Content Include="FirstImage\row2.png" />
@@ -300,11 +307,6 @@
     <Content Include="FirstImage\yihui.png" />
     <Content Include="FirstImage\yinke.png" />
     <Content Include="FirstImage\shangyu.png" />
-    <Content Include="FirstImage\图1.png" />
-    <Content Include="FirstImage\图2.png" />
-    <Content Include="FirstImage\图3.png" />
-    <Content Include="FirstImage\图4.png" />
-    <Content Include="FirstImage\图5.png" />
     <Content Include="FirstImage\图标1.png" />
     <Content Include="FirstImage\图标10.png" />
     <Content Include="FirstImage\图标11.png" />
@@ -344,8 +346,34 @@
     <Content Include="Font\webfont.svg" />
     <Content Include="Font\webfont_pnqaxdsleaaqyqfr\demo.html" />
     <Content Include="Font\webfont_pnqaxdsleaaqyqfr\webfont.svg" />
+    <Content Include="Images\2017102821478558.png" />
+    <Content Include="Images\2017102902334113.jpg" />
+    <Content Include="Images\2017102903256739.png" />
+    <Content Include="Images\201710290348332.png" />
+    <Content Include="Images\2017102904032432.png" />
+    <Content Include="Images\201710290425663.png" />
+    <Content Include="Images\2017102911836732.png" />
+    <Content Include="Images\2017102912012961.bmp" />
+    <Content Include="Images\2017102912129739.bmp" />
+    <Content Include="Images\2017102912232929.jpg" />
+    <Content Include="Images\201710294331663.bmp" />
+    <Content Include="Images\2017102943437343.png" />
+    <Content Include="Images\2017102943856266.bmp" />
+    <Content Include="Images\2017102944712378.png" />
+    <Content Include="Images\2017102945045307.png" />
+    <Content Include="Images\2017102945211892.png" />
+    <Content Include="Images\2017102945422308.png" />
+    <Content Include="Images\201710294557360.png" />
+    <Content Include="Images\201710295030450.png" />
+    <Content Include="Images\201710295135851.png" />
+    <Content Include="Images\201710295738629.png" />
+    <Content Include="Images\201710295944437.png" />
     <Content Include="Images\2017104162454690.jpg" />
     <Content Include="Images\201710416920346.jpg" />
+    <Content Include="Images\2017117112048512.jpg" />
+    <Content Include="Images\2017117143810747.jpg" />
+    <Content Include="Images\20171191345850.gif" />
+    <Content Include="Images\20171191345855.gif" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bg_error.png" />
     <Content Include="Images\bg_error_bottom.png" />
@@ -581,6 +609,12 @@
     <Content Include="Images\Web\xxgk.png" />
     <Content Include="Js\Demo.js" />
     <Content Include="Js\scroll.js" />
+    <Content Include="Master\2.gif" />
+    <Content Include="Master\BigFengCheng.gif" />
+    <Content Include="Master\Pacman.gif" />
+    <Content Include="Master\P_tatata三角形.gif" />
+    <Content Include="Master\P_掉星星.gif" />
+    <Content Include="Master\Stardered.gif" />
     <Content Include="packages.config" />
     <Content Include="Font\webfont.eot" />
     <Content Include="Font\webfont.ttf" />
@@ -609,14 +643,18 @@
     <Content Include="ForePage\使用文档.docx" />
     <None Include="Properties\PublishProfiles\CzmWeb.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="ProductImage\201710142133037.jpg" />
-    <Content Include="ProductImage\20171021121630848.jpg" />
-    <Content Include="ProductImage\2017102113219253.jpg" />
-    <Content Include="ProductImage\20171081887953.jpg" />
+    <Content Include="ProductImage\2017117102612606.jpg" />
+    <Content Include="ProductImage\201711710572090.jpg" />
+    <Content Include="ProductImage\2017117111230997.jpg" />
+    <Content Include="ProductImage\2017117111729176.jpg" />
+    <Content Include="ProductImage\20171171192928.jpg" />
+    <Content Include="ProductImage\20171171449036.jpg" />
+    <Content Include="ProductImage\201711715521653.jpg" />
     <Content Include="ProductImage\productType1.jpg" />
     <Content Include="ProductImage\productType2.jpg" />
     <Content Include="ProductImage\productType3.jpg" />
     <Content Include="ProductImage\productType4.jpg" />
+    <Content Include="ProgressBar.htm" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
@@ -643,6 +681,8 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="UserPage\UserbecomeTypeHigh.aspx" />
+    <Content Include="UserPage\UserbecomeTypeHighCHN.aspx" />
     <Content Include="UserPage\UserConmunicationApace.aspx" />
     <Content Include="UserPage\UserConmunicationApaceCHN.aspx" />
     <Content Include="UserPage\UserCreateProject.aspx" />
@@ -654,7 +694,6 @@
     <Content Include="UserPage\UserNewProductShow.aspx" />
     <Content Include="UserPage\UserNewProductShowCHN.aspx" />
     <Content Include="UserPage\UserPageLogin.aspx" />
-    <Content Include="UserPage\UserMuBan.aspx" />
     <Content Include="UserPage\UserPageLoginCHN.aspx" />
     <Content Include="UserPage\UserPageRegister.aspx" />
     <Content Include="UserPage\UserPageRegisterCHN.aspx" />
@@ -664,6 +703,9 @@
     <Content Include="UserPage\UserVedioShowList.aspx" />
     <Content Include="UserPage\UserVedioShowListCHE.aspx" />
     <Content Include="VedioList\2017102413124848.jpg" />
+    <Content Include="VedioList\20171024215330535.mp4" />
+    <Content Include="VedioList\2017119161035900.mp4" />
+    <Content Include="VedioList\201711916918771.mp4" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -684,6 +726,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\GetDataFromView.cs" />
+    <Compile Include="App_Code\ProgressBar.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="App_Code\PublicUserJudge.cs" />
     <Compile Include="App_Code\SendPhoneMessage.cs" />
     <Compile Include="App_Code\PublicGetDataFromDB.cs" />
@@ -833,6 +878,13 @@
     <Compile Include="BackendManage\UserSuggestionsList.aspx.designer.cs">
       <DependentUpon>UserSuggestionsList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BackendManage\UserUpradeList.aspx.cs">
+      <DependentUpon>UserUpradeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackendManage\UserUpradeList.aspx.designer.cs">
+      <DependentUpon>UserUpradeList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BackendManage\UserValidCheck.aspx.cs">
       <DependentUpon>UserValidCheck.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -935,6 +987,20 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="UserPage\UserbecomeTypeHigh.aspx.cs">
+      <DependentUpon>UserbecomeTypeHigh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\UserbecomeTypeHigh.aspx.designer.cs">
+      <DependentUpon>UserbecomeTypeHigh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserPage\UserbecomeTypeHighCHN.aspx.cs">
+      <DependentUpon>UserbecomeTypeHighCHN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPage\UserbecomeTypeHighCHN.aspx.designer.cs">
+      <DependentUpon>UserbecomeTypeHighCHN.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserPage\UserConmunicationApace.aspx.cs">
       <DependentUpon>UserConmunicationApace.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1012,13 +1078,6 @@
     <Compile Include="UserPage\UserPageLogin.aspx.designer.cs">
       <DependentUpon>UserPageLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UserPage\UserMuBan.aspx.cs">
-      <DependentUpon>UserMuBan.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UserPage\UserMuBan.aspx.designer.cs">
-      <DependentUpon>UserMuBan.aspx</DependentUpon>
-    </Compile>
     <Compile Include="UserPage\UserPageLoginCHN.aspx.cs">
       <DependentUpon>UserPageLoginCHN.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1084,7 +1143,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Data\NeatUpload_Temp\" />
     <Folder Include="ProjectFile\" />
   </ItemGroup>
   <ItemGroup>

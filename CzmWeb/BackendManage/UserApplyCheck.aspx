@@ -53,7 +53,7 @@
                   关键字[手机号码]:<asp:TextBox ID="txtPhone" runat="server" Height="26px"></asp:TextBox>
                   关键字[用户名]<asp:TextBox ID="txtName" runat="server" Height="26px"></asp:TextBox>
                  <asp:Button ID="Button1" runat="server" Text="查找"  CssClass="Save" OnClick="Button1_OnClick" ></asp:Button>
-            </cente>
+            </center>
         </div>
         <div>
             <table width="100%" border="1" cellpadding="0" cellspacing="0" class="table4">
@@ -105,7 +105,7 @@
                         <tr class='p_item_<%# Container.ItemIndex % 2 %>' onmouseover="c=this.className;this.className='p_item_hover';"
                             onmouseout="this.className=c">
                             <td align="center">
-                                <asp:Button ID="btndelete" runat="server" Text="" CssClass="btnDelete"  CommandArgument='<%#Eval("UserId")%>' CommandName="Delete"/>
+                                <asp:Button ID="btndelete" runat="server" Text="" CssClass="btnDelete" OnClientClick="return confirm('你如果删除此用户！会删除此用户所有信息。包括用户投资信息！用户创造项目！')"  CommandArgument='<%#Eval("UserId")%>' CommandName="Delete"/>
                             </td>
                             <td align="center">
                                 <%#Eval("UserId")%>
@@ -132,10 +132,10 @@
                                 <%#Eval("UserCard") %>
                             </td>
                             <td align="center">
-                               <a href=<%#Eval("UserCardPicture_Address") %>>图片查看</a>  
+                               <a href=<%#Eval("UserCardPicture_Address") %>> <%#Eval("UserCardPicture_Address").ToString()=="" ? "用户未上传图片":"图片查看" %></a>  
                             </td>
                             <td align="center">
-                                <a href=<%#Eval("UserCardPicture2_Address") %> >图片查看</a>  
+                                <a href=<%#Eval("UserCardPicture2_Address")%> ><%#Eval("UserCardPicture2_Address").ToString()=="" ? "用户未上传图片":"图片查看" %></a>  
                             </td>
                             <td align="center">
                                 <%#Eval("UserStateFlag") %>

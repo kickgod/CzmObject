@@ -54,6 +54,7 @@ namespace CzmWeb.Common
                         MessaegBox("文件名已经重复！");
                         return;
                     }
+            
                     FlUpLoad.PostedFile.SaveAs(Server.MapPath(MapPaths) + Path.GetFileName(FlUpLoad.PostedFile.FileName));
                     ChangeFileName(Server.MapPath(MapPaths) + Path.GetFileName(FlUpLoad.PostedFile.FileName), GetNewFileName());
                 }

@@ -13,7 +13,7 @@
     *{ padding: 0px;margin: 0px;text-decoration: none;}
     .JiaoBen{ width: 100%;font-size: smaller;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: gainsboro;text-align: center;background-color:RGB(176,53,112) }
     .JiaoBen a{color: gainsboro}
-    .txtStyle{ width: 100%;height: 25px;}
+    .txtStyle{ width: 100%;height: 30px;}
     .Register  .btnLoginNowTime{font-family: '华文楷体', '楷体', '微软雅黑', '宋体';height: 30px;
         width: 90px;background-color: RGB(196, 22, 222);border: RGB(176, 53, 112);color: white;font-weight: 300;letter-spacing: 3px;font-size: large;margin-left: 10px;margin-left: 100px;transform: skew(-25deg, 0deg); -ms-transform: skew(-25deg, 0deg);-webkit-transform: skew(-25deg, 0deg);}
     .Register{ width: 100%;margin: auto; height: 1200px;}
@@ -347,12 +347,12 @@
                     <asp:ListItem value="0">女（female）</asp:ListItem>
                 </asp:DropDownList>
             </p>
-            <!--性别-->
+            <!--邮箱-->
             <br/>
             <p>
                 <asp:Label ID="lblPwd_C" CssClass="TFS_FormFont"  runat="server" Text="Your mail:" Visible="True"></asp:Label>
                 <br/>
-                <asp:TextBox ID="txtPwd" runat="server"  CssClass="txtStyle" placeholder="E-mail Address"></asp:TextBox>
+                <asp:TextBox ID="txtPwd" runat="server" TextMode="Email"  CssClass="txtStyle" placeholder="E-mail Address"></asp:TextBox>
             </p>
             <!--电话-->
             <br/>
@@ -399,24 +399,24 @@
     </div>
     <div class="zixun">
         <div class="showDiv">
-            <p style="font-size: 8px">WeChat QR code</p>
-            <img src="../Images/SystemPicture/timg.jpg"/>
+            <p style="font-size: 6px">WeChat QR code</p>
+            <img src="../Images/SystemPicture/mmexport1509186467240.jpg"/>
             <p>Scan code</p>
             <p>More surprises</p>
         </div>
         <div class="lanmu">
-            <a href="javascript:void(0)"><img src="../Images/SystemPicture/userLanse.png" title="User Login"/></a>
-            <a href="javascript:void(0)"><img src="../Images/SystemPicture/zixunlanse.png" title="Online"/></a>
-            <a href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="../Images/SystemPicture/阿里旺旺.png" title="阿里旺旺" /></a>
-            <a href="javascript:void(0)"><img src="../Images/SystemPicture/qqlanse.png" title="QQ咨询" /></a>
-            <a href="#"><img src="../Images/SystemPicture/zhidinglanse.png" title="首页" /></a>
+            <a target="_blank" href="../UserPage/UserPageLogin.aspx"><img src="../Images/SystemPicture/userLanse.png" title="User Login"/></a>
+            <a target="_blank" href="../UserPage/UserConmunicationApace.aspx"><img src="../Images/SystemPicture/zixunlanse.png" title="Online"/></a>
+            <a target="_blank" href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="../Images/SystemPicture/阿里旺旺.png" title="Ali Server" /></a>
+            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2212901&site=qq&menu=yes"><img src="../Images/SystemPicture/qqlanse.png" title="QQ Server" /></a>
+            <a href="#"><img src="../Images/SystemPicture/zhidinglanse.png" title="Home" /></a>
         </div>
     </div>
-    <div class="JiaoBen" Id="Adminsrator" >
-        <p style="padding-top: 5px">
-            <a href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="../Images/SystemPicture/阿里旺旺.png" width="20px" height="20px"/>Ali Want</a>
-            <a href="http://wpa.qq.com/msgrd?v=1&uin=544956252"><img src="../Images/SystemPicture/qq.png" width="20px" height="20px"/>QQ service</a>Copyright © 2017-Today|SiChuan ChuangZaoMen High - tech Development Co. Ltd|Consumer hotline：15698259380|Enterprise Mail:chuangzaomen@163.com|hotline：15826121
-            <a href="../BackendManage/AdminLogin.aspx">Administrator</a>
+    <div class="JiaoBen" Id="Adminsrator">
+        <p style="text-align: center;padding-top: 5px">
+            <a target="_blank" href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="../Images/SystemPicture/阿里旺旺.png" width="20px" height="20px"/>Ali Want</a>
+            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2212901&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2212901:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>Copyright © 2017-Today|Sichuan Creator Association New & High-tech Development Co.LTD.|Consumer hotline：18981191139|Enterprise Mail:2212901@qq.com|hotline：18981191139
+            <a target="_blank" href="../BackendManage/AdminLogin.aspx">Administrator</a>
         </p>
     </div>
 </div>

@@ -129,12 +129,12 @@
        .zixun .lanmu a img{ width: 30px;height: 30px;margin:5px auto}
        .zixun .lanmu a img:hover{ transform: translate(2px, 2px);-webkit-transform: translate(2px, 2px);background-color: white}
    }
-   @media only screen and (min-width: 441px) and (max-width: 767.9px) {
+   @media only screen and (min-width: 480px) and (max-width: 767.9px) {
        #ShowPhoneIfStart{display:block}  
        #ShowPhoneIfEnd{display: none}    
        #CompanyName{ font-size: 14px;font-family: '楷体', '宋体';font-weight: 500;color: purple;width: 100%;text-align: center }      
        #RowProductTypeShow .col-md-3{ margin-bottom: 15px;margin: auto}    
-       #RowProductTypeShow img{ width: 100%;height: 160px;}    
+       #RowProductTypeShow img{ width: 100%;height: 200px;}    
        .VedioList{ width: 100%;height: 400px;background-color: RGB(231, 223, 238);box-sizing: border-box}
        .VedioList .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
        .VedioList .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
@@ -172,13 +172,15 @@
        .ProjectName{ color: gainsboro;font-size: 15px;font-weight: 400;background-color: crimson;}
        .WordOfTheProduct{ color: white;font-weight: 400;font-style: italic;text-transform: uppercase;font-size: 8px;line-height: 10px;background-color: RGB(148, 30, 80) }
        .ShowIntorductiOfpROJECT{ width: 100%;height: 50px;overflow: hidden}
+       #NewProductShow img{ width: 100%;height: 300px;transition: 0.5s}
+       #NewProductShow img:hover{ transform: scale(1,1);-webkit-transform: scale(1.1, 1.1);}
    }
-   @media only screen and (min-width: 0px) and (max-width: 440px) {
+   @media only screen and (min-width: 0px) and (max-width: 480px) {
        #ShowPhoneIfStart{display: block}  
        #ShowPhoneIfEnd{display: none} 
        #CompanyName{ font-size: 14px;font-family: '楷体', '宋体';font-weight: 500;color: purple;width: 100%;text-align: center }
        .Font_Name_English{ color: darkmagenta;font-weight: 400;font-size: 15px; text-align: center;padding-left: 10px;letter-spacing: 1px;word-spacing: 3px; }
-       #RowProductTypeShow img{ width: 100%;height: 220px;} 
+       #RowProductTypeShow img{ width: 100%;height: 300px;} 
        .intro{font-size: 14px;font-family: '楷体', '宋体';font-weight: 400;color: purple}
        .VedioList{ width: 100%;height: 400px;background-color: RGB(231, 223, 238);box-sizing: border-box}
        .VedioList .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
@@ -210,4 +212,6 @@
        .WordOfTheProduct{ display: none; }
        .ShowIntorductiOfpROJECT{ width: 100%;height: 50px;overflow: hidden}
        .zixun{ display: none;}
+       #NewProductShow img{ width: 100%;height: 340px;transition: 0.5s}
+       #NewProductShow img:hover{ transform: scale(1,1);-webkit-transform: scale(1.1, 1.1);}
    }

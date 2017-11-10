@@ -17,9 +17,18 @@
     <link href="../Content/FontBindData.css" rel="stylesheet" type="text/css" />
     <link href="../bootstrap337/css/style.css" rel="stylesheet" />
     <link href="../Content/FontBindData.css" rel="stylesheet" />
-    <script type="text/javascript">
-        
-    </script>
+    <style type="text/css">
+        .Loading{width: 100%;height: 100%;position: fixed;top: 0px;left: 0px;background-color: white;z-index: 100;}
+        .pic{background-image: url(../Master/Stardered.gif);width: 128px; height: 128px;
+            /*居中显示方法*/
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            margin: auto;
+        }
+    </style>
     <style type="text/css">
         .txtBox{ width: 240px;height: 23px;line-height: 23px}
         .Save{height: 25px;	width: 60px; border: none; background: palevioletred;cursor: pointer;color: white;border: solid 1px gainsboro;
@@ -30,6 +39,23 @@
         .rowVdeio .col-md-4{margin-top: 15px}
         .Save:hover{background-color: gray}
     </style>
+    <script type="text/javascript">
+        function UpLoad() {
+            var Chinese = document.getElementById("<%=txrChineseName.ClientID%>");
+            var English = document.getElementById("<%=txtEnglishName.ClientID%>");
+            if (Chinese == "") {
+                alert("请填写中文名称");
+                return false;
+            }
+            if (English == "") {
+                alert("请填写英文名称");
+                return false;
+            }
+            var Loading = '<div class="Loading"><div class="pic"></div></div>';
+            $("body").append(Loading);
+            return true;
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -76,7 +102,7 @@
                 <td colspan="4" align="center">
                     <asp:Button ID="btnAdd" CssClass="Save" runat="server" Text="添加" OnClick="btnAdd_Click" />
                     <asp:Button ID="btnEdit" CssClass="Save" runat="server" Text="编辑" OnClick="btnEdit_Click" />
-                    <asp:Button ID="btnSave" CssClass="Save" runat="server" Text="保持" OnClick="btnSave_Click" />
+                    <asp:Button ID="btnSave" CssClass="Save" runat="server" Text="保持" OnClientClick="return UpLoad();"  OnClick="btnSave_Click" />
                 </td>
             </tr>
         </table>
@@ -85,15 +111,20 @@
      <br/>
       <h2 class="h2" style="text-align: center;font-family: ProductFontStyle">视频列表</h2>
      <div class="container">
+         <div class="row">
+             <p>
+                 如果视频无法播放请切换到360兼容模式下[<a href="https://zhidao.baidu.com/question/2053532665201144107.html" target="_blank">切换方式</a>]
+             </p>
+         </div>
         <div class="row rowVdeio">
             <asp:Repeater ID="reptm" runat="server" OnItemCommand="reptm_OnItemCommand">
                 <ItemTemplate>
                     <div class="col-md-4">
                         <div style="width: 100%">
                             <video poster="../VedioList/2017102413124848.jpg" preload="auto" controls="controls" style="width: 100%;" >
-                                <source type="video/mp4" src=<%#Eval("VidioPath")%> >
-                                <source type="video/webm" src=<%#Eval("VidioPath")%> >
-                                <source type="video/ogg" src=<%#Eval("VidioPath")%> >
+                                <source type="video/mp4"  src='<%#Eval("VidioPath")%>  >
+                                <source type="video/webm" src='<%#Eval("VidioPath")%>  >
+                                <source type="video/ogg"  src=<%#Eval("VidioPath")%>  >
                             </video>
                         </div>
                         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl=<%#Eval("VidioPath")%> >点击播放</asp:HyperLink>

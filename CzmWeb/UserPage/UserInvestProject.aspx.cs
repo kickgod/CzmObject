@@ -63,6 +63,16 @@ namespace CzmWeb.UserPage
                 item.Text = td.Rows[i]["ProvinceName_e"].ToString();
                 ddlProvince.Items.Add(item);
             }
+            ddlProvince.SelectedIndex = 0;
+            string ProvinceID = ddlProvince.SelectedValue;
+            DataTable tds = getTable.GetAllDataFromtblDowntownRegionList("ProvinceId =" + ProvinceID);
+            for (int i = 0; i < tds.Rows.Count; i++)
+            {
+                ListItem item = new ListItem();
+                item.Value = tds.Rows[i]["RegionID"].ToString();
+                item.Text = tds.Rows[i]["RegionName_e"].ToString();
+                ddlDataRegiom.Items.Add(item);
+            }
         }
         protected void ddlProvince_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -88,32 +98,56 @@ namespace CzmWeb.UserPage
         }
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            string UserIdPhone = Session["User"].ToString();
-            bool IsPingbi = Judge.JudgeUserPowerCountIs_30(UserIdPhone);
-            if (IsPingbi)
+            try
             {
-                MessaegBox("You have been shielded! Temporarily unable to conduct business operations! Please contact the administrator! understand situation.");
-                return;
+                if (Session["User"]!=null)
+                {
+                    string UserIdPhone = Session["User"].ToString();
+                    bool IsPingbi = Judge.JudgeUserPowerCountIs_30(UserIdPhone);
+                    if (IsPingbi)
+                    {
+                        MessaegBox("You have been shielded! Temporarily unable to conduct business operations! Please contact the administrator! understand situation.");
+                        return;
+                    }
+                    bool IsnormalUser = Judge.JudgeUserPowerCountIs30(UserIdPhone);
+                    if (!IsnormalUser)
+                    {
+                        MessaegBox("You have no investment rights");
+                        return;
+                    }
+                    bool IsCanTypeTwo = Judge.JudgeUserTypeIs_Two(UserIdPhone);
+                    if (!IsCanTypeTwo)
+                    {
+                        MessaegBox("Diamond members have investment rights!");
+                        return;
+                    }
+                    if (ddlDataRegiom.Items.Count <= 0)
+                    {
+                        MessaegBox("You have not selected a region yet");
+                        return;
+                    }
+                    string ProjectName = txtTread.Text;
+                    string Account = txtAmount.Text;
+                    string UserID = "15685962321"; /*Session["User"].ToString();*/
+                    string Province = ddlProvince.SelectedItem.Text;
+                    Province = Province + " " + ddlDataRegiom.SelectedItem.Text;
+                    string InsertDwName = txtAddress.Text;
+                    string Phone = txtPhone.Text;
+                    string Address = txtAddress.Text;
+                    string sql = "INSERT INTO [XcXm].[dbo].[tblProjectInvestInfo]([InsertProjectName],[Account]," +
+                                 "[UserId],[Province],[InsertDwName],[NewPhone],[NewAdress],[PiiState]) VALUES";
+                    string sqlValue = "( '" + ProjectName + "','" + Account + "','" + UserID
+                                      + "','" + Province + "','" + InsertDwName + "','" + Phone + "','" + Address + "',10)";
+                    DB.CarryOutSqlSentence(sql + sqlValue);
+                    ChangeNULL();
+                }
             }
-            if (ddlDataRegiom.Items.Count<=0)
+            catch (Exception exception)
             {
-                MessaegBox("You have not selected a region yet");
-                return;
+                Console.WriteLine(exception);
+                throw;
             }
-            string ProjectName = txtTread.Text;
-            string Account = txtAmount.Text;
-            string UserID = "15685962321"; /*Session["User"].ToString();*/
-            string Province = ddlProvince.SelectedItem.Text;
-                   Province =Province+" "+ ddlDataRegiom.SelectedItem.Text;
-            string InsertDwName = txtAddress.Text;
-            string Phone = txtPhone.Text;
-            string Address = txtAddress.Text;
-            string sql = "INSERT INTO [XcXm].[dbo].[tblProjectInvestInfo]([InsertProjectName],[Account]," +
-                         "[UserId],[Province],[InsertDwName],[NewPhone],[NewAdress],[PiiState]) VALUES";
-            string sqlValue = "( '" + ProjectName + "','" + Account + "','" + UserID 
-                + "','" + Province + "','" + InsertDwName + "','" + Phone+"','"+Address+"',10)";
-            DB.CarryOutSqlSentence(sql + sqlValue);
-            ChangeNULL();
+
         }
     }
 }

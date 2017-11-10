@@ -57,17 +57,6 @@ namespace CzmWeb.UserPage
             }
             return true;
         }
-        protected void BtnSendCode_Click(object sender, EventArgs e)
-        {
-            string pwd = txtUserPwds.Text;
-            //如果用户存在再发验证码
-            if (CheckIsNumber())
-            {
-                ViewState["Code"] = this.sender.GenerateVerificationCode();
-               this.sender.SendMessage(txtUserID.Text, "你的验证码为：" + ViewState["Code"].ToString());
-                MessaegBoxResp("已结发送！");
-            }
-        }
         private void MessaegBoxResp(String msg)
         {
             Response.Write("<script>alert('" + msg + "');</script>");
@@ -89,15 +78,8 @@ namespace CzmWeb.UserPage
 
             if (CheckIsNumber())
             {
-                if (ViewState["Code"] != null && ViewState["Code"].ToString() == txtVaildCode.Text)
-                {
                     Session["User"] = txtUserID.Text;
                     MessageBoxResponse("登录成功");
-                }
-                else
-                {
-                    MessaegBox("验证码错误！");
-                }
             }
             else
             {

@@ -36,6 +36,32 @@ namespace CzmWeb.App_Code
             return Convert.ToInt32(Result);
         }
         /// <summary>
+        /// 返回用户类型
+        /// </summary>
+        /// <param name="UserId"></param>
+        /// <returns></returns>
+        public int GetUserTypeId(string UserId)
+        {
+            if (UserId == "")
+            {
+                return -1;
+            }
+            string Result;
+            SqlConnection con = GetSqlConnection();
+            if (con.State != ConnectionState.Open)
+            {
+                con.Open();
+            }
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT [UserType] FROM [XcXm].[dbo].[tblUserInfo] WHERE UserId='" + UserId + "'";
+            Result = cmd.ExecuteScalar().ToString();
+            cmd.Dispose();
+            con.Dispose();
+            con.Close();
+            return Convert.ToInt32(Result);
+        }
+        /// <summary>
         /// 判断用户权限是否等于正常用户 30级
         /// </summary>
         /// <returns></returns>
@@ -68,6 +94,49 @@ namespace CzmWeb.App_Code
             }
             int Power = GetUserPowerRightCount(UserId);
             if (Power == -30)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 判断用户类型是否是钻石会员
+        /// </summary>
+        /// <param name="UserId"></param>
+        /// <returns></returns>
+        public bool JudgeUserTypeIs_Two(string UserId)
+        {
+            if (UserId == "")
+            {
+                return false;
+            }
+            int Power = GetUserTypeId(UserId);
+            if (Power == 2)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        /// <summary>
+        /// 判断用户类型是否是普通会员
+        /// </summary>
+        /// <param name="UserId"></param>
+        /// <returns></returns>
+        public bool JudgeUserTypeIs_One(string UserId)
+        {
+            if (UserId == "")
+            {
+                return false;
+            }
+            int Power = GetUserTypeId(UserId);
+            if (Power == 1)
             {
                 return true;
             }
@@ -127,6 +196,55 @@ namespace CzmWeb.App_Code
             {
                 return false;
             }
+        }
+        /// <summary>
+        /// 升级为高级会员
+        /// </summary>
+        /// <param name="UserId"></param>
+        /// <returns></returns>
+        private int ChangeUserTypeToTwo(string UserId)
+        {
+            int Result;
+            if (UserId=="")
+            {
+                return 0;
+            }
+            bool IsMormalUser = JudgeUserPowerCountIs30(UserId);
+            if (IsMormalUser)
+            {
+                string Sql = "update [XcXm].[dbo].[tblUserInfo] set UserType =2 where UserId ='" + UserId + "'";
+                Result =CarryOutSqlSentence(Sql);
+                return Result;
+            }
+            else
+            {
+                return 0;
+            }
+                
+        }
+        /// <summary>
+        /// 降为普通会员
+        /// </summary>
+        /// <param name="UserId">用户名</param>
+        /// <returns></returns>
+        private int ChangeUserTypeToOne(string UserId)
+        {
+            int Result;
+            if (UserId == "")
+            {
+                return 0;
+            }
+            if (IsHaveUserID(UserId))
+            {
+                string Sql = "update [XcXm].[dbo].[tblUserInfo] set UserType =2 where UserId ='" + UserId + "'";
+                Result = CarryOutSqlSentence(Sql);
+                return Result;
+            }
+            else
+            {
+                return 0;
+            }
+
         }
     }
 }

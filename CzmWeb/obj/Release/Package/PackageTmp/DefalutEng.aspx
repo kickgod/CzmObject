@@ -17,22 +17,84 @@
     <script src="../Js/scroll.js"></script>
     <link href="CSS/BootsrapDefaultENG.css" rel="stylesheet" />
     <script type="text/javascript">
-        window.onload = function () {
-            $('.carousel').carousel();
-            $('#identifier').carousel('cycle');
-            $('#identifier').carousel({
-                interval: 1000
-            });
-        }
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('.list_lh li:even').addClass('lieven');
-        })
+        });
         $(function () {
             $("div.list_lh").myScroll({
                 speed: 30,
                 rowHeight: 68
             });
         });
+        if (window.matchMedia("(min-width:480px) and (max-width:767px)").matches) {
+            var Row = document.getElementById("NewProductShow");
+            var RowType = document.getElementById("RowProductTypeShow");
+            var RowProjext = document.getElementById("ProjectHave");
+            var DivList = RowType.getElementsByTagName("div");
+            for (var i = 0; i < DivList.length; i++) {
+                DivList[i].className = "col-md-3 col-sm-6 col-xs-6";
+            }
+            var DivTypeList = Row.getElementsByTagName("div");
+            for (var i = 0; i < DivTypeList.length; i++) {
+                DivTypeList[i].className = "col-md-3 col-sm-6 col-xs-6";
+            }
+            var DivProjectList = RowProjext.getElementsByTagName("div");
+            for (var i = 0; i < DivProjectList.length; i++) {
+                DivProjectList[i].className = "col-md-3 col-sm-6 col-xs-6";
+            }
+        } else if (window.matchMedia("(min-width:0px) and (max-width:479px)").matches) {
+            var Row = document.getElementById("NewProductShow");
+            var RowType = document.getElementById("RowProductTypeShow");
+            var RowProjext = document.getElementById("ProjectHave");
+            var DivList = Row.getElementsByTagName("div");
+            for (var i = 0; i < DivList.length; i++) {
+                DivList[i].className = "col-md-3 col-sm-6 col-xs-12";
+            }
+            var DivTypeList = RowType.getElementsByTagName("div");
+            for (var i = 0; i < DivTypeList.length; i++) {
+                DivTypeList[i].className = "col-md-3 col-sm-6 col-xs-12";
+            }
+            var DivProjectList = RowProjext.getElementsByTagName("div");
+            for (var i = 0; i < DivProjectList.length; i++) {
+                DivProjectList[i].className = "col-md-3 col-sm-6 col-xs-12";
+            }
+        }
+
+        window.onresize = function () {
+            if (window.matchMedia("(min-width:480px) and (max-width:767px)").matches) {
+                var Row = document.getElementById("NewProductShow");
+                var RowType = document.getElementById("RowProductTypeShow");
+                var RowProjext = document.getElementById("ProjectHave");
+                var DivList = RowType.getElementsByTagName("div");
+                for (var i = 0; i < DivList.length; i++) {
+                    DivList[i].className = "col-md-3 col-sm-6 col-xs-6";
+                }
+                var DivTypeList = Row.getElementsByTagName("div");
+                for (var i = 0; i < DivTypeList.length; i++) {
+                    DivTypeList[i].className = "col-md-3 col-sm-6 col-xs-6";
+                }
+                var DivProjectList = RowProjext.getElementsByTagName("div");
+                for (var i = 0; i < DivProjectList.length; i++) {
+                    DivProjectList[i].className = "col-md-3 col-sm-6 col-xs-6";
+                }
+            } else if (window.matchMedia("(min-width:0px) and (max-width:479px)").matches) {
+                var Row = document.getElementById("NewProductShow");
+                var RowType = document.getElementById("RowProductTypeShow");
+                var RowProjext = document.getElementById("ProjectHave");
+                var DivList = Row.getElementsByTagName("div");
+                for (var i = 0; i < DivList.length; i++) {
+                    DivList[i].className = "col-md-3 col-sm-6 col-xs-12";
+                }
+                var DivTypeList = RowType.getElementsByTagName("div");
+                for (var i = 0; i < DivTypeList.length; i++) {
+                    DivTypeList[i].className = "col-md-3 col-sm-6 col-xs-12";
+                }
+                var DivProjectList = RowProjext.getElementsByTagName("div");
+                for (var i = 0; i < DivProjectList.length; i++) {
+                    DivProjectList[i].className = "col-md-3 col-sm-6 col-xs-12";
+                }
+            }
+        }
     </script>
     <style type="text/css">
         .OnMouseOver{}
@@ -78,7 +140,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../DefalutEng.aspx"><strong class="CZMBrandCompany">CZM</strong></a>
+                <a class="navbar-brand" target="_blank" href="../DefalutEng.aspx"><strong class="CZMBrandCompany">CZM</strong></a>
             </div>
             <div class="collapse navbar-collapse" id="example-navbar-collapse">
                 <ul class="nav navbar-nav">
@@ -88,7 +150,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="../Default.aspx" target="blank" >Chinese</a></li>
-                            <li><a href="../DefalutEng.aspx"  >English</a></li>
+                            <li><a href="../DefalutEng.aspx" target="_blank"  >English</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -96,8 +158,9 @@
                             Login <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="../UserPage/UserPageLogin.aspx"><span class="glyphicon glyphicon-user"></span>log In Immediately</a></li>
-                            <li><a href="../UserPage/UserPageRegister.aspx"><span class="glyphicon glyphicon-log-in"></span>Sign up now</a></li>
+                            <li><a href="../UserPage/UserPageLogin.aspx" target="_blank" ><span class="glyphicon glyphicon-user"></span>log In Immediately</a></li>
+                            <li><a href="../UserPage/UserPageRegister.aspx" target="_blank" ><span class="glyphicon glyphicon-log-in"></span>Sign up now</a></li>
+                            <li><a href="../UserPage/UserbecomeTypeHigh.aspx" target="_blank" ><span class="glyphicon glyphicon-home"></span>Personal Center</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -105,15 +168,15 @@
                             User function <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="active"><a href="DefalutEng.aspx">Home Page</a></li>
-                            <li><a href="../UserPage/UserProductTypeShow.aspx">Product Catagory</a></li>
-                            <li><a href="../UserPage/UserNewProductShow.aspx">New</a></li>
-                            <li><a href="../UserPage/UserCreateProject.aspx">Project Applay</a></li>
-                            <li><a href="../UserPage/UserInvestProject.aspx">Invest</a></li>
-                            <li><a href="../UserPage/UserProjectShow.aspx">Display</a></li>
-                            <li><a href="#Watchlive">Live Webcast</a></li>
-                            <li><a href="../UserPage/UserVedioShowList.aspx">Video List</a></li>
-                            <li><a href="../UserPage/UserConmunicationApace.aspx">Communication</a></li>
+                            <li class="active"><a href="DefalutEng.aspx" target="_blank">Home Page</a></li>
+                            <li><a target="_blank" href="../UserPage/UserProductTypeShow.aspx">Product Catagory</a></li>
+                            <li><a target="_blank" href="../UserPage/UserNewProductShow.aspx">New</a></li>
+                            <li><a target="_blank" href="../UserPage/UserCreateProject.aspx">Project Applay</a></li>
+                            <li><a target="_blank" href="../UserPage/UserInvestProject.aspx">Invest</a></li>
+                            <li><a target="_blank" href="../UserPage/UserProjectShow.aspx">Display</a></li>
+                            <li><a target="_blank" href="#Watchlive">Live Webcast</a></li>
+                            <li><a target="_blank" href="../UserPage/UserVedioShowList.aspx">Video List</a></li>
+                            <li><a target="_blank"  href="../UserPage/UserConmunicationApace.aspx">Communication</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -123,7 +186,7 @@
     <nav class="navbar navbar-default" role="navigation" id="ShowPhoneIfEnd">
         <div class="container-fluid"> 
             <div class="navbar-header">
-                <a class="navbar-brand" href="../DefalutEng.aspx"><strong class="CZMBrandCompany">CZM</strong></a>
+                <a class="navbar-brand" href="../DefalutEng.aspx" target="_blank" ><strong class="CZMBrandCompany">CZM</strong></a>
             </div>
             <div>
                 <!--向左对齐-->
@@ -134,15 +197,15 @@
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
-                            <li class="active"><a href="../DefalutEng.aspx">Home Page</a></li>
-                            <li><a href="../UserPage/UserProductTypeShow.aspx">Product Catagory</a></li>
-                            <li><a href="../UserPage/UserNewProductShow.aspx">New</a></li>
-                            <li><a href="../UserPage/UserCreateProject.aspx">Project Applay</a></li>
-                            <li><a href="../UserPage/UserInvestProject.aspx">Invest</a></li>
-                            <li><a href="../UserPage/UserProjectShow.aspx">Display</a></li>
-                            <li><a href="#Watchlive">Live Webcast</a></li>
-                            <li><a href="../UserPage/UserVedioShowList.aspx">Video List</a></li>
-                            <li><a href="../UserPage/UserConmunicationApace.aspx">Communication</a></li>
+                            <li class="active"><a target="_blank" href="../DefalutEng.aspx">Home Page</a></li>
+                            <li><a target="_blank" href="../UserPage/UserProductTypeShow.aspx">Product Catagory</a></li>
+                            <li><a target="_blank" href="../UserPage/UserNewProductShow.aspx">New</a></li>
+                            <li><a target="_blank" href="../UserPage/UserCreateProject.aspx">Project Applay</a></li>
+                            <li><a target="_blank" href="../UserPage/UserInvestProject.aspx">Invest</a></li>
+                            <li><a target="_blank" href="../UserPage/UserProjectShow.aspx">Display</a></li>
+                            <li><a target="_blank" href="#Watchlive">Live Webcast</a></li>
+                            <li><a target="_blank" href="../UserPage/UserVedioShowList.aspx">Video List</a></li>
+                            <li><a target="_blank" href="../UserPage/UserConmunicationApace.aspx">Communication</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -153,21 +216,22 @@
                             Login <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="../UserPage/UserPageLogin.aspx"><span class="glyphicon glyphicon-user"></span>log In Immediately</a></li>
-                            <li><a href="../UserPage/UserPageRegister.aspx"><span class="glyphicon glyphicon-log-in"></span>Sign up now</a></li>
+                            <li><a href="../UserPage/UserPageLogin.aspx" target="_blank"><span class="glyphicon glyphicon-user"></span>log In Immediately</a></li>
+                            <li><a href="../UserPage/UserPageRegister.aspx" target="_blank"><span class="glyphicon glyphicon-log-in"></span>Sign up now</a></li>
+                            <li><a href="../UserPage/UserbecomeTypeHigh.aspx" target="_blank" ><span class="glyphicon glyphicon-home"></span>Personal Center</a></li>
                         </ul>
                     </li>
                 </ul>
                 <form class="navbar-form navbar-right" role="search">
-                    <a href="../Default.aspx"  type="submit" class="btn btn-default" >Chinese</a>
-                    <a href="../DefalutEng.aspx"  type="submit" class="btn btn-default"  >English</a>
+                    <a href="../Default.aspx" target="_blank" type="submit" class="btn btn-default" >Chinese</a>
+                    <a href="../DefalutEng.aspx" target="_blank" type="submit" class="btn btn-default"  >English</a>
                 </form>
             </div>
         </div>
     </nav>
     <!--轮播图部分-->
     <div id="LunBoControl">
-        <div id="myCarousel" class="carousel slide"  data-interval=1500  >
+        <div id="myCarousel" class="carousel slide" data-ride="carousel"   data-interval=4500  >
             <!-- 轮播（Carousel）指标 -->
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" style="background-color: #000000;" data-slide-to="0" class="active"></li>
@@ -179,23 +243,23 @@
             <!-- 轮播（Carousel）项目 -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img  src="../FirstImage/图1.png"  alt="First slide">
+                    <img  src="../FirstImage/Cmp_1.png"  alt="First slide">
                     <div class="carousel-caption" style="color: #000000;"></div>
                 </div>
                 <div class="item">
-                    <img src="../FirstImage/图2.png" alt="Second slide">
+                    <img src="../FirstImage/Cmp_2.png" alt="Second slide">
                     <div class="carousel-caption" style="color: #000000;" ></div>
                 </div>
                 <div class="item">
-                    <img src="../FirstImage/图3.png" alt="Third slide">
+                    <img src="../FirstImage/Cmp_3.png" alt="Third slide">
                     <div class="carousel-caption" style="color: #000000;" ></div>
                 </div>
                 <div class="item">
-                    <img src="../FirstImage/图4.png" alt="Third slide">
+                    <img src="../FirstImage/Cmp_4.png" alt="Third slide">
                     <div class="carousel-caption" style="color: #000000;" ></div>
                 </div>
                 <div class="item">
-                    <img src="../FirstImage/图5.png" alt="Third slide">
+                    <img src="../FirstImage/Cmp_5.png" alt="Third slide">
                     <div class="carousel-caption" style="color: #000000;" ></div>
                 </div>
             </div>
@@ -238,8 +302,8 @@
                     <ItemTemplate>
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <figure>
-                                <a href="../UserPage/UserNewProductShow.aspx"><img src='<%#Eval("TypePicture")%>' ></a>                 
-                                <figcaption><span class="intro"><a href="../UserPage/UserNewProductShow.aspx" style="color: purple;font-size: 18px; font-weight: 400;">[<%#Eval("typeName_e")%>]</span></a></figcaption>
+                                <a href="../UserPage/UserNewProductShow.aspx" target="_blank" ><img src='<%#Eval("TypePicture")%>' ></a>                 
+                                <figcaption><span class="intro"><a href="../UserPage/UserNewProductShow.aspx" target="_blank" style="color: purple;font-size: 18px; font-weight: 400;">[<%#Eval("typeName_e")%>]</span></a></figcaption>
                             </figure>
                         </div>
                     </ItemTemplate>
@@ -258,12 +322,12 @@
                     <ItemTemplate>
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <figure>
-                                <a href=<%#Eval("taobaoUrl")%> ><img src='<%#Eval("ImgPatjh")%>' ></a>                
+                                <a target="_blank" href=<%#Eval("taobaoUrl")%> ><img src='<%#Eval("ImgPatjh")%>' ></a>                
                                 <figcaption>
                                     <p class="introShowWord"><span>[<%#Eval("ProductName_e")%>]</span></p>
                                     <p class="DownGoumai">
                                         <span class="MeonyChar">¥</span><span class="Meony"><%#Eval("Price_now")%></span> <span class="MeonyLastChar">¥<%#Eval("price_last")%></span>
-                                        <span><asp:HyperLink ID="hypLinkToTaoBao" runat="server"  CssClass="btn btn-primary btn-danger" NavigateUrl='<%#Eval("taobaoUrl")%>'>Purchase</asp:HyperLink></span>
+                                        <span><asp:HyperLink ID="hypLinkToTaoBao" runat="server" target="_blank"  CssClass="btn btn-primary btn-danger" NavigateUrl='<%#Eval("taobaoUrl")%>'>Purchase</asp:HyperLink></span>
                                     </p>
                                     <p class="ProductShowDiscr"> 
                                         <%#Eval("ProductDescription_e")%>
@@ -284,13 +348,13 @@
         </div>
         <section class="VedioList">
             <div class="Vedioshelf"> 
-                <div class="LeftBox" style="background-image: url(../FirstImage/diaoyu.png)"><a href="../UserPage/UserVedioShowList.aspx"><img src="../FirstImage/图标8.png"/></a></div>
-                <div class="CenterBox" style="background-image: url(../FirstImage/yihui.png);"><a href="../UserPage/UserVedioShowList.aspx"><img src="../FirstImage/图标8.png"/></a></div>
-                <div class="RightBox" style="background-image: url(../FirstImage/wenwu.png"><a href="../UserPage/UserVedioShowList.aspx"><img src="../FirstImage/图标8.png"/></a></div>
+                <div class="LeftBox" style="background-image: url(../FirstImage/diaoyu.png)"><a target="_blank" href="../UserPage/UserVedioShowList.aspx"><img src="../FirstImage/图标8.png"/></a></div>
+                <div class="CenterBox" style="background-image: url(../FirstImage/yihui.png);"><a target="_blank" href="../UserPage/UserVedioShowList.aspx"><img src="../FirstImage/图标8.png"/></a></div>
+                <div class="RightBox" style="background-image: url(../FirstImage/wenwu.png"><a target="_blank" href="../UserPage/UserVedioShowList.aspx"><img src="../FirstImage/图标8.png"/></a></div>
             </div>   
              <br/>
             <div class="LearingMoreVedio">
-                <p><a href="../UserPage/UserVedioShowList.aspx">WATCH MORE</a></p>
+                <p><a href="../UserPage/UserVedioShowList.aspx" target="_blank" >WATCH MORE</a></p>
             </div>        
         </section>  
         <!--观看直播-->
@@ -305,10 +369,10 @@
                 <ItemTemplate>
                     <div class="col-md-4 col-xs-4">
                         <figure>
-                            <asp:HyperLink ID="HypKuaiShow" CssClass="OnMouseOver" runat="server" NavigateUrl='<%#Eval("LiUrl")%>' ><img src='<%#Eval("UrlImg")%>' /></asp:HyperLink>
+                            <asp:HyperLink ID="HypKuaiShow" target="_blank" CssClass="OnMouseOver" runat="server" NavigateUrl='<%#Eval("LiUrl")%>' ><img src='<%#Eval("UrlImg")%>' /></asp:HyperLink>
                             <figcaption>
                                 <br/>
-                                <asp:HyperLink ID="HypKuaiShow2" CssClass="OnMouseOver"  NavigateUrl='<%#Eval("LiUrl")%>' runat="server">
+                                <asp:HyperLink ID="HypKuaiShow2" target="_blank" CssClass="OnMouseOver"  NavigateUrl='<%#Eval("LiUrl")%>' runat="server">
                                     <span class="LiveIng">
                                         <asp:Label ID="lblkuaishou" runat="server" Text='<%#Eval("LiTitleEng") %>' ></asp:Label>
                                     </span>
@@ -347,7 +411,7 @@
                     <asp:Repeater ID="reptmProject" runat="server">
                         <ItemTemplate>
                             <div class="item">
-                                <a href="#"><img class="imgLunbo2shoji" src=<%#Eval("ImgPicturPath")%>  alt="First slide"></a>
+                                <a target="_blank" href="../UserPage/UserProjectShow.aspx"><img class="imgLunbo2shoji" src=<%#Eval("ImgPicturPath")%>  alt="First slide"></a>
                                 <div class="carousel-caption" style="color: #000000;">
                                     <p class="ShowIntorductiOfpROJECT">
                                         <span class="ProjectName">[项目：<%#Eval("PciName_c")%>]</span><br/>
@@ -441,10 +505,10 @@
                             <a href="#CompanyIntroduction" >Company description</a>
                         </td>
                         <td align="center">
-                            <a href="../UserPage/UserInvestProjectCHN.aspx" >Cooperative investment</a>
+                            <a href="../UserPage/UserInvestProjectCHN.aspx" target="_blank" >Cooperative investment</a>
                         </td>
                         <td align="center">
-                            <a href="../UserPage/UserConmunicationApaceCHN.aspx">Online consulting</a>
+                            <a href="../UserPage/UserConmunicationApaceCHN.aspx" target="_blank" >Online consulting</a>
                         </td>
                     </tr>
                     <tr>
@@ -487,9 +551,9 @@
             <p>More surprises</p>
         </div>
         <div class="lanmu">
-            <a href="../UserPage/UserPageLogin.aspx"><img src="../Images/SystemPicture/userLanse.png" title="User Login"/></a>
-            <a href="../UserPage/UserConmunicationApace.aspx"><img src="../Images/SystemPicture/zixunlanse.png" title="Online"/></a>
-            <a href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="../Images/SystemPicture/阿里旺旺.png" title="Ali Server" /></a>
+            <a target="_blank" href="../UserPage/UserPageLogin.aspx"><img src="../Images/SystemPicture/userLanse.png" title="User Login"/></a>
+            <a target="_blank" href="../UserPage/UserConmunicationApace.aspx"><img src="../Images/SystemPicture/zixunlanse.png" title="Online"/></a>
+            <a target="_blank" href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="../Images/SystemPicture/阿里旺旺.png" title="Ali Server" /></a>
             <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2212901&site=qq&menu=yes"><img src="../Images/SystemPicture/qqlanse.png" title="QQ Server" /></a>
             <a href="#"><img src="../Images/SystemPicture/zhidinglanse.png" title="Home" /></a>
         </div>

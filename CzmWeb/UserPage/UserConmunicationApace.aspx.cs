@@ -19,10 +19,7 @@ namespace CzmWeb.UserPage
         PublicUserJudge Judge = new PublicUserJudge();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["User"] == null)
-            {
-                MessageBoxResponse("You are not logged in, login timeout");
-            }
+
         }
 
         private void MessageBoxResponse(string msg)

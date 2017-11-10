@@ -129,17 +129,12 @@
         function Login() {
             var UserID = document.getElementById("<%=txtUserID.ClientID%>");
             var UserPwd = document.getElementById("<%=txtUserPwds.ClientID%>");
-            var VaildCode = document.getElementById("<%=txtVaildCode.ClientID%>");
             if (UserID.value == "") {
                 alert("请输入你的ID");
                 return false;
             }
             if (UserPwd.value == "") {
                 alert("请输入你的密码");
-                return false;
-            }
-            if (VaildCode.value == "") {
-                alert("请输入验证码");
                 return false;
             }
             return true;
@@ -159,11 +154,6 @@
                     <p class="UserID">
                         <img src="../Images/SystemPicture/Userpwd.png"/>
                         <asp:TextBox ID="txtUserPwds" CssClass="txtUserIDs" TextMode="Password" placeholder="请输入密码" runat="server"></asp:TextBox>
-                    </p>
-                    <p class="ValidCode">
-                        <img src="../Images/SystemPicture/validcoed.png"/>
-                        <asp:TextBox ID="txtVaildCode" CssClass="txtUserpwds" placeholder="验证码" runat="server"></asp:TextBox>
-                        <asp:Button ID="BtnSendCode" CssClass="BtnSendCodes" runat="server" Text="发送" OnClick="BtnSendCode_Click" OnClientClick="return SendCode() "  />
                     </p>
                     <p class="LoginBtn">
                         <asp:Button ID="btnLogin" CssClass="BtnLogin TFS_Standardstyle" runat="server" Text="登录" OnClick="btnLogin_Click" />

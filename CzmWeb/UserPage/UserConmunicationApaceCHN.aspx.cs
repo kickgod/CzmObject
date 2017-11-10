@@ -18,10 +18,7 @@ namespace CzmWeb.UserPage
         PublicUserJudge Judge = new PublicUserJudge();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["User"] == null)
-            {
-                MessageBoxResponse("尚未登录！或登录超时！");
-            }
+
         }
         private void MessageBoxResponse(string msg)
         {

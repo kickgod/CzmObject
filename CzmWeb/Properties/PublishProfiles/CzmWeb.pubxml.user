@@ -34,7 +34,7 @@
       <publishTime>11/05/2017 18:23:00</publishTime>
     </File>
     <File Include="BackendManage/BackAdmin.aspx">
-      <publishTime>11/03/2017 17:40:11</publishTime>
+      <publishTime>11/09/2017 14:59:36</publishTime>
     </File>
     <File Include="BackendManage/InvestPlaceAdd.aspx">
       <publishTime>10/28/2017 15:06:54</publishTime>
@@ -55,7 +55,7 @@
       <publishTime>11/06/2017 00:02:46</publishTime>
     </File>
     <File Include="BackendManage/ProductTypeAdd.aspx">
-      <publishTime>11/05/2017 23:47:46</publishTime>
+      <publishTime>11/09/2017 15:57:32</publishTime>
     </File>
     <File Include="BackendManage/ProjectInformation.aspx">
       <publishTime>11/05/2017 18:57:15</publishTime>
@@ -64,19 +64,22 @@
       <publishTime>11/05/2017 13:03:14</publishTime>
     </File>
     <File Include="BackendManage/UserApplyCheck.aspx">
-      <publishTime>10/29/2017 19:46:59</publishTime>
+      <publishTime>11/09/2017 18:08:26</publishTime>
     </File>
     <File Include="BackendManage/UserSuggestionListChinese.aspx">
-      <publishTime>11/04/2017 17:04:18</publishTime>
+      <publishTime>11/09/2017 17:53:43</publishTime>
     </File>
     <File Include="BackendManage/UserSuggestionsList.aspx">
       <publishTime>10/28/2017 15:30:18</publishTime>
+    </File>
+    <File Include="BackendManage/UserUpradeList.aspx">
+      <publishTime>11/09/2017 18:25:35</publishTime>
     </File>
     <File Include="BackendManage/UserValidCheck.aspx">
       <publishTime>11/06/2017 11:44:45</publishTime>
     </File>
     <File Include="BackendManage/VedioListAndUp.aspx">
-      <publishTime>10/27/2017 21:57:55</publishTime>
+      <publishTime>11/09/2017 16:34:28</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>09/24/2017 10:23:00</publishTime>
@@ -88,7 +91,7 @@
       <publishTime>09/24/2017 10:23:01</publishTime>
     </File>
     <File Include="bin/CzmWeb.dll">
-      <publishTime>11/06/2017 11:44:59</publishTime>
+      <publishTime>11/09/2017 18:26:36</publishTime>
     </File>
     <File Include="bin/DoEasyClassLib.dll">
       <publishTime>09/22/2017 21:04:06</publishTime>
@@ -214,7 +217,7 @@
       <publishTime>10/08/2017 17:26:21</publishTime>
     </File>
     <File Include="Common/wuc_FileVedio.ascx">
-      <publishTime>10/23/2017 22:38:30</publishTime>
+      <publishTime>11/08/2017 01:05:38</publishTime>
     </File>
     <File Include="Common/wuc_ListPager.ascx">
       <publishTime>10/09/2017 20:03:26</publishTime>
@@ -223,7 +226,7 @@
       <publishTime>10/19/2017 16:17:45</publishTime>
     </File>
     <File Include="Contact.aspx">
-      <publishTime>10/03/2017 09:31:36</publishTime>
+      <publishTime>11/07/2017 23:39:29</publishTime>
     </File>
     <File Include="Content/BtnGethupStyle.css">
       <publishTime>09/25/2017 21:56:51</publishTime>
@@ -238,7 +241,7 @@
       <publishTime>09/25/2017 21:56:51</publishTime>
     </File>
     <File Include="Content/InputFileUploadStyle.css">
-      <publishTime>09/25/2017 21:56:51</publishTime>
+      <publishTime>11/08/2017 01:05:38</publishTime>
     </File>
     <File Include="Content/Site.css">
       <publishTime>09/24/2017 10:22:56</publishTime>
@@ -415,13 +418,13 @@
       <publishTime>10/04/2017 16:09:20</publishTime>
     </File>
     <File Include="CSS/BootsrapDefaultCHN.css">
-      <publishTime>11/04/2017 10:11:06</publishTime>
+      <publishTime>11/07/2017 13:10:43</publishTime>
     </File>
     <File Include="CSS/BootsrapDefaultENG.css">
-      <publishTime>11/04/2017 10:09:51</publishTime>
+      <publishTime>11/07/2017 13:10:41</publishTime>
     </File>
     <File Include="CSS/BootsrapMuBan.css">
-      <publishTime>11/05/2017 10:28:09</publishTime>
+      <publishTime>11/09/2017 18:14:03</publishTime>
     </File>
     <File Include="CSS/button.css">
       <publishTime>10/06/2017 23:20:34</publishTime>
@@ -505,10 +508,10 @@
       <publishTime>09/22/2017 21:04:18</publishTime>
     </File>
     <File Include="DefalutEng.aspx">
-      <publishTime>11/04/2017 23:55:38</publishTime>
+      <publishTime>11/08/2017 22:49:11</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>11/06/2017 00:12:10</publishTime>
+      <publishTime>11/09/2017 17:51:12</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>09/24/2017 10:22:56</publishTime>
@@ -527,6 +530,21 @@
     </File>
     <File Include="FirstImage/5_CompanyFeture_c.jpg">
       <publishTime>10/28/2017 17:52:02</publishTime>
+    </File>
+    <File Include="FirstImage/Cmp_1.png">
+      <publishTime>10/28/2017 21:34:17</publishTime>
+    </File>
+    <File Include="FirstImage/Cmp_2.png">
+      <publishTime>10/28/2017 21:34:17</publishTime>
+    </File>
+    <File Include="FirstImage/Cmp_3.png">
+      <publishTime>10/28/2017 21:34:17</publishTime>
+    </File>
+    <File Include="FirstImage/Cmp_4.png">
+      <publishTime>10/28/2017 21:34:17</publishTime>
+    </File>
+    <File Include="FirstImage/Cmp_5.png">
+      <publishTime>10/28/2017 21:34:17</publishTime>
     </File>
     <File Include="FirstImage/diaoyu.png">
       <publishTime>09/27/2017 15:44:53</publishTime>
@@ -729,11 +747,89 @@
     <File Include="Global.asax">
       <publishTime>09/24/2017 10:22:56</publishTime>
     </File>
+    <File Include="Images/2017102821478558.png">
+      <publishTime>10/28/2017 21:47:08</publishTime>
+    </File>
+    <File Include="Images/2017102902334113.jpg">
+      <publishTime>10/29/2017 00:23:34</publishTime>
+    </File>
+    <File Include="Images/2017102903256739.png">
+      <publishTime>10/29/2017 00:32:56</publishTime>
+    </File>
+    <File Include="Images/201710290348332.png">
+      <publishTime>10/29/2017 00:34:08</publishTime>
+    </File>
+    <File Include="Images/2017102904032432.png">
+      <publishTime>10/29/2017 00:40:32</publishTime>
+    </File>
+    <File Include="Images/201710290425663.png">
+      <publishTime>10/29/2017 00:42:05</publishTime>
+    </File>
+    <File Include="Images/2017102911836732.png">
+      <publishTime>10/29/2017 01:18:36</publishTime>
+    </File>
+    <File Include="Images/2017102912012961.bmp">
+      <publishTime>10/29/2017 01:20:12</publishTime>
+    </File>
+    <File Include="Images/2017102912129739.bmp">
+      <publishTime>10/29/2017 01:21:29</publishTime>
+    </File>
+    <File Include="Images/2017102912232929.jpg">
+      <publishTime>10/29/2017 01:22:32</publishTime>
+    </File>
+    <File Include="Images/201710294331663.bmp">
+      <publishTime>10/29/2017 04:33:01</publishTime>
+    </File>
+    <File Include="Images/2017102943437343.png">
+      <publishTime>10/29/2017 04:34:37</publishTime>
+    </File>
+    <File Include="Images/2017102943856266.bmp">
+      <publishTime>10/29/2017 04:38:56</publishTime>
+    </File>
+    <File Include="Images/2017102944712378.png">
+      <publishTime>10/29/2017 04:47:12</publishTime>
+    </File>
+    <File Include="Images/2017102945045307.png">
+      <publishTime>10/29/2017 04:50:45</publishTime>
+    </File>
+    <File Include="Images/2017102945211892.png">
+      <publishTime>10/29/2017 04:52:11</publishTime>
+    </File>
+    <File Include="Images/2017102945422308.png">
+      <publishTime>10/29/2017 04:54:22</publishTime>
+    </File>
+    <File Include="Images/201710294557360.png">
+      <publishTime>10/29/2017 04:55:07</publishTime>
+    </File>
+    <File Include="Images/201710295030450.png">
+      <publishTime>10/29/2017 05:00:30</publishTime>
+    </File>
+    <File Include="Images/201710295135851.png">
+      <publishTime>10/29/2017 05:13:58</publishTime>
+    </File>
+    <File Include="Images/201710295738629.png">
+      <publishTime>10/29/2017 05:07:38</publishTime>
+    </File>
+    <File Include="Images/201710295944437.png">
+      <publishTime>10/29/2017 05:09:44</publishTime>
+    </File>
     <File Include="Images/2017104162454690.jpg">
       <publishTime>10/04/2017 16:24:54</publishTime>
     </File>
     <File Include="Images/201710416920346.jpg">
       <publishTime>10/04/2017 16:09:20</publishTime>
+    </File>
+    <File Include="Images/2017117112048512.jpg">
+      <publishTime>11/07/2017 11:20:48</publishTime>
+    </File>
+    <File Include="Images/2017117143810747.jpg">
+      <publishTime>11/07/2017 14:38:10</publishTime>
+    </File>
+    <File Include="Images/20171191345850.gif">
+      <publishTime>11/09/2017 13:45:08</publishTime>
+    </File>
+    <File Include="Images/20171191345855.gif">
+      <publishTime>11/09/2017 13:45:08</publishTime>
     </File>
     <File Include="Images/accent.png">
       <publishTime>09/24/2017 10:22:56</publishTime>
@@ -1434,11 +1530,29 @@
     <File Include="Js/scroll.js">
       <publishTime>10/21/2017 15:08:50</publishTime>
     </File>
+    <File Include="Master/2.gif">
+      <publishTime>11/08/2017 18:57:58</publishTime>
+    </File>
+    <File Include="Master/BigFengCheng.gif">
+      <publishTime>11/08/2017 18:57:58</publishTime>
+    </File>
+    <File Include="Master/Pacman.gif">
+      <publishTime>11/08/2017 18:57:58</publishTime>
+    </File>
+    <File Include="Master/P_tatata三角形.gif">
+      <publishTime>11/08/2017 18:57:58</publishTime>
+    </File>
+    <File Include="Master/P_掉星星.gif">
+      <publishTime>11/08/2017 18:57:58</publishTime>
+    </File>
+    <File Include="Master/Stardered.gif">
+      <publishTime>11/08/2017 18:57:58</publishTime>
+    </File>
     <File Include="Master/UserPageMaster.Master">
-      <publishTime>11/05/2017 16:37:58</publishTime>
+      <publishTime>11/07/2017 12:49:13</publishTime>
     </File>
     <File Include="Master/UserPageMasters.Master">
-      <publishTime>11/05/2017 16:37:47</publishTime>
+      <publishTime>11/07/2017 12:30:22</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>09/24/2017 10:23:06</publishTime>
@@ -1464,6 +1578,27 @@
     <File Include="ProductImage/20171081887953.jpg">
       <publishTime>10/08/2017 18:08:07</publishTime>
     </File>
+    <File Include="ProductImage/2017117102612606.jpg">
+      <publishTime>11/07/2017 10:26:12</publishTime>
+    </File>
+    <File Include="ProductImage/201711710572090.jpg">
+      <publishTime>11/07/2017 10:57:20</publishTime>
+    </File>
+    <File Include="ProductImage/2017117111230997.jpg">
+      <publishTime>11/07/2017 11:12:30</publishTime>
+    </File>
+    <File Include="ProductImage/2017117111729176.jpg">
+      <publishTime>11/07/2017 11:17:29</publishTime>
+    </File>
+    <File Include="ProductImage/20171171192928.jpg">
+      <publishTime>11/07/2017 11:09:29</publishTime>
+    </File>
+    <File Include="ProductImage/20171171449036.jpg">
+      <publishTime>11/07/2017 14:49:00</publishTime>
+    </File>
+    <File Include="ProductImage/201711715521653.jpg">
+      <publishTime>11/07/2017 15:05:21</publishTime>
+    </File>
     <File Include="ProductImage/productType1.jpg">
       <publishTime>09/26/2017 19:00:00</publishTime>
     </File>
@@ -1487,6 +1622,9 @@
     </File>
     <File Include="ProductImage/首页9.jpg">
       <publishTime>09/26/2017 19:00:00</publishTime>
+    </File>
+    <File Include="ProgressBar.htm">
+      <publishTime>11/08/2017 19:17:06</publishTime>
     </File>
     <File Include="Scripts/jquery-1.8.2.js">
       <publishTime>09/24/2017 10:22:57</publishTime>
@@ -1567,76 +1705,91 @@
       <publishTime>09/24/2017 10:23:02</publishTime>
     </File>
     <File Include="Site.Master">
-      <publishTime>09/24/2017 10:22:56</publishTime>
+      <publishTime>11/08/2017 19:17:32</publishTime>
     </File>
     <File Include="Site.Mobile.Master">
       <publishTime>09/24/2017 10:23:05</publishTime>
     </File>
+    <File Include="UserPage/UserbecomeTypeHigh.aspx">
+      <publishTime>11/09/2017 18:17:25</publishTime>
+    </File>
+    <File Include="UserPage/UserbecomeTypeHighCHN.aspx">
+      <publishTime>11/09/2017 18:17:10</publishTime>
+    </File>
     <File Include="UserPage/UserConmunicationApace.aspx">
-      <publishTime>11/05/2017 10:54:28</publishTime>
+      <publishTime>11/09/2017 17:59:14</publishTime>
     </File>
     <File Include="UserPage/UserConmunicationApaceCHN.aspx">
-      <publishTime>11/05/2017 10:56:53</publishTime>
+      <publishTime>11/09/2017 15:38:03</publishTime>
     </File>
     <File Include="UserPage/UserCreateProject.aspx">
-      <publishTime>11/05/2017 17:06:09</publishTime>
+      <publishTime>11/08/2017 22:23:40</publishTime>
     </File>
     <File Include="UserPage/UserCreateProjectCHN.aspx">
-      <publishTime>11/05/2017 10:44:38</publishTime>
+      <publishTime>11/09/2017 15:37:52</publishTime>
     </File>
     <File Include="UserPage/UserForgetCode.aspx">
-      <publishTime>11/05/2017 22:19:32</publishTime>
+      <publishTime>11/09/2017 14:26:53</publishTime>
     </File>
     <File Include="UserPage/UserInvestProject.aspx">
-      <publishTime>11/05/2017 10:08:22</publishTime>
+      <publishTime>11/08/2017 21:52:45</publishTime>
     </File>
     <File Include="UserPage/UserInvestProjectCHN.aspx">
-      <publishTime>11/04/2017 16:23:07</publishTime>
+      <publishTime>11/09/2017 15:37:38</publishTime>
     </File>
     <File Include="UserPage/UserMuBan.aspx">
       <publishTime>10/28/2017 15:07:50</publishTime>
     </File>
     <File Include="UserPage/UserNewProductShow.aspx">
-      <publishTime>11/05/2017 01:17:12</publishTime>
+      <publishTime>11/07/2017 19:06:32</publishTime>
     </File>
     <File Include="UserPage/UserNewProductShowCHN.aspx">
-      <publishTime>11/04/2017 14:10:42</publishTime>
+      <publishTime>11/09/2017 15:37:23</publishTime>
     </File>
     <File Include="UserPage/UserPageLogin.aspx">
-      <publishTime>11/05/2017 16:32:24</publishTime>
+      <publishTime>11/08/2017 22:19:30</publishTime>
     </File>
     <File Include="UserPage/UserPageLoginCHN.aspx">
-      <publishTime>11/05/2017 12:55:23</publishTime>
+      <publishTime>11/08/2017 20:33:20</publishTime>
     </File>
     <File Include="UserPage/UserPageRegister.aspx">
-      <publishTime>11/05/2017 16:38:33</publishTime>
+      <publishTime>11/09/2017 14:32:04</publishTime>
     </File>
     <File Include="UserPage/UserPageRegisterCHN.aspx">
-      <publishTime>11/05/2017 16:39:05</publishTime>
+      <publishTime>11/09/2017 15:43:51</publishTime>
     </File>
     <File Include="UserPage/UserProductTypeShow.aspx">
-      <publishTime>11/05/2017 23:32:41</publishTime>
+      <publishTime>11/08/2017 22:06:10</publishTime>
     </File>
     <File Include="UserPage/UserProductTypeShowCHN.aspx">
-      <publishTime>11/05/2017 23:32:35</publishTime>
+      <publishTime>11/09/2017 15:44:09</publishTime>
     </File>
     <File Include="UserPage/UserProjectShow.aspx">
-      <publishTime>11/05/2017 12:57:55</publishTime>
+      <publishTime>11/09/2017 15:46:19</publishTime>
     </File>
     <File Include="UserPage/UserProjectShowCHN.aspx">
-      <publishTime>11/04/2017 16:10:19</publishTime>
+      <publishTime>11/09/2017 15:45:45</publishTime>
     </File>
     <File Include="UserPage/UserVedioShowList.aspx">
-      <publishTime>11/05/2017 10:50:27</publishTime>
+      <publishTime>11/09/2017 18:16:10</publishTime>
     </File>
     <File Include="UserPage/UserVedioShowListCHE.aspx">
-      <publishTime>11/05/2017 23:32:26</publishTime>
+      <publishTime>11/09/2017 15:36:16</publishTime>
     </File>
     <File Include="VedioList/2017102413124848.jpg">
       <publishTime>10/23/2017 22:56:08</publishTime>
     </File>
     <File Include="VedioList/2017102413124848.webm">
       <publishTime>10/24/2017 13:12:04</publishTime>
+    </File>
+    <File Include="VedioList/20171024215330535.mp4">
+      <publishTime>10/24/2017 21:53:30</publishTime>
+    </File>
+    <File Include="VedioList/2017119161035900.mp4">
+      <publishTime>11/09/2017 16:10:35</publishTime>
+    </File>
+    <File Include="VedioList/201711916918771.mp4">
+      <publishTime>11/09/2017 16:09:18</publishTime>
     </File>
     <File Include="VedioList/招聘.webm">
       <publishTime>10/24/2017 12:54:43</publishTime>
@@ -1645,7 +1798,7 @@
       <publishTime>09/24/2017 10:23:05</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/06/2017 00:03:26</publishTime>
+      <publishTime>11/09/2017 16:55:07</publishTime>
     </File>
   </ItemGroup>
 </Project>

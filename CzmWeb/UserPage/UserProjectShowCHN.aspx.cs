@@ -37,13 +37,6 @@ namespace CzmWeb.UserPage
         {
             reptemNewProduct.DataSource = DB.CarryOutSqlGeDataTable("SELECT TOP 9 * FROM [XcXm].[dbo].[tblProjectCreate] WHERE PciState = 30 order by PciTime");
             reptemNewProduct.DataBind();
-            if (Session["User"] != null)
-            {
-                reptmMy.DataSource = DB.CarryOutSqlGeDataTable("SELECT * FROM tblProjectCreate WHERE UserId ='" + Session["User"].ToString() + "'");
-                reptmMy.DataBind();
-            }
-            Repeater1.DataSource = getTable.GetAllDataFromtblProjectInvestInfo("UserId ='" + Session["User"].ToString() + "'");
-            Repeater1.DataBind();
         }
         private void MessaegBox(String msg)
         {

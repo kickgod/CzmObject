@@ -307,7 +307,7 @@
                 }
             }
         </script>
-        <header class="PhoneHead" id="daohanglanPhone">
+<header class="PhoneHead" id="daohanglanPhone">
             <div class="headerTtile">
                 <div class="left">
                     <span>创造门</span>
@@ -320,35 +320,35 @@
                     <a href="javascript:ShowHead()"><img  src="../Images/SystemPicture/zhedie.png" width="50px" height="50px"/></a>
                 </div>
             </div>
-        </header>
+</header>
         <div class="Head" id="headerCaidan">
             <div class="logo"><i class="Font_Title">创造门</i></div>
             <div class="Nav">
                 <ul>
-                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneFirstPage20171001.png"/><a href="../DefalutEng.aspx"><asp:Label ID="lblFisrtPage" runat="server" CssClass="FontColor" Text="Home"></asp:Label></a></li>
-                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneType20171001.png"/><a href="../UserPage/UserProductTypeShow.aspx"><asp:Label ID="lbl_Product_type"  runat="server" CssClass="FontColor"  Text="Product Catagory"></asp:Label></a></li>
-                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneNewProject20171001.png"/><a href="../UserPage/UserNewProductShow.aspx"><asp:Label ID="lbl_NewProduct"    runat="server"  CssClass="FontColor" Text="New"></asp:Label></a></li>
-                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneCreate20171001.png"/><a href="../UserPage/UserCreateProject.aspx"><asp:Label ID="lbl_CreateProject" runat="server" CssClass="FontColor"  Text="Project Applay"></asp:Label></a></li>
-                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneInvest20171001.png"/><a href="../UserPage/UserInvestProject.aspx"><asp:Label ID="lbl_Create_Invert" runat="server" CssClass="FontColor"  Text="Invest"></asp:Label></a></li>
-                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneShoe20171001.png"/><a href="../UserPage/UserProjectShow.aspx"><asp:Label ID="lbl_Project_show" runat="server" CssClass="FontColor"  Text="Display"></asp:Label></a></li>
-                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneVedio20171001.png"/><a href="../UserPage/UserVedioShowList.aspx"><asp:Label ID="lbl_Look_Vedio" runat="server"  CssClass="FontColor" Text="Video"></asp:Label></a></li>
-                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneConection20171001.png"/><a href="../UserPage/UserConmunicationApace.aspx"><asp:Label ID="lblChangeSpace" runat="server"  CssClass="FontColor" Text="Communication"></asp:Label></a></li>
+                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneFirstPage20171001.png"/><a target="_blank" href="../DefalutEng.aspx"><asp:Label ID="lblFisrtPage" runat="server" CssClass="FontColor" Text="Home"></asp:Label></a></li>
+                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneType20171001.png"/><a target="_blank" href="../UserPage/UserProductTypeShow.aspx"><asp:Label ID="lbl_Product_type"  runat="server" CssClass="FontColor"  Text="Product Catagory"></asp:Label></a></li>
+                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneNewProject20171001.png"/><a target="_blank" href="../UserPage/UserNewProductShow.aspx"><asp:Label ID="lbl_NewProduct"    runat="server"  CssClass="FontColor" Text="New"></asp:Label></a></li>
+                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneCreate20171001.png"/><a target="_blank" href="../UserPage/UserCreateProject.aspx"><asp:Label ID="lbl_CreateProject" runat="server" CssClass="FontColor"  Text="Project Applay"></asp:Label></a></li>
+                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneInvest20171001.png"/><a target="_blank" href="../UserPage/UserInvestProject.aspx"><asp:Label ID="lbl_Create_Invert" runat="server" CssClass="FontColor"  Text="Invest"></asp:Label></a></li>
+                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneShoe20171001.png"/><a target="_blank" href="../UserPage/UserProjectShow.aspx"><asp:Label ID="lbl_Project_show" runat="server" CssClass="FontColor"  Text="Display"></asp:Label></a></li>
+                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneVedio20171001.png"/><a target="_blank" href="../UserPage/UserVedioShowList.aspx"><asp:Label ID="lbl_Look_Vedio" runat="server"  CssClass="FontColor" Text="Video"></asp:Label></a></li>
+                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneConection20171001.png"/><a target="_blank" href="../UserPage/UserConmunicationApace.aspx"><asp:Label ID="lblChangeSpace" runat="server"  CssClass="FontColor" Text="Communication"></asp:Label></a></li>
                 </ul>
             </div>
             <div class="NavPhone">
                 <ul>
-                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneLog20171001.png"/><a href="../UserPage/UserPageLogin.aspx"><asp:Label ID="lblUserLog" runat="server"  CssClass="FontColor" Text="用户登录"></asp:Label></a></li>
-                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneLogin20171001.png"/><a href="../UserPage/UserPageRegister.aspx"><asp:Label ID="lblUserLogin" runat="server"  CssClass="FontColor" Text="用户注册"></asp:Label></a></li>
+                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneLog20171001.png"/><a target="_blank" href="../UserPage/UserPageLogin.aspx"><asp:Label ID="lblUserLog" runat="server"  CssClass="FontColor" Text="用户登录"></asp:Label></a></li>
+                    <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneLogin20171001.png"/><a target="_blank" href="../UserPage/UserPageRegister.aspx"><asp:Label ID="lblUserLogin" runat="server"  CssClass="FontColor" Text="用户注册"></asp:Label></a></li>
                 </ul>
             </div>
             <div class="Login_ACE">
                 <ul>
                     <li>
-                        <a href="../UserPage/UserPageLogin.aspx" class="hoverTitle" id="KickOpen" ><img src="../Images/SystemPicture/User_White.png"/></a>
+                        <a href="../UserPage/UserPageLogin.aspx" class="hoverTitle"  target="_blank"  id="KickOpen" ><img src="../Images/SystemPicture/User_White.png"/></a>
                     </li>
                     <li>
-                        <asp:LinkButton ID="lkbtnChinese" CssClass="transfer" runat="server" OnClick="lkbtnChinese_Click">Chinese</asp:LinkButton>
-                        <asp:LinkButton ID="lkbtnEnish" CssClass="transfer"  runat="server" OnClick="lkbtnEnish_Click">English</asp:LinkButton>
+                        <asp:LinkButton ID="lkbtnChinese" CssClass="transfer" runat="server" target="_blank"  OnClick="lkbtnChinese_Click">转为汉语</asp:LinkButton>
+                        <asp:LinkButton ID="lkbtnEnish" CssClass="transfer"  runat="server" target="_blank" OnClick="lkbtnEnish_Click">English</asp:LinkButton>
                         <li></li>
                         <li></li>
                     </li>
@@ -368,14 +368,14 @@
                              </span>
                         </p>
                         <p class="UserID">
-                            <img src="../Images/SystemPicture/again_hover.png"/><asp:TextBox ID="txtPwdOne" CssClass="txtPhoneNumber" runat="server" placeholder="[重复密码(Password)]" ></asp:TextBox>
+                            <img src="../Images/SystemPicture/again_hover.png"/><asp:TextBox ID="txtPwdOne" CssClass="txtPhoneNumber" runat="server" placeholder="[新密码(New Password)]" ></asp:TextBox>
                             <span>
                                 <asp:Image ID="imgNewPassword" runat="server" ImageUrl="../Images/SystemPicture/Right.png" Visible="False"  Width="20px" Height="20px"/>
                                 <asp:Image ID="imgNewPasswords" runat="server"  ImageUrl="../Images/SystemPicture/Error.png" Visible="False" Width="20px" Height="20px"/>
                             </span>
                         </p>
                         <p class="UserID">
-                            <img src="../Images/SystemPicture/again_hover.png"/><asp:TextBox ID="txtPwdTwo" CssClass="txtPhoneNumber" runat="server" placeholder="[重复密码(Password Again)]" ></asp:TextBox>
+                            <img src="../Images/SystemPicture/again_hover.png"/><asp:TextBox ID="txtPwdTwo" CssClass="txtPhoneNumber" runat="server" placeholder="[重复新密码(New Password Again)]" ></asp:TextBox>
                             <span>
                                 <asp:Image ID="imgPwdOne" runat="server" ImageUrl="../Images/SystemPicture/Right.png" Visible="False" Width="20px" Height="20px"/>
                                 <asp:Image ID="imgPwdTwo" runat="server"  ImageUrl="../Images/SystemPicture/Error.png" Visible="False" Width="20px" Height="20px"/>
@@ -405,10 +405,10 @@
                     <p>惊喜连连更多</p>
                 </div>
                 <div class="lanmu">
-                    <a href="javascript:void(0)"><img src="../Images/SystemPicture/userLanse.png" title="用户登录"/></a>
-                    <a href="javascript:void(0)"><img src="../Images/SystemPicture/zixunlanse.png" title="在线咨询"/></a>
-                    <a href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="../Images/SystemPicture/阿里旺旺.png" title="阿里旺旺" /></a>
-                    <a href="javascript:void(0)"><img src="../Images/SystemPicture/qqlanse.png" title="QQ咨询" /></a>
+                    <a  target="blank" href="../UserPage/UserPageLoginCHN.aspx"><img src="../Images/SystemPicture/userLanse.png" title="用户登录"/></a>
+                    <a  target="blank" href="../UserPage/UserConmunicationApaceCHN.aspx"><img src="../Images/SystemPicture/zixunlanse.png" title="在线咨询"/></a>
+                    <a target="_blank" href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="../Images/SystemPicture/阿里旺旺.png" title="阿里旺旺" /></a>
+                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2212901&site=qq&menu=yes"><img src="../Images/SystemPicture/qqlanse.png" title="QQ咨询" /></a>
                     <a href="#"><img src="../Images/SystemPicture/zhidinglanse.png" title="首页" /></a>
                 </div>
        

@@ -57,16 +57,6 @@ namespace CzmWeb.UserPage
             }
             return true;
         }
-        protected void BtnSendCode_Click(object sender, EventArgs e)
-        {
-            //如果用户存在再发验证码
-            if (CheckIsNumber())
-            {
-                ViewState["Code"]=this.sender.GenerateVerificationCode();
-                this.sender.SendMessage(txtUserID.Text, "你的验证码为：" + ViewState["Code"].ToString());
-                MessaegBoxResp("Has been sent");
-            }
-        }
         private void MessaegBox(String msg)
         {
             Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('" + msg + "')</script>");
@@ -89,22 +79,8 @@ namespace CzmWeb.UserPage
 
             if (CheckIsNumber())
             {
-                if (ViewState["Code"] != null && ViewState["Code"].ToString() == txtVaildCode.Text)
-                {
-                    String UserID = txtUserID.Text;
-                    bool IsOlUser= Judge.JudgeUserPowerCountIs10(UserID);
-                    if (IsOlUser)
-                    {
-                        MessageBoxResponse("Your information is under review");     
-                        return;
-                    }
                     Session["User"] = txtUserID.Text;
-                    MessageBoxResponse("login successful");
-                }
-                else
-                {
-                    MessaegBox("Verification code error！");
-                }                
+                    MessageBoxResponse("login successful");             
             }
         }
 

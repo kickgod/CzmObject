@@ -98,8 +98,7 @@ namespace CzmWeb.App_Code
             DataTable td =new DataTable();
             adapter.Fill(td);
             return td;
-        }
-        
+        }       
     }
     
 }

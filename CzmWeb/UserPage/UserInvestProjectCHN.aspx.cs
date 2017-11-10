@@ -64,6 +64,16 @@ namespace CzmWeb.UserPage
                 item.Text = td.Rows[i]["ProvinceName_c"].ToString();
                 ddlProvince.Items.Add(item);
             }
+            ddlProvince.SelectedIndex = 0;
+            string ProvinceID = ddlProvince.SelectedValue;
+            DataTable tdt = getTable.GetAllDataFromtblDowntownRegionList("ProvinceId =" + ProvinceID);
+            for (int i = 0; i < tdt.Rows.Count; i++)
+            {
+                ListItem item = new ListItem();
+                item.Value = tdt.Rows[i]["RegionID"].ToString();
+                item.Text = tdt.Rows[i]["RegionName_c"].ToString();
+                ddlDataRegiom.Items.Add(item);
+            }
         }
         protected void ddlProvince_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -96,6 +106,18 @@ namespace CzmWeb.UserPage
                 MessaegBox("你已经被屏蔽！暂时无法进行业务操作！请及时联系管理员！了解情况.");
                 return ;
             }
+            bool IsnormalUser = Judge.JudgeUserPowerCountIs30(UserIdPhone);
+            if (!IsnormalUser)
+            {
+                MessaegBox("你暂无资格投资");
+                return; 
+            }
+            bool IsCanTypeTwo = Judge.JudgeUserTypeIs_Two(UserIdPhone);
+            if (!IsCanTypeTwo)
+            {
+                MessaegBox("钻石会员才有投资权限!");
+                return;
+            }           
             if (ddlDataRegiom.Items.Count <= 0)
             {
                 MessaegBox("你尚未选择地区！");

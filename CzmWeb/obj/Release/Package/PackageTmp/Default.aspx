@@ -6,37 +6,99 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="pragma" content="no-cache"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-    <title>创造门</title>
-    <link rel="icon" href="../Images/SystemPicture/创造力.ico" />
-    <link href="../bootstrap337/css/style.css" rel="stylesheet" />
-    <link href="../bootstrap337/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../Content/FontBindData.css" rel="stylesheet" />
-    <script src="../bootstrap337/js/jquery-3.2.1.min.js"></script>
-    <script src="../bootstrap337/js/bootstrap.min.js"></script>
-    <script src="../bootstrap337/js/holder.min.js"></script>
-    <script src="../Js/scroll.js"></script>
-    <link href="CSS/BootsrapDefaultCHN.css" rel="stylesheet" />
-    <script type="text/javascript">
-        function Guquan(StockName) {
-            alert(StockName);
-        }
-        window.onload = function () {
-            $('.carousel').carousel();
-            $('#identifier').carousel('cycle');
-            $('#identifier').carousel({
-                interval: 1000
+        <title>创造门</title>
+        <link rel="icon" href="../Images/SystemPicture/创造力.ico" />
+        <script src="../bootstrap337/js/jquery-3.2.1.min.js"></script>
+        <link href="../bootstrap337/css/style.css" rel="stylesheet" />
+        <link href="../bootstrap337/css/bootstrap.min.css" rel="stylesheet" />
+        <style type="text/css">
+            .Loading{width: 100%;height: 100%;position: fixed;top: 0px;left: 0px;background-color: white;z-index: 200;}
+            .pic{width: 64px; height: 64px;background-image: url(../Master/BigFengCheng.gif);  /*居中显示方法*/ position: absolute; top: 0px;left: 0px; right: 0px; bottom: 0px; margin: auto;}
+        </style>
+        <script type="text/javascript">
+            if (window.matchMedia("(min-width:480px) and (max-width:767px)").matches) {
+                var Row = document.getElementById("NewProductShow");
+                var RowType = document.getElementById("RowProductTypeShow");
+                var RowProjext = document.getElementById("ProjectHave");
+                var DivList = RowType.getElementsByTagName("div");
+                for (var i = 0; i < DivList.length; i++) {
+                    DivList[i].className = "col-md-3 col-sm-6 col-xs-6";
+                }
+                var DivTypeList = Row.getElementsByTagName("div");
+                for (var i = 0; i < DivTypeList.length; i++) {
+                    DivTypeList[i].className = "col-md-3 col-sm-6 col-xs-6";
+                }
+                var DivProjectList = RowProjext.getElementsByTagName("div");
+                for (var i = 0; i < DivProjectList.length; i++) {
+                    DivProjectList[i].className = "col-md-3 col-sm-6 col-xs-6";
+                }
+            } else if (window.matchMedia("(min-width:0px) and (max-width:479px)").matches) {
+                var Row = document.getElementById("NewProductShow");
+                var RowType = document.getElementById("RowProductTypeShow");
+                var RowProjext = document.getElementById("ProjectHave");
+                var DivList = Row.getElementsByTagName("div");
+                for (var i = 0; i < DivList.length; i++) {
+                    DivList[i].className = "col-md-3 col-sm-6 col-xs-12";
+                }
+                var DivTypeList = RowType.getElementsByTagName("div");
+                for (var i = 0; i < DivTypeList.length; i++) {
+                    DivTypeList[i].className = "col-md-3 col-sm-6 col-xs-12";
+                }
+                var DivProjectList = RowProjext.getElementsByTagName("div");
+                for (var i = 0; i < DivProjectList.length; i++) {
+                    DivProjectList[i].className = "col-md-3 col-sm-6 col-xs-12";
+                }
+            }
+            function Guquan(StockName) {
+                alert(StockName);
+            }
+            $(document).ready(function () {
+                $('.list_lh li:even').addClass('lieven');
+            })
+            $(function () {
+                $("div.list_lh").myScroll({
+                    speed: 30,
+                    rowHeight: 68
+                });
             });
-        }
-        $(document).ready(function () {
-            $('.list_lh li:even').addClass('lieven');
-        })
-        $(function () {
-            $("div.list_lh").myScroll({
-                speed: 30,
-                rowHeight: 68
-            });
-        });
-    </script>
+            window.onresize = function () {
+                if (window.matchMedia("(min-width:480px) and (max-width:767px)").matches) {
+                    var Row = document.getElementById("NewProductShow");
+                    var RowType = document.getElementById("RowProductTypeShow");
+                    var RowProjext = document.getElementById("ProjectHave");
+                    var DivList = RowType.getElementsByTagName("div");
+                    for (var i = 0; i < DivList.length; i++) {
+                        DivList[i].className = "col-md-3 col-sm-6 col-xs-6";
+                    }
+                    var DivTypeList = Row.getElementsByTagName("div");
+                    for (var i = 0; i < DivTypeList.length; i++) {
+                        DivTypeList[i].className = "col-md-3 col-sm-6 col-xs-6";
+                    }
+                    var DivProjectList = RowProjext.getElementsByTagName("div");
+                    for (var i = 0; i < DivProjectList.length; i++) {
+                        DivProjectList[i].className = "col-md-3 col-sm-6 col-xs-6";
+                    }
+                } else if (window.matchMedia("(min-width:0px) and (max-width:479px)").matches) {
+                    var Row = document.getElementById("NewProductShow");
+                    var RowType = document.getElementById("RowProductTypeShow");
+                    var RowProjext = document.getElementById("ProjectHave");
+                    var DivList = Row.getElementsByTagName("div");
+                    for (var i = 0; i < DivList.length; i++) {
+                        DivList[i].className = "col-md-3 col-sm-6 col-xs-12";
+                    }
+                    var DivTypeList = RowType.getElementsByTagName("div");
+                    for (var i = 0; i < DivTypeList.length; i++) {
+                        DivTypeList[i].className = "col-md-3 col-sm-6 col-xs-12";
+                    }
+                    var DivProjectList = RowProjext.getElementsByTagName("div");
+                    for (var i = 0; i < DivProjectList.length; i++) {
+                        DivProjectList[i].className = "col-md-3 col-sm-6 col-xs-12";
+                    }
+                }
+            }
+        </script>
+        <link href="../Content/FontBindData.css" rel="stylesheet" />
+        <link href="../CSS/BootsrapDefaultCHN.css" rel="stylesheet" />
         <style type="text/css">
             .OnMouseOver{}
             .OnMouseOver:hover{cursor: pointer}
@@ -70,7 +132,6 @@
         </style>
     </head>
 <body>
-<!--导航部分bootstrap框架-->
 <nav class="navbar navbar-default" role="navigation" id="ShowPhoneIfStart">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -99,8 +160,9 @@
                         用户入口 <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="../UserPage/UserPageLoginCHN.aspx"><span class="glyphicon glyphicon-user"></span> 立即登录</a></li>
-                        <li><a href="../UserPage/UserPageRegisterCHN.aspx"><span class="glyphicon glyphicon-log-in"></span> 立即注册</a></li>
+                        <li><a target="_blank" href="../UserPage/UserPageLoginCHN.aspx"><span class="glyphicon glyphicon-user"></span> 立即登录</a></li>
+                        <li><a target="_blank" href="../UserPage/UserPageRegisterCHN.aspx"><span class="glyphicon glyphicon-log-in"></span> 立即注册</a></li>
+                        <li><a target="_blank" href="../UserPage/UserbecomeTypeHighCHN.aspx"><span class="glyphicon glyphicon-home"></span> 个人中心</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -108,15 +170,15 @@
                         用户功能 <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="active"><a href="../Default.aspx">主页</a></li>
-                        <li><a href="../UserPage/UserProductTypeShowCHN.aspx">产品分类</a></li>
-                        <li><a href="../UserPage/UserNewProductShowCHN.aspx">新品预告</a></li>
-                        <li><a href="../UserPage/UserCreateProjectCHN.aspx">我要创作</a></li>
-                        <li><a href="../UserPage/UserInvestProjectCHN.aspx">我要投资</a></li>
-                        <li><a href="../UserPage/UserProjectShowCHN.aspx">项目展示</a></li>
-                        <li><a href="#Watchlive">观看直播</a></li>
-                        <li><a href="../UserPage/UserVedioShowListCHE.aspx">视频专区</a></li>
-                        <li><a href="../UserPage/UserConmunicationApaceCHN.aspx">交流空间</a></li>
+                        <li class="active"><a target="_blank" href="../Default.aspx">主页</a></li>
+                        <li><a target="_blank" href="../UserPage/UserProductTypeShowCHN.aspx">产品分类</a></li>
+                        <li><a target="_blank" href="../UserPage/UserNewProductShowCHN.aspx">新品预告</a></li>
+                        <li><a target="_blank" href="../UserPage/UserCreateProjectCHN.aspx">我要创作</a></li>
+                        <li><a target="_blank" href="../UserPage/UserInvestProjectCHN.aspx">我要投资</a></li>
+                        <li><a target="_blank" href="../UserPage/UserProjectShowCHN.aspx">项目展示</a></li>
+                        <li><a target="_blank" href="#Watchlive">观看直播</a></li>
+                        <li><a target="_blank" href="../UserPage/UserVedioShowListCHE.aspx">视频专区</a></li>
+                        <li><a target="_blank" href="../UserPage/UserConmunicationApaceCHN.aspx">交流空间</a></li>
                     </ul>
                 </li>
             </ul>
@@ -126,7 +188,7 @@
 <nav class="navbar navbar-default" role="navigation" id="ShowPhoneIfEnd">
     <div class="container-fluid"> 
         <div class="navbar-header">
-            <a class="navbar-brand" href="#Adminsrator"><strong class="CZMBrandCompany">创造门</strong></a>
+            <a class="navbar-brand" target="_blank" href="#Adminsrator"><strong class="CZMBrandCompany">创造门</strong></a>
         </div>
         <div>
             <!--向左对齐-->
@@ -137,15 +199,15 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="active"><a href="../Default.aspx">主页</a></li>
-                        <li><a href="../UserPage/UserProductTypeShowCHN.aspx">产品分类</a></li>
-                        <li><a href="../UserPage/UserNewProductShowCHN.aspx">新品预告</a></li>
-                        <li><a href="../UserPage/UserCreateProjectCHN.aspx">我要创作</a></li>
-                        <li><a href="../UserPage/UserInvestProjectCHN.aspx">我要投资</a></li>
-                        <li><a href="../UserPage/UserProjectShowCHN.aspx">项目展示</a></li>
-                        <li><a href="#Watchlive">观看直播</a></li>
-                        <li><a href="../UserPage/UserVedioShowListCHE.aspx">视频专区</a></li>
-                        <li><a href="../UserPage/UserConmunicationApaceCHN.aspx">交流空间</a></li>
+                        <li class="active"><a target="_blank" href="../Default.aspx">主页</a></li>
+                        <li><a target="_blank" href="../UserPage/UserProductTypeShowCHN.aspx">产品分类</a></li>
+                        <li><a target="_blank" href="../UserPage/UserNewProductShowCHN.aspx">新品预告</a></li>
+                        <li><a target="_blank" href="../UserPage/UserCreateProjectCHN.aspx">我要创作</a></li>
+                        <li><a target="_blank" href="../UserPage/UserInvestProjectCHN.aspx">我要投资</a></li>
+                        <li><a target="_blank" href="../UserPage/UserProjectShowCHN.aspx">项目展示</a></li>
+                        <li><a target="_blank" href="#Watchlive">观看直播</a></li>
+                        <li><a target="_blank" href="../UserPage/UserVedioShowListCHE.aspx">视频专区</a></li>
+                        <li><a target="_blank" href="../UserPage/UserConmunicationApaceCHN.aspx">交流空间</a></li>
                     </ul>
                 </li>
             </ul>
@@ -156,21 +218,22 @@
                         用户入口 <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="../UserPage/UserPageLoginCHN.aspx"><span class="glyphicon glyphicon-user"></span> 立即登录</a></li>
-                        <li><a href="../UserPage/UserPageRegisterCHN.aspx"><span class="glyphicon glyphicon-log-in"></span> 立即注册</a></li>
+                        <li><a href="../UserPage/UserPageLoginCHN.aspx" target="_blank"><span class="glyphicon glyphicon-user"></span> 立即登录</a></li>
+                        <li><a href="../UserPage/UserPageRegisterCHN.aspx" target="_blank"><span class="glyphicon glyphicon-log-in"></span> 立即注册</a></li>
+                        <li><a target="_blank" href="../UserPage/UserbecomeTypeHighCHN.aspx"><span class="glyphicon glyphicon-home"></span> 个人中心</a></li>
                     </ul>
                 </li>
             </ul>
             <form class="navbar-form navbar-right" role="search">
-                <a href="../Default.aspx"  type="submit" class="btn btn-default" >Chinese</a>
-                <a href="../DefalutEng.aspx"  type="submit" class="btn btn-default"  >English</a>
+                <a href="../Default.aspx "  target="_blank" type="submit" class="btn btn-default" >Chinese</a>
+                <a href="../DefalutEng.aspx" target="_blank" type="submit" class="btn btn-default"  >English</a>
             </form>
         </div>
     </div>
 </nav>
 <!--轮播图部分-->
 <div id="LunBoControl">
-    <div id="myCarousel" class="carousel slide"  data-interval=1500  >
+    <div id="myCarousel" class="carousel slide"  data-ride="carousel"   data-interval=4500   >
         <!-- 轮播（Carousel）指标 -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" style="background-color: #000000;" data-slide-to="0" class="active"></li>
@@ -239,7 +302,7 @@
                 <ItemTemplate>
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <figure>
-                            <a href="../UserPage/UserProductTypeShowCHN.aspx"><img src='<%#Eval("TypePicture")%>'  ></a>                 
+                            <a href="../UserPage/UserProductTypeShowCHN.aspx" target="_blank" ><img src='<%#Eval("TypePicture")%>'  ></a>                 
                             <figcaption><span class="intro"><a href="../UserPage/UserProductTypeShowCHN.aspx" style="color: purple; font-size: 18px; font-weight: 400;">[<%#Eval("typeName_c")%>]</span></a></figcaption>
                         </figure>
                     </div>
@@ -259,12 +322,12 @@
                 <ItemTemplate>
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <figure>
-                            <a href=<%#Eval("taobaoUrl")%> ><img src='<%#Eval("ImgPatjh")%>' ></a>                
+                            <a href=<%#Eval("taobaoUrl")%>  target="_blank" ><img src='<%#Eval("ImgPatjh")%>' ></a>                
                             <figcaption>
                                 <p class="introShowWord"><span style="font-size: 18px; font-weight: 400;">[<%#Eval("ProductName_c")%>]</span></p>
                                 <p class="DownGoumai">
                                     <span class="MeonyChar">¥</span><span class="Meony"><%#Eval("Price_now")%></span> <span class="MeonyLastChar">¥<%#Eval("price_last")%></span>
-                                    <span><asp:HyperLink ID="hypLinkToTaoBao" runat="server"  CssClass="btn btn-primary btn-danger" NavigateUrl='<%#Eval("taobaoUrl")%>'>购买</asp:HyperLink></span>
+                                    <span><asp:HyperLink ID="hypLinkToTaoBao" runat="server"  CssClass="btn btn-primary btn-danger" target="_blank" NavigateUrl='<%#Eval("taobaoUrl")%>'>购买</asp:HyperLink></span>
                                 </p>
                                 <p class="ProductShowDiscr"> 
                                     <%#Eval("ProductDescription_c")%>
@@ -285,13 +348,13 @@
     </div>
     <section class="VedioList">
         <div class="Vedioshelf"> 
-            <div class="LeftBox" style="background-image: url(../FirstImage/diaoyu.png)"><a href="../UserPage/UserVedioShowListCHE.aspx"><img src="../FirstImage/图标8.png"/></a></div>
-            <div class="CenterBox" style="background-image: url(../FirstImage/yihui.png);"><a href="../UserPage/UserVedioShowListCHE.aspx" ><img src="../FirstImage/图标8.png"/></a></div>
-            <div class="RightBox" style="background-image: url(../FirstImage/wenwu.png"><a href="../UserPage/UserVedioShowListCHE.aspx"><img src="../FirstImage/图标8.png"/></a></div>
+            <div class="LeftBox" style="background-image: url(../FirstImage/diaoyu.png)"><a target="_blank" href="../UserPage/UserVedioShowListCHE.aspx"><img src="../FirstImage/图标8.png"/></a></div>
+            <div class="CenterBox" style="background-image: url(../FirstImage/yihui.png);"><a target="_blank" href="../UserPage/UserVedioShowListCHE.aspx" ><img src="../FirstImage/图标8.png"/></a></div>
+            <div class="RightBox" style="background-image: url(../FirstImage/wenwu.png"><a target="_blank" href="../UserPage/UserVedioShowListCHE.aspx"><img src="../FirstImage/图标8.png"/></a></div>
         </div>   
         <br/>
         <div class="LearingMoreVedio">
-            <p><a href="../UserPage/UserVedioShowListCHE.aspx">观看更多</a></p>
+            <p><a href="../UserPage/UserVedioShowListCHE.aspx" target="_blank" >观看更多</a></p>
         </div>        
     </section>  
 <!--观看直播-->
@@ -306,10 +369,10 @@
             <ItemTemplate>
                 <div class="col-md-4 col-xs-4">
                     <figure>
-                        <asp:HyperLink ID="HypKuaiShow" CssClass="OnMouseOver" runat="server" NavigateUrl='<%#Eval("LiUrl")%>' ><img src='<%#Eval("UrlImg")%>' /></asp:HyperLink>
+                        <asp:HyperLink ID="HypKuaiShow" target="_blank" CssClass="OnMouseOver" runat="server" NavigateUrl='<%#Eval("LiUrl")%>' ><img src='<%#Eval("UrlImg")%>' /></asp:HyperLink>
                         <figcaption>
                             <br/>
-                            <asp:HyperLink ID="HypKuaiShow2" CssClass="OnMouseOver"  NavigateUrl='<%#Eval("LiUrl")%>' runat="server">
+                            <asp:HyperLink ID="HypKuaiShow2" CssClass="OnMouseOver" target="_blank"  NavigateUrl='<%#Eval("LiUrl")%>' runat="server">
                                 <span class="LiveIng">
                                     <asp:Label ID="lblkuaishou" runat="server" Text='<%#Eval("LiTitle") %>' ></asp:Label>
                                 </span>
@@ -328,7 +391,7 @@
     </span> 
 </div>
 <div id="LunBoControl2">
-    <div id="myCarouse2" class="carousel slide"  data-interval=1500  >
+    <div id="myCarouse2" class="carousel slide"   data-ride="carousel"   data-interval=4500  >
         <!-- 轮播（Carousel）指标 -->
         <ol class="carousel-indicators">
             <li data-target="#myCarouse2" style="background-color: #000000;" data-slide-to="0" class="active"></li>
@@ -342,13 +405,13 @@
         <div class="carousel-inner">
             <div class="carousel-inner">
                 <div class="item active">
-                    <img  src="../FirstImage/1_CompanyName_c.jpg"  alt="First slide">
+                    <img src="../FirstImage/1_CompanyName_c.jpg"  alt="First slide">
                     <div class="carousel-caption" style="color: #000000;"></div>
                 </div>
                 <asp:Repeater ID="reptmProject" runat="server">
                     <ItemTemplate>
                         <div class="item">
-                            <a href="#"><img class="imgLunbo2shoji" src=<%#Eval("ImgPicturPath")%>  alt="First slide"></a>
+                            <a target="_blank" href="../UserPage/UserProjectShowCHN.aspx"><img class="imgLunbo2shoji" src=<%#Eval("ImgPicturPath")%>  alt="First slide"></a>
                             <div class="carousel-caption" style="color: #000000;">
                                 <p class="ShowIntorductiOfpROJECT">
                                     <span class="ProjectName">[项目：<%#Eval("PciName_c")%>]</span><br/>
@@ -414,7 +477,7 @@
                         <asp:Repeater ID="reptmInvset" runat="server">
                             <ItemTemplate>
                                 <li>
-                                    <p><a href="javascript:ale rt('对方隐私！无法查看')" target="_blank"><%#Eval("TypeName_c") %> <%#Eval("UserName_e") %></a><a href="#" target="_blank" class="btn_lh" >投资了<%#Eval("Account") %>元</a><em style="width: 30%"><%#Eval("InsertProjectName") %>项目</em></p>
+                                    <p><a href="javascript:alert('对方隐私！无法查看')" target="_blank"><%#Eval("TypeName_c") %> <%#Eval("UserName_e") %></a><a href="#" target="_blank" class="btn_lh" >投资了<%#Eval("Account") %>元</a><em style="width: 30%"><%#Eval("InsertProjectName") %>项目</em></p>
                                     <p><a href="javascript:alert('对方隐私！无法查看')" target="_blank" class="a_blue">投资时间：</a><span><%#Eval("InvestTime") %></span></p>
                                 </li>                       
                             </ItemTemplate>
@@ -502,4 +565,7 @@
 </div>
 </form>
  </body>
+<script src="../bootstrap337/js/bootstrap.min.js"></script>
+<script src="../bootstrap337/js/holder.min.js"></script>
+<script src="../Js/scroll.js"></script>
 </html>

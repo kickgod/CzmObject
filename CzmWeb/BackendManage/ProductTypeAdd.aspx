@@ -63,7 +63,7 @@
                         <asp:Label ID="lblID" runat="server" Text="自动编号" Visible="True" ></asp:Label>
                     </td>
                     <td align="center">
-                        选择查看
+                        <strong>选择编辑或查看</strong>
                     </td>
                     <td>
                         <asp:DropDownList ID="ddlCheckType" AutoPostBack="True"  OnSelectedIndexChanged="ddlCheckType_OnSelectedIndexChanged" runat="server" CssClass="txtBox" ></asp:DropDownList>

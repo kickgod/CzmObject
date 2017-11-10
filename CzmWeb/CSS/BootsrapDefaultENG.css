@@ -172,6 +172,8 @@
              .ProjectName{ color: gainsboro;font-size: 15px;font-weight: 400;background-color: crimson;}
              .WordOfTheProduct{ color: white;font-weight: 400;font-style: italic;text-transform: uppercase;font-size: 8px;line-height: 10px;background-color: RGB(148, 30, 80) }
              .ShowIntorductiOfpROJECT{ width: 100%;height: 50px;overflow: hidden}
+             #NewProductShow img{ width: 100%;height: 300px;transition: 0.5s}
+             #NewProductShow img:hover{ transform: scale(1,1);-webkit-transform: scale(1.1, 1.1);}
          }
          @media only screen and (min-width: 0px) and (max-width: 440px) {
              #ShowPhoneIfStart{display: block}  
@@ -210,4 +212,6 @@
              .WordOfTheProduct{ display: none; }
              .ShowIntorductiOfpROJECT{ width: 100%;height: 50px;overflow: hidden}
              .zixun{ display: none;overflow: hidden}
+             #NewProductShow img{ width: 100%;height: 340px;transition: 0.5s}
+             #NewProductShow img:hover{ transform: scale(1,1);-webkit-transform: scale(1.1, 1.1);}
          }

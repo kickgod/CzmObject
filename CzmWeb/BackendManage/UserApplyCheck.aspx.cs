@@ -47,6 +47,10 @@ namespace CzmWeb.BackendManage
             if (e.CommandName == "Delete")
             {
                 string sql = " DELETE FROM [XcXm].[dbo].[tblUserInfo] WHERE UserId='" + e.CommandArgument + "'";
+                string sqlProject = "DELETE FROM [XcXm].[dbo].[tblProjectCreate] WHERE UserId ='"+e.CommandArgument+"'";
+                string sqlInvest = "  DELETE FROM  [XcXm].[dbo].[tblProjectInvestInfo] WHERE UserId ='"+e.CommandArgument+"'";
+                DB.CarryOutSqlSentence(sqlInvest);
+                DB.CarryOutSqlSentence(sqlProject);
                 int Result= DB.CarryOutSqlSentence(sql);
                 if (Result == 1)
                 {

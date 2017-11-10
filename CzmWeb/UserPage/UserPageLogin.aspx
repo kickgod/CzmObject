@@ -115,33 +115,15 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <script type="text/javascript">
-        function SendCode() {
-            var UserID = document.getElementById("<%=txtUserID.ClientID%>");
-            var UserPwd = document.getElementById("<%=txtUserPwds.ClientID%>");
-            if (UserID.value == "") {
-                alert("Please enter your ID");
-                return false;
-            }
-            if (UserPwd.value == "") {
-                alert("Please enter your password");
-                return false;
-            }
-            return true;
-        }
         function Login() {
             var UserID = document.getElementById("<%=txtUserID.ClientID%>");
             var UserPwd = document.getElementById("<%=txtUserPwds.ClientID%>");
-            var VaildCode = document.getElementById("<%=txtVaildCode.ClientID%>");
             if (UserID.value == "") {
                 alert("Please enter your ID");
                 return false;
             }
             if (UserPwd.value == "") {
                 alert("Please enter your password");
-                return false;
-            }
-            if (VaildCode.value == "") {
-                alert("please enter verification code");
                 return false;
             }
             return true;
@@ -162,13 +144,8 @@
                         <img src="../Images/SystemPicture/Userpwd.png"/>
                         <asp:TextBox ID="txtUserPwds" CssClass="txtUserIDs" TextMode="Password" placeholder="Please enter your password" runat="server"></asp:TextBox>
                     </p>
-                    <p class="ValidCode">
-                        <img src="../Images/SystemPicture/validcoed.png"/>
-                        <asp:TextBox ID="txtVaildCode" CssClass="txtUserpwds" placeholder="Code" runat="server"></asp:TextBox>
-                        <asp:Button ID="BtnSendCode" CssClass="BtnSendCodes" runat="server" Text="Send" OnClick="BtnSendCode_Click" OnClientClick="return SendCode() "  />
-                    </p>
                     <p class="LoginBtn">
-                        <asp:Button ID="btnLogin" CssClass="BtnLogin TFS_Standardstyle" runat="server" Text="Landing" OnClick="btnLogin_Click" />
+                        <asp:Button ID="btnLogin" CssClass="BtnLogin TFS_Standardstyle" runat="server" Text="Landing" OnClientClick="return  Login();"  OnClick="btnLogin_Click" />
                     </p>
                     <p class="LoginError">
                         <asp:LinkButton ID="likbtnForgetPwd" CssClass="TFS_Standardstyle FontCss" runat="server" PostBackUrl="~/UserPage/UserForgetCode.aspx">forget password</asp:LinkButton>

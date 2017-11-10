@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<script language="javascript">
+    function SetPorgressBar(pos) {
+        //设置进度条居中
+
+        var screenWidth = document.body.offsetWidth;
+        ProgressBarSide.style.width = Math.round(screenWidth / 2) + "px";
+        ProgressBarSide.style.left = Math.round(screenWidth / 4) + "px";
+        ProgressBarSide.style.top = "50px";
+        ProgressBarSide.style.height = "21px";
+        ProgressBarSide.style.display = "block";
+
+        //设置进度条百分比 
+        ProgressBar.style.width = pos + "%";
+        ProgressText.innerHTML = pos + "%";
+    }
+
+    function SetMaxValue(maxValue) {
+        ProgressBarSide.style.width = maxValue + "px";
+    }
+
+    //完成后隐藏进度条
+    function SetCompleted() {
+        ProgressBarSide.style.display = "none";
+    }
+
+    function SetTitle(title) {
+        ProgressTitle.innerHTML = title;
+    }
+</script>
+<div id="ProgressBarSide" style="position: absolute; height: 21px; width: 100px;
+                                     color: Silver; border-width: 1px; border-style: Solid; display: block">
+    <div id="ProgressBar" style="position: absolute; height: 21px; width: 0%; background-color: #1475BB">
+    </div>
+    <div id="ProgressText" style="position: absolute; height: 21px; width: 100%; text-align: center">
+    </div>
+    <div id="ProgressTitle" style="position: absolute; height: 21px; top: 21px; width: 100%;
+                                                                                                                                                                                                                                                                                                                                                                 text-align: center">
+    </div>
+</div>
+<body>
+
+</body>
+</html>

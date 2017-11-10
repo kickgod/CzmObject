@@ -77,8 +77,8 @@
 		.file input {
 		    position: absolute;
 		    font-size: 100px;
-		    right: 0;
-		    top: 0;
+		    right: -1154px;
+		    top: -10px;
 		    opacity: 0;
 		}
 		.file:hover {
