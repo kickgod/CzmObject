@@ -84,13 +84,27 @@ namespace CzmWeb.BackendManage
             if (Ismodify)
             {
                 string Sql = "";
-                if (wuc_FileVedio.IsHaveFile())
+                if (wuc_FileVedio.IsHaveFile()&&wuc_FileVedio1.IsHaveFile()==false)
                 {
                     wuc_FileVedio.UpFile();
                     string FileAddress = wuc_FileVedio.ServerDianPath;
                     Sql = "  UPDATE [XcXm].[dbo].[tblVideoInfo] SET VideoName_c='" + VedioStringCHE + "' ,VideoName_e ='" + VedioStringEng + "' ,VidioPath='" + FileAddress + "' WHERE VidioID = "+lblVedioId.Text;
                 }
-                else
+                else if (wuc_FileVedio.IsHaveFile() == false && wuc_FileVedio1.IsHaveFile())
+                {
+                    wuc_FileVedio1.UpFile();
+                    string FileAddress = wuc_FileVedio1.ServerDianPath;
+                    Sql = "  UPDATE [XcXm].[dbo].[tblVideoInfo] SET VideoName_c='" + VedioStringCHE + "' ,VideoName_e ='" + VedioStringEng + "' ,videoPoster='" + FileAddress + "' WHERE VidioID = " + lblVedioId.Text;                   
+                }
+                else if (wuc_FileVedio.IsHaveFile()&& wuc_FileVedio1.IsHaveFile())
+                {
+                    wuc_FileVedio1.UpFile();
+                    wuc_FileVedio.UpFile();
+                    string PosterAddre = wuc_FileVedio1.ServerDianPath;
+                    string FileAddress = wuc_FileVedio.ServerDianPath;
+                    Sql = "  UPDATE [XcXm].[dbo].[tblVideoInfo] SET VideoName_c='" + VedioStringCHE + "' ,VideoName_e ='" + VedioStringEng + "' ,videoPoster='" + PosterAddre + "',VidioPath='"+FileAddress+"' WHERE VidioID = " + lblVedioId.Text;                       
+                }
+                else if(!wuc_FileVedio.IsHaveFile()&& !wuc_FileVedio1.IsHaveFile())
                 {
                     Sql = "  UPDATE [XcXm].[dbo].[tblVideoInfo] SET VideoName_c='" + VedioStringCHE + "' ,VideoName_e ='" + VedioStringEng + "' WHERE VidioID = " + lblVedioId.Text;                 
                 }
@@ -104,10 +118,17 @@ namespace CzmWeb.BackendManage
                     MessaegBox("请上传视频");
                     return;
                 }
+                if (!wuc_FileVedio1.IsHaveFile())
+                {
+                    MessaegBox("请上传视频封面");
+                    return;                  
+                }
                 wuc_FileVedio.UpFile();
+                wuc_FileVedio1.UpFile();
+                string FilePoster = wuc_FileVedio1.ServerDianPath;
                 string FileAddress = wuc_FileVedio.ServerDianPath;
-                String SQL = "  INSERT INTO [XcXm].[dbo].[tblVideoInfo](VideoName_c,VideoName_e,VidioPath)" +
-                             " VALUES('" + VedioStringCHE + "',+'" + VedioStringEng + "','" + FileAddress + "')";
+                String SQL = "  INSERT INTO [XcXm].[dbo].[tblVideoInfo](VideoName_c,VideoName_e,VidioPath,videoPoster)" +
+                             " VALUES('" + VedioStringCHE + "',+'" + VedioStringEng + "','" + FileAddress +"','"+ FilePoster+"')";
                 DB.CarryOutSqlSentence(SQL);
                 MessaegBox("上传成功");
             }

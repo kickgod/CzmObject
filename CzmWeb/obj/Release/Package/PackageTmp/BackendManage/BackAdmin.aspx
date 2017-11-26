@@ -152,7 +152,7 @@
                 <p class="TFS_Standardstyle">
                     <span>管理员:</span><asp:Label ID="lblAdmin" CssClass="TFS_Standardstyle TFS_Font" runat="server" Text="admin"></asp:Label> 时间：<span id="DateTimeNow"></span>
                     <a href="../BackendManage/AdminLogin.aspx" title="退出登陆" ><img src="../Images/SystemPicture/退出.png" width="30px"  height="30px" />退出登录</a>
-                    <a href="../Default.aspx"  title="返回首页"><img src="../Images/SystemPicture/生生世世.png"  width="30px"  height="30px" />返回首页</a> 
+                    <a href="../Default.aspx"  title="返回首页" target="_blank" ><img src="../Images/SystemPicture/生生世世.png"  width="30px"  height="30px"  />返回首页</a> 
                     <asp:Label ID="lbladminpwd" runat="server" Text=""  Visible="False"></asp:Label>
                 </p>
             </div>
@@ -174,9 +174,10 @@
                         <li id="ProductAdmin"><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk" onclick="OpenProductChooseKa()" /><a href="javascript:OpenProductChooseKa()">产品管理</a>
                             <ul class="OpenProduct" id="ProductShooseKa">
                                 <li><a href="javascript:GetPage('../BackendManage/ProductTypeAdd.aspx')">A.产品类别</a></li>
-                                <li><a href="javascript:GetPage('../BackendManage/ProductAddNew.aspx')">B.添加产品</a></li>
-                                <li><a href="javascript:GetPage('../BackendManage/ProductDataList.aspx')">C.产品列表</a></li>
-                                <li><a href="javascript:GetPage('../BackendManage/ProductDataShow.aspx')">D.产品效果</a></li>
+                                <li><a href="javascript:GetPage('../BackendManage/ProductTypeTwoAdd.aspx')">B.产品子类</a></li>
+                                <li><a href="javascript:GetPage('../BackendManage/ProductAddNew.aspx')">C.添加产品</a></li>
+                                <li><a href="javascript:GetPage('../BackendManage/ProductDataList.aspx')">D.产品列表</a></li>
+                                <li><a href="javascript:GetPage('../BackendManage/ProductDataShow.aspx')">E.产品效果</a></li>
                             </ul>
                         </li>
                         <li id="ManageUser"><img src="../Images/SystemPicture/角标（下） - 副本.png" class="ImgShooseCk"/><a href="javascript:OpenUserManageChooseKa()">会员管理</a>

@@ -96,35 +96,20 @@
         <div>
             <!--向左对齐-->
             <ul class="nav navbar-nav navbar-left">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        User function
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="active"><a target="_blank" href="../DefalutEng.aspx">Home Page</a></li>
-                        <li><a target="_blank" href="../UserPage/UserProductTypeShow.aspx">Product Catagory</a></li>
-                        <li><a target="_blank" href="../UserPage/UserNewProductShow.aspx">New</a></li>
-                        <li><a target="_blank" href="../UserPage/UserCreateProject.aspx">Project Applay</a></li>
-                        <li><a target="_blank" href="../UserPage/UserInvestProject.aspx">Invest</a></li>
-                        <li><a target="_blank" href="../UserPage/UserProjectShow.aspx">Display</a></li>
-                        <li><a target="_blank" href="../UserPage/UserVedioShowList.aspx">Video List</a></li>
-                        <li><a target="_blank" href="../UserPage/UserConmunicationApace.aspx">Communication</a></li>
-                    </ul>
-                </li>
+                <li class="ulloSpan"><a target="_blank" href="../DefalutEng.aspx">Home Page</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserProductTypeShow.aspx">Product Catagory</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserNewProductShow.aspx">New</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserCreateProject.aspx">Project Applay</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserInvestProject.aspx">Invest</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserProjectShow.aspx">Display</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserVedioShowList.aspx">Video List</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserConmunicationApace.aspx">Communication</a></li>
             </ul>
             <!--向右对齐-->
             <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Login <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../UserPage/UserPageLogin.aspx" target="_blank"><span class="glyphicon glyphicon-user"></span>log In Immediately</a></li>
-                        <li><a href="../UserPage/UserPageRegister.aspx" target="_blank"><span class="glyphicon glyphicon-log-in"></span>Sign up now</a></li>
-                        <li><a href="../UserPage/UserbecomeTypeHigh.aspx" target="_blank" ><span class="glyphicon glyphicon-home"></span>Personal Center</a></li>
-                    </ul>
-                </li>
+                <li class="ulloSpan"><a href="../UserPage/UserPageLogin.aspx" target="_blank"><span class="glyphicon glyphicon-user"></span>log In Immediately</a></li>
+                <li class="ulloSpan"><a href="../UserPage/UserPageRegister.aspx" target="_blank"><span class="glyphicon glyphicon-log-in"></span>Sign up now</a></li>
+                <li class="ulloSpan"><a href="../UserPage/UserbecomeTypeHigh.aspx" target="_blank" ><span class="glyphicon glyphicon-home"></span>Personal Center</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search">
                 <a href="../Default.aspx" target="_blank" type="submit" class="btn btn-default" >Chinese</a>
@@ -161,17 +146,41 @@
         <small>Category</small>
     </h3>
 </div>
+<form id="form1" runat="server">
+    <div class="container">
+        <div class="row" id="TypeShow">
+            <asp:Repeater ID="reptm" runat="server"  OnItemCommand="reptm_OnItemCommand">
+                <ItemTemplate>
+                    <div class="col-sm-6 col-md-6">
+                        <div class="thumbnail">
+                            <img src=<%#Eval("TypePicture")%> alt="加载中" />
+                            <div class="caption">
+                                <h3 class="introShowWord introShowWordNew">[Product Category]<%#Eval("typeName_e")%></h3>
+                                <p class="TypeIntroductionss">
+                                    <asp:Button ID="btnCheck" CssClass="btn btn-default" runat="server" Text="See Details" CommandArgument='<%#Eval("typeID")%>' CommandName="Check" />
+                                </p>
+                                <p class="TypeIntroductions">
+                                    <strong>Introduction:</strong> <%#Eval("TypeDecription_e")%>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+    </div>
+</form>
 <div class="container">
-    <div class="row" id="TypeShow">
-        <asp:Repeater ID="reptm" runat="server" >
+    <div class="row" id="Div1">
+        <asp:Repeater ID="reptmTwoType" runat="server"  OnItemCommand="reptm_OnItemCommand">
             <ItemTemplate>
                 <div class="col-sm-6 col-md-6">
                     <div class="thumbnail">
-                        <img src=<%#Eval("TypePicture")%> alt="加载中" />
+                        <img src=<%#Eval("TypePictureTwo")%> alt="Loading" />
                         <div class="caption">
-                            <h3 class="introShowWord introShowWordNew">[Product Category]<%#Eval("typeName_e")%></h3>
+                            <h3 class="introShowWord introShowWordNew">[Product Category]<%#Eval("TypeNameENG")%></h3>
                             <p class="TypeIntroductions">
-                                <strong>Introduction:</strong> <%#Eval("TypeDecription_e")%>
+                                <strong>Introduction:</strong> <%#Eval("TypeDecription2_e")%>
                             </p>
                         </div>
                     </div>

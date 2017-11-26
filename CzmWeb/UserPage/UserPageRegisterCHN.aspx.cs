@@ -75,28 +75,27 @@ namespace CzmWeb.UserPage
                 MessaegBox("验证码错误");
                 return;
             }
-            if (!wuc_FileUpload1.IsHaveFile())
+            if (wuc_FileUpload1.IsHaveFile())
             {
-                MessaegBox("请选择上传图片1");
+                wuc_FileUpload1.MapPaths = "~/CradIDPictureDB/";
+                wuc_FileUpload1.UpFile();
                 return;               
             }
-            if (!wuc_FileUpload2.IsHaveFile())
+            if (wuc_FileUpload2.IsHaveFile())
             {
-                MessaegBox("请选择上传图片2");
+                wuc_FileUpload2.MapPaths = "~/CradIDPictureDB/";
+                wuc_FileUpload2.UpFile();
                 return;
             }
             else
             {
                 if (!CheckIsHavBeenHave())
                 {
-                    wuc_FileUpload1.MapPaths = "~/CradIDPictureDB/";
-                    wuc_FileUpload1.UpFile();
-                    wuc_FileUpload2.UpFile();
                     if (wuc_FileUpload1.ServerShenNuePath != "" && wuc_FileUpload2.ServerShenNuePath != "")
                     {
                         String sql =
                             "INSERT INTO tblUserInfo(UserId,UserType,UserName_e,UserSex,UserCard,UserCardPicture_Address,UserCardPicture2_Address,UserWechat,UserEmail,UserPwd,UserState)" +
-                            " values('" + txtUserPhone.Text + "',1,'" + txtUserName.Text + "'," +
+                            " values('" + txtUserPhone.Text + "',1,'" + txtUserRealName.Text + "'," +
                             DropDownList1.SelectedValue + ",'" + txtUserCardID.Text + "','" +
                             wuc_FileUpload1.ServerDianPath + "','" + wuc_FileUpload1.ServerDianPath + "','" +
                             txtUserName.Text + "','" + txtPwd.Text + "','" + txtPasswordOne.Text + "',10)";
@@ -113,7 +112,7 @@ namespace CzmWeb.UserPage
                     {
                         String sql =
                             "INSERT INTO tblUserInfo(UserId,UserType,UserName_e,UserSex,UserCard,UserCardPicture_Address,UserCardPicture2_Address,UserWechat,UserEmail,UserPwd,UserState)" +
-                            " values('" + txtUserPhone.Text + "',1,'" + txtUserName.Text + "'," +
+                            " values('" + txtUserPhone.Text + "',1,'" + txtUserRealName.Text + "'," +
                             DropDownList1.SelectedValue + ",'" + txtUserCardID.Text + "','" +
                             "" + "','" + "" + "','" +
                             txtUserName.Text + "','" + txtPwd.Text + "','" + txtPasswordOne.Text + "',10)";

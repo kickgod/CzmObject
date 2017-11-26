@@ -1,7 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/UserPageMaster.Master" AutoEventWireup="true" CodeBehind="UserPageLogin.aspx.cs" Inherits="CzmWeb.UserPage.UserPageLogin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .Mainpage{ width: 100%;background-color: RGB(245, 234, 240); }
+        .ulloSpan a{display: block}
+        .ulloSpan:hover { border-bottom: RGB(148, 30, 80) 2px solid;border-top: RGB(148, 30, 80) 2px solid;color: black;font-size: 18px}
+         .Mainpage{ width: 100%;background-color: RGB(245, 234, 240); }
         .Mainpage .LoginUp{ width: 100%;height: 100px;background-color: inherit}
         .Mainpage .Login {background-color: inherit; width: 400px;margin: auto;margin-top: 50px}
         .Mainpage .Login .Ttile{height: 50px;line-height: 50px; color: RGB(176, 53, 112);font-size: 20px;text-align: center;font-style: italic;font-weight: bold;}
@@ -43,7 +45,7 @@
             .Mainpage .Login .ValidCode img{ width: 30px;height: 30px;border: RGB(245,234,240) 3px solid;vertical-align: bottom}
             .Mainpage .Login .ValidCode .txtUserpwds{ height: 34px;width: 100px} 
             .Mainpage .Login .ValidCode .BtnSendCodes{font-family: '华文楷体', '楷体', '微软雅黑', '宋体';height: 36px;width: 100px;background-color: RGB(176, 53, 112);border: RGB(176, 53, 112);color:
-             white;font-weight: 300;letter-spacing: 3px;font-size: large;margin-left: 10px;border-radius: 12px}
+                                                                                                                                                                                           white;font-weight: 300;letter-spacing: 3px;font-size: large;margin-left: 10px;border-radius: 12px}
             .Mainpage .Login .LoginBtn{ margin-top: 10px;}
             .Mainpage .Login .LoginBtn .BtnLogin{ width: 226px;height: 36px;margin-left: 60px;background-color: RGB(176, 53, 112);border: RGB(176, 53, 112);color: white;font-weight: 300;letter-spacing: 6px;font-size: large; }
             .Mainpage .Login .LoginError{margin-top: 12px}

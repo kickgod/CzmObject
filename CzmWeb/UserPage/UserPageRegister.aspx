@@ -319,14 +319,15 @@
         <div class="MainRegister">
             <p class="FistHange">
                 <span><asp:Label ID="Label2" runat="server" Text="User login"></asp:Label></span><asp:Label ID="lblyzm" runat="server" Text="" Visible="false"></asp:Label>
+                <small><span class="Requre"> * Required</span></small>
             </p>
             <br/>
             <!--微信-->
             <p>
-                <asp:Label ID="lblUserName_C" CssClass="TFS_FormFont" runat="server" Text="Wechat:"></asp:Label>
+                <asp:Label ID="lblUserName_C" CssClass="TFS_FormFont" runat="server" Text="Username:"></asp:Label>
             </p>
             <p>
-                <asp:TextBox ID="txtUserName" CssClass="txtStyle"  runat="server"  placeholder="Input User Wechat！"></asp:TextBox>
+                <asp:TextBox ID="txtUserName" CssClass="txtStyle"  runat="server"  placeholder="Input User U sername！"></asp:TextBox>
             </p>
             <!--真实姓名-->
             <br/>

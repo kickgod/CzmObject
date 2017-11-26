@@ -106,34 +106,20 @@
         <div>
             <!--向左对齐-->
             <ul class="nav navbar-nav navbar-left">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        User function
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="active"><a target="_blank" href="../DefalutEng.aspx">Home Page</a></li>
-                        <li><a target="_blank" href="../UserPage/UserProductTypeShow.aspx">Product Catagory</a></li>
-                        <li><a target="_blank" href="../UserPage/UserNewProductShow.aspx">New</a></li>
-                        <li><a target="_blank" href="../UserPage/UserCreateProject.aspx">Project Applay</a></li>
-                        <li><a target="_blank" href="../UserPage/UserInvestProject.aspx">Invest</a></li>
-                        <li><a target="_blank" href="../UserPage/UserProjectShow.aspx">Display</a></li>
-                        <li><a target="_blank" href="../UserPage/UserVedioShowList.aspx">Video List</a></li>
-                        <li><a target="_blank" href="../UserPage/UserConmunicationApace.aspx">Communication</a></li>
-                    </ul>
-                </li>
+                <li class="ulloSpan"><a target="_blank" href="../DefalutEng.aspx">Home Page</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserProductTypeShow.aspx">Product Catagory</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserNewProductShow.aspx">New</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserCreateProject.aspx">Project Applay</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserInvestProject.aspx">Invest</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserProjectShow.aspx">Display</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserVedioShowList.aspx">Video List</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserConmunicationApace.aspx">Communication</a></li>
             </ul>
             <!--向右对齐-->
             <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Login <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../UserPage/UserPageLogin.aspx" target="_blank"><span class="glyphicon glyphicon-user"></span>log In Immediately</a></li>
-                        <li><a href="../UserPage/UserPageRegister.aspx" target="_blank"><span class="glyphicon glyphicon-log-in"></span>Sign up now</a></li>
-                    </ul>
-                </li>
+                <li class="ulloSpan"><a href="../UserPage/UserPageLogin.aspx" target="_blank"><span class="glyphicon glyphicon-user"></span>log In Immediately</a></li>
+                <li class="ulloSpan"><a href="../UserPage/UserPageRegister.aspx" target="_blank"><span class="glyphicon glyphicon-log-in"></span>Sign up now</a></li>
+                <li class="ulloSpan"><a href="../UserPage/UserbecomeTypeHigh.aspx" target="_blank" ><span class="glyphicon glyphicon-home"></span>Personal Center</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search">
                 <a href="../Default.aspx" target="_blank" type="submit" class="btn btn-default" >Chinese</a>

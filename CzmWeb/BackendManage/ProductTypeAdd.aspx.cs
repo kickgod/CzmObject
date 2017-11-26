@@ -231,8 +231,8 @@ namespace CzmWeb.BackendManage
             {
                 string sqlString = "delete from  tblProductInfo where [ProductType]= " + e.CommandArgument;
                 string sql = "DELETE FROM [XcXm].[dbo].[tblProductTypeInfo] WHERE typeID =" + e.CommandArgument;
-                DB.CarryOutSqlSentence(sql);
                 DB.CarryOutSqlSentence(sqlString);
+                DB.CarryOutSqlSentence(sql);
                 BindData();
                 MessaegBox("成功删除");
             }

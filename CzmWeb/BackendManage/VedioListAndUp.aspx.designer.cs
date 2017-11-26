@@ -58,6 +58,15 @@ namespace CzmWeb.BackendManage {
         protected global::CzmWeb.Common.wuc_FileVedio wuc_FileVedio;
         
         /// <summary>
+        /// wuc_FileVedio1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::CzmWeb.Common.wuc_FileVedio wuc_FileVedio1;
+        
+        /// <summary>
         /// btnAdd 控件。
         /// </summary>
         /// <remarks>

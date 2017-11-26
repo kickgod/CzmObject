@@ -606,5 +606,53 @@ namespace CzmWeb.App_Code
             adapter.Fill(td);
             return td;
         }
+        /// <summary>
+        /// 返回表tblProductTypeTwoInfo所有数据
+        /// 表中信息为直播地址信息 
+        /// 修改人：蒋星 22017 /11/26 23:01
+        /// </summary>
+        /// <returns>返回数据集DataTable</returns>
+        public DataTable GetAllDataFromtblProductTypeTwoInfo()
+        {
+            SqlConnection con = GetSqlConnection();
+            DataTable td = new DataTable();
+            if (con.State != ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM tblProductTypeTwoInfo";
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(td);
+            return td;
+        }
+        /// <summary>
+        /// 返回表tblProductTypeTwoInfo所有数据
+        /// 表中信息为直播地址信息 
+        /// 修改人：蒋星 2017 /11/26 23:01
+        /// <returns>返回数据集DataTable</returns>
+        public DataTable GetAllDataFromtblProductTypeTwoInfo(String Where)
+        {
+            SqlConnection con = GetSqlConnection();
+            DataTable td = new DataTable();
+            if (con.State != ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            if (Where == "")
+            {
+                cmd.CommandText = "SELECT * FROM tblProductTypeTwoInfo";
+            }
+            else
+            {
+                cmd.CommandText = "SELECT * FROM tblProductTypeTwoInfo Where " + Where;
+            }
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            adapter.Fill(td);
+            return td;
+        }
     }
 }

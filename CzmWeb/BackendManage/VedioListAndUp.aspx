@@ -92,10 +92,10 @@
                     <uc1:wuc_FileVedio runat="server" id="wuc_FileVedio" />                   
                 </td>
                 <td align="center">
-                    状态
+                    封面
                 </td>
                 <td>
-                    正常
+                    <uc1:wuc_FileVedio runat="server" id="wuc_FileVedio1" />   
                 </td>
             </tr>
             <tr>
@@ -121,9 +121,9 @@
                 <ItemTemplate>
                     <div class="col-md-4">
                         <div style="width: 100%">
-                            <video poster="../VedioList/2017102413124848.jpg" preload="auto" controls="controls" style="width: 100%;" >
-                                <source type="video/mp4"  src='<%#Eval("VidioPath")%>  >
-                                <source type="video/webm" src='<%#Eval("VidioPath")%>  >
+                            <video poster=<%#Eval("videoPoster")%>  preload="auto" controls="controls" style="width: 100%;" >
+                                <source type="video/mp4"  src=<%#Eval("VidioPath")%>  >
+                                <source type="video/webm" src=<%#Eval("VidioPath")%>  >
                                 <source type="video/ogg"  src=<%#Eval("VidioPath")%>  >
                             </video>
                         </div>

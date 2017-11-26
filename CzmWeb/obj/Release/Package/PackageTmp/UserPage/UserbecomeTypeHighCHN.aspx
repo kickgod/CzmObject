@@ -49,6 +49,8 @@
             #ProjectHave figure img{ width: 100%;height: 200px;}
             #reptemNewProductMy figure img{ width: 120px;height: 55px;}
         }
+        .ulloSpan a{display: block}
+        .ulloSpan:hover { border-bottom: white 2px solid;border-top: white 2px solid;color: black;font-size: 18px}
         .SSSS{border-radius: 12.5px;}
         .SearchTxt{ width: 70%;height: 27px;border-radius: 12.5px;font-size: 13px;color: black;text-indent: 15px}
     </style>
@@ -117,50 +119,33 @@
             </div>
         </div>
     </nav>
-    <nav class="navbar navbar-default" role="navigation" id="ShowPhoneIfEnd">
-        <div class="container-fluid"> 
-            <div class="navbar-header">
-                <a class="navbar-brand" target="_blank" href="../Default.aspx"><strong class="CZMBrandCompany">创造门</strong></a>
-            </div>
-            <div>
-                <!--向左对齐-->
-                <ul class="nav navbar-nav navbar-left">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            用户功能
-                            <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="active"><a target="_blank" href="../Default.aspx">主页</a></li>
-                            <li><a target="_blank" href="../UserPage/UserProductTypeShowCHN.aspx">产品分类</a></li>
-                            <li><a target="_blank" href="../UserPage/UserNewProductShowCHN.aspx">新品预告</a></li>
-                            <li><a target="_blank" href="../UserPage/UserCreateProjectCHN.aspx">我要创作</a></li>
-                            <li><a target="_blank" href="../UserPage/UserInvestProjectCHN.aspx">我要投资</a></li>
-                            <li><a target="_blank" href="../UserPage/UserProjectShowCHN.aspx">项目展示</a></li>
-                            <li><a target="_blank" href="../UserPage/UserVedioShowListCHE.aspx">视频专区</a></li>
-                            <li><a target="_blank" href="../UserPage/UserConmunicationApaceCHN.aspx">交流空间</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <!--向右对齐-->
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            用户入口 <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../UserPage/UserPageLoginCHN.aspx" target="_blank"><span class="glyphicon glyphicon-user"></span> 立即登录</a></li>
-                            <li><a href="../UserPage/UserPageRegisterCHN.aspx" target="_blank"><span class="glyphicon glyphicon-log-in"></span> 立即注册</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="navbar-form navbar-right" role="search">
-                    <a href="../Default.aspx "  target="_blank" type="submit" class="btn btn-default" >Chinese</a>
-                    <a href="../DefalutEng.aspx" target="_blank" type="submit" class="btn btn-default"  >English</a>
-                </form>
-            </div>
+<nav class="navbar navbar-default" role="navigation" id="ShowPhoneIfEnd">
+    <div class="container-fluid"> 
+        <div>
+            <!--向左对齐-->
+            <ul class="nav navbar-nav navbar-left" >
+                <li class="ulloSpan"><a target="_blank" href="../Default.aspx">主页</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserProductTypeShowCHN.aspx">产品分类</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserNewProductShowCHN.aspx">新品预告</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserCreateProjectCHN.aspx">我要创作</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserInvestProjectCHN.aspx">我要投资</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserProjectShowCHN.aspx">项目展示</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserVedioShowListCHE.aspx">视频专区</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserConmunicationApaceCHN.aspx">交流空间</a></li>
+            </ul>
+            <!--向右对齐-->
+            <ul class="nav navbar-nav navbar-right">
+                <li class="ulloSpan"><a href="../UserPage/UserPageLoginCHN.aspx" target="_blank"><span class="glyphicon glyphicon-user"></span> 立即登录</a></li>
+                <li class="ulloSpan"><a href="../UserPage/UserPageRegisterCHN.aspx" target="_blank"><span class="glyphicon glyphicon-log-in"></span> 立即注册</a></li>
+                <li class="ulloSpan"><a target="_blank" href="../UserPage/UserbecomeTypeHighCHN.aspx"><span class="glyphicon glyphicon-home"></span> 个人中心</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
+                <a href="../Default.aspx "  target="_blank" type="submit" class="btn btn-default" >CN</a>
+                <a href="../DefalutEng.aspx" target="_blank" type="submit" class="btn btn-default"  >EN</a>
+            </form>
         </div>
-    </nav>
+    </div>
+</nav>
 <form id="form1" runat="server">
     <div class="container" style="margin-top: -35px">
         <div class="page-header">
@@ -206,7 +191,7 @@
                                 注册时间:<asp:Label ID="Label1" runat="server" Visible="True" Text='<%#Eval("InsertTime")%>'></asp:Label>
                             </div>
                             <div class="panel-body">
-                                微信:<asp:Label ID="Label2" runat="server" Visible="True" Text='<%#Eval("UserWechat")%>'></asp:Label>
+                                用户名:<asp:Label ID="Label2" runat="server" Visible="True" Text='<%#Eval("UserWechat")%>'></asp:Label>
                             </div>
                             <div class="panel-body">
                                 [备注] 钻石会员才有自由投资的权限和快速申请项目的能力.
@@ -342,7 +327,7 @@
                             <asp:TextBox ID="txtUserEmail" TextMode="Email" CssClass="form-control" placeholder="Please enter your email address" runat="server"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <label for="txtWeChat">微信</label>
+                            <label for="txtWeChat">用户名</label>
                             <asp:TextBox ID="txtWeChat"  CssClass="form-control" placeholder="Please enter your WeChat" runat="server"></asp:TextBox>
                         </div>
                         <br/>

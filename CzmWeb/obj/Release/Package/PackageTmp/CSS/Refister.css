@@ -1,6 +1,7 @@
 ﻿        *{ padding: 0px;margin: 0px;text-decoration: none;}
         .JiaoBen{ width: 100%;height: 80px;font-size: smaller;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: gainsboro;text-align: center;background-color:RGB(176,53,112) }
         .JiaoBen a{color: gainsboro}
+        .Requre{ font-weight: 700;font-size: 18px;color: red;padding: 5px;vertical-align: middle}
         /***********************************************1300px以上*************************************************************************/
         @media only screen and (min-width:1300px) {
             .PhoneImg{ width: 30px;height: 30px;padding-top: 10px;display: none}

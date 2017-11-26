@@ -41,7 +41,7 @@ namespace CzmWeb
             reptemNewProduct.DataBind();
             reptmInvset.DataSource = getView.GetAllDataFrom_vwUserInvsertProject("PiiState =30");
             reptmInvset.DataBind();
-            reptmProject.DataSource = getView.GetAllDataFrom_vwCreateProjrctItem();
+            reptmProject.DataSource = getView.CarryOutSqlGeDataTable("SELECT TOP 3 * FROM [XcXm].[dbo].[tblProjectCreate] ORDER BY ImgUploadtime DESC");
             reptmProject.DataBind();
             Repeater1.DataSource = DB.CarryOutSqlGeDataTable("SELECT TOP 4 * FROM [XcXm].[dbo].[tblProjectCreate] WHERE PciState = 30 order by PciTime");
             Repeater1.DataBind();
@@ -61,6 +61,14 @@ namespace CzmWeb
                     Response.Redirect("~/UserPage/UserInvestProjectCHN.aspx?QueryName=" + QueryName);
                 }
            
+        }
+
+        protected void reptem_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            if (e.CommandName == "Check")
+            {
+                Response.Redirect("~/UserPage/UserProductTypeShowCHN.aspx?TypeIds= " + e.CommandArgument);
+            }
         }
     }
 }

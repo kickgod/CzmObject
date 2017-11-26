@@ -145,6 +145,7 @@
     <Content Include="BackendManage\ProductAddNew.aspx" />
     <Content Include="BackendManage\ProductDataShow.aspx" />
     <Content Include="BackendManage\ProductTypeAdd.aspx" />
+    <Content Include="BackendManage\ProductTypeTwoAdd.aspx" />
     <Content Include="BackendManage\ProjectInformation.aspx" />
     <Content Include="BackendManage\ProjectValidCheck.aspx" />
     <Content Include="BackendManage\UserApplyCheck.aspx" />
@@ -263,6 +264,8 @@
     <Content Include="CSS\button.css" />
     <Content Include="CSS\Demo.css" />
     <Content Include="CSS\index.css" />
+    <Content Include="CSS\jquery.flipster.css" />
+    <Content Include="CSS\jquery.flipster.js" />
     <Content Include="CSS\PrintPage.css" />
     <Content Include="CSS\Refister.css" />
     <Content Include="CSS\resetStyle.css" />
@@ -287,8 +290,9 @@
     <Content Include="CSS\WebScreen.css" />
     <Content Include="CSS\WebSubPage.css" />
     <Content Include="CSS\WebTable.css" />
-    <Content Include="DefalutEng.aspx" />
+    <Content Include="DefalutEngs.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="DefalutEng.aspx" />
     <Content Include="FirstImage\1_CompanyName_c.jpg" />
     <Content Include="FirstImage\2_CompanyIntro_c.jpg" />
     <Content Include="FirstImage\3_CompanyTitle_c.jpg" />
@@ -511,9 +515,6 @@
     <Content Include="Images\Print\sicnu_logo.png" />
     <Content Include="Images\Print\sicnu_logo_350.png" />
     <Content Include="Images\process.gif" />
-    <Content Include="Images\QrCode\wb_zjc.jpg" />
-    <Content Include="Images\QrCode\wx_jy.jpg" />
-    <Content Include="Images\QrCode\wx_zs.jpg" />
     <Content Include="Images\SystemPicture\again_hover.png" />
     <Content Include="Images\SystemPicture\firstpage.png" />
     <Content Include="Images\SystemPicture\IsRight.png" />
@@ -539,20 +540,26 @@
     <Content Include="Images\SystemPicture\userLanmu.png" />
     <Content Include="Images\SystemPicture\userLanse.png" />
     <Content Include="Images\SystemPicture\Userpwd.png" />
+    <Content Include="Images\SystemPicture\userZixun2.png" />
     <Content Include="Images\SystemPicture\User_White.png" />
     <Content Include="Images\SystemPicture\validcoed.png" />
+    <Content Include="Images\SystemPicture\yitiao.png" />
     <Content Include="Images\SystemPicture\zhedie.png" />
     <Content Include="Images\SystemPicture\zhediexiangxia.png" />
     <Content Include="Images\SystemPicture\zhidinglanse.png" />
     <Content Include="Images\SystemPicture\zixunlanse.png" />
     <Content Include="Images\SystemPicture\二维码.png" />
+    <Content Include="Images\SystemPicture\写作.png" />
     <Content Include="Images\SystemPicture\创造力.ico" />
     <Content Include="Images\SystemPicture\向下箭头.png" />
     <Content Include="Images\SystemPicture\咨询.png" />
+    <Content Include="Images\SystemPicture\投资.png" />
     <Content Include="Images\SystemPicture\折叠xiangzuo.png" />
     <Content Include="Images\SystemPicture\折叠zhedie.png" />
     <Content Include="Images\SystemPicture\旺旺.png" />
+    <Content Include="Images\SystemPicture\消息.png" />
     <Content Include="Images\SystemPicture\生生世世.png" />
+    <Content Include="Images\SystemPicture\用户123.png" />
     <Content Include="Images\SystemPicture\置顶.png" />
     <Content Include="Images\SystemPicture\Right.png" />
     <Content Include="Images\SystemPicture\Error.png" />
@@ -607,6 +614,11 @@
     <Content Include="Images\Web\title_line.png" />
     <Content Include="Images\Web\top.png" />
     <Content Include="Images\Web\xxgk.png" />
+    <Content Include="Img\1510495015.png" />
+    <Content Include="Img\mmexport1509186467240.jpg" />
+    <Content Include="Img\QQ.png" />
+    <Content Include="Img\微信.png" />
+    <Content Include="Img\支付宝.png" />
     <Content Include="Js\Demo.js" />
     <Content Include="Js\scroll.js" />
     <Content Include="Master\2.gif" />
@@ -704,6 +716,7 @@
     <Content Include="UserPage\UserVedioShowListCHE.aspx" />
     <Content Include="VedioList\2017102413124848.jpg" />
     <Content Include="VedioList\20171024215330535.mp4" />
+    <Content Include="VedioList\20171121154618192.jpg" />
     <Content Include="VedioList\2017119161035900.mp4" />
     <Content Include="VedioList\201711916918771.mp4" />
     <Content Include="ViewSwitcher.ascx" />
@@ -843,6 +856,13 @@
     <Compile Include="BackendManage\ProductTypeAdd.aspx.designer.cs">
       <DependentUpon>ProductTypeAdd.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BackendManage\ProductTypeTwoAdd.aspx.cs">
+      <DependentUpon>ProductTypeTwoAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackendManage\ProductTypeTwoAdd.aspx.designer.cs">
+      <DependentUpon>ProductTypeTwoAdd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BackendManage\ProjectInformation.aspx.cs">
       <DependentUpon>ProjectInformation.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -941,12 +961,12 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DefalutEng.aspx.cs">
-      <DependentUpon>DefalutEng.aspx</DependentUpon>
+    <Compile Include="DefalutEngs.aspx.cs">
+      <DependentUpon>DefalutEngs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="DefalutEng.aspx.designer.cs">
-      <DependentUpon>DefalutEng.aspx</DependentUpon>
+    <Compile Include="DefalutEngs.aspx.designer.cs">
+      <DependentUpon>DefalutEngs.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -954,6 +974,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefalutEng.aspx.cs">
+      <DependentUpon>DefalutEng.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefalutEng.aspx.designer.cs">
+      <DependentUpon>DefalutEng.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

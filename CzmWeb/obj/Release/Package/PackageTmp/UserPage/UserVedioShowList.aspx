@@ -18,6 +18,14 @@
     <link href="../CSS/BootsrapMuBan.css" rel="stylesheet" />
     <style type="text/css">
         .ProductNameType{color: white;font-weight: 500;background-color: RGB(174, 105, 130);padding: 5px 20px;word-spacing: 5px;font-size: 16px}
+        .ulloSpan a{display: block}
+        .ulloSpan:hover { border-bottom: white 2px solid;border-top: white 2px solid;color: black;font-size: 18px}
+        .navbar-nav li:hover{
+            background-color: purple;
+        }
+        .navbar-nav li  a:hover{
+            background-color: purple;
+        }
     </style>
     <script type="text/javascript">
         window.onload = function () {
@@ -100,35 +108,20 @@
         <div>
             <!--向左对齐-->
             <ul class="nav navbar-nav navbar-left">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        User function
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="active"><a target="_blank" href="../DefalutEng.aspx">Home Page</a></li>
-                        <li><a target="_blank" href="../UserPage/UserProductTypeShow.aspx">Product Catagory</a></li>
-                        <li><a target="_blank" href="../UserPage/UserNewProductShow.aspx">New</a></li>
-                        <li><a target="_blank" href="../UserPage/UserCreateProject.aspx">Project Applay</a></li>
-                        <li><a target="_blank" href="../UserPage/UserInvestProject.aspx">Invest</a></li>
-                        <li><a target="_blank" href="../UserPage/UserProjectShow.aspx">Display</a></li>
-                        <li><a target="_blank" href="../UserPage/UserVedioShowList.aspx">Video List</a></li>
-                        <li><a target="_blank" href="../UserPage/UserConmunicationApace.aspx">Communication</a></li>
-                    </ul>
-                </li>
+                 <li class="ulloSpan"><a target="_blank" href="../DefalutEng.aspx">Home Page</a></li>
+                 <li class="ulloSpan"><a target="_blank" href="../UserPage/UserProductTypeShow.aspx">Product Catagory</a></li>
+                 <li class="ulloSpan"><a target="_blank" href="../UserPage/UserNewProductShow.aspx">New</a></li>
+                 <li class="ulloSpan"><a target="_blank" href="../UserPage/UserCreateProject.aspx">Project Applay</a></li>
+                 <li class="ulloSpan"><a target="_blank" href="../UserPage/UserInvestProject.aspx">Invest</a></li>
+                 <li class="ulloSpan"><a target="_blank" href="../UserPage/UserProjectShow.aspx">Display</a></li>
+                 <li class="ulloSpan"><a target="_blank" href="../UserPage/UserVedioShowList.aspx">Video List</a></li>
+                 <li class="ulloSpan"><a target="_blank" href="../UserPage/UserConmunicationApace.aspx">Communication</a></li>
             </ul>
             <!--向右对齐-->
             <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Login <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../UserPage/UserPageLogin.aspx" target="_blank"><span class="glyphicon glyphicon-user"></span>log In Immediately</a></li>
-                        <li><a href="../UserPage/UserPageRegister.aspx" target="_blank"><span class="glyphicon glyphicon-log-in"></span>Sign up now</a></li>
-                        <li><a href="../UserPage/UserbecomeTypeHigh.aspx" target="_blank" ><span class="glyphicon glyphicon-home"></span>Personal Center</a></li>
-                    </ul>
-                </li>
+                  <li class="ulloSpan"><a href="../UserPage/UserPageLogin.aspx" target="_blank"><span class="glyphicon glyphicon-user"></span>log In Immediately</a></li>
+                  <li class="ulloSpan"><a href="../UserPage/UserPageRegister.aspx" target="_blank"><span class="glyphicon glyphicon-log-in"></span>Sign up now</a></li>
+                  <li class="ulloSpan"><a href="../UserPage/UserbecomeTypeHigh.aspx" target="_blank" ><span class="glyphicon glyphicon-home"></span>Personal Center</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="search">
                 <a href="../Default.aspx" target="_blank" type="submit" class="btn btn-default" >Chinese</a>
@@ -151,7 +144,7 @@
             <ItemTemplate>
                 <div class="col-md-4 col-sm-6 " style="margin-top: 15px">
                     <div style="width: 100%">
-                        <video poster="../VedioList/2017102413124848.jpg" preload="meta" controls="controls" style="width: 100%;" >
+                        <video poster='<%#Eval("videoPoster")%>'  preload="meta" controls="controls" style="width: 100%;" >
                             <source type="video/mp4" src=<%#Eval("VidioPath")%> >
                             <source type="video/webm" src=<%#Eval("VidioPath")%> >
                             <source type="video/ogg" src=<%#Eval("VidioPath")%> >

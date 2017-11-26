@@ -44,6 +44,10 @@
         .A_p_item_0:hover{ background-color: RGB(243,35,135);color: white }
         .A_p_item_1{background-color: white}
         .A_p_item_1:hover{ background-color: RGB(243,35,135);color: white }
+        .auto-style1
+        {
+            height: 32px;
+        }
     </style>
     <title></title>
 </head>

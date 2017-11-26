@@ -7,27 +7,28 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using CzmObject.App_Code;
 using CzmWeb.App_Code;
+
 namespace CzmWeb
 {
-    public partial class defalut : System.Web.UI.Page
+    public partial class Defaults : System.Web.UI.Page
     {
         GetDataFromTable getTable = new GetDataFromTable();
         GetDataFromView getView = new GetDataFromView();
         PublicGetDataFromDB DB = new PublicGetDataFromDB();
         SendPhoneMessage send = new SendPhoneMessage();
-        PublicUserJudge Judge =new PublicUserJudge();
+        PublicUserJudge Judge = new PublicUserJudge();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                DataBindt();
+                DataBind();
                 AddUrlLive();
             }
         }
 
-        private void DataBindt()
+        private void DataBind()
         {
-                //绑定产品种类
+            //绑定产品种类
             DataTable td = new DataTable();
             td = DB.CarryOutSqlGeDataTable("SELECT top 8 * FROM [XcXm].[dbo].[tblProductTypeInfo] where TypeState =30");
             reptem.DataSource = td;
@@ -39,11 +40,12 @@ namespace CzmWeb
             reptemNewProduct.DataBind();
             reptmInvset.DataSource = getView.GetAllDataFrom_vwUserInvsertProject("PiiState =30");
             reptmInvset.DataBind();
-            reptmProject.DataSource = getView.GetAllDataFrom_vwCreateProjrctItem();
+            reptmProject.DataSource = getView.CarryOutSqlGeDataTable("SELECT TOP 3 * FROM [XcXm].[dbo].[tblProjectCreate] ORDER BY ImgUploadtime DESC");
             reptmProject.DataBind();
             Repeater1.DataSource = DB.CarryOutSqlGeDataTable("SELECT TOP 4 * FROM [XcXm].[dbo].[tblProjectCreate] WHERE PciState = 30 order by PciTime");
             Repeater1.DataBind();
         }
+
         private void AddUrlLive()
         {
             DataTable td = getTable.GetAllDataFromtblLiveInfo();
@@ -55,9 +57,15 @@ namespace CzmWeb
             if (e.CommandName == "Invest")
             {
                 string QueryName = e.CommandArgument.ToString();
-                Response.Redirect("~/UserPage/UserInvestProjectCHN.aspx?QueryName=" + QueryName);
+                Response.Redirect("~/UserPage/UserInvestProject.aspx?QueryName=" + QueryName);
             }
-
+        }
+        protected void reptem_OnItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            if (e.CommandName == "Check")
+            {
+                Response.Redirect("~/UserPage/UserProductTypeShow.aspx?TypeIds= " + e.CommandArgument);
+            }
         }
     }
 }

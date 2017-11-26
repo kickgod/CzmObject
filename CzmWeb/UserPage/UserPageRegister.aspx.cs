@@ -81,7 +81,7 @@ namespace CzmWeb.UserPage
             {
                         String sql =
                             "INSERT INTO tblUserInfo(UserId,UserType,UserName_e,UserSex,UserCardPicture_Address,UserCardPicture2_Address,UserWechat,UserEmail,UserPwd,UserState)" +
-                            " values('" + txtUserPhone.Text + "',1,'" + txtUserName.Text + "'," +
+                            " values('" + txtUserPhone.Text + "',1,'" + txtUserRealName.Text + "'," +
                             DropDownList1.SelectedValue  +  ",'" +
                             "" + "','" + "" + "','" +
                             txtUserName.Text + "','" + txtPwd.Text + "','" + txtPasswordOne.Text + "',10)";

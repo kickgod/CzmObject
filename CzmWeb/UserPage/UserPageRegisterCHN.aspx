@@ -183,10 +183,6 @@
                         alert("请填写验证码");
                         return false;
                     }
-                    if (cardIdNuMber.value == "" || cardIdNuMber.value == null) {
-                        alert("请填写你的身份证号码！");
-                        return false;
-                    }
                     if (passwordC.value == "" || passwordC.value == null) {
                         alert("请填写你的密码！");
                         return false;
@@ -206,15 +202,19 @@
                 <div class="MainRegister">
                     <p class="FistHange">
                         <span><asp:Label ID="Label2" runat="server" Text="用户注册"></asp:Label></span><asp:Label ID="lblyzm" runat="server" Text="" Visible="False"></asp:Label>
+                        <span class="Requre">星号 * 必填</span>
                     </p>
-                    <br/><br/>
+                    <br/>
+                    <br/>
                     <p class="Sheck UserName">
-                        <asp:Label ID="lblUserName_C" CssClass="TFS_FormFont" runat="server" Text="微信号:" Visible="True"></asp:Label>
-                        <asp:TextBox ID="txtUserName" CssClass="BtnTextForm"  runat="server"  placeholder="微信号"></asp:TextBox>
+                        <asp:Label ID="lblUserName_C" CssClass="TFS_FormFont" runat="server" Text="用户名:" Visible="True"></asp:Label>
+                        <asp:TextBox ID="txtUserName" CssClass="BtnTextForm"  runat="server"  autofocus="autofocus" placeholder="用户名"></asp:TextBox>
+                        <span class="Requre">*</span>
                     </p>
                     <p class="Sheck UserRealName">
                         <asp:Label ID="lblUserPwd_C" CssClass="TFS_FormFont" runat="server" Text="真实姓名:" Visible="True"></asp:Label>
                         <asp:TextBox ID="txtUserRealName" CssClass="BtnTextFormS"  runat="server"  placeholder="真实姓名"></asp:TextBox>
+                        <span class="Requre">*</span>
                     </p>
                     <p class="Sheck UserSex">
                         <asp:Label ID="lblSex_C" CssClass="TFS_FormFont" runat="server" Text="性别:" Visible="True"></asp:Label>
@@ -222,21 +222,25 @@
                             <asp:ListItem value="1">男（male）</asp:ListItem>
                             <asp:ListItem value="0">女（female）</asp:ListItem>
                         </asp:DropDownList>
+                        <span class="Requre">*</span>
                     </p>
                     <p class="Sheck UserPwd">
                         <asp:Label ID="lblPwd_C" CssClass="TFS_FormFont" runat="server" Text="电子邮箱:" Visible="True"></asp:Label>
                         <asp:TextBox ID="txtPwd" TextMode="Email" CssClass="BtnTextFormPwd"  runat="server"  placeholder="E-mail Address"></asp:TextBox>
+                        <span class="Requre">*</span>
                         <span class="biaozhu">请输入常用邮箱</span>
                     </p>
                     <p class="Sheck UserPhone">
                         <asp:Label ID="lblUserPhone_C" CssClass="TFS_FormFont" runat="server" Text="手机号:" Visible="True"></asp:Label>
                         <asp:TextBox ID="txtUserPhone" CssClass="BtnTextFormPhone"  runat="server"  placeholder="Phone Number"></asp:TextBox>
+                        <span class="Requre">*</span>
                         <span class="biaozhu">你的手机号就是以后的登录ID</span>
                     </p>
                     <p class="Sheck VaildCodes">
                         <asp:Label ID="Code_C" CssClass="TFS_FormFont" runat="server" Text="验证码:" Visible="True" ></asp:Label>
                         <asp:TextBox ID="txtCode" CssClass="BtnTextFormCode"  runat="server"  placeholder="验证码"></asp:TextBox>
                         <asp:Button ID="btnSendCode" runat="server" Text="发送" OnClientClick="return  sendCodes()" CssClass="BtnSendCodes" OnClick="btnSendCode_Click"/>
+                        <span class="Requre">*</span>
                         <span class="biaozhu">填写好后点击发送</span>
                     </p>
                     <p class="Sheck CradIdNumber">
@@ -259,12 +263,16 @@
                     <p class="Sheck UserPwd">
                         <asp:Label ID="LblPwdW_C" CssClass="TFS_FormFont" runat="server" Text="设置密码:" Visible="True"></asp:Label>
                         <asp:Label ID="LblPwdW_E" CssClass="TFS_FormFont"  runat="server" Text="Password:" Visible="false"></asp:Label>
-                        <asp:TextBox ID="txtPasswordOne" CssClass="BtnTextFormPwd"  runat="server" TextMode="Password" placeholder="请输入密码(Password)"></asp:TextBox><span class="biaozhu">请输入严格密码</span>
+                        <asp:TextBox ID="txtPasswordOne" CssClass="BtnTextFormPwd"  runat="server" TextMode="Password" placeholder="请输入密码(Password)"></asp:TextBox>
+                        <span class="Requre">*</span>
+                        <span class="biaozhu">请输入严格密码</span>
                     </p>
                     <p class="Sheck UserPwd">
                         <asp:Label ID="lblPwds_C" CssClass="TFS_FormFont" runat="server" Text="重复输入:" Visible="True"></asp:Label>
                         <asp:Label ID="lblPwds_E" CssClass="TFS_FormFont"  runat="server" Text="Password:" Visible="false"></asp:Label>
-                        <asp:TextBox ID="txtPasswordTwo" CssClass="BtnTextFormPwd"  runat="server" TextMode="Password"  placeholder="请输入密码(Input Password Again)"></asp:TextBox><span class="biaozhu">请输入严格密码</span>
+                        <asp:TextBox ID="txtPasswordTwo" CssClass="BtnTextFormPwd"  runat="server" TextMode="Password"  placeholder="请输入密码(Input Password Again)"></asp:TextBox>
+                        <span class="Requre">*</span>
+                        <span class="biaozhu">请输入严格密码</span>
                     </p>
                     <p class="Sheck LoginNow">
                         <asp:Button ID="btnLoginNowTime" CssClass="btnLoginNowTime" runat="server" Text="注册" OnClientClick="return CheckNull();" OnClick="btnLoginNowTime_Click" />

@@ -19,7 +19,28 @@ namespace CzmWeb.UserPage
         PublicUserJudge Judge = new PublicUserJudge();
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataBandS();
+            if (!IsPostBack)
+            {
+                if (Request.QueryString["TypeIds"] != null)
+                {
+                    ViewState["Typeid"] = Request.QueryString["TypeIds"].ToString();
+                    DataBindPerson();
+                }
+                else
+                {
+                    DataBandS();
+                }               
+            } 
+        }
+        private void DataBindPerson()
+        {
+            DataTable td =null;
+            if (ViewState["Typeid"] != null)
+            {
+                 td = getTable.CarryOutSqlGeDataTable("SELECT * FROM [XcXm].[dbo].[tblProductTypeTwoInfo] WHERE TypeIsVisiable=1 and typeID= " + ViewState["Typeid"].ToString()); 
+            }
+            reptmTwoType.DataSource = td;
+            reptmTwoType.DataBind();           
         }
         private void DataBandS()
         {
@@ -31,16 +52,15 @@ namespace CzmWeb.UserPage
         {
             Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('" + msg + "')</script>");
         }
-        private void MessageBoxLanguge(string Chinese, string English)
+        protected void reptm_OnItemCommand(object source, RepeaterCommandEventArgs e)
         {
-            if (Session["Lang"].ToString() == "CHE" || Session["Lang"] == null)
+            if (e.CommandName == "Check")
             {
-                MessaegBox(Chinese);
-            }
-            else
-            {
-                MessaegBox(English);
-            }
+                ViewState["Typeid"] = e.CommandArgument;
+                DataBindPerson();
+                reptm.DataSource = null;
+                reptm.DataBind();
+            }          
         }
     }
 }

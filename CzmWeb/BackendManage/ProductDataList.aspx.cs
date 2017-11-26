@@ -55,6 +55,17 @@ namespace CzmWeb.BackendManage
         {
             if (e.CommandName == "Delete")
             {
+                string TypeId =
+                    DB.CarryOutSqlGetFirstColmun(
+                        "SELECT [ProductType] FROM [XcXm].[dbo].[tblProductInfo] WHERE ProductID =" +
+                        e.CommandArgument);
+                int CountType =Convert.ToInt32(
+                    DB.CarryOutSqlGetFirstColmun(
+                        "SELECT COUNT(*) FROM [XcXm].[dbo].[tblProductTypeInfo] WHERE [typeID] =" + e.CommandArgument));
+                if (CountType > 0)
+                {
+                    MessaegBox("");
+                }
                 string sql = "DELETE FROM [XcXm].[dbo].[tblProductInfo] WHERE ProductID ='" + e.CommandArgument + "'";
                 DB.CarryOutSqlSentence(sql);
                 MessaegBox("成功删除");
