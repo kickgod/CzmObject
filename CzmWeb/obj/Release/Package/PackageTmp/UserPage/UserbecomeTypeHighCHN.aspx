@@ -313,8 +313,18 @@
                             <uc1:wuc_FileUpload_1 runat="server" ID="wuc_FileUpload2" />
                         </div>
                         <p style="text-align: center">
-                            <asp:Button ID="btnChange" CssClass="btn btn-danger" OnClick="btnChange_OnClick" runat="server" Text="Submit" OnClientClick="return CheckNull()" />
+                            <asp:Button ID="btnChange" CssClass="btn btn-danger" OnClick="btnChange_OnClick" runat="server" Text="提交" OnClientClick="return CheckNull()" />
                         </p>
+                        <br />
+                        <h4 class="h4">上传图片结果</h4>
+                         <div class="row">
+                            <div class="col-md-4 col-xs-6">
+                                <asp:Image ID="ImgSrcPictureOne" Visible="False" runat="server" Width="160px" Height="100px" BorderColor="white" />
+                            </div>
+                            <div class="col-md-4 col-xs-6">
+                                <asp:Image ID="ImgSrcPictureTwo"  Visible="False" runat="server" Width="160px" Height="100px"  BorderColor="white" />
+                            </div>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="Personal">
                         <div class="form-group">
@@ -332,8 +342,8 @@
                         </div>
                         <br/>
                         <div style="text-align: center; height: 70px;line-height: 70px">
-                            <asp:Button ID="btnEditUserInfor" runat="server" CssClass="btn btn-danger" Text="Edit" OnClick="btnEditUserInfor_OnClick" />
-                            <asp:Button ID="btnChangeUserInfor" runat="server" CssClass="btn btn-danger" Text="Submit" OnClick="btnChangeUserInfor_OnClick" />
+                            <asp:Button ID="btnEditUserInfor" runat="server" CssClass="btn btn-danger" Text="编辑" OnClick="btnEditUserInfor_OnClick" />
+                            <asp:Button ID="btnChangeUserInfor" runat="server" CssClass="btn btn-danger" Text="提交" OnClick="btnChangeUserInfor_OnClick" />
                         </div>
                     </div>
                 </div>

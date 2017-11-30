@@ -328,6 +328,15 @@
                             <p style="text-align: center">
                                 <asp:Button ID="btnChange" CssClass="btn btn-danger" OnClick="btnChange_OnClick" runat="server" Text="Submit" OnClientClick="return CheckNull()" />
                             </p>
+                            <h4 class="h4">Upload Picture Result：</h4>
+                            <div class="row">
+                                <div class="col-md-4 col-xs-6">
+                                    <asp:Image ID="ImgSrcPictureOne" Visible="False" runat="server" Width="160px" Height="100px" BorderColor="white" />
+                                </div>
+                                <div class="col-md-4 col-xs-6">
+                                    <asp:Image ID="ImgSrcPictureTwo"  Visible="False" runat="server" Width="160px" Height="100px"  BorderColor="white" />
+                                </div>
+                            </div>
                         </div>
                         <div class="tab-pane fade" id="Personal">
                             <div class="form-group">

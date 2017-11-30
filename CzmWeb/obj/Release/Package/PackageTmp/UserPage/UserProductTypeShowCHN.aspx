@@ -176,6 +176,9 @@
                         <img src=<%#Eval("TypePictureTwo")%> alt="加载中" />
                         <div class="caption">
                             <h3 class="introShowWord introShowWordNew">[产品类别]<%#Eval("TypeNameCHM")%></h3>
+                            <p class="TypeIntroductionss">
+                                <a href='<%#Eval("Taobao")%>' class="btn btn-danger"  >立即选购</a>
+                            </p>
                             <p class="TypeIntroductions">
                                 <strong>简介：</strong> <%#Eval("TypeDecription2_c")%>
                             </p>

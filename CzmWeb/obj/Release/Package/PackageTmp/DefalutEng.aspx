@@ -418,13 +418,13 @@
             <div class="col-md-6 col-sm-12 " id="Font_Intro_Footer1">
                 <br/>
                 <br/>
-                <h3 class="h3">关于我们</h3>
+                <h3 class="h3">About us</h3>
                 <br/>
-                <p style="font-size: 16px">公司致力于创新创造，努力发展,不断进取！</p>
+                <p style="font-size: 16px">The company is committed to creating innovative, hard work and keep making progress!</p>
                 <table cellpadding="10px" cellspacing="10px" class="TableName" width="100%" >
                     <thead>
                     <tr>
-                        <th>关于我们</th><th>合作投资</th><th>交流空间</th>
+                        <th>About us</th><th>Cooperation</th><th>Communication</th>
                     </tr>
                     </thead>
                     <tr>
@@ -473,11 +473,11 @@
             <div class="col-md-4 col-sm-8" id="Font_Intro_Footer3">
                 <br/><br/><br/><br/><br/><br/>
                 <figure>
-                    <figcaption>企业公众号</figcaption>
+                    <figcaption>Business WeChat</figcaption>
                     <img src="../Images/SystemPicture/mmexport1509186467240.jpg" width="150px" height="150px" />
                 </figure>
                 <figure>
-                    <figcaption>网站微信</figcaption>
+                    <figcaption>Website QR Code</figcaption>
                     <img src="../Img/1510495015.png"  width="150px" height="150px"/>
                 </figure>
                       

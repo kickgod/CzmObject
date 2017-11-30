@@ -28,12 +28,17 @@ namespace CzmWeb.UserPage
         {
             if (CheckIsHavBeenHave())
             {
-                MessaegBox("号码已经被使用");
+                MessaegBox("号码已经被使用!");
+                return;
             }
-            String Code = Send.GenerateVerificationCode();
-            Send.SendMessage(txtUserPhone.Text, "你的验证码为:" + Code);
-            lblyzm.Text = Code;
-            MessaegBox("已经发送！(The news has been sent)");
+            else
+            {
+                String Code = Send.GenerateVerificationCode();
+                Send.SendMessage(txtUserPhone.Text, "你的验证码为:" + Code);
+                lblyzm.Text = Code;
+                MessaegBox("已经发送！(The news has been sent)");              
+            }
+
         }
         /// <summary>
         /// 如果重复了数据 返回true;

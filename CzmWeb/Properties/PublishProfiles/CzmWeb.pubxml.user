@@ -34,7 +34,7 @@
       <publishTime>11/05/2017 18:23:00</publishTime>
     </File>
     <File Include="BackendManage/BackAdmin.aspx">
-      <publishTime>11/27/2017 01:54:57</publishTime>
+      <publishTime>11/30/2017 15:09:48</publishTime>
     </File>
     <File Include="BackendManage/InvestPlaceAdd.aspx">
       <publishTime>10/28/2017 15:06:54</publishTime>
@@ -58,7 +58,7 @@
       <publishTime>11/20/2017 12:34:40</publishTime>
     </File>
     <File Include="BackendManage/ProductTypeTwoAdd.aspx">
-      <publishTime>11/27/2017 01:36:21</publishTime>
+      <publishTime>11/30/2017 15:58:34</publishTime>
     </File>
     <File Include="BackendManage/ProjectInformation.aspx">
       <publishTime>11/05/2017 18:57:15</publishTime>
@@ -94,7 +94,7 @@
       <publishTime>09/24/2017 10:23:01</publishTime>
     </File>
     <File Include="bin/CzmWeb.dll">
-      <publishTime>11/27/2017 07:12:51</publishTime>
+      <publishTime>11/30/2017 16:09:49</publishTime>
     </File>
     <File Include="bin/DoEasyClassLib.dll">
       <publishTime>09/22/2017 21:04:06</publishTime>
@@ -517,13 +517,13 @@
       <publishTime>09/22/2017 21:04:18</publishTime>
     </File>
     <File Include="DefalutEng.aspx">
-      <publishTime>11/27/2017 04:50:53</publishTime>
+      <publishTime>11/30/2017 16:07:12</publishTime>
     </File>
     <File Include="DefalutEngs.aspx">
-      <publishTime>11/26/2017 16:34:28</publishTime>
+      <publishTime>11/30/2017 16:01:13</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>11/27/2017 04:48:21</publishTime>
+      <publishTime>11/30/2017 16:03:01</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>09/24/2017 10:22:56</publishTime>
@@ -1756,10 +1756,10 @@
       <publishTime>09/24/2017 10:23:05</publishTime>
     </File>
     <File Include="UserPage/UserbecomeTypeHigh.aspx">
-      <publishTime>11/16/2017 23:36:59</publishTime>
+      <publishTime>11/30/2017 15:48:37</publishTime>
     </File>
     <File Include="UserPage/UserbecomeTypeHighCHN.aspx">
-      <publishTime>11/26/2017 22:37:50</publishTime>
+      <publishTime>11/30/2017 15:48:36</publishTime>
     </File>
     <File Include="UserPage/UserConmunicationApace.aspx">
       <publishTime>11/16/2017 23:21:42</publishTime>
@@ -1801,13 +1801,13 @@
       <publishTime>11/26/2017 22:37:48</publishTime>
     </File>
     <File Include="UserPage/UserPageRegisterCHN.aspx">
-      <publishTime>11/26/2017 22:20:31</publishTime>
+      <publishTime>11/27/2017 14:40:22</publishTime>
     </File>
     <File Include="UserPage/UserProductTypeShow.aspx">
-      <publishTime>11/27/2017 07:11:24</publishTime>
+      <publishTime>11/30/2017 15:58:21</publishTime>
     </File>
     <File Include="UserPage/UserProductTypeShowCHN.aspx">
-      <publishTime>11/27/2017 04:31:48</publishTime>
+      <publishTime>11/30/2017 15:58:10</publishTime>
     </File>
     <File Include="UserPage/UserProjectShow.aspx">
       <publishTime>11/16/2017 23:24:07</publishTime>
@@ -1846,7 +1846,7 @@
       <publishTime>09/24/2017 10:23:05</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/16/2017 23:41:52</publishTime>
+      <publishTime>11/27/2017 14:48:00</publishTime>
     </File>
   </ItemGroup>
 </Project>

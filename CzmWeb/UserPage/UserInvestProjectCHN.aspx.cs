@@ -26,7 +26,7 @@ namespace CzmWeb.UserPage
             }
             if (!IsPostBack)
             {
-                DataBind();
+                DataBindS();
             }
         }
         private void MessageBoxResponse(string msg)
@@ -52,7 +52,7 @@ namespace CzmWeb.UserPage
                 MessaegBox(English);
             }
         }
-        private void DataBind()
+        private void DataBindS()
         {
             /*省级单位*/
             ddlProvince.Items.Clear();

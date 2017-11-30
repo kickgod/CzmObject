@@ -63,7 +63,6 @@ namespace CzmWeb.BackendManage
             }
             return tnTop;
         }
-
         private void MessaegBox(String msg)
         {
             Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('" + msg + "')</script>");
@@ -74,6 +73,7 @@ namespace CzmWeb.BackendManage
             txtBoxCHNname.Enabled = false;
             txtDescriptionENG.Enabled = false;
             txtDescriptionCHN.Enabled = false;
+            txtTaoBaoDizhi.Enabled = false;
         }
         private void ChangeFromEnableTrue()
         {
@@ -81,6 +81,7 @@ namespace CzmWeb.BackendManage
             txtBoxCHNname.Enabled = true;
             txtDescriptionENG.Enabled = true;
             txtDescriptionCHN.Enabled = true;
+            txtTaoBaoDizhi.Enabled = true;
         }
         private void ChangeNull()
         {
@@ -90,6 +91,7 @@ namespace CzmWeb.BackendManage
             lblFuji.Text = "";
             lblFujiRegion.Text = "";
             txtDescriptionENG.Text = "";
+            txtTaoBaoDizhi.Text = "";
             txtDescriptionCHN.Text = "";
         }
         protected void trvNode_SelectedNodeChanged1(object sender, EventArgs e)
@@ -114,6 +116,7 @@ namespace CzmWeb.BackendManage
                         txtBoxENGname.Text = td.Rows[0]["typeName_e"].ToString();
                         txtDescriptionCHN.Text = td.Rows[0]["TypeDecription_c"].ToString();
                         txtDescriptionENG.Text = td.Rows[0]["TypeDecription_e"].ToString();
+                        txtTaoBaoDizhi.Text ="";
                         lblFuji.Text = "产品类比";
                     }
                 }
@@ -132,6 +135,7 @@ namespace CzmWeb.BackendManage
                         txtBoxENGname.Text = td.Rows[0]["TypeNameENG"].ToString();
                         txtDescriptionCHN.Text = td.Rows[0]["TypeDecription2_c"].ToString();
                         txtDescriptionENG.Text = td.Rows[0]["TypeDecription2_e"].ToString();
+                        txtTaoBaoDizhi.Text = td.Rows[0]["Taobao"].ToString();
                         lblFuji.Text = parentNode.Text;
                     }
                 }
@@ -149,7 +153,6 @@ namespace CzmWeb.BackendManage
             ChangeFromEnableFalse();
 
         }
-
         protected void btnAdd_Click(object sender, EventArgs e)
         {
             if (lblFuji.Text == "")
@@ -170,9 +173,9 @@ namespace CzmWeb.BackendManage
             txtDescriptionCHN.Enabled=true;
             txtBoxENGname.Enabled = true;
             txtBoxCHNname.Enabled = true;
+            txtTaoBaoDizhi.Enabled = true;
             btnAdd.Visible = false;
         }
-
         protected void btnEdit_Click(object sender, EventArgs e)
         {
             if (lblProvinceId.Text == "自动编号")
@@ -235,7 +238,6 @@ namespace CzmWeb.BackendManage
                 }
             }
         }
-
         protected void btnSave_Click(object sender, EventArgs e)
         {
             if (txtBoxENGname.Enabled == false)
@@ -275,7 +277,7 @@ namespace CzmWeb.BackendManage
                 string ChangeTable = lblProvinceId.Text.Substring(0, 1);
                 if (ChangeTable == "P")
                 {
-                    String sqlwhere = " UPDATE [XcXm].[dbo].[tblProductTypeInfo] SET typeName_c='" + txtBoxCHNname.Text.Replace("\'", ss) + "',typeName_e='" + txtBoxENGname.Text.Replace("\'", ss) +"',TypeDecription_c= '"+txtDescriptionCHN.Text.Replace("\'", ss)+"', TypeDecription_e = '"+txtDescriptionENG.Text.Replace("\'", ss)+  "' WHERE typeID= " + lblProvinceId.Text.Replace('P', ' ').Replace('-', ' ');
+                    String sqlwhere = " UPDATE [XcXm].[dbo].[tblProductTypeInfo] SET  typeName_c='" + txtBoxCHNname.Text.Replace("\'", ss) + "',typeName_e='" + txtBoxENGname.Text.Replace("\'", ss) + "',TypeDecription_c= '" + txtDescriptionCHN.Text.Replace("\'", ss) + "', TypeDecription_e = '" + txtDescriptionENG.Text.Replace("\'", ss) + "' WHERE typeID= " + lblProvinceId.Text.Replace('P', ' ').Replace('-', ' ');
                     if (wuc_FileUpload.IsHaveFile())
                     {
                         wuc_FileUpload.UpFile();
@@ -294,12 +296,12 @@ namespace CzmWeb.BackendManage
                 }
                 else if (ChangeTable == "R")
                 {
-                    String sqlwhere = " UPDATE [XcXm].[dbo].[tblProductTypeTwoInfo] SET TypeNameCHM='" + txtBoxCHNname.Text.Replace("\'", ss) + "',TypeNameENG='" + txtBoxENGname.Text.Replace("\'", ss) + "',TypeDecription2_c= '" + txtDescriptionCHN.Text.Replace("\'", ss) + "', TypeDecription2_e = '" + txtDescriptionENG.Text.Replace("\'", ss) + " ' WHERE TypeTwoId= " + lblProvinceId.Text.Replace('R', ' ').Replace('-', ' ');
+                    String sqlwhere = " UPDATE [XcXm].[dbo].[tblProductTypeTwoInfo] SET  Taobao ='" + txtTaoBaoDizhi.Text.Replace("\'", ss) + "' , TypeNameCHM='" + txtBoxCHNname.Text.Replace("\'", ss) + "',TypeNameENG='" + txtBoxENGname.Text.Replace("\'", ss) + "',TypeDecription2_c= '" + txtDescriptionCHN.Text.Replace("\'", ss) + "', TypeDecription2_e = '" + txtDescriptionENG.Text.Replace("\'", ss) + " ' WHERE TypeTwoId= " + lblProvinceId.Text.Replace('R', ' ').Replace('-', ' ');
                     if (wuc_FileUpload.IsHaveFile())
                     {
                         wuc_FileUpload.UpFile();
                         string Address = wuc_FileUpload.ServerDianPath;
-                        sqlwhere = " UPDATE [XcXm].[dbo].[tblProductTypeTwoInfo] SET TypeNameCHM='" + txtBoxCHNname.Text.Replace("\'", ss) + "',TypeNameENG='" + txtBoxENGname.Text.Replace("\'", ss) + "',TypeDecription2_c= '" + txtDescriptionCHN.Text.Replace("\'", ss) + "', TypeDecription2_e = '" + txtDescriptionENG.Text.Replace("\'", ss) + "' , TypePictureTwo = '" + Address + " ' WHERE TypeTwoId= " + lblProvinceId.Text.Replace('R', ' ').Replace('-', ' ');
+                        sqlwhere = " UPDATE [XcXm].[dbo].[tblProductTypeTwoInfo] SET   Taobao ='" + txtTaoBaoDizhi.Text.Replace("\'", ss) + "', TypeNameCHM='" + txtBoxCHNname.Text.Replace("\'", ss) + "',TypeNameENG='" + txtBoxENGname.Text.Replace("\'", ss) + "',TypeDecription2_c= '" + txtDescriptionCHN.Text.Replace("\'", ss) + "', TypeDecription2_e = '" + txtDescriptionENG.Text.Replace("\'", ss) + "' , TypePictureTwo = '" + Address + " ' WHERE TypeTwoId= " + lblProvinceId.Text.Replace('R', ' ').Replace('-', ' ');
                     }
                     int count = DB.CarryOutSqlSentence(sqlwhere);
                     if (count == 1)
@@ -331,7 +333,8 @@ namespace CzmWeb.BackendManage
 
                     String sqlwhere =
                         "  INSERT INTO [XcXm].[dbo].[tblProductTypeInfo](typeName_c,typeName_e,TypePicture,TypeDecription_c,TypeDecription_e)  VALUES('" +
-                        txtBoxCHNname.Text.Replace("\'", ss) + "','" + txtBoxENGname.Text.Replace("\'", ss)+"','" +Address+ "', '"+txtDescriptionCHN.Text +"' ,'"+txtDescriptionENG.Text+ "')";
+                        txtBoxCHNname.Text.Replace("\'", ss) + "','" + txtBoxENGname.Text.Replace("\'", ss)+"','" +Address+ "', '"+txtDescriptionCHN.Text +"' ,'"+txtDescriptionENG.Text+
+                        "')";
                     int count = DB.CarryOutSqlSentence(sqlwhere);
                     if (count == 1)
                     {
@@ -346,8 +349,8 @@ namespace CzmWeb.BackendManage
                 {
                     string sqlProvinceID = lblFujiRegion.Text.Replace('P', ' ').Replace('-', ' '); ;
                     String sqlwhere =
-                        "  INSERT INTO [XcXm].[dbo].[tblProductTypeTwoInfo](TypeNameCHM,TypeNameENG,typeID,TypePictureTwo,TypeDecription2_c,TypeDecription2_e)  VALUES('" +
-                        txtBoxCHNname.Text.Replace("\'", ss) + "','" + txtBoxENGname.Text.Replace("\'", ss) + "'," + sqlProvinceID + ",'" + Address + "', '" + txtDescriptionCHN.Text + "' ,'" + txtDescriptionENG.Text + "')";
+                        "  INSERT INTO [XcXm].[dbo].[tblProductTypeTwoInfo](TypeNameCHM,TypeNameENG,typeID,TypePictureTwo,TypeDecription2_c,TypeDecription2_e,Taobao)  VALUES('" +
+                        txtBoxCHNname.Text.Replace("\'", ss) + "','" + txtBoxENGname.Text.Replace("\'", ss) + "'," + sqlProvinceID + ",'" + Address + "', '" + txtDescriptionCHN.Text + "' ,'" + txtDescriptionENG.Text + "', '" + txtTaoBaoDizhi.Text.Replace("\'", ss) + "' )";
                     int count = DB.CarryOutSqlSentence(sqlwhere);
                     if (count == 1)
                     {

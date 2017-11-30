@@ -472,7 +472,7 @@
                            <img src="../Images/SystemPicture/mmexport1509186467240.jpg" width="150px" height="150px" />
                        </figure>
                       <figure>
-                          <figcaption>网站微信</figcaption>
+                          <figcaption>网站二维码</figcaption>
                           <img src="../Img/1510495015.png"  width="150px" height="150px"/>
                       </figure>
                       

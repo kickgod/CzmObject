@@ -29,7 +29,7 @@ namespace CzmWeb.UserPage
                 {
                     txtTread.Text = Request.QueryString["QueryName"];
                 }
-                DataBind();
+                DataBindT();
             }
         }
         private void MessageBoxResponse(string msg)
@@ -51,7 +51,7 @@ namespace CzmWeb.UserPage
                 MessaegBox(English);
             }
         }
-        private void DataBind()
+        private void DataBindT()
         {
             /*省级单位*/
             ddlProvince.Items.Clear();

@@ -131,6 +131,14 @@
                         </td>
                     </tr>
                     <tr>
+                        <td align="center">
+                            淘宝地址
+                        </td>
+                        <td colspan="3">
+                            <asp:TextBox ID="txtTaoBaoDizhi" runat="server" Width="98%" Height="22px"> </asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
                         <td colspan="4" align="center">
                             <asp:Button ID="btnAdd" CssClass="Save" runat="server" Text="添加子级" OnClick="btnAdd_Click"  />
                             <asp:Button ID="btnEdit" CssClass="Save" runat="server" Text="修改" OnClick="btnEdit_Click" />

@@ -22,12 +22,12 @@ namespace CzmWeb
         {
             if (!IsPostBack)
             {
-                DataBind();
+                DataBindD();
                 AddUrlLive();
             }
         }
 
-        private void DataBind()
+        private void DataBindD()
         {
             //绑定产品种类
             DataTable td = new DataTable();

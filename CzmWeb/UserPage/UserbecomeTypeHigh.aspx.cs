@@ -69,6 +69,17 @@ namespace CzmWeb.UserPage
             }
 
         }
+        private void ShowPictue()
+        {
+            if (Session["User"] != null)
+            {
+                DataTable td = getTable.GetAllDataFromtblUserInfo("UserId ='" + Session["User"].ToString() + "'");
+                ImgSrcPictureOne.ImageUrl = td.Rows[0]["UserCardPicture_Address"].ToString();
+                ImgSrcPictureTwo.ImageUrl = td.Rows[0]["UserCardPicture2_Address"].ToString();
+                ImgSrcPictureOne.Visible = true;
+                ImgSrcPictureTwo.Visible = true;
+            }
+        }
         protected void reptmMy_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
             Repeater rep = (Repeater)e.Item.FindControl("reptem");
@@ -118,6 +129,7 @@ namespace CzmWeb.UserPage
                     string ID = txtId.Text.Replace("\'", "\'\'");
                     string Sql = "update [XcXm].[dbo].[tblUserInfo] set UserRemark ='14',UserCard ='" + ID + "',UserCardPicture_Address='" + FirstPicture + "',UserCardPicture2_Address ='" + SeconfPicture + "' where UserId ='" + UserId + "'";
                     int Reault = DB.CarryOutSqlSentence(Sql);
+                    ShowPictue();
                     if (Reault == 1)
                     {
                         MessaegBox("Submitted successfully");

@@ -243,23 +243,25 @@
                         <span class="Requre">*</span>
                         <span class="biaozhu">填写好后点击发送</span>
                     </p>
-                    <p class="Sheck CradIdNumber">
-                        <asp:Label ID="IDNumber_C" CssClass="TFS_FormFont" runat="server" Text="身份证号:" Visible="True" ></asp:Label>
-                        <asp:Label ID="IDNumber_E" CssClass="TFS_FormFont"  runat="server" Text="Chinese identity card number:" Visible="False" ></asp:Label>
-                        <asp:TextBox ID="txtUserCardID" CssClass="BtnTextFormIDNumber"  runat="server"  placeholder="身份证号"></asp:TextBox>
-                        <span class="biaozhu">我们会按照法律保护你的隐私！</span>
-                    </p>
-                    <p class="Sheck CradIdPicture">
-                        <asp:Label ID="pictureUp_C" CssClass="TFS_FormFont" runat="server" Text="身份证照片上传:" Visible="True" ></asp:Label>
-                        <uc1:wuc_FileUpload ID="wuc_FileUpload1" runat="server"  />
-                        <span class="biaozhu">请上传身份证正面照片</span>
-                    </p>
-                    <p class="Sheck CradIdPicture">
-                        <asp:Label ID="pictureDown_C" CssClass="TFS_FormFont" runat="server" Text="身份证照片上传:" Visible="True" ></asp:Label>
-                        <asp:Label ID="pictureDown_E" CssClass="TFS_FormFont"  runat="server" Text="Chinese identity card :" Visible="False" ></asp:Label>
-                        <uc1:wuc_FileUpload ID="wuc_FileUpload2" runat="server"  />
-                        <span class="biaozhu">请上传身份证背面照片</span>
-                    </p>
+                    <div style="display: none">
+                        <p class="Sheck CradIdNumber">
+                            <asp:Label ID="IDNumber_C" CssClass="TFS_FormFont" runat="server" Text="身份证号:" Visible="True" ></asp:Label>
+                            <asp:Label ID="IDNumber_E" CssClass="TFS_FormFont"  runat="server" Text="Chinese identity card number:" Visible="False" ></asp:Label>
+                            <asp:TextBox ID="txtUserCardID" CssClass="BtnTextFormIDNumber"  runat="server"  placeholder="身份证号"></asp:TextBox>
+                            <span class="biaozhu">我们会按照法律保护你的隐私！</span>
+                        </p>
+                        <p class="Sheck CradIdPicture">
+                            <asp:Label ID="pictureUp_C" CssClass="TFS_FormFont" runat="server" Text="身份证照片上传:" Visible="True" ></asp:Label>
+                            <uc1:wuc_FileUpload ID="wuc_FileUpload1" runat="server"  />
+                            <span class="biaozhu">请上传身份证正面照片</span>
+                        </p>
+                        <p class="Sheck CradIdPicture">
+                            <asp:Label ID="pictureDown_C" CssClass="TFS_FormFont" runat="server" Text="身份证照片上传:" Visible="True" ></asp:Label>
+                            <asp:Label ID="pictureDown_E" CssClass="TFS_FormFont"  runat="server" Text="Chinese identity card :" Visible="False" ></asp:Label>
+                            <uc1:wuc_FileUpload ID="wuc_FileUpload2" runat="server"  />
+                            <span class="biaozhu">请上传身份证背面照片</span>
+                        </p>
+                    </div>
                     <p class="Sheck UserPwd">
                         <asp:Label ID="LblPwdW_C" CssClass="TFS_FormFont" runat="server" Text="设置密码:" Visible="True"></asp:Label>
                         <asp:Label ID="LblPwdW_E" CssClass="TFS_FormFont"  runat="server" Text="Password:" Visible="false"></asp:Label>

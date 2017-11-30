@@ -22,11 +22,11 @@ namespace CzmWeb.UserPage
         {
             if (!IsPostBack)
             {
-                DataBind();
+                DataBindS();
             }
         }
 
-        private void DataBind()
+        private void DataBindS()
         {
             //绑定新品八个/四个/六个
             DataTable tdNewProduct = new DataTable();

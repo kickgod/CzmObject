@@ -81,7 +81,17 @@ namespace CzmWeb.UserPage
         {
 
         }
-
+        private void ShowPictue()
+        {
+            if (Session["User"]!= null)
+            {
+                DataTable td = getTable.GetAllDataFromtblUserInfo("UserId ='" + Session["User"].ToString() + "'");
+                ImgSrcPictureOne.ImageUrl = td.Rows[0]["UserCardPicture_Address"].ToString();
+                ImgSrcPictureTwo.ImageUrl = td.Rows[0]["UserCardPicture2_Address"].ToString();
+                ImgSrcPictureOne.Visible = true;
+                ImgSrcPictureTwo.Visible = true;
+            }
+        }
         protected void btnChange_OnClick(object sender, EventArgs e)
         {
             try
@@ -92,22 +102,22 @@ namespace CzmWeb.UserPage
                     bool IsOK = Judge.JudgeUserTypeIs_Two(UserId);
                     if (IsOK)
                     {
-                        MessaegBox("You are already a Senior member");
+                        MessaegBox("你已经是砖石会员无须再次上传！");
                         return;
                     }
                     if (!wuc_FileUpload1.IsHaveFile())
                     {
-                        MessaegBox("Please select the first picture");
+                        MessaegBox("请上传第一张图片");
                         return;
                     }
                     if (!wuc_FileUpload2.IsHaveFile())
                     {
-                        MessaegBox("Please select the second picture");
+                        MessaegBox("请上传第二张图片");
                         return;
                     }
                     if (txtId.Text == "")
                     {
-                        MessaegBox("ID can not be empty");
+                        MessaegBox("证件号不能为空！");
                         return;
                     }
                     /*先上传*/
@@ -118,13 +128,14 @@ namespace CzmWeb.UserPage
                     string ID = txtId.Text.Replace("\'", "\'\'");
                     string Sql = "update [XcXm].[dbo].[tblUserInfo] set UserRemark ='14',UserCard ='" + ID + "',UserCardPicture_Address='" + FirstPicture + "',UserCardPicture2_Address ='" + SeconfPicture + "' where UserId ='" + UserId + "'";
                     int Reault = DB.CarryOutSqlSentence(Sql);
+                    ShowPictue();
                     if (Reault == 1)
                     {
-                        MessaegBox("Submitted successfully");
+                        MessaegBox("提交成功");
                     }
                     else
                     {
-                        MessaegBox("System Error");
+                        MessaegBox("系统错误！");
                     }
                 }
             }
