@@ -13,5 +13,27 @@ namespace CzmWeb
         {
 
         }
+        private void MessaegBox(String msg)
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('" + msg + "')</script>");
+        }
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            string NameFineOne = "";
+            string NameFineTwo = "";
+            NameFineOne = ((Label) wuc_UploadPic.FindControl("lblWenjian")).Text;
+            NameFineTwo = ((Label)wuc_UploadPic1.FindControl("lblWenjian")).Text;
+            if (NameFineOne == "")
+            {
+                MessaegBox("请上传第一张图片");
+                return;
+            }
+            if (NameFineTwo == "")
+            {
+                MessaegBox("请上传第二张图片");
+                return;
+            }
+            MessaegBox(NameFineTwo+NameFineOne);
+        }
     }
 }

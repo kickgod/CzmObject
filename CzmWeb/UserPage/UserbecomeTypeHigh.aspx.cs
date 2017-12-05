@@ -19,13 +19,19 @@ namespace CzmWeb.UserPage
         PublicUserJudge Judge = new PublicUserJudge();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["User"] == null)
-            {
-                MessageBoxResponse("You are not logged in, login timeout");
-            }
+
             if (!IsPostBack)
             {
-                BingData();
+                if (Session["User"] == null)
+                {
+                    MessageBoxResponse("You are not logged in, login timeout");
+                }
+                else
+                {
+                    Label3.Text = Session["User"].ToString();                  
+                }
+
+                BingDatas();
                 AddUserData();
             }
         }
@@ -37,15 +43,15 @@ namespace CzmWeb.UserPage
         {
             Response.Write("<script>alert('" + msg + "');location.href='../UserPage/UserPageLogin.aspx';</script>");
         }
-        private void BingData()
+        private void BingDatas()
         {
-            if (Session["User"] != null)
+            if (Label3.Text != "")
             {
-                reptmMy.DataSource = DB.CarryOutSqlGeDataTable("SELECT * FROM tblProjectCreate WHERE UserId ='" + Session["User"].ToString() + "'");
+                reptmMy.DataSource = DB.CarryOutSqlGeDataTable("SELECT * FROM tblProjectCreate WHERE UserId ='" + Label3.Text+ "'");
                 reptmMy.DataBind();
-                Repeater1.DataSource = getTable.GetAllDataFromtblProjectInvestInfo("UserId ='" + Session["User"].ToString() + "'");
+                Repeater1.DataSource = getTable.GetAllDataFromtblProjectInvestInfo("UserId ='" + Label3.Text+ "'");
                 Repeater1.DataBind();
-                RpemUserInfor.DataSource = getTable.GetAllDataFromtblUserInfo("UserId ='" + Session["User"].ToString() + "'");
+                RpemUserInfor.DataSource = getTable.GetAllDataFromtblUserInfo("UserId ='" + Label3.Text + "'");
                 RpemUserInfor.DataBind();
             }
 
@@ -58,7 +64,7 @@ namespace CzmWeb.UserPage
                 {
                     string sql = "DELETE FROM [XcXm].[dbo].[tblProjectInvestInfo] WHERE PiiID=" + e.CommandArgument;
                     DB.CarryOutSqlSentence(sql);
-                    BingData();
+                    BingDatas();
                     MessaegBox("You have deleted it");
                 }
             }
@@ -71,9 +77,9 @@ namespace CzmWeb.UserPage
         }
         private void ShowPictue()
         {
-            if (Session["User"] != null)
+            if (Label3.Text != "")
             {
-                DataTable td = getTable.GetAllDataFromtblUserInfo("UserId ='" + Session["User"].ToString() + "'");
+                DataTable td = getTable.GetAllDataFromtblUserInfo("UserId ='" + Label3.Text.ToString() + "'");
                 ImgSrcPictureOne.ImageUrl = td.Rows[0]["UserCardPicture_Address"].ToString();
                 ImgSrcPictureTwo.ImageUrl = td.Rows[0]["UserCardPicture2_Address"].ToString();
                 ImgSrcPictureOne.Visible = true;
@@ -97,37 +103,40 @@ namespace CzmWeb.UserPage
         {
             try
             {
-                if (Session["User"] != null)
+                if (Label3.Text != "")
                 {
-                    string UserId = Session["User"].ToString();
-                    bool IsOK = Judge.JudgeUserTypeIs_Two(UserId);
-                    if (IsOK)
+                    string userId = Convert.ToString(Label3.Text);
+                    bool isOK = false;
+                    isOK = Judge.JudgeUserTypeIs_Two(userId);
+                    if (isOK)
                     {
                         MessaegBox("You are already a Senior member");
                         return;
                     }
-                    if (!wuc_FileUpload1.IsHaveFile())
+                    string NameFineOne = "";
+                    string NameFineTwo = "";
+                    NameFineOne = ((Label)wuc_UpLoadDoubleEng2.FindControl("lblWenjian")).Text;
+                    NameFineTwo = ((Label)wuc_UpLoadDoubleEng2.FindControl("lblWenjian2")).Text;
+                    if (NameFineOne == "")
                     {
-                        MessaegBox("Please select the first picture");
+                        MessaegBox("Please upload the first picture");
                         return;
                     }
-                    if (!wuc_FileUpload2.IsHaveFile())
+                    if (NameFineTwo == "")
                     {
-                        MessaegBox("Please select the second picture");
+                        MessaegBox("Please upload the second picture");
                         return;
                     }
                     if (txtId.Text == "")
                     {
-                        MessaegBox("ID can not be empty");
+                        MessaegBox("ID number can not be empty！");
                         return;
                     }
                     /*先上传*/
-                    wuc_FileUpload1.UpFile();
-                    string FirstPicture = wuc_FileUpload1.ServerDianPath.Replace("\'", "\'\'");
-                    wuc_FileUpload2.UpFile();
-                    string SeconfPicture = wuc_FileUpload2.ServerDianPath.Replace("\'", "\'\'");
+                    string FirstPicture = NameFineOne.Replace("\'", "\'\'");
+                    string SeconfPicture = NameFineTwo.Replace("\'", "\'\'");
                     string ID = txtId.Text.Replace("\'", "\'\'");
-                    string Sql = "update [XcXm].[dbo].[tblUserInfo] set UserRemark ='14',UserCard ='" + ID + "',UserCardPicture_Address='" + FirstPicture + "',UserCardPicture2_Address ='" + SeconfPicture + "' where UserId ='" + UserId + "'";
+                    string Sql = "update [XcXm].[dbo].[tblUserInfo] set UserRemark ='14',UserCard ='" + ID + "',UserCardPicture_Address='" + FirstPicture + "',UserCardPicture2_Address ='" + SeconfPicture + "' where UserId ='" + userId + "'";
                     int Reault = DB.CarryOutSqlSentence(Sql);
                     ShowPictue();
                     if (Reault == 1)
@@ -151,9 +160,9 @@ namespace CzmWeb.UserPage
         {
             try
             {
-                if (Session["User"] != null)
+                if (Label3.Text != "")
                 {
-                    DataTable td = getTable.GetAllDataFromtblUserInfo("UserId ='" + Session["User"].ToString() + "'");
+                    DataTable td = getTable.GetAllDataFromtblUserInfo("UserId ='" + Label3.Text.ToString() + "'");
                     if (td.Rows.Count == 1)
                     {
                         txtUserName.Text = td.Rows[0]["UserName_e"].ToString();
@@ -174,9 +183,9 @@ namespace CzmWeb.UserPage
         {
             try
             {
-                if (Session["User"] != null)
+                if (Label3.Text != "")
                 {
-                    string UserId = Session["User"].ToString();
+                    string UserId = Label3.Text;
                     if (txtUserEmail.Text == "")
                     {
                         MessaegBox("Email can not be empty");
@@ -208,7 +217,7 @@ namespace CzmWeb.UserPage
                         MessaegBox("System Error");
                     }
                     AddUserData();
-                    BingData();
+                    BingDatas();
                     ChangetxtEnableFalse();
                 }
             }

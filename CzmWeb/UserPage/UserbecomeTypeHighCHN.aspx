@@ -1,5 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserbecomeTypeHighCHN.aspx.cs" Inherits="CzmWeb.UserPage.UserbecomeTypeHighCHN" %>
 <%@ Register TagPrefix="uc1" TagName="wuc_FileUpload_1" Src="~/Common/wuc_FileUpload.ascx" %>
+<%@ Register TagPrefix="uc1" TagName="wuc_UploadPic" Src="~/Common/wuc_UploadPic.ascx" %>
+<%@ Register Src="~/Common/wuc_UpLoadDouble.ascx" TagPrefix="uc1" TagName="wuc_UpLoadDouble" %>
+
 
 <!DOCTYPE html>
 
@@ -64,6 +67,7 @@
                 return true;
             }
         }
+
     </script>
     <title>创造门</title>
 </head>
@@ -152,6 +156,7 @@
             <h3><span class="ProductNameType">个人中心</span>
                 <small>用户</small>
             </h3>
+            <asp:Label ID="Label3" Visible="False" runat="server" Text=""></asp:Label>
         </div>
         <div class="row">
             <div class="col-md-3">
@@ -204,23 +209,68 @@
                 <ul id="myTab" class="nav nav-tabs">
                     <li class="active">
                         <a href="#investment" data-toggle="tab">
-                            个人投资
+                            会员升级
                         </a>
                     </li>
-                    <li><a href="#project" data-toggle="tab">个人项目 </a></li>
+                    <li><a href="#project" data-toggle="tab">修改信息 </a></li>
                     <li class="dropdown">
                         <a href="#" id="myTabDrop1" class="dropdown-toggle" 
                            data-toggle="dropdown">账号管理
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
-                            <li><a href="#upgrade" tabindex="-1" data-toggle="tab">会员升级</a></li>
-                            <li><a href="#Personal" tabindex="-1" data-toggle="tab">修改信息</a></li>
+                            <li><a href="#upgrade" tabindex="-1" data-toggle="tab">个人项目</a></li>
+                            <li><a href="#Personal" tabindex="-1" data-toggle="tab">个人投资</a></li>
                         </ul>
                     </li>
                 </ul>
                 <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade in active" id="investment">
+                        <br/>
+                        <p>
+                            [填写指示]
+                            请填写你的身份证件号码！并且上传你的身份证前后两张照片。我们会及时处理你的申请，并为你升级你的会员等级！
+                        </p>
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-globe FontBig"></span><span class="FontUserType">证件号码</span></span>
+                            <asp:TextBox ID="txtId" CssClass="form-control" placeholder="Please enter your ID number" runat="server"></asp:TextBox>
+                        </div>
+                        <uc1:wuc_UpLoadDouble runat="server" ID="wuc_UpLoadDouble" />
+                        <p style="text-align: center">
+                            <asp:Button ID="btnChange" CssClass="btn btn-danger" OnClick="btnChange_OnClick" runat="server" Text="提交" OnClientClick="return CheckNull()" />
+                        </p>
+                        <br />
+                        <h4 class="h4">上传图片结果</h4>
+                        <div class="row">
+                            <div class="col-md-4 col-xs-6">
+                                <asp:Image ID="ImgSrcPictureOne" Visible="False" runat="server" Width="160px" Height="100px" BorderColor="white" />
+                            </div>
+                            <div class="col-md-4 col-xs-6">
+                                <asp:Image ID="ImgSrcPictureTwo"  Visible="False" runat="server" Width="160px" Height="100px"  BorderColor="white" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="project">
+                        <div class="form-group">
+                            <label for="txtUserName">真实姓名</label>
+                            <asp:TextBox ID="txtUserName" CssClass="form-control" placeholder="Please enter your real name" runat="server"></asp:TextBox>
+                        </div>
+                        <br/>
+                        <div class="form-group">
+                            <label for="txtUserEmail">电子邮件</label>
+                            <asp:TextBox ID="txtUserEmail" TextMode="Email" CssClass="form-control" placeholder="Please enter your email address" runat="server"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtWeChat">用户名</label>
+                            <asp:TextBox ID="txtWeChat"  CssClass="form-control" placeholder="Please enter your WeChat" runat="server"></asp:TextBox>
+                        </div>
+                        <br/>
+                        <div style="text-align: center; height: 70px;line-height: 70px">
+                            <asp:Button ID="btnEditUserInfor" runat="server" CssClass="btn btn-danger" Text="编辑" OnClick="btnEditUserInfor_OnClick" />
+                            <asp:Button ID="btnChangeUserInfor" runat="server" CssClass="btn btn-danger" Text="提交" OnClick="btnChangeUserInfor_OnClick" />
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="upgrade">
                         <div class="row">
                             <table class="table" style="width: 96%;margin: auto">
                                 <div class="col-md-12 col-sm-12 col-xs-12" >
@@ -258,7 +308,7 @@
                             </table>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="project">
+                    <div class="tab-pane fade" id="Personal">
                         <div class="row" id="reptemNewProductMy">
                             <asp:Repeater ID="reptmMy" runat="server">
                                 <ItemTemplate>
@@ -271,7 +321,7 @@
                                                 <p>
                                                     <details>
                                                         <summary>基本信息</summary>
-                                                        <span class="TitleIconsins">Demand:</span><%#Eval("PciInvestMeony")%> RMB<br/>
+                                                        <span class="TitleIconsins">Demand:</span><%#Eval("PciInvestMeony")%>RMB<br/>
                                                         <a href="javascript:Guquan('<%#Eval("PciName_c")%>')">股份权限->点击查看</a><br/>
                                                         <asp:HyperLink ID="HyperLink1" NavigateUrl=<%#Eval("PciRemark")%> runat="server">证书下载地址</asp:HyperLink>
                                                         <p>获得投资</p>
@@ -283,67 +333,12 @@
                                                     </details>
                                                 </p>
                                                 <p class="ProductShowDiscr"> 
-                                                    <span class="TitleIconss">[简介]:</span><%#Eval("PciDescription_c")%>
-                                                </p>
+                                                    <span class="TitleIconss">[简介]:</span><%#Eval("PciDescription_c")%></p>
                                             </figcaption>
                                         </figure>
                                     </div>
                                 </ItemTemplate>
                             </asp:Repeater>   
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="upgrade">
-                        <br/>
-                        <p>
-                            [填写指示]
-                            请填写你的身份证件号码！并且上传你的身份证前后两张照片。我们会及时处理你的申请，并为你升级你的会员等级！
-                        </p>
-                        <div class="input-group input-group-lg">
-                            <span class="input-group-addon"><span class="glyphicon glyphicon-globe FontBig"></span><span class="FontUserType">证件号码</span></span>
-                            <asp:TextBox ID="txtId" CssClass="form-control" placeholder="Please enter your ID number" runat="server"></asp:TextBox>
-                        </div>
-                        <div class="form-group">
-                            <label for="name">第一张图片</label>
-                            <br/>
-                            <uc1:wuc_FileUpload_1 runat="server" ID="wuc_FileUpload1" />
-                        </div>
-                        <div class="form-group">
-                            <label for="name">第二张图片</label>
-                            <br />
-                            <uc1:wuc_FileUpload_1 runat="server" ID="wuc_FileUpload2" />
-                        </div>
-                        <p style="text-align: center">
-                            <asp:Button ID="btnChange" CssClass="btn btn-danger" OnClick="btnChange_OnClick" runat="server" Text="提交" OnClientClick="return CheckNull()" />
-                        </p>
-                        <br />
-                        <h4 class="h4">上传图片结果</h4>
-                         <div class="row">
-                            <div class="col-md-4 col-xs-6">
-                                <asp:Image ID="ImgSrcPictureOne" Visible="False" runat="server" Width="160px" Height="100px" BorderColor="white" />
-                            </div>
-                            <div class="col-md-4 col-xs-6">
-                                <asp:Image ID="ImgSrcPictureTwo"  Visible="False" runat="server" Width="160px" Height="100px"  BorderColor="white" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="Personal">
-                        <div class="form-group">
-                            <label for="txtUserName">真实姓名</label>
-                            <asp:TextBox ID="txtUserName" CssClass="form-control" placeholder="Please enter your real name" runat="server"></asp:TextBox>
-                        </div>
-                        <br/>
-                        <div class="form-group">
-                            <label for="txtUserEmail">电子邮件</label>
-                            <asp:TextBox ID="txtUserEmail" TextMode="Email" CssClass="form-control" placeholder="Please enter your email address" runat="server"></asp:TextBox>
-                        </div>
-                        <div class="form-group">
-                            <label for="txtWeChat">用户名</label>
-                            <asp:TextBox ID="txtWeChat"  CssClass="form-control" placeholder="Please enter your WeChat" runat="server"></asp:TextBox>
-                        </div>
-                        <br/>
-                        <div style="text-align: center; height: 70px;line-height: 70px">
-                            <asp:Button ID="btnEditUserInfor" runat="server" CssClass="btn btn-danger" Text="编辑" OnClick="btnEditUserInfor_OnClick" />
-                            <asp:Button ID="btnChangeUserInfor" runat="server" CssClass="btn btn-danger" Text="提交" OnClick="btnChangeUserInfor_OnClick" />
                         </div>
                     </div>
                 </div>

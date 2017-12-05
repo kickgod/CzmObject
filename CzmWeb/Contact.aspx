@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Contact" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="CzmWeb.Contact" %>
 
+<%@ Register Src="~/Common/wuc_UploadPic.ascx" TagPrefix="uc1" TagName="wuc_UploadPic" %>
+
+
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <hgroup class="title">
         <h1><%: Title %>.</h1>
@@ -18,6 +21,11 @@
             <span class="label">After Hours:</span>
             <span>425.555.0199</span>
         </p>
+        <uc1:wuc_UploadPic runat="server" id="wuc_UploadPic" />
+        <br />
+        <uc1:wuc_UploadPic runat="server" id="wuc_UploadPic1" />
+        <br/>
+        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
     </section>
     
     

@@ -20,6 +20,10 @@ namespace CzmWeb.UserPage
         {
           
         }
+        private void MessageBoxResponse(string msg)
+        {
+            Response.Write("<script>alert('" + msg + "');location.href='../UserPage/UserPageLoginCHN.aspx';</script>");
+        }
         private void MessaegBox(String msg)
         {
             Page.ClientScript.RegisterStartupScript(this.GetType(), "alert", "<script>window.alert('" + msg + "')</script>");
@@ -103,14 +107,14 @@ namespace CzmWeb.UserPage
                             " values('" + txtUserPhone.Text + "',1,'" + txtUserRealName.Text + "'," +
                             DropDownList1.SelectedValue + ",'" + txtUserCardID.Text + "','" +
                             wuc_FileUpload1.ServerDianPath + "','" + wuc_FileUpload1.ServerDianPath + "','" +
-                            txtUserName.Text + "','" + txtPwd.Text + "','" + txtPasswordOne.Text + "',10)";
+                            txtUserName.Text + "','" + txtPwd.Text + "','" + txtPasswordOne.Text + "',30)";
                         int Count = DB.CarryOutSqlSentence(sql);
                         if (Count != 1)
                         {
                             MessaegBox("系统错误！请通知管理员！");
                             return;
                         }
-                        MessaegBox("已经注册！请等待审核！审核后可以登录");
+                        MessageBoxResponse("注册成功！");
                         Server.Transfer("../UserPage/UserPageLogin.aspx");
                     }
                     else
@@ -120,14 +124,14 @@ namespace CzmWeb.UserPage
                             " values('" + txtUserPhone.Text + "',1,'" + txtUserRealName.Text + "'," +
                             DropDownList1.SelectedValue + ",'" + txtUserCardID.Text + "','" +
                             "" + "','" + "" + "','" +
-                            txtUserName.Text + "','" + txtPwd.Text + "','" + txtPasswordOne.Text + "',10)";
+                            txtUserName.Text + "','" + txtPwd.Text + "','" + txtPasswordOne.Text + "',30)";
                         int Count = DB.CarryOutSqlSentence(sql);
                         if (Count != 1)
                         {
                             MessaegBox("系统错误！请通知管理员！");
                             return;
                         }
-                        MessaegBox("已经注册！请等待审核！审核后可以登录！");                
+                        MessageBoxResponse("注册成功");                
                     }
                 }
             }

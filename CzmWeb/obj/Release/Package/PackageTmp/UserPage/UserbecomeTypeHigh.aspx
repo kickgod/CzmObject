@@ -1,6 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserbecomeTypeHigh.aspx.cs" Inherits="CzmWeb.UserPage.UserbecomeTypeHigh" %>
 
-<%@ Register Src="~/Common/wuc_FileUpload.ascx" TagPrefix="uc1" TagName="wuc_FileUpload" %>
+<%@ Register Src="~/Common/wuc_UpLoadDoubleEng.ascx" TagPrefix="uc1" TagName="wuc_UpLoadDoubleEng" %>
+
+
 
 
 <!DOCTYPE html>
@@ -165,6 +167,7 @@
                 <h3><span class="ProductNameType">Personal Center</span>
                     <small>User</small>
                 </h3>
+                <asp:Label ID="Label3" Visible="False" runat="server" Text=""></asp:Label>
             </div>
             <div class="row">
                 <div class="col-md-3">
@@ -184,7 +187,7 @@
                                         data-content='<%#Eval("UserState").ToString()=="-30"? "Your account has been blocked":"Your account is normal" %>'>
                                     Status
                                 </button>
-                                <a href="../UserPage/UserForgetCode.aspx" class="btn btn-warning" target="_blank" >修改密码</a>
+                                <a href="../UserPage/UserForgetCode.aspx" class="btn btn-warning" target="_blank" >Change Password</a>
                             </div>
                             <br/>
                             <div class="panel panel-default">
@@ -217,95 +220,23 @@
                     <ul id="myTab" class="nav nav-tabs">
                         <li class="active">
                             <a href="#investment" data-toggle="tab">
-                                Personal investment
+                                Member upgrade application
                             </a>
                         </li>
-                        <li><a href="#project" data-toggle="tab">Personal project </a></li>
+                        <li><a href="#project" data-toggle="tab"> Personal information changes</a></li>
                         <li class="dropdown">
                             <a href="#" id="myTabDrop1" class="dropdown-toggle" 
-                               data-toggle="dropdown">Account management
+                               data-toggle="dropdown">Project & Investment
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
-                                <li><a href="#upgrade" tabindex="-1" data-toggle="tab">Member upgrade application</a></li>
-                                <li><a href="#Personal" tabindex="-1" data-toggle="tab">Personal information changes</a></li>
+                                <li><a href="#upgrade" tabindex="-1" data-toggle="tab">Personal investment</a></li>
+                                <li><a href="#Personal" tabindex="-1" data-toggle="tab">Personal project</a></li>
                             </ul>
                         </li>
                     </ul>
                     <div id="myTabContent" class="tab-content">
                         <div class="tab-pane fade in active" id="investment">
-                                <div class="row">
-                                    <table class="table" style="width: 96%;margin: auto">
-                                        <div class="col-md-12 col-sm-12 col-xs-12" >
-                                            <thead>
-                                            <tr>
-                                                <th>Number</th>
-                                                <th>Project Name</th>
-                                                <th>Account</th>
-                                                <th>Region</th>
-                                                <th>Time</th>
-                                                <th>Status</th>
-                                                <th>Delete</th>
-                                            </tr>
-                                            </thead>
-                                        </div>
-                                        <tbody>
-                                        <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_OnItemCommand">
-                                            <ItemTemplate>
-                                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <tr>
-                                                        <td><%#Container.ItemIndex+1 %></td>
-                                                        <td><%#Eval("InsertProjectName")%></td>
-                                                        <td><%#Eval("Account")%></td>
-                                                        <td><%#Eval("Province")%></td>
-                                                        <td><%#Eval("InvestTime")%></td>
-                                                        <td><%# (Eval("PiiState").ToString()=="30") ?"already passed":( (Eval("PiiState").ToString()=="10")?"submitted":"Did not pass" )  %></td>
-                                                        <td><asp:Button ID="Button1" runat="server" Text="Delete" CssClass="btn-primary btn-sm" OnClientClick="javascript:confirm('Are you sure you want to delete your investment application?');" Visible='<%#Eval("PiiState").ToString()=="10"%>'  CommandName="Delete" CommandArgument='<%#Eval("PiiID")%>'/></td>
-                                                    </tr>
-                                                </div>
-                                            </ItemTemplate>
-                                            <HeaderTemplate>
-                                            </HeaderTemplate>
-                                        </asp:Repeater>  
-                                        </tbody>
-                                    </table>
-                                </div>
-                        </div>
-                        <div class="tab-pane fade" id="project">
-                            <div class="row" id="reptemNewProductMy">
-                                <asp:Repeater ID="reptmMy" runat="server">
-                                    <ItemTemplate>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <figure>
-                                                <img src='<%#Eval("ImgPicturPath")%>' >          
-                                                <figcaption>
-                                                    <p ><span class="introShowWord">[<%#Eval("PciName_c")%>]</span></p>
-                                                    <p>Status:<%# Eval("PciState").ToString()=="30" ? "Approved":(Eval("PciState").ToString()=="-30"? "Not approved":"Is under review" ) %></p>
-                                                    <p>
-                                                        <details>
-                                                            <summary>Basic Information</summary>
-                                                            <span class="TitleIconsins">Demand:</span><%#Eval("PciInvestMeony")%> RMB<br/>
-                                                            <a href="javascript:Guquan('<%#Eval("PciName_c")%>')">Stock Right->Click to view</a><br/>
-                                                            <asp:HyperLink ID="HyperLink1" NavigateUrl=<%#Eval("PciRemark")%> runat="server">Certificate download address</asp:HyperLink>
-                                                            <p>Project Debriefing</p>
-                                                            <asp:Repeater ID="reptem" runat="server">
-                                                                <ItemTemplate>
-                                                                    <p> <%#Eval("UserName_e") %> invested  <%#Eval("Account") %> RMB in your project time:<%#Eval("InvestTime") %></p>
-                                                                </ItemTemplate>
-                                                            </asp:Repeater>
-                                                        </details>
-                                                    </p>
-                                                    <p class="ProductShowDiscr"> 
-                                                        <span class="TitleIconss">[Introduction]:</span><%#Eval("PciDescription_c")%>
-                                                    </p>
-                                                </figcaption>
-                                            </figure>
-                                        </div>
-                                    </ItemTemplate>
-                                </asp:Repeater>   
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="upgrade">
                             <p>
                                 [Completion Instructions]
                                 Please fill in your ID number and upload two pictures of your identification documents photo.
@@ -315,16 +246,7 @@
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-globe FontBig"></span><span class="FontUserType">ID number</span></span>
                                 <asp:TextBox ID="txtId" CssClass="form-control" placeholder="Please enter your ID number" runat="server"></asp:TextBox>
                             </div>
-                            <div class="form-group">
-                                <label for="name">The first picture</label>
-                                <br/>
-                                <uc1:wuc_FileUpload runat="server" ID="wuc_FileUpload1" />
-                            </div>
-                            <div class="form-group">
-                                <label for="name">The second picture</label>
-                                <br />
-                                <uc1:wuc_FileUpload runat="server" ID="wuc_FileUpload2" />
-                            </div>
+                            <uc1:wuc_UpLoadDoubleEng runat="server" id="wuc_UpLoadDoubleEng2" />
                             <p style="text-align: center">
                                 <asp:Button ID="btnChange" CssClass="btn btn-danger" OnClick="btnChange_OnClick" runat="server" Text="Submit" OnClientClick="return CheckNull()" />
                             </p>
@@ -338,7 +260,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="Personal">
+                        <div class="tab-pane fade" id="project">
                             <div class="form-group">
                                 <label for="txtUserName">Real name</label>
                                 <asp:TextBox ID="txtUserName" CssClass="form-control" placeholder="Please enter your real name" runat="server"></asp:TextBox>
@@ -356,6 +278,77 @@
                             <div style="text-align: center; height: 70px;line-height: 70px">
                                 <asp:Button ID="btnEditUserInfor" runat="server" CssClass="btn btn-danger" Text="Edit" OnClick="btnEditUserInfor_OnClick" />
                                 <asp:Button ID="btnChangeUserInfor" runat="server" CssClass="btn btn-danger" Text="Submit" OnClick="btnChangeUserInfor_OnClick" />
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="upgrade">
+                            <div class="row">
+                                <table class="table" style="width: 96%;margin: auto">
+                                    <div class="col-md-12 col-sm-12 col-xs-12" >
+                                        <thead>
+                                        <tr>
+                                            <th>Number</th>
+                                            <th>Project Name</th>
+                                            <th>Account</th>
+                                            <th>Region</th>
+                                            <th>Time</th>
+                                            <th>Status</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                        </thead>
+                                    </div>
+                                    <tbody>
+                                    <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_OnItemCommand">
+                                        <ItemTemplate>
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <tr>
+                                                    <td><%#Container.ItemIndex+1 %></td>
+                                                    <td><%#Eval("InsertProjectName")%></td>
+                                                    <td><%#Eval("Account")%></td>
+                                                    <td><%#Eval("Province")%></td>
+                                                    <td><%#Eval("InvestTime")%></td>
+                                                    <td><%# (Eval("PiiState").ToString()=="30") ?"already passed":( (Eval("PiiState").ToString()=="10")?"submitted":"Did not pass" )  %></td>
+                                                    <td><asp:Button ID="Button1" runat="server" Text="Delete" CssClass="btn-primary btn-sm" OnClientClick="javascript:confirm('Are you sure you want to delete your investment application?');" Visible='<%#Eval("PiiState").ToString()=="10"%>'  CommandName="Delete" CommandArgument='<%#Eval("PiiID")%>'/></td>
+                                                </tr>
+                                            </div>
+                                        </ItemTemplate>
+                                        <HeaderTemplate>
+                                        </HeaderTemplate>
+                                    </asp:Repeater>  
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="Personal">
+                            <div class="row" id="reptemNewProductMy">
+                                <asp:Repeater ID="reptmMy" runat="server">
+                                    <ItemTemplate>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <figure>
+                                                <img src='<%#Eval("ImgPicturPath")%>' >          
+                                                <figcaption>
+                                                    <p ><span class="introShowWord">[<%#Eval("PciName_c")%>]</span></p>
+                                                    <p>Status:<%# Eval("PciState").ToString()=="30" ? "Approved":(Eval("PciState").ToString()=="-30"? "Not approved":"Is under review" ) %></p>
+                                                    <p>
+                                                        <details>
+                                                            <summary>Basic Information</summary>
+                                                            <span class="TitleIconsins">Demand:</span><%#Eval("PciInvestMeony")%>RMB<br/>
+                                                            <a href="javascript:Guquan('<%#Eval("PciName_c")%>')">Stock Right->Click to view</a><br/>
+                                                            <asp:HyperLink ID="HyperLink1" NavigateUrl=<%#Eval("PciRemark")%> runat="server">Certificate download address</asp:HyperLink>
+                                                            <p>Project Debriefing</p>
+                                                            <asp:Repeater ID="reptem" runat="server">
+                                                                <ItemTemplate>
+                                                                    <p> <%#Eval("UserName_e") %> invested  <%#Eval("Account") %> RMB in your project time:<%#Eval("InvestTime") %></p>
+                                                                </ItemTemplate>
+                                                            </asp:Repeater>
+                                                        </details>
+                                                    </p>
+                                                    <p class="ProductShowDiscr"> 
+                                                        <span class="TitleIconss">[Introduction]:</span><%#Eval("PciDescription_c")%></p>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </ItemTemplate>
+                                </asp:Repeater>   
                             </div>
                         </div>
                     </div>
@@ -388,7 +381,7 @@
         <p style="text-align: center;padding-top: 5px">
             <a target="_blank" href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="../Images/SystemPicture/阿里旺旺.png" width="20px" height="20px"/>Ali Want</a>
             <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2212901&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2212901:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>Copyright © 2017-Today|Sichuan Creator Association New & High-tech Development Co.LTD.|Consumer hotline：18981191139|Enterprise Mail:2212901@qq.com|hotline：18981191139
-            <a target="_blank" href="../BackendManage/AdminLogin.aspx">Administrator</a>
+            <a target="_blank" href="../BackendManage/AdminLogin.aspx">Administrator" href="../BackendManage/AdminLogin.aspx">Administrator</a>
         </p>
     </div>
 </body>

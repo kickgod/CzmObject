@@ -11,7 +11,6 @@ D:\Repository GitHub\fuben\CzmWeb\bin\CzmWeb.pdb
 D:\Repository GitHub\fuben\CzmWeb\bin\DoEasyClassLib.pdb
 F:\Repository GitHub\fuben\CzmWeb\bin\CzmWeb.dll
 F:\Repository GitHub\fuben\CzmWeb\bin\CzmWeb.pdb
-F:\Repository GitHub\fuben\CzmWeb\bin\DoEasyClassLib.pdb
-F:\Repository GitHub\fuben\CzmWeb\obj\Debug\CzmWeb.csprojResolveAssemblyReference.cache
 F:\Repository GitHub\fuben\CzmWeb\obj\Debug\CzmWeb.dll
 F:\Repository GitHub\fuben\CzmWeb\obj\Debug\CzmWeb.pdb
+F:\Repository GitHub\fuben\CzmWeb\obj\Debug\CzmWeb.csprojResolveAssemblyReference.cache

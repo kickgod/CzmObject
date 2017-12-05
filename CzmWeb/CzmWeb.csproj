@@ -195,6 +195,9 @@
     <Content Include="Common\wuc_FileVedio.ascx" />
     <Content Include="Common\wuc_ListPager.ascx" />
     <Content Include="Common\wuc_PagerEng.ascx" />
+    <Content Include="Common\wuc_UpLoadDouble.ascx" />
+    <Content Include="Common\wuc_UpLoadDoubleEng.ascx" />
+    <Content Include="Common\wuc_UploadPic.ascx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\BtnGethupStyle.css" />
     <Content Include="Content\BtnStanderdStyle.css" />
@@ -653,6 +656,7 @@
     <Content Include="bootstrap337\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Master\UserPageMasters.Master" />
     <Content Include="ForePage\使用文档.docx" />
+    <Content Include="WebForm1.aspx" />
     <None Include="Properties\PublishProfiles\CzmWeb.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="ProductImage\2017117102612606.jpg" />
@@ -714,6 +718,20 @@
     <Content Include="UserPage\UserProjectShowCHN.aspx" />
     <Content Include="UserPage\UserVedioShowList.aspx" />
     <Content Include="UserPage\UserVedioShowListCHE.aspx" />
+    <Content Include="UserZhengJian\201712215254980.jpg" />
+    <Content Include="UserZhengJian\2017122152946215.jpg" />
+    <Content Include="UserZhengJian\2017122153042494.jpg" />
+    <Content Include="UserZhengJian\2017122153047304.jpg" />
+    <Content Include="UserZhengJian\2017122153644884.jpg" />
+    <Content Include="UserZhengJian\2017122153652954.jpg" />
+    <Content Include="UserZhengJian\2017122161111750.jpg" />
+    <Content Include="UserZhengJian\2017122161128103.jpg" />
+    <Content Include="UserZhengJian\2017122163211463.jpg" />
+    <Content Include="UserZhengJian\2017122163251142.png" />
+    <Content Include="UserZhengJian\201712216326184.jpg" />
+    <Content Include="UserZhengJian\201712216331232.jpg" />
+    <Content Include="UserZhengJian\20171221661378.jpg" />
+    <Content Include="UserZhengJian\201712216623758.jpg" />
     <Content Include="VedioList\2017102413124848.jpg" />
     <Content Include="VedioList\20171024215330535.mp4" />
     <Content Include="VedioList\20171121154618192.jpg" />
@@ -954,6 +972,27 @@
     <Compile Include="Common\wuc_PagerEng.ascx.designer.cs">
       <DependentUpon>wuc_PagerEng.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Common\wuc_UpLoadDouble.ascx.cs">
+      <DependentUpon>wuc_UpLoadDouble.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\wuc_UpLoadDouble.ascx.designer.cs">
+      <DependentUpon>wuc_UpLoadDouble.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\wuc_UpLoadDoubleEng.ascx.cs">
+      <DependentUpon>wuc_UpLoadDoubleEng.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\wuc_UpLoadDoubleEng.ascx.designer.cs">
+      <DependentUpon>wuc_UpLoadDoubleEng.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\wuc_UploadPic.ascx.cs">
+      <DependentUpon>wuc_UploadPic.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\wuc_UploadPic.ascx.designer.cs">
+      <DependentUpon>wuc_UploadPic.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1167,6 +1206,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

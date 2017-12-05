@@ -1,11 +1,14 @@
 ﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="CzmWeb.About" %>
 
+<%@ Register Src="~/Common/wuc_UpLoadDouble.ascx" TagPrefix="uc1" TagName="wuc_UpLoadDouble" %>
+
+
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <hgroup class="title">
         <h1><%: Title %>.</h1>
         <h2>Your app description page.</h2>
     </hgroup>
-
+    <uc1:wuc_UpLoadDouble runat="server" id="wuc_UpLoadDouble" />
     <article>
         <p>        
             Use this area to provide additional information.
@@ -25,6 +28,7 @@
         <p>        
             Use this area to provide additional information.
         </p>
+
         <ul>
             <li><a runat="server" href="~/">Home</a></li>
             <li><a runat="server" href="~/About">About</a></li>

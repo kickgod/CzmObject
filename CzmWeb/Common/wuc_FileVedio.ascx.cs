@@ -39,7 +39,7 @@ namespace CzmWeb.Common
             }
         }
 
-        public String ServerDianPath;
+        public String ServerDianPath="";
         public String ServerShenNuePath = "";
         public string MapPaths = "~/VedioList/";
         public void UpFile()

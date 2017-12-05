@@ -180,7 +180,7 @@
                         <div class="caption">
                             <h3 class="introShowWord introShowWordNew">[Product Category]<%#Eval("TypeNameENG")%></h3>
                             <p class="TypeIntroductionss">
-                                <a href='<%#Eval("Taobao")%>' class="btn btn-danger"  >立即选购</a>
+                                <a href='<%#Eval("Taobao")%>' class="btn btn-danger"  >Buy Now</a>
                             </p>
                             <p class="TypeIntroductions">
                                 <strong>Introduction:</strong> <%#Eval("TypeDecription2_e")%>

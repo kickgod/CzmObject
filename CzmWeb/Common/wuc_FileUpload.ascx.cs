@@ -34,12 +34,13 @@ namespace CzmObject.Common
             else
             {
                 String result =".."+ServerShenNuePath.Substring(1, ServerShenNuePath.Length - 1);
+                lblWenjian.Text = ServerDianPath;
                 ServerDianPath = result;
                 return result;
             }
         }
 
-        public String ServerDianPath;
+        public String ServerDianPath="";
         public String ServerShenNuePath ="";
         public string MapPaths = "~/Images/";  
         public void UpFile()
@@ -49,7 +50,7 @@ namespace CzmObject.Common
             {
                 if (FlUpLoad.HasFile)
                 {
-                    string[] type = { ".jpg", ".gif", ".png", ".bmp" };
+                    string[] type = { ".jpg", ".gif", ".png", ".bmp",".jpeg" };
                     string isStanderded = "";
                     string FileType = Path.GetExtension(FlUpLoad.PostedFile.FileName);
                     foreach (string name in type.Where<string>(str => str == FileType))

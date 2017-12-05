@@ -69,6 +69,10 @@ namespace CzmWeb.UserPage
             }
             return false;
         }
+        private void MessageBoxResponses(string msg)
+        {
+            Response.Write("<script>alert('" + msg + "');location.href='../UserPage/UserPageLogin.aspx';</script>");
+        }
         protected void btnLoginNowTime_Click(object sender, EventArgs e)
         {
             Regex r = new Regex("^\\s*([A-Za-z0-9_-]+(\\.\\w+)*@(\\w+\\.)+\\w{2,5})\\s*$");
@@ -89,14 +93,14 @@ namespace CzmWeb.UserPage
                             " values('" + txtUserPhone.Text + "',1,'" + txtUserRealName.Text + "'," +
                             DropDownList1.SelectedValue  +  ",'" +
                             "" + "','" + "" + "','" +
-                            txtUserName.Text + "','" + txtPwd.Text + "','" + txtPasswordOne.Text + "',10)";
+                            txtUserName.Text + "','" + txtPwd.Text + "','" + txtPasswordOne.Text + "',30)";
                         int Count = DB.CarryOutSqlSentence(sql);
                         if (Count != 1)
                         {
                             MessaegBox("system error! Please inform the administrator！");
                             return;
                         }
-                        MessageBoxResponse("Already registered! Please wait for review! After the audit can log!");
+                MessageBoxResponses("Already registered! ");
                 }
         }
         private void MessageBoxResponse(string msg)
