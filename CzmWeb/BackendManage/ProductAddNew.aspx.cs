@@ -271,10 +271,10 @@ namespace CzmWeb.BackendManage
                 wuc_FileUpload.MapPaths = "~/ProductImage/";
                 wuc_FileUpload.UpFile();
                 string ImgPath = wuc_FileUpload.ServerDianPath;
-                string sql = "  INSERT INTO [XcXm].[dbo].[tblProductInfo] ( [ProductName_c] ,[ProductName_e],[ProductType],[ProductDescription_c],[ProductDescription_e]  ,[IsVisiable],[IsNew],[ImgPatjh],[ProductKey],[taobaoUrl],[price_last],[Price_now],[IsBY],[IsRm],[ProductState],ProductKeyEng)" +
+                string sql = "  INSERT INTO [XcXm].[dbo].[tblProductInfo] ( [ProductName_c] ,[ProductName_e],[ProductType],[ProductDescription_c],[ProductDescription_e]  ,[IsVisiable],[IsNew],[ImgPatjh],[ProductKey],[taobaoUrl],[price_last],[Price_now],[IsBY],[IsRm],[ProductState],ProductKeyEng,ProductImgPC)" +
                              " VALUES('" + txtNameChinese.Text + "','" + EnglishName + "'," + ddlProductType.SelectedValue + " ,'" + txtProductIntroDuct.Text + "','" + ProductEngIntroDuctiuon +
                              "'," + IsVisibly + "," + IsNew + ",'" + ImgPath + "'," + "'" + txtKetWords.Text + "', '" + UrlOfTaoBao + "' ," + priceLast + "," +
-                             txtPriceNow.Text + "," + IsBaoyou + "," + IsRemai + ",30" + ",'" + KendLish + "')";
+                             txtPriceNow.Text + "," + IsBaoyou + "," + IsRemai + ",30" + ",'" + KendLish + " ' , ' "+wuc_FileUpload_pc.ServerDianPath+"')";
                 //Label1.Text = sql;
                 DB.CarryOutSqlSentence(sql);
                 MessaegBoxConfrim("添加完成");
@@ -286,7 +286,7 @@ namespace CzmWeb.BackendManage
                         wuc_FileUpload.MapPaths = "~/ProductImage/";
                         wuc_FileUpload.UpFile();
                         string imgPath = wuc_FileUpload.ServerDianPath;
-                        string sql = " UPDATE [XcXm].[dbo].[tblProductInfo] SET" + "ProductName_c ='" +
+                        string sql = " UPDATE [XcXm].[dbo].[tblProductInfo] SET  " + "ProductName_c ='" +
                                      txtNameChinese.Text + "',ProductName_e ='" + txtNameEnglish.Text.Replace("\'", ss) + "', ProductType=" +
                                      ddlProductType.SelectedValue +
                                      ",ProductDescription_c='" + txtProductIntroDuct.Text + "',ProductDescription_e='" +
@@ -314,6 +314,44 @@ namespace CzmWeb.BackendManage
             lblProductId.Text = "自动编号";
             ChangeProductNull();
             ChangeProductEnableTrue();
+        }
+
+        protected void btnAgainPhone_OnClick(object sender, EventArgs e)
+        {
+            if (lblProductId.Text == "自动编号")
+            {
+                MessaegBox("暂未选择一个商品");
+                return;
+            }
+            if (!wuc_FileUpload.IsHaveFile())
+            {
+                MessaegBox("请选择上传的非主页图片啊");
+                return;
+            }
+            wuc_FileUpload.MapPaths = "~/ProductImage/";
+            wuc_FileUpload.UpFile();
+            string sql = " UPDATE [XcXm].[dbo].[tblProductInfo] SET ImgPatjh= '" + wuc_FileUpload.ServerDianPath + "'" + "WHERE ProductID=" + lblProductId.Text;
+            DB.CarryOutSqlSentence(sql);
+            MessaegBox("修改成功！");
+        }
+
+        protected void btnSavepc_OnClick(object sender, EventArgs e)
+        {
+            if (lblProductId.Text == "自动编号")
+            {
+                MessaegBox("暂未选择一个商品");
+                return;
+            }
+            if (!wuc_FileUpload_pc.IsHaveFile())
+            {
+                MessaegBox("请选择上传的Pc主页端图片啊");
+                return;
+            }
+            wuc_FileUpload_pc.MapPaths = "~/ProductImage/";
+            wuc_FileUpload_pc.UpFile();
+            string sql = " UPDATE [XcXm].[dbo].[tblProductInfo] SET ProductImgPC= '" + wuc_FileUpload_pc.ServerDianPath + "'" + "WHERE ProductID=" + lblProductId.Text;
+            DB.CarryOutSqlSentence(sql);
+            MessaegBox("修改成功！");
         }
     }
 }

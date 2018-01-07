@@ -118,21 +118,27 @@ namespace CzmWeb.BackendManage
             string sqlString =  " PciID > 0";
             if (txtProjectShow.Text!="")
             {
-                sqlString += " and  PciName_c like '%" + txtProjectShow.Text + "'% ";
+                sqlString += " and  PciName_c like '%" + txtProjectShow.Text + "%' ";
             }
             if (txtKeyMiaoshu.Text!="")
             {
-                sqlString += " and  PciDescription_c like '%" + txtKeyMiaoshu.Text + "'% ";                
+
+                sqlString += " and  PciDescription_c like '%" + txtKeyMiaoshu.Text + "%' ";                
             }
             if (txtProductKey.Text != "")
             {
-                sqlString += " and  PciID = " + txtKeyMiaoshu.Text + " ";           
+                if (!ValueJudge.IsInt(txtProductKey.Text))
+                {
+                    MessaegBox("请填写数字！");
+                    return;
+                }
+                sqlString += " and  PciID = " + txtProductKey.Text + " ";           
             }
             if (ddlState.SelectedItem.Value!="-1")
             {
                 sqlString += " and PciState =" + ddlState.SelectedValue;
             }
-            sqlString += "order by PciState,ImgUploadtime Desc";
+            sqlString += " order by PciState,ImgUploadtime Desc";
             lblWhere.Text = sqlString;
             wucPager.Bind();
         }
@@ -157,15 +163,20 @@ namespace CzmWeb.BackendManage
             string sqlString = " PciID > 0";
             if (txtProjectShow.Text != "")
             {
-                sqlString += " and  PciName_c like '%" + txtProjectShow.Text + "'% ";
+                sqlString += " and  PciName_c like '%" + txtProjectShow.Text + "%' ";
             }
             if (txtKeyMiaoshu.Text != "")
             {
-                sqlString += " and  PciDescription_c like '%" + txtKeyMiaoshu.Text + "'% ";
+                sqlString += " and  PciDescription_c like '%" + txtKeyMiaoshu.Text + "%' ";
             }
             if (txtProductKey.Text != "")
             {
-                sqlString += " and  PciID = " + txtKeyMiaoshu.Text + " ";
+                if (!ValueJudge.IsInt(txtProductKey.Text))
+                {
+                    MessaegBox("请填写数字！");
+                    return;
+                }
+                sqlString += " and  PciID = " + txtProductKey.Text + " ";
             }
             if (ddlState.SelectedItem.Value != "-1")
             {

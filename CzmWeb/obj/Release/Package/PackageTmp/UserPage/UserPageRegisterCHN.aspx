@@ -9,7 +9,7 @@
 <head runat="server">
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="icon" href="../Images/SystemPicture/创造力.ico" />
+    <link rel="icon" href="../Img/CZM.png" />
     <link href="../CSS/TraditionalFontStyle.css" type="text/css"  rel="stylesheet" />
     <link href="../Content/FontBindData.css" type="text/css"  rel="stylesheet" />
     <link href="../CSS/Refister.css"  type="text/css"  rel="stylesheet" />
@@ -98,7 +98,7 @@
     <header class="PhoneHead" id="daohanglanPhone">
         <div class="headerTtile">
             <div class="left">
-                <span><a href="../Default.aspx" target="_blank" >创造门</a></span>
+                <span><a href="../Default.aspx" target="_blank" >四川创造门高新技术开发有限公司</a></span>
             </div>
             <div class="center">
                 <a href="../Defalut.aspx" style="visibility: hidden" target="_blank"  class ="cents" >CHE</a>

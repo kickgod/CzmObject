@@ -110,7 +110,7 @@ namespace CzmWeb.BackendManage
             string sqlString = " PiiID > 0";
             if (txtProjectShow.Text != "")
             {
-                sqlString += " and  InsertProjectName like '%" + txtProjectShow.Text + "'% ";
+                sqlString += " and  InsertProjectName like '%" + txtProjectShow.Text + "%' ";
             }
             if (txtUserId.Text != "")
             {
@@ -118,7 +118,7 @@ namespace CzmWeb.BackendManage
             }
             if (ddlState.SelectedItem.Value != "-1")
             {
-                sqlString += " and PiiState =" + ddlState.SelectedValue;
+                sqlString += " and PiiState = " + ddlState.SelectedValue;
             }
             sqlString += "order by PiiState,InvestTime Desc";
             lblWhere.Text = sqlString;
@@ -160,4 +160,5 @@ namespace CzmWeb.BackendManage
             wucPager.Bind();
         }
     }
+
 }

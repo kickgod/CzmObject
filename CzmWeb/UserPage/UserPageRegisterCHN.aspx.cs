@@ -53,17 +53,9 @@ namespace CzmWeb.UserPage
             /*电话号码查重*/
             int countPhone = Convert.ToInt32(DB.CarryOutSqlGetFirstColmun("SELECT COUNT(*) FROM  tblUserInfo WHERE UserId= '"+txtUserPhone.Text+"'"));
             /*身份证号码查重*/
-            int CountCardID = Convert.ToInt32( DB.CarryOutSqlGetFirstColmun("SELECT COUNT(*) FROM  tblUserInfo WHERE UserCard= '" + txtUserCardID.Text + "'"));
-            if (countPhone != 0 || CountCardID != 0)
+            if (countPhone != 0)
             {
-                if (countPhone != 0)
-                {
-                    MessaegBox("手机号已经被使用");
-                }
-                if (CountCardID != 0)
-                {
-                    MessaegBox("身份证件号码已经绑定！无法再次绑定！");
-                }
+                MessaegBox("手机号已经被使用");
                 return true;
             }
             else

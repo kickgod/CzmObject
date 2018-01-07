@@ -34,6 +34,7 @@ namespace CzmWeb.UserPage
 
         private void ChangeIsNUll()
         {
+            /*
             txtAdress.Text = "成功！请等待审核! 我们将以短信的方式通知你";
             txtAmount.Text = "";
             txtApplyName.Text = "成功！请等待审核! 我们将以短信的方式通知你";
@@ -42,6 +43,7 @@ namespace CzmWeb.UserPage
             txtZlH.Text = "成功！请等待审核! 我们将以短信的方式通知你";
             txtProjectName.Text = "成功！请等待审核! 我们将以短信的方式通知你";
             txtProjectIntroDuction.Text = "成功！请等待审核! 我们将以短信的方式通知你";
+             * */
         }
 
         private int SaveData()
@@ -107,27 +109,28 @@ namespace CzmWeb.UserPage
                 MessaegBox("请填写你的地址");
                 return 0;
             }
+            /*上传文件*/
             wuc_FileVedio.MapPaths = "~/ProjectFile/";
+            wuc_FileVedio.UpFile();
+            string FileAddress = wuc_FileVedio.ServerDianPath;
+            /*上传图片*/
             wuc_FileUpload_Piture.MapPaths = "~/ProjectFile/";
+            wuc_FileUpload_Piture.UpFile();
+            string PictureAddress = wuc_FileUpload_Piture.ServerDianPath;
             string pciName = txtProjectName.Text.Replace("\'", "\'\'");
             string PatentNumber = txtZlH.Text.Replace("\'", "\'\'");
             string Description = txtProjectIntroDuction.Text.Replace("\'", "\'\'");
-
-            wuc_FileUpload_Piture.UpFile();
-            string PictureAddress = wuc_FileUpload_Piture.ServerDianPath;
-
-            wuc_FileVedio.UpFile();
-            string FileAddress = wuc_FileVedio.ServerDianPath;
-
+            /*投资金额*/
             string shareRadio = txtBilieShuoming.Text;
             string PciInvestMeony = txtAmount.Text;
-
+            /*申请人*/
             string Applicant = txtApplyName.Text;
-
+            /*电话*/
             string Phone = txtPhone.Text;
-
+            /*地址*/
             string Address = txtAdress.Text;
             string AddUser = Session["User"].ToString();
+
             string sql = "INSERT INTO [XcXm].[dbo].[tblProjectCreate]" +
                          "([PciName_c],[PatentNumber],[PciDescription_c],[ImgPicturPath],[PciRemark],[PciInvestMeony],[stockRateIntroduction],[FzrName],[NewPhone],[NewAdress],[UserId]) VALUES ";
             string sqlValues = "('" + pciName + "','" + PatentNumber + "','" + Description + "','" + PictureAddress +

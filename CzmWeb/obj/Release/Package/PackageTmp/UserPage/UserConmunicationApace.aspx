@@ -9,7 +9,7 @@
     <script src="../bootstrap337/js/jquery-3.2.1.min.js"></script>
     <script src="../bootstrap337/js/bootstrap.min.js"></script>
     <script src="../bootstrap337/js/holder.min.js"></script>
-    <link rel="icon" href="../Images/SystemPicture/创造力.ico" />
+    <link rel="icon" href="../Img/CZM.png" />
     <link href="../bootstrap337/css/style.css" rel="stylesheet" />
     <link href="../bootstrap337/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../Content/FontBindData.css" rel="stylesheet" />

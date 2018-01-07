@@ -25,7 +25,7 @@ namespace CzmWeb.UserPage
         }
         private void MessageBoxResponse(string msg)
         {
-            Response.Write("<script>alert('" + msg + "');location.href='../UserPage/UserPageLogin.aspx';</script>");
+            Response.Write("<script>alert('" + msg + "');location.href='../UserPage/UserCreateProject.aspx';</script>");
         }
         private void MessaegBox(String msg)
         {
@@ -34,6 +34,7 @@ namespace CzmWeb.UserPage
 
         private void ChangeIsNUll()
         {
+            /*
             txtAdress.Text = "success！Please wait for the audit! We'll notify you by SMS";
             txtAmount.Text = "";
             txtApplyName.Text = "success！Please wait for the audit! We'll notify you by SMS";
@@ -42,6 +43,7 @@ namespace CzmWeb.UserPage
             txtZlH.Text = "success！Please wait for the audit! We'll notify you by SMS";
             txtProjectName.Text = "success！Please wait for the audit! We'll notify you by SMS";
             txtProjectIntroDuction.Text = "success！Please wait for the audit! We'll notify you by SMS";
+             */
         }
         protected void btnSave_Click(object sender, EventArgs e)
         {
@@ -110,17 +112,17 @@ namespace CzmWeb.UserPage
                 MessaegBox("Please enter your unit address");
                 return;                 
             }
+            /*上传文件*/
             wuc_FileVedio.MapPaths = "~/ProjectFile/";
+            wuc_FileVedio.UpFile();
+            string FileAddress = wuc_FileVedio.ServerDianPath;
+            /*上传图片*/   
             wuc_FileUpload_Piture.MapPaths = "~/ProjectFile/";
+            wuc_FileUpload_Piture.UpFile();
+            string PictureAddress = wuc_FileUpload_Piture.ServerDianPath;
             string pciName = txtProjectName.Text.Replace("\'", "\'\'");
             string PatentNumber=txtZlH.Text.Replace("\'", "\'\'");
             string Description = txtProjectIntroDuction.Text.Replace("\'", "\'\'");
-            /*上传图片*/
-            wuc_FileUpload_Piture.UpFile();
-            string PictureAddress = wuc_FileUpload_Piture.ServerDianPath;
-            /*上传文件*/
-            wuc_FileVedio.UpFile();
-            string FileAddress = wuc_FileVedio.ServerDianPath;
             /*投资金额*/
             string shareRadio = txtBilieShuoming.Text;
             string PciInvestMeony = txtAmount.Text;

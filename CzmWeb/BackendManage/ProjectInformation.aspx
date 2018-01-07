@@ -38,12 +38,12 @@
 <form id="form1" runat="server">
     <div class="container-fluid">
         <div class="page-header" style="margin-top: -20px">
-            <h3><span class="ProductNameType">我要创造</span>
-                <small>创造</small>
+            <h3><span class="ProductNameType">项目详情</span>
+                <small></small>
             </h3>
         </div>
         <div class="form-group">
-            <label for="txtProjectName">创造名称</label>
+            <label for="txtProjectName">创造项目名称</label>
             <asp:TextBox ID="txtProjectName" runat="server" CssClass="form-control" placeholder="项目名称"></asp:TextBox>
         </div>
         <div class="form-group">
@@ -56,7 +56,8 @@
         </div>
         <div class="form-group">
             <label for="wuc_FileUpload_Piture">项目图片</label><br />
-            <asp:HyperLink ID="hylicture" runat="server">图片</asp:HyperLink>
+            <asp:HyperLink ID="hylicture" runat="server">
+                <asp:Label ID="Label1" runat="server" Text="图片"></asp:Label></asp:HyperLink>
         </div>
         <div class="form-group">
             <label for="wuc_FileVedio">证书</label><br />

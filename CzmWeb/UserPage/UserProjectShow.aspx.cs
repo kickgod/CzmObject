@@ -26,6 +26,13 @@ namespace CzmWeb.UserPage
             }
             if (!IsPostBack)
             {
+                if (Request.QueryString["ProjectNames"] != null)
+                {
+                    string sqlwhere = " PciID = " + Request.QueryString["ProjectNames"];
+                    DataTable td = getTable.GetAllDataFromtblProjectCreate(sqlwhere);
+                    reptemNewProduct.DataSource = td;
+                    reptemNewProduct.DataBind();
+                }
                 BingData();
             }
         }
@@ -80,7 +87,7 @@ namespace CzmWeb.UserPage
             if (e.CommandName == "Invest")
             {
                 string QueryName = e.CommandArgument.ToString();
-                Response.Redirect("../UserPage/UserInvestProject.aspx?QueryName="+QueryName);
+                Response.Redirect("~/UserPage/UserInvestProject.aspx?QueryNamet=" + QueryName);
             }
         }
 

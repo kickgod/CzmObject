@@ -89,7 +89,7 @@ namespace CzmWeb.App_Code
             SqlConnection con = GetSqlConnection();
             if (con.State != ConnectionState.Open)
             {
-                con.Open();
+               con.Open();
             }
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;

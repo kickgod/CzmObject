@@ -40,43 +40,43 @@
       <publishTime>10/28/2017 15:06:54</publishTime>
     </File>
     <File Include="BackendManage/InvestProjectList.aspx">
-      <publishTime>11/03/2017 13:33:28</publishTime>
+      <publishTime>01/07/2018 02:24:45</publishTime>
     </File>
     <File Include="BackendManage/LiveListUrlAdd.aspx">
       <publishTime>11/04/2017 09:39:58</publishTime>
     </File>
     <File Include="BackendManage/ProductAddNew.aspx">
-      <publishTime>10/21/2017 13:22:48</publishTime>
+      <publishTime>01/07/2018 10:44:03</publishTime>
     </File>
     <File Include="BackendManage/ProductDataList.aspx">
       <publishTime>11/20/2017 12:42:03</publishTime>
     </File>
     <File Include="BackendManage/ProductDataShow.aspx">
-      <publishTime>11/06/2017 00:02:46</publishTime>
+      <publishTime>01/07/2018 03:42:57</publishTime>
     </File>
     <File Include="BackendManage/ProductTypeAdd.aspx">
       <publishTime>11/20/2017 12:34:40</publishTime>
     </File>
     <File Include="BackendManage/ProductTypeTwoAdd.aspx">
-      <publishTime>11/30/2017 15:58:34</publishTime>
+      <publishTime>01/06/2018 09:05:26</publishTime>
     </File>
     <File Include="BackendManage/ProjectInformation.aspx">
-      <publishTime>11/05/2017 18:57:15</publishTime>
+      <publishTime>01/07/2018 02:10:10</publishTime>
     </File>
     <File Include="BackendManage/ProjectValidCheck.aspx">
-      <publishTime>11/20/2017 12:44:41</publishTime>
+      <publishTime>01/07/2018 01:18:28</publishTime>
     </File>
     <File Include="BackendManage/UserApplyCheck.aspx">
       <publishTime>11/09/2017 18:08:26</publishTime>
     </File>
     <File Include="BackendManage/UserSuggestionListChinese.aspx">
-      <publishTime>11/09/2017 17:53:43</publishTime>
+      <publishTime>12/06/2017 20:24:33</publishTime>
     </File>
     <File Include="BackendManage/UserSuggestionsList.aspx">
       <publishTime>10/28/2017 15:30:18</publishTime>
     </File>
     <File Include="BackendManage/UserUpradeList.aspx">
-      <publishTime>11/09/2017 18:25:35</publishTime>
+      <publishTime>12/06/2017 20:27:04</publishTime>
     </File>
     <File Include="BackendManage/UserValidCheck.aspx">
       <publishTime>11/06/2017 11:44:45</publishTime>
@@ -94,7 +94,7 @@
       <publishTime>09/24/2017 10:23:01</publishTime>
     </File>
     <File Include="bin/CzmWeb.dll">
-      <publishTime>12/04/2017 08:56:04</publishTime>
+      <publishTime>01/07/2018 14:15:10</publishTime>
     </File>
     <File Include="bin/DoEasyClassLib.dll">
       <publishTime>09/22/2017 21:04:06</publishTime>
@@ -148,31 +148,31 @@
       <publishTime>09/24/2017 10:23:00</publishTime>
     </File>
     <File Include="bootstrap337/css/bootstrap-theme.css">
-      <publishTime>07/25/2016 15:53:28</publishTime>
+      <publishTime>11/03/2017 13:42:50</publishTime>
     </File>
     <File Include="bootstrap337/css/bootstrap-theme.css.map">
-      <publishTime>07/25/2016 15:53:28</publishTime>
+      <publishTime>11/03/2017 13:42:50</publishTime>
     </File>
     <File Include="bootstrap337/css/bootstrap-theme.min.css">
-      <publishTime>07/25/2016 15:53:28</publishTime>
+      <publishTime>11/03/2017 13:42:50</publishTime>
     </File>
     <File Include="bootstrap337/css/bootstrap-theme.min.css.map">
-      <publishTime>07/25/2016 15:53:28</publishTime>
+      <publishTime>11/03/2017 13:42:50</publishTime>
     </File>
     <File Include="bootstrap337/css/bootstrap.css">
       <publishTime>11/16/2017 23:04:47</publishTime>
     </File>
     <File Include="bootstrap337/css/bootstrap.css.map">
-      <publishTime>07/25/2016 15:53:28</publishTime>
+      <publishTime>11/03/2017 13:42:50</publishTime>
     </File>
     <File Include="bootstrap337/css/bootstrap.min.css">
-      <publishTime>10/19/2017 15:27:19</publishTime>
+      <publishTime>12/22/2017 20:48:06</publishTime>
     </File>
     <File Include="bootstrap337/css/bootstrap.min.css.map">
-      <publishTime>07/25/2016 15:53:28</publishTime>
+      <publishTime>11/03/2017 13:42:50</publishTime>
     </File>
     <File Include="bootstrap337/css/style.css">
-      <publishTime>10/21/2017 15:16:37</publishTime>
+      <publishTime>12/07/2017 21:38:27</publishTime>
     </File>
     <File Include="bootstrap337/fonts/glyphicons-halflings-regular.eot">
       <publishTime>07/25/2016 13:43:02</publishTime>
@@ -217,10 +217,10 @@
       <publishTime>10/09/2017 20:38:31</publishTime>
     </File>
     <File Include="Common/wuc_FileUpload.ascx">
-      <publishTime>12/02/2017 15:57:32</publishTime>
+      <publishTime>12/24/2017 21:11:06</publishTime>
     </File>
     <File Include="Common/wuc_FileVedio.ascx">
-      <publishTime>11/08/2017 01:05:38</publishTime>
+      <publishTime>12/24/2017 20:40:26</publishTime>
     </File>
     <File Include="Common/wuc_ListPager.ascx">
       <publishTime>10/09/2017 20:03:26</publishTime>
@@ -229,10 +229,10 @@
       <publishTime>12/02/2017 15:28:22</publishTime>
     </File>
     <File Include="Common/wuc_UpLoadDouble.ascx">
-      <publishTime>12/02/2017 20:13:31</publishTime>
+      <publishTime>12/04/2017 22:16:13</publishTime>
     </File>
     <File Include="Common/wuc_UpLoadDoubleEng.ascx">
-      <publishTime>12/02/2017 20:13:36</publishTime>
+      <publishTime>12/04/2017 22:18:15</publishTime>
     </File>
     <File Include="Common/wuc_UploadPic.ascx">
       <publishTime>12/02/2017 20:03:56</publishTime>
@@ -430,7 +430,7 @@
       <publishTime>10/04/2017 16:09:20</publishTime>
     </File>
     <File Include="CSS/BootsrapDefaultCHN.css">
-      <publishTime>11/27/2017 00:51:14</publishTime>
+      <publishTime>01/07/2018 14:00:13</publishTime>
     </File>
     <File Include="CSS/BootsrapDefaultENG.css">
       <publishTime>11/13/2017 16:57:49</publishTime>
@@ -440,6 +440,9 @@
     </File>
     <File Include="CSS/button.css">
       <publishTime>10/06/2017 23:20:34</publishTime>
+    </File>
+    <File Include="CSS/default_class.css">
+      <publishTime>12/10/2017 14:22:31</publishTime>
     </File>
     <File Include="CSS/Demo.css">
       <publishTime>10/05/2017 09:53:38</publishTime>
@@ -525,32 +528,44 @@
     <File Include="CSS/WebTable.css">
       <publishTime>09/22/2017 21:04:18</publishTime>
     </File>
+    <File Include="CssStardered/BasicStyle.css">
+      <publishTime>12/10/2017 14:23:27</publishTime>
+    </File>
+    <File Include="CssStardered/icon/chuangzaoValue.png">
+      <publishTime>12/10/2017 14:16:19</publishTime>
+    </File>
     <File Include="DefalutEng.aspx">
-      <publishTime>11/30/2017 16:07:12</publishTime>
+      <publishTime>01/07/2018 13:39:42</publishTime>
     </File>
     <File Include="DefalutEngs.aspx">
       <publishTime>11/30/2017 16:01:13</publishTime>
     </File>
     <File Include="Default.aspx">
-      <publishTime>11/30/2017 16:03:01</publishTime>
+      <publishTime>01/07/2018 14:05:32</publishTime>
+    </File>
+    <File Include="Default_Pc_CHN.aspx">
+      <publishTime>01/07/2018 14:14:37</publishTime>
+    </File>
+    <File Include="Default_Pc_ENG.aspx">
+      <publishTime>01/07/2018 14:14:29</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>09/24/2017 10:22:56</publishTime>
     </File>
     <File Include="FirstImage/1_CompanyName_c.jpg">
-      <publishTime>10/28/2017 17:52:02</publishTime>
+      <publishTime>12/07/2017 17:30:48</publishTime>
     </File>
     <File Include="FirstImage/2_CompanyIntro_c.jpg">
-      <publishTime>10/28/2017 17:52:02</publishTime>
+      <publishTime>12/07/2017 17:30:39</publishTime>
     </File>
     <File Include="FirstImage/3_CompanyTitle_c.jpg">
-      <publishTime>10/28/2017 17:52:02</publishTime>
+      <publishTime>12/07/2017 17:30:25</publishTime>
     </File>
     <File Include="FirstImage/4_CompanyFocus_c.jpg">
-      <publishTime>10/28/2017 17:52:02</publishTime>
+      <publishTime>12/07/2017 17:30:14</publishTime>
     </File>
     <File Include="FirstImage/5_CompanyFeture_c.jpg">
-      <publishTime>10/28/2017 17:52:02</publishTime>
+      <publishTime>12/07/2017 17:30:06</publishTime>
     </File>
     <File Include="FirstImage/Cmp_1.png">
       <publishTime>10/28/2017 21:34:17</publishTime>
@@ -739,7 +754,7 @@
       <publishTime>09/25/2017 00:16:53</publishTime>
     </File>
     <File Include="Font/webfont.svg">
-      <publishTime>09/25/2017 00:22:02</publishTime>
+      <publishTime>12/22/2017 18:55:49</publishTime>
     </File>
     <File Include="Font/webfont.ttf">
       <publishTime>09/25/2017 00:16:53</publishTime>
@@ -1563,14 +1578,62 @@
     <File Include="Images/Web/xxgk.png">
       <publishTime>10/06/2017 14:25:21</publishTime>
     </File>
+    <File Include="Img/1.jpg">
+      <publishTime>12/29/2017 00:22:21</publishTime>
+    </File>
     <File Include="Img/1510495015.png">
       <publishTime>11/12/2017 21:57:14</publishTime>
+    </File>
+    <File Include="Img/2.jpg">
+      <publishTime>12/29/2017 00:22:26</publishTime>
+    </File>
+    <File Include="Img/3.jpg">
+      <publishTime>12/29/2017 00:22:42</publishTime>
+    </File>
+    <File Include="Img/4.jpg">
+      <publishTime>12/29/2017 00:22:32</publishTime>
+    </File>
+    <File Include="Img/5.jpg">
+      <publishTime>12/29/2017 00:22:34</publishTime>
+    </File>
+    <File Include="Img/Aliba.png">
+      <publishTime>12/22/2017 19:42:26</publishTime>
+    </File>
+    <File Include="Img/CZM.png">
+      <publishTime>12/22/2017 21:39:34</publishTime>
+    </File>
+    <File Include="Img/dingbu.png">
+      <publishTime>12/22/2017 19:41:24</publishTime>
+    </File>
+    <File Include="Img/Icon.png">
+      <publishTime>12/19/2017 09:17:54</publishTime>
     </File>
     <File Include="Img/mmexport1509186467240.jpg">
       <publishTime>11/12/2017 22:00:26</publishTime>
     </File>
+    <File Include="Img/One.png">
+      <publishTime>12/22/2017 20:29:35</publishTime>
+    </File>
+    <File Include="Img/Qiye2WM.jpg">
+      <publishTime>11/12/2017 22:00:26</publishTime>
+    </File>
     <File Include="Img/QQ.png">
       <publishTime>11/12/2017 21:52:28</publishTime>
+    </File>
+    <File Include="Img/User.png">
+      <publishTime>12/22/2017 19:35:15</publishTime>
+    </File>
+    <File Include="Img/weixin.png">
+      <publishTime>12/22/2017 19:45:23</publishTime>
+    </File>
+    <File Include="Img/yonghu.png">
+      <publishTime>12/20/2017 18:52:40</publishTime>
+    </File>
+    <File Include="Img/zhiding.png">
+      <publishTime>12/20/2017 18:52:40</publishTime>
+    </File>
+    <File Include="Img/zixun.png">
+      <publishTime>12/22/2017 19:37:40</publishTime>
     </File>
     <File Include="Img/微信.png">
       <publishTime>11/12/2017 21:53:49</publishTime>
@@ -1580,6 +1643,9 @@
     </File>
     <File Include="Js/Demo.js">
       <publishTime>10/05/2017 09:49:16</publishTime>
+    </File>
+    <File Include="Js/hammer.js">
+      <publishTime>01/07/2018 09:29:36</publishTime>
     </File>
     <File Include="Js/scroll.js">
       <publishTime>10/21/2017 15:08:50</publishTime>
@@ -1606,7 +1672,7 @@
       <publishTime>11/16/2017 23:40:45</publishTime>
     </File>
     <File Include="Master/UserPageMasters.Master">
-      <publishTime>11/07/2017 12:30:22</publishTime>
+      <publishTime>01/07/2018 14:13:39</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>09/24/2017 10:23:06</publishTime>
@@ -1653,6 +1719,36 @@
     <File Include="ProductImage/201711715521653.jpg">
       <publishTime>11/07/2017 15:05:21</publishTime>
     </File>
+    <File Include="ProductImage/2017122420347590.png">
+      <publishTime>12/24/2017 20:03:47</publishTime>
+    </File>
+    <File Include="ProductImage/20181733151216.jpg">
+      <publishTime>01/07/2018 03:31:51</publishTime>
+    </File>
+    <File Include="ProductImage/2018173316481.jpg">
+      <publishTime>01/07/2018 03:31:06</publishTime>
+    </File>
+    <File Include="ProductImage/2018173363815.jpg">
+      <publishTime>01/07/2018 03:36:03</publishTime>
+    </File>
+    <File Include="ProductImage/20181734121246.jpg">
+      <publishTime>01/07/2018 03:41:21</publishTime>
+    </File>
+    <File Include="ProductImage/2018173414690.jpg">
+      <publishTime>01/07/2018 03:41:46</publishTime>
+    </File>
+    <File Include="ProductImage/20181734234292.jpg">
+      <publishTime>01/07/2018 03:42:34</publishTime>
+    </File>
+    <File Include="ProductImage/2018173429103.jpg">
+      <publishTime>01/07/2018 03:42:09</publishTime>
+    </File>
+    <File Include="ProductImage/2018174112477.jpg">
+      <publishTime>01/07/2018 04:11:02</publishTime>
+    </File>
+    <File Include="ProductImage/2018174112485.jpg">
+      <publishTime>01/07/2018 04:11:02</publishTime>
+    </File>
     <File Include="ProductImage/productType1.jpg">
       <publishTime>09/26/2017 19:00:00</publishTime>
     </File>
@@ -1679,6 +1775,24 @@
     </File>
     <File Include="ProgressBar.htm">
       <publishTime>11/08/2017 19:17:06</publishTime>
+    </File>
+    <File Include="ProjectFile/201711413214731.jpg">
+      <publishTime>11/04/2017 13:21:47</publishTime>
+    </File>
+    <File Include="ProjectFile/201711413214740.docx">
+      <publishTime>11/04/2017 13:21:47</publishTime>
+    </File>
+    <File Include="ProjectFile/20171223213640864.jpg">
+      <publishTime>12/23/2017 21:36:40</publishTime>
+    </File>
+    <File Include="ProjectFile/20171224205742854.png">
+      <publishTime>12/24/2017 20:57:42</publishTime>
+    </File>
+    <File Include="ProjectFile/20171224214113165.pdf">
+      <publishTime>12/24/2017 21:41:13</publishTime>
+    </File>
+    <File Include="ProjectFile/20171224214113171.png">
+      <publishTime>12/24/2017 21:41:13</publishTime>
     </File>
     <File Include="Scripts/jquery-1.8.2.js">
       <publishTime>09/24/2017 10:22:57</publishTime>
@@ -1765,70 +1879,70 @@
       <publishTime>09/24/2017 10:23:05</publishTime>
     </File>
     <File Include="UserPage/UserbecomeTypeHigh.aspx">
-      <publishTime>12/02/2017 20:18:12</publishTime>
+      <publishTime>01/07/2018 02:31:09</publishTime>
     </File>
     <File Include="UserPage/UserbecomeTypeHighCHN.aspx">
-      <publishTime>12/02/2017 20:09:02</publishTime>
+      <publishTime>01/07/2018 14:05:51</publishTime>
     </File>
     <File Include="UserPage/UserConmunicationApace.aspx">
-      <publishTime>11/16/2017 23:21:42</publishTime>
+      <publishTime>12/25/2017 00:03:25</publishTime>
     </File>
     <File Include="UserPage/UserConmunicationApaceCHN.aspx">
-      <publishTime>11/16/2017 23:36:43</publishTime>
+      <publishTime>01/07/2018 14:05:58</publishTime>
     </File>
     <File Include="UserPage/UserCreateProject.aspx">
-      <publishTime>11/16/2017 23:22:13</publishTime>
+      <publishTime>12/25/2017 00:03:22</publishTime>
     </File>
     <File Include="UserPage/UserCreateProjectCHN.aspx">
-      <publishTime>11/16/2017 23:37:25</publishTime>
+      <publishTime>01/07/2018 14:06:06</publishTime>
     </File>
     <File Include="UserPage/UserForgetCode.aspx">
-      <publishTime>11/09/2017 14:26:53</publishTime>
+      <publishTime>01/07/2018 14:12:14</publishTime>
     </File>
     <File Include="UserPage/UserInvestProject.aspx">
-      <publishTime>11/16/2017 23:22:41</publishTime>
+      <publishTime>01/07/2018 01:25:14</publishTime>
     </File>
     <File Include="UserPage/UserInvestProjectCHN.aspx">
-      <publishTime>11/16/2017 23:37:42</publishTime>
+      <publishTime>01/07/2018 14:06:15</publishTime>
     </File>
     <File Include="UserPage/UserMuBan.aspx">
       <publishTime>10/28/2017 15:07:50</publishTime>
     </File>
     <File Include="UserPage/UserNewProductShow.aspx">
-      <publishTime>12/02/2017 17:22:39</publishTime>
+      <publishTime>12/25/2017 00:03:13</publishTime>
     </File>
     <File Include="UserPage/UserNewProductShowCHN.aspx">
-      <publishTime>11/16/2017 23:38:09</publishTime>
+      <publishTime>12/25/2017 00:03:11</publishTime>
     </File>
     <File Include="UserPage/UserPageLogin.aspx">
-      <publishTime>11/16/2017 23:23:40</publishTime>
+      <publishTime>12/25/2017 00:03:10</publishTime>
     </File>
     <File Include="UserPage/UserPageLoginCHN.aspx">
-      <publishTime>11/08/2017 20:33:20</publishTime>
+      <publishTime>01/07/2018 14:13:22</publishTime>
     </File>
     <File Include="UserPage/UserPageRegister.aspx">
-      <publishTime>11/26/2017 22:37:48</publishTime>
+      <publishTime>12/25/2017 00:03:07</publishTime>
     </File>
     <File Include="UserPage/UserPageRegisterCHN.aspx">
-      <publishTime>11/27/2017 14:40:22</publishTime>
+      <publishTime>01/07/2018 14:12:56</publishTime>
     </File>
     <File Include="UserPage/UserProductTypeShow.aspx">
-      <publishTime>11/30/2017 22:05:59</publishTime>
+      <publishTime>12/25/2017 00:03:04</publishTime>
     </File>
     <File Include="UserPage/UserProductTypeShowCHN.aspx">
-      <publishTime>11/30/2017 15:58:10</publishTime>
+      <publishTime>01/07/2018 14:12:49</publishTime>
     </File>
     <File Include="UserPage/UserProjectShow.aspx">
-      <publishTime>11/16/2017 23:24:07</publishTime>
+      <publishTime>12/25/2017 00:09:47</publishTime>
     </File>
     <File Include="UserPage/UserProjectShowCHN.aspx">
-      <publishTime>11/16/2017 23:38:40</publishTime>
+      <publishTime>01/07/2018 14:12:42</publishTime>
     </File>
     <File Include="UserPage/UserVedioShowList.aspx">
-      <publishTime>11/27/2017 04:42:49</publishTime>
+      <publishTime>12/25/2017 00:02:58</publishTime>
     </File>
     <File Include="UserPage/UserVedioShowListCHE.aspx">
-      <publishTime>11/27/2017 04:42:35</publishTime>
+      <publishTime>01/07/2018 14:12:33</publishTime>
     </File>
     <File Include="UserZhengJian/201712215254980.jpg">
       <publishTime>12/02/2017 15:25:04</publishTime>
@@ -1897,7 +2011,7 @@
       <publishTime>09/24/2017 10:23:05</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/02/2017 18:20:51</publishTime>
+      <publishTime>01/07/2018 10:05:08</publishTime>
     </File>
     <File Include="WebForm1.aspx">
       <publishTime>12/02/2017 20:04:54</publishTime>

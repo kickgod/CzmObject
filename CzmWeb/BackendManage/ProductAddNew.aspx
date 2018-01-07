@@ -20,8 +20,9 @@
         .txtBox{ width: 240px;height: 23px;line-height: 23px}
         .TdClass{text-align: center}
         .hs{ height: 28px;line-height: 28px}
-        .Save{height: 25px;	width: 60px; border: none; background: gainsboro;cursor: pointer;color: darkturquoise;border: solid 1px gainsboro;
+        .Save{height: 28px;	width: 80px; border: none;border: 1px solid black; background: darkturquoise;cursor: pointer;color: white;border: solid 1px gainsboro;
             margin-top: 0px;
+            border-radius: 5px;
         }  
         .Save:hover{background-color: gray}
         .ProductShowNow{position: relative; width: 900px;height: 300px;background-color: white;margin: 0px auto;font-family:ProductFontStyle } 
@@ -125,7 +126,19 @@
                         </td>
                         <td>
                             <uc1:wuc_FileUpload runat="server" ID="wuc_FileUpload" />
+                            [适用于手机端图片]
+                            <asp:Button ID="btnAgainPhone" runat="server" CssClass="Save" Text="重新上传" OnClick="btnAgainPhone_OnClick" />
                         </td>
+                        <td align="center">
+                            图片上传
+                        </td>
+                        <td>
+                           <uc1:wuc_FileUpload runat="server" ID="wuc_FileUpload_pc" />
+                            [仅限用于PC端首页图片]
+                            <asp:Button ID="btnSavepc" runat="server" CssClass="Save" Text="重新上传" OnClick="btnSavepc_OnClick" />
+                        </td>
+                    </tr>
+                    <tr>
                         <td align="center">
                             当前价格
                         </td>
@@ -137,7 +150,8 @@
                         </td>
                         <td>
                             <asp:TextBox ID="txtPriceLst" runat="server"  CssClass="txtBox"></asp:TextBox>
-                            [默认值为当前价格的1.2倍]</td>
+                            [默认值为当前价格的1.2倍]
+                        </td>
                     </tr>
                     <tr>
                         <td align="center">关键字[英文 空格分开]</td>

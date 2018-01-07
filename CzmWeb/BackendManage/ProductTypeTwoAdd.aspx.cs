@@ -44,7 +44,7 @@ namespace CzmWeb.BackendManage
             for (int i = 0; i < tBase.Rows.Count; i++)
             {
                 TreeNode tnNode = new TreeNode();
-                tnNode.Text = tBase.Rows[i]["typeName_c"].ToString().Trim() + " |英文:" + tBase.Rows[i]["typeName_e"].ToString().Trim();
+                tnNode.Text = tBase.Rows[i]["typeName_c"].ToString().Trim() ;
                 tnNode.Value = "P" + tBase.Rows[i]["typeID"].ToString().Trim();
                 tnTop.ChildNodes.Add(CreateSubMenu(tnNode, tnNode.Value.Replace('P', ' ')));
             }
@@ -57,7 +57,7 @@ namespace CzmWeb.BackendManage
             for (int j = 0; j < tsubmnu.Rows.Count; j++)
             {
                 TreeNode tnSubMenu = new TreeNode();
-                tnSubMenu.Text = tsubmnu.Rows[j]["TypeNameCHM"].ToString().Trim() + " |英文:" + tsubmnu.Rows[j]["TypeNameENG"].ToString().Trim(); ;
+                tnSubMenu.Text = tsubmnu.Rows[j]["TypeNameCHM"].ToString().Trim() ;
                 tnSubMenu.Value = "R" + tsubmnu.Rows[j]["TypeTwoId"].ToString().Trim();
                 tnTop.ChildNodes.Add(tnSubMenu);
             }
@@ -321,7 +321,7 @@ namespace CzmWeb.BackendManage
             {
                 if (!wuc_FileUpload.IsHaveFile())
                 {
-                    MessaegBox("请上传视频封面");
+                    MessaegBox("请上传图片");
                     return;
                 }
                 wuc_FileUpload.UpFile();

@@ -8,6 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
     <title>CZM</title>
     <link rel="icon" href="../Images/SystemPicture/创造力.ico" />
+      <script type="text/javascript">
+                var screen3 = window.matchMedia('(min-width:0px) and (max-width:800px)');
+                if (screen3.matches) {
+                    /*使得手机端折叠菜单打开pc端折叠菜单*/
+
+                } else {
+                    location.href = '../Default_Pc_ENG.aspx';
+                }
+        </script>
     <script src="../bootstrap337/js/jquery-3.2.1.min.js"></script>
     <link href="../bootstrap337/css/style.css" rel="stylesheet" />
     <link href="../bootstrap337/css/bootstrap.min.css" rel="stylesheet" />
@@ -147,11 +156,11 @@
 <div id="LunBoControl">
     <div id="myCarousel" class="carousel slide"  data-ride="carousel"   data-interval=4500   >
         <ol class="carousel-indicators">
-            <li data-target="#myCarousel" style="background-color: #000000;" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel"  style="background-color: #000000;" data-slide-to="1"></li>
-            <li data-target="#myCarousel"  style="background-color: #000000;" data-slide-to="2"></li>
-            <li data-target="#myCarousel"  style="background-color: #000000;"  data-slide-to="3"></li>
-            <li data-target="#myCarousel"  style="background-color: #000000;"  data-slide-to="4"></li>
+            <li data-target="#myCarousel" style="background-color: #000000;color: white " data-slide-to="0" class="active">1</li>
+            <li data-target="#myCarousel"  style="background-color: #000000;color: white" data-slide-to="1">2</li>
+            <li data-target="#myCarousel"  style="background-color: #000000;color: white" data-slide-to="2">3</li>
+            <li data-target="#myCarousel"  style="background-color: #000000;color: white"  data-slide-to="3">4</li>
+            <li data-target="#myCarousel"  style="background-color: #000000;color: white"  data-slide-to="4">5</li>
         </ol>   
         <div class="carousel-inner">
             <div class="item active">
@@ -185,13 +194,6 @@
                 <div class="carousel-caption" style="color: #000000;" ></div>
             </div>
         </div>
-        <!-- 轮播（Carousel）导航 -->
-        <a class="carousel-control left" href="#myCarousel" 
-           data-slide="prev">&lsaquo;
-        </a>
-        <a class="carousel-control right" href="#myCarousel" 
-           data-slide="next">&rsaquo;
-        </a>
     </div>
 </div>
 <br/><br/>
@@ -309,7 +311,7 @@
             </section>
         </div>
         <div class="col-md-5">
-            <span  style="font-size:60px;font-family:'微软雅黑';color:white;font-weight:400; text-shadow:8px 8px 0px RGB(195,195,189); letter-spacing: 4px;">
+            <span  style="font-size:60px;font-family:'微软雅黑';color:white;font-weight:400; text-shadow:1px 1px 0px RGB(195,195,189); letter-spacing: 4px;">
                 Watch live
             </span>                  
         </div>
@@ -337,27 +339,18 @@
                 </div>                   
             </ItemTemplate>  
         </asp:Repeater>
-        <div class="col-md-4">
-            <img src="../FirstImage/首页8.jpg" width="100%"/>
-        </div>    
-        <div class="col-md-4">
-            <img src="../FirstImage/首页9.jpg"  width="100%"/>
-        </div>    
-        <div class="col-md-4">
-            <img src="../FirstImage/首页10.jpg"  width="100%"/>
-        </div>  
     </div>
 </section>
 <br/><br/>
 <div class="JuzhongFont">
     <span style="padding-bottom: -10px;">
-        <span style="font-size: 20px; font-weight: 700; font-family: '微软雅黑';">Investment</span><span class="Font_Name_English" style="font-size: 18px">INVESTMENT</span>
+        <span style="font-size: 20px; font-weight: 700; font-family: '微软雅黑';">项目投资</span><span class="Font_Name_English" style="font-size: 18px">INVESTMENT</span>
     </span> 
     <p style="height: 25px; margin-top: -30px;">
         <img src="../Images/SystemPicture/yitiao.png"></img>
     </p>
 </div>
-<br/>
+<br/><br/>
 <div class="container">
     <div class="row" id="ProjectHave">
         <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_OnItemCommand" >
@@ -399,8 +392,9 @@
                     <asp:Repeater ID="reptmInvset" runat="server">
                         <ItemTemplate>
                             <li>
-                                <p><a href="javascript:ale rt('对方隐私！无法查看')" target="_blank"><%#Eval("TypeName_c") %> <%#Eval("UserName_e") %> 对</a><a href="#" target="_blank" class="btn_lh" >投资了<%#Eval("Account") %>元</a><em style="width: 30%"><%#Eval("InsertProjectName") %></em></p>
-                                <p><a href="javascript:alert('对方隐私！无法查看')" target="_blank" class="a_blue">Investment time：</a><span><%#Eval("InvestTime") %></span></p>
+                                <p><a href="javascript:ale rt('The other party privacy! Unable to view')" target="_blank"><%#Eval("TypeName_c") %> <%#Eval("UserName_e") %> 对</a><a href="#" target="_blank" class="btn_lh" >投资了<%#Eval("Account") %>元</a><em style="width: 30%"><%#Eval("InsertProjectName") %></em></p>
+                                <br/><br/><br/><br/>
+                                <p><a href="javascript:alert('The other party privacy! Unable to view')" target="_blank" class="a_blue">Investment time：</a><span><%#Eval("InvestTime") %></span></p>
                             </li>                       
                         </ItemTemplate>
                     </asp:Repeater>
@@ -419,12 +413,13 @@
                 <br/>
                 <br/>
                 <h3 class="h3">About us</h3>
-                <br/>
-                <p style="font-size: 16px">The company is committed to creating innovative, hard work and keep making progress!</p>
+                <p style="font-size: 14px" title="Unite wisdom, focus on creating. Create the door is focused on a variety of innovative product development platform. Provide inventor with project development platform and provide investors with high-quality project selection opportunities">
+                    Unite wisdom, focus on creating. Create the door is focused on a variety of innovative product development platform. Provide inventor with project development platform....
+                </p>
                 <table cellpadding="10px" cellspacing="10px" class="TableName" width="100%" >
                     <thead>
                     <tr>
-                        <th>About us</th><th>Cooperation</th><th>Communication</th>
+                        <th>关于我们</th><th>合作投资</th><th>交流空间</th>
                     </tr>
                     </thead>
                     <tr>
@@ -435,12 +430,12 @@
                             <a href="../UserPage/UserProjectShowCHN.aspx" class="a_blue" >投资信息</a>
                         </td>
                         <td width="33%"  height="30px" style="line-height: 30px">
-                            <a href="../UserPage/UserConmunicationApaceCHN.aspx">疑惑解答</a>
+                            <asp:Label ID="Label3" runat="server" Text="上传流程"></asp:Label>
                         </td>
                     </tr>
                     <tr>
                         <td width="33%" height="30px" style="line-height: 30px">
-                            <asp:Label ID="lblCompany" runat="server" Text="厂商信息"></asp:Label>
+                            <asp:Label ID="Label2" runat="server" Text="投资流程"></asp:Label>
                         </td>
                         <td width="33%" height="30px" style="line-height: 30px">
                             <asp:Label ID="lblFalv" runat="server" Text="投资项目"></asp:Label>
@@ -448,17 +443,6 @@
                         <td width="33%" height="30px" style="line-height: 30px">
                             <asp:Label ID="lblshengming" runat="server" Text="投资咨询"></asp:Label>
                         </td>
-                    </tr>
-                    <tr>
-                        <td width="33%" height="30px" style="line-height: 30px">
-                            <asp:Label ID="Label1" runat="server" Text="地址"></asp:Label>
-                        </td>
-                        <td width="33%" height="30px" style="line-height: 30px">
-                            <asp:Label ID="Label2" runat="server" Text="投资流程"></asp:Label>
-                        </td>
-                        <td width="33%" height="30px" style="line-height: 30px">
-                            <asp:Label ID="Label3" runat="server" Text="上传流程"></asp:Label>
-                        </td>                      
                     </tr>
                 </table>
                 <br/><br/>
@@ -550,5 +534,44 @@
 <script src="../bootstrap337/js/bootstrap.min.js"></script>
 <script src="../bootstrap337/js/holder.min.js"></script>
 <script src="../Js/scroll.js"></script>
+<script type="text/javascript">
+    document.querySelector("#myCarousel").addEventListener("touchstart",
+        function (event) {
+            //code here
+            event.preventDefault();
+        },
+        false);
+    'use strict';
+    $(function () {
+        // 获取手指在轮播图元素上的一个滑动方向（左右）
+
+        // 获取界面上轮播图容器
+        var $carousels = $('.carousel');
+        var startX, endX;
+        // 在滑动的一定范围内，才切换图片
+        var offset = 50;
+        // 注册滑动事件
+        $carousels.on('touchstart', function (e) {
+            // 手指触摸开始时记录一下手指所在的坐标x
+            startX = e.originalEvent.touches[0].clientX;
+
+        });
+        $carousels.on('touchmove', function (e) {
+            // 目的是：记录手指离开屏幕一瞬间的位置 ，用move事件重复赋值
+            endX = e.originalEvent.touches[0].clientX;
+        });
+        $carousels.on('touchend', function (e) {
+            //console.log(endX);
+            //结束触摸一瞬间记录手指最后所在坐标x的位置 endX
+            //比较endX与startX的大小，并获取每次运动的距离，当距离大于一定值时认为是有方向的变化
+            var distance = Math.abs(startX - endX);
+            if (distance > offset) {
+                //说明有方向的变化
+                //根据获得的方向 判断是上一张还是下一张出现
+                $(this).carousel(startX > endX ? 'next' : 'prev');
+            }
+        })
+    });
+</script>
 </html>
 

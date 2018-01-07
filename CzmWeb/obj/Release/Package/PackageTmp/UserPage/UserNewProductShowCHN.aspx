@@ -8,7 +8,7 @@
 <head id="Head1" runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="icon" href="../Images/SystemPicture/创造力.ico" />
+    <link rel="icon" href="../Img/CZM.png" />
     <script src="../bootstrap337/js/jquery-3.2.1.min.js"></script>
     <script src="../bootstrap337/js/bootstrap.min.js"></script>
     <link href="../bootstrap337/css/bootstrap.min.css" rel="stylesheet" />

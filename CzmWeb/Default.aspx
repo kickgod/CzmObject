@@ -7,6 +7,15 @@
     <meta http-equiv="pragma" content="no-cache"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
         <title>创造门</title>
+        <script type="text/javascript">
+            var screen3 = window.matchMedia('(min-width:0px) and (max-width:800px)');
+            if (screen3.matches) {
+                /*使得手机端折叠菜单打开pc端折叠菜单*/
+
+            } else {
+                location.href = '../Default_Pc_CHN.aspx';
+            }
+        </script>
         <link rel="icon" href="../Images/SystemPicture/创造力.ico" />
         <script src="../bootstrap337/js/jquery-3.2.1.min.js"></script>
         <link href="../bootstrap337/css/style.css" rel="stylesheet" />
@@ -25,6 +34,8 @@
             .TypeIntroductions:first-letter{ color: purple;font-size: 25px}
             .TypeIntroductions strong{font-size: 15px}
             #ProjectHave figure img{ width: 100%;height: 100%;}
+            #NewProductShow .col-md-3{ padding: 5px;box-sizing: border-box}
+            #RowProductTypeShow .col-md-3{ padding: 5px;}
             #reptemNewProductMy figure img{ width: 100%;height: 100%;}
             .TitleIconss{color: purple;font-size: 18px;font-family: ProductFontStyle;}
             .TitleIconsins{color: purple;font-size: 13px;font-family: ProductFontStyle;}
@@ -54,9 +65,14 @@
             .SearchTxt{ width: 70%;height: 27px;border-radius: 12.5px;font-size: 13px;color: black;text-indent: 15px}
             .LiveIng{color:coral;font-size:15px;border-bottom: coral 1px solid}
             .ulloSpan a{display: block}
-            .ulloSpan:hover { border-bottom: RGB(148, 30, 80) 2px solid;border-top: RGB(148, 30, 80) 2px solid;color: black;font-size: 18px}
+            .ulloSpan:hover { background-color: RGB(175, 53, 110);border-bottom: RGB(148, 30, 80) 2px solid;border-top: RGB(148, 30, 80) 2px solid;color: black;font-size: 18px}
             .FirstTimeDivLogo{ background-color: RGB(175, 53, 110); height: 60px;}
             .FirstTimeDivLogo i{opacity: 0.6;filter: opacity(60);letter-spacing:4px;  margin-left: 40px;margin-top: 5px; font-size: 20px;color: white;font-family: '微软雅黑';height: 58px;vertical-align: bottom}
+            #ShowPhoneIfEnd{ background-color: white;color: white;margin-bottom: 20px}
+            #ShowPhoneIfEnd{ height: 70px}
+            #ShowPhoneIfEnd a{font-size: 16px;color: gray;display: inline-block;height: 70px;line-height: 70px;padding-left: 15px;padding-right: 15px;transition: 1s;}
+            #ShowPhoneIfEnd a:hover{ text-decoration: none;color: white;background-color: RGB(175, 53, 110);border: RGB(175, 53, 110);border-radius: 5px }
+            #ShowPhoneIfEnd .FloatRight{float: right}
         </style>
     </head>
 <body>
@@ -73,7 +89,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="../Default.aspx"><strong class="CZMBrandCompanyT">创造门</strong></a>
+            <a class="navbar-brand" href="../Default.aspx"><strong class="CZMBrandCompanyT">四川创造门高新技术开发有限公司</strong></a>
         </div>
         <div class="collapse navbar-collapse" id="example-navbar-collapse">
             <ul class="nav navbar-nav">
@@ -116,36 +132,25 @@
         </div>
     </div>
 </nav>
-<nav class="navbar navbar-default" role="navigation" id="ShowPhoneIfEnd">
-    <div class="container-fluid"> 
-        <div>
-            <!--向左对齐-->
-            <ul class="nav navbar-nav navbar-left" >
-                 <li class="ulloSpan"><a target="_blank" href="../Default.aspx">主页</a></li>
-                 <li class="ulloSpan"><a target="_blank" href="../UserPage/UserProductTypeShowCHN.aspx">产品分类</a></li>
-                 <li class="ulloSpan"><a target="_blank" href="../UserPage/UserNewProductShowCHN.aspx">新品预告</a></li>
-                 <li class="ulloSpan"><a target="_blank" href="../UserPage/UserCreateProjectCHN.aspx">我要创作</a></li>
-                 <li class="ulloSpan"><a target="_blank" href="../UserPage/UserInvestProjectCHN.aspx">我要投资</a></li>
-                 <li class="ulloSpan"><a target="_blank" href="../UserPage/UserProjectShowCHN.aspx">项目展示</a></li>
-                 <li class="ulloSpan"><a  href="#Watchlive">观看直播</a></li>
-                 <li class="ulloSpan"><a target="_blank" href="../UserPage/UserVedioShowListCHE.aspx">视频专区</a></li>
-                 <li class="ulloSpan"><a target="_blank" href="../UserPage/UserConmunicationApaceCHN.aspx">交流空间</a></li>
-            </ul>
-            <!--向右对齐-->
-            <ul class="nav navbar-nav navbar-right">
-                 <li class="ulloSpan"><a href="../UserPage/UserPageLoginCHN.aspx" target="_blank"><span class="glyphicon glyphicon-user"></span> 立即登录</a></li>
-                 <li class="ulloSpan"><a href="../UserPage/UserPageRegisterCHN.aspx" target="_blank"><span class="glyphicon glyphicon-log-in"></span> 立即注册</a></li>
-                 <li class="ulloSpan"><a target="_blank" href="../UserPage/UserbecomeTypeHighCHN.aspx"><span class="glyphicon glyphicon-home"></span> 个人中心</a></li>
-            </ul>
-            <form class="navbar-form navbar-right" role="search">
-                <a href="../Default.aspx "  target="_blank" type="submit" class="btn btn-default" >CN</a>
-                <a href="../DefalutEng.aspx" target="_blank" type="submit" class="btn btn-default"  >EN</a>
-            </form>
-        </div>
-    </div>
+<nav class="borderGrey_One" id="ShowPhoneIfEnd">
+                 <a target="_blank" href="../Default.aspx">主页</a>
+                 <a target="_blank" href="../UserPage/UserProductTypeShowCHN.aspx">产品分类</a>
+                 <a target="_blank" href="../UserPage/UserNewProductShowCHN.aspx">新品预告</a>
+                 <a target="_blank" href="../UserPage/UserCreateProjectCHN.aspx">我要创作</a>
+                 <a target="_blank" href="../UserPage/UserInvestProjectCHN.aspx">我要投资</a>
+                 <a target="_blank" href="../UserPage/UserProjectShowCHN.aspx">项目展示</a>
+                 <a  href="#Watchlive">观看直播</a>
+                 <a target="_blank" href="../UserPage/UserVedioShowListCHE.aspx">视频专区</a>
+                 <a target="_blank" href="../UserPage/UserConmunicationApaceCHN.aspx">交流空间</a>
+                 <a class="FloatRight" href="../Default.aspx "  target="_blank" type="submit" >CN</a>
+                 <a class="FloatRight" href="../DefalutEng.aspx" target="_blank" type="submit" >EN</a>
+                 <a class="FloatRight" href="../UserPage/UserPageLoginCHN.aspx" target="_blank"><span class="glyphicon glyphicon-user"></span> 立即登录</a>
+                 <a class="FloatRight" href="../UserPage/UserPageRegisterCHN.aspx" target="_blank"><span class="glyphicon glyphicon-log-in"></span> 立即注册</a>
+                 <a class="FloatRight" target="_blank" href="../UserPage/UserbecomeTypeHighCHN.aspx"><span class="glyphicon glyphicon-home"></span> 个人中心</a>
+
 </nav>
 <div id="LunBoControl">
-    <div id="myCarousel" class="carousel slide"  data-ride="carousel"   data-interval=4500   >
+    <div id="myCarousel" class="carousel slide"  data-ride="carousel"   data-interval="4500"   >
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" style="background-color: #000000;" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel"  style="background-color: #000000;" data-slide-to="1"></li>
@@ -155,41 +160,35 @@
         </ol>   
         <div class="carousel-inner">
             <div class="item active">
-                <img  src="../FirstImage/1_CompanyName_c.jpg"  alt="First slide">
+                <img  src="../FirstImage/1_CompanyName_c.jpg"  alt="First slide"/>
                 <div class="carousel-caption" style="color: #000000;">
                     <div class="col-md-12"  id="introdutionOFourCompany">
                         <p class="ItroDuctionOfCompany">
-                            <span class="intro">【公司简介】</span>四川创造门高新技术开发有限公司是致力于各种创新产品研发的实体机构，目前已经推出多项专利创新产品，并已获人们广泛认同
-                            我们还会不断研发更多创新产品推向市场，为人类社会的发展做出贡献！创造改变命运！创造改变未来！我们吸纳各种创新人才成为我们的合作伙伴
-                            ，为全人类服务，为有创造梦想的人服务，走进创造门，感受创造，拥有创造，参与创造，创造门与你同在！
+                            <span class="intro">【公司简介】</span>四川创造门高新技术开发有限公司是一家致力于各种创新产品研发的实体机构，我们不断开发各种创新产品推向市场，没有行业限制。
+                            我们吸纳各种创新人才成为我们的合作伙伴，也为各投资机构投资提供优质创新项目千针引线。
+                            创造门以促进全民创新为己任，汇聚智慧，专注创造是我们永不改变的主题。
+                            目前我们已经成功在渔具行业有了多个产品取得成功。也成功研发了洗鞋袜专利产品。还在医疗保健行业成功开发了康和美系列保健器械。未来，我们还会不断推出更多有意义的创新产品，为人类社会的发展添砖加瓦。
                         </p>
                     </div>
                 </div>
             </div>
             <div class="item">
-                <img src="../FirstImage/2_CompanyIntro_c.jpg" alt="Second slide">
+                <img src="../FirstImage/2_CompanyIntro_c.jpg" alt="Second slide"/>
                 <div class="carousel-caption" style="color: #000000;" ></div>
             </div>
             <div class="item">
-                <img src="../FirstImage/3_CompanyTitle_c.jpg" alt="Third slide">
+                <img src="../FirstImage/3_CompanyTitle_c.jpg" alt="Third slide"/>
                 <div class="carousel-caption" style="color: #000000;" ></div>
             </div>
             <div class="item">
-                <img src="../FirstImage/4_CompanyFocus_c.jpg" alt="Third slide">
+                <img src="../FirstImage/4_CompanyFocus_c.jpg" alt="Third slide"/>
                 <div class="carousel-caption" style="color: #000000;" ></div>
             </div>
             <div class="item">
-                <img src="../FirstImage/5_CompanyFeture_c.jpg" alt="Third slide">
+                <img src="../FirstImage/5_CompanyFeture_c.jpg" alt="Third slide"/>
                 <div class="carousel-caption" style="color: #000000;" ></div>
             </div>
         </div>
-        <!-- 轮播（Carousel）导航 -->
-        <a class="carousel-control left" href="#myCarousel" 
-           data-slide="prev">&lsaquo;
-        </a>
-        <a class="carousel-control right" href="#myCarousel" 
-           data-slide="next">&rsaquo;
-        </a>
     </div>
 </div>
 <br/><br/>
@@ -198,7 +197,7 @@
         <span style="font-size: 20px; font-weight: 700; font-family: '微软雅黑';">产品分类</span><span class="Font_Name_English" style="font-size: 18px">PRODUCT CATEGORY</span>
     </span> 
     <p style="height: 25px; margin-top: -30px;">
-        <img src="../Images/SystemPicture/yitiao.png"></img>
+        <a href="#Section_Two"><img src="../Images/SystemPicture/yitiao.png"></img></a>
     </p>
 </div>
 <br/><br/>
@@ -207,7 +206,7 @@
         <div class="row" id="RowProductTypeShow">
             <asp:Repeater ID="reptem" runat="server" OnItemCommand="reptem_ItemCommand">
                 <ItemTemplate>
-                    <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="col-md-3 col-sm-6 col-xs-6 borderGrey_One">
                         <figure>
                             <a href="../UserPage/UserProductTypeShowCHN.aspx" target="_blank" ><img src='<%#Eval("TypePicture")%>'  ></a>                 
                         </figure>
@@ -224,12 +223,12 @@
             </asp:Repeater>              
         </div>
     </div>
-    <div class="JuzhongFont">
+    <div class="JuzhongFont" id="Section_Two">
         <span style="padding-bottom: -10px;">
             <span style="font-size: 20px; font-weight: 700; font-family: '微软雅黑';">新品预告</span><span class="Font_Name_English" style="font-size: 18px">NEW PRODUCT</span>
         </span> 
         <p style="height: 25px; margin-top: -30px;">
-            <img src="../Images/SystemPicture/yitiao.png"></img>
+            <a href="#Section_Three"><img src="../Images/SystemPicture/yitiao.png"/></a>
         </p>
     </div>
     <br/><br/><br/><br/>
@@ -237,10 +236,11 @@
         <div class="row" id="NewProductShow">
             <asp:Repeater ID="reptemNewProduct" runat="server">
                 <ItemTemplate>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="borderGrey_One col-md-3 col-sm-6 col-xs-12">
                         <figure>
-                            <a href=<%#Eval("taobaoUrl")%>  target="_blank" ><img src='<%#Eval("ImgPatjh")%>' ></a>                
+                            <a href='<%#Eval("taobaoUrl")%>'  target="_blank" ><img src='<%#Eval("ImgPatjh")%>' ></a>                
                             <figcaption>
+                                <br/>
                                 <p class="introShowWord"><span style="font-size: 18px; font-weight: 400;">[<%#Eval("ProductName_c")%>]</span></p>
                                 <p class="DownGoumai">
                                     <span class="MeonyChar">¥</span><span class="Meony"><%#Eval("Price_now")%></span> <span class="MeonyLastChar">¥<%#Eval("price_last")%></span>
@@ -256,21 +256,21 @@
             </asp:Repeater>              
         </div>
     </div>
-<br /><br /><br />
-<div class="JuzhongFont">
+<div class="JuzhongFont" id="Section_Three">
     <span style="padding-bottom: -10px;">
         <span style="font-size: 20px; font-weight: 700; font-family: '微软雅黑';">视频专区</span><span class="Font_Name_English" style="font-size: 18px">Video Shelf</span>
     </span> 
     <p style="height: 25px; margin-top: -30px;">
-        <img src="../Images/SystemPicture/yitiao.png"></img>
+        <a href="#Section_Four"><img src="../Images/SystemPicture/yitiao.png"/></a>
     </p>
 </div>
 <br/><br/><br/><br/>
     <section class="VedioList">
-        <div class="Vedioshelf"> 
+        <div class="Vedioshelf">
+            <a href="../UserPage/UserVedioShowListCHE.aspx" style="padding-left: 30px"> 点击观看视频</a> 
             <div class="LeftBox" style="background-image: url(../FirstImage/diaoyu.png)"><a target="_blank" href="../UserPage/UserVedioShowListCHE.aspx"><img src="../FirstImage/图标8.png"/></a></div>
             <div class="CenterBox" style="background-image: url(../FirstImage/yihui.png);"><a target="_blank" href="../UserPage/UserVedioShowListCHE.aspx" ><img src="../FirstImage/图标8.png"/></a></div>
-            <div class="RightBox" style="background-image: url(../FirstImage/wenwu.png"><a target="_blank" href="../UserPage/UserVedioShowListCHE.aspx"><img src="../FirstImage/图标8.png"/></a></div>
+            <div class="RightBox" style="background-image: url(../FirstImage/wenwu.png)"><a target="_blank" href="../UserPage/UserVedioShowListCHE.aspx"><img src="../FirstImage/图标8.png"/></a></div>
         </div>   
         <br/>
         <div class="LearingMoreVedio">
@@ -304,8 +304,8 @@
                     </div>
                 </section>
             </div>
-            <div class="col-md-5">
-                <span  style="font-size:70px;font-family:'微软雅黑';color:white;font-weight:400; text-shadow:8px 8px 0px RGB(195,195,189); letter-spacing: 4px;  ">
+            <div class="col-md-5" id="Section_Four">
+                <span  style="font-size:70px;font-family:'微软雅黑';color:white;font-weight:400; text-shadow:1px 1px 0px RGB(195,195,189); letter-spacing: 4px;  ">
                     观看直播
                 </span>                  
             </div>
@@ -317,7 +317,7 @@
             <span style="font-size: 20px; font-weight: 700; font-family: '微软雅黑';">项目展示</span><span class="Font_Name_English" style="font-size: 18px">Projrct Show</span>
         </span> 
         <p style="height: 25px; margin-top: -30px;">
-            <img src="../Images/SystemPicture/yitiao.png"></img>
+            <a href="#Section_Five"><img src="../Images/SystemPicture/yitiao.png"></img></a>
         </p>
     </div>
     <br/><br/><br/><br/>
@@ -332,25 +332,16 @@
                         <a target="_blank" href="../UserPage/UserProjectShowCHN.aspx"><img width="100%" src=<%#Eval("ImgPicturPath")%>   alt="First slide"></a>
                     </div>                   
                 </ItemTemplate>  
-            </asp:Repeater>
-            <div class="col-md-4">
-                <img src="../FirstImage/首页8.jpg" width="100%"/>
-            </div>    
-            <div class="col-md-4">
-                <img src="../FirstImage/首页9.jpg"  width="100%"/>
-            </div>    
-            <div class="col-md-4">
-                <img src="../FirstImage/首页10.jpg"  width="100%"/>
-            </div>  
+            </asp:Repeater> 
         </div>
     </section>
   <br/><br/>
-    <div class="JuzhongFont">
+    <div class="JuzhongFont" id="Section_Five">
         <span style="padding-bottom: -10px;">
             <span style="font-size: 20px; font-weight: 700; font-family: '微软雅黑';">项目投资</span><span class="Font_Name_English" style="font-size: 18px">INVESTMENT</span>
         </span> 
         <p style="height: 25px; margin-top: -30px;">
-            <img src="../Images/SystemPicture/yitiao.png"></img>
+            <a href="#Section_Six"><img src="../Images/SystemPicture/yitiao.png"></img></a>
         </p>
     </div>
     <br/>
@@ -387,15 +378,17 @@
     <div class="container">
         <div class="box" >
             <div class="bcon" id="ScrollTime">
-                <h1><b>投资记录</b></h1>
+                <h1><b>合作展示</b></h1>
                 <!-- 展示列表 -->
                 <div class="list_lh">
                     <ul>
                         <asp:Repeater ID="reptmInvset" runat="server">
                             <ItemTemplate>
                                 <li>
-                                    <p><a href="javascript:alert('对方隐私！无法查看')" target="_blank"><%#Eval("TypeName_c") %> <%#Eval("UserName_e") %>  对</a><a href="#" target="_blank" class="btn_lh" >投资了<%#Eval("Account") %>元</a><em style="width: 30%"><%#Eval("InsertProjectName") %></em></p>
-                                    <p><a href="javascript:alert('对方隐私！无法查看')" target="_blank" class="a_blue">投资时间：</a><span><%#Eval("InvestTime") %></span></p>
+                                    <p><a href="javascript:alert('对方隐私！无法查看')" target="_blank"><%#Eval("TypeName_c") %> <%#Eval("UserName_e") %>  对</a>
+                                        <a href="#" target="_blank" class="btn_lh" >投资了<%#Eval("Account") %>元</a><em style="width: 30%"><%#Eval("InsertProjectName") %></em></p>
+                                     <br/><br/><br/><br/>
+                                     <p><a href="javascript:alert('对方隐私！无法查看')" target="_blank" class="a_blue">投资时间：</a><span><%#Eval("InvestTime") %></span></p>
                                 </li>                       
                             </ItemTemplate>
                         </asp:Repeater>
@@ -407,7 +400,7 @@
 <!--关于我们-->
 <footer style="width: 100%; height: 50px;background-color:RGB(160,53,122) "></footer>
 <footer style="width: 100%; height: 25px;background-color:ghostwhite "></footer>
-<div class="container-fluid" style="background-color:RGB(241,238,238); ">
+<div class="container-fluid" style="background-color:RGB(241,238,238); " id="Section_Six">
       <div class="container-fluid">
           <div class="row" >
               <div class="col-md-6 col-sm-12 " id="Font_Intro_Footer1">
@@ -415,7 +408,7 @@
                   <br/>
                   <h3 class="h3">关于我们</h3>
                   <br/>
-                  <p style="font-size: 16px">公司致力于创新创造，努力发展,不断进取！</p>
+                  <p style="font-size: 14px">凝聚智慧，专注创造。创造门是专注于各种创新产品研发的平台。为发明人提供项目开发平台，为投资者提供优质项目选择机会</p>
                   <table cellpadding="10px" cellspacing="10px" class="TableName" width="100%" >
                       <thead>
                            <tr>
@@ -430,12 +423,12 @@
                               <a href="../UserPage/UserProjectShowCHN.aspx" class="a_blue" >投资信息</a>
                           </td>
                           <td width="33%"  height="30px" style="line-height: 30px">
-                              <a href="../UserPage/UserConmunicationApaceCHN.aspx">疑惑解答</a>
+                              <asp:Label ID="Label3" runat="server" Text="上传流程"></asp:Label>
                           </td>
                       </tr>
                       <tr>
                           <td width="33%" height="30px" style="line-height: 30px">
-                              <asp:Label ID="lblCompany" runat="server" Text="厂商信息"></asp:Label>
+                              <asp:Label ID="Label2" runat="server" Text="投资流程"></asp:Label>
                           </td>
                           <td width="33%" height="30px" style="line-height: 30px">
                               <asp:Label ID="lblFalv" runat="server" Text="投资项目"></asp:Label>
@@ -443,17 +436,6 @@
                           <td width="33%" height="30px" style="line-height: 30px">
                               <asp:Label ID="lblshengming" runat="server" Text="投资咨询"></asp:Label>
                           </td>
-                      </tr>
-                      <tr>
-                          <td width="33%" height="30px" style="line-height: 30px">
-                              <asp:Label ID="Label1" runat="server" Text="地址"></asp:Label>
-                          </td>
-                          <td width="33%" height="30px" style="line-height: 30px">
-                              <asp:Label ID="Label2" runat="server" Text="投资流程"></asp:Label>
-                          </td>
-                          <td width="33%" height="30px" style="line-height: 30px">
-                              <asp:Label ID="Label3" runat="server" Text="上传流程"></asp:Label>
-                          </td>                      
                       </tr>
                   </table>
                   <br/><br/>
@@ -471,7 +453,8 @@
                            <figcaption>企业公众号</figcaption>
                            <img src="../Images/SystemPicture/mmexport1509186467240.jpg" width="150px" height="150px" />
                        </figure>
-                      <figure>
+
+                      <figure style="margin-left: 40px">
                           <figcaption>网站二维码</figcaption>
                           <img src="../Img/1510495015.png"  width="150px" height="150px"/>
                       </figure>
@@ -529,14 +512,14 @@
         <a target="_blank" href="../UserPage/UserPageLoginCHN.aspx"><img src="../Images/SystemPicture/用户123.png" title="用户登录"/></a>
         <a target="_blank" href="../UserPage/UserConmunicationApaceCHN.aspx"><img src="../Images/SystemPicture/消息.png" title="在线咨询"/></a>
         <a target="_blank" href="../UserPage/UserCreateProjectCHN.aspx"><img src="../Images/SystemPicture/投资.png" title="我要投资" /></a>
-        <a target="_blank" target="_blank" href="../UserPage/UserInvestProjectCHN.aspx" ><img src="../Images/SystemPicture/写作.png" title="我要创作" /></a>
+        <a arget="_blank" href="../UserPage/UserInvestProjectCHN.aspx" ><img src="../Images/SystemPicture/写作.png" title="我要创作" /></a>
         <a href="#"><img src="../Images/SystemPicture/置顶.png" title="首页" /></a>
     </div>
 </div>
 <div class="JiaoBens" Id="Adminsrator">
     <p style="text-align: center;padding-top: 5px">
         <a href="https://amos.alicdn.com/getcid.aw?spm=2013.1.1000126.6.5a8f08b5Aoywrz&v=3&groupid=0&s=1&charset=utf-8&uid=%E6%B5%B7%E7%BF%94%E5%88%9B%E9%80%A0&site=cntaobao&groupid=0&s=1&fromid=cntaobao"><img src="../Images/SystemPicture/阿里旺旺.png" width="20px" height="20px"/>阿里旺旺</a>
-        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2212901&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:2212901:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>Copyright © 2017-至今|四川创造门高新技术开发有限公司|客服电话：18981191139|企业邮箱:2212901@qq.com|热线电话：18981191139
+        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=646248323&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:646248323:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>Copyright © 2017-至今|四川创造门高新技术开发有限公司|客服电话：18981191139|企业邮箱:646248323@qq.com|热线电话：18981191139
         <a href="../BackendManage/AdminLogin.aspx">管理员</a>
     </p>
 </div>
@@ -545,4 +528,43 @@
 <script src="../bootstrap337/js/bootstrap.min.js"></script>
 <script src="../bootstrap337/js/holder.min.js"></script>
 <script src="../Js/scroll.js"></script>
+<script type="text/javascript">
+    document.querySelector("#myCarousel").addEventListener("touchstart",
+        function(event) {
+            //code here
+            event.preventDefault();
+        },
+        false);
+    'use strict';
+    $(function () {
+        // 获取手指在轮播图元素上的一个滑动方向（左右）
+
+        // 获取界面上轮播图容器
+        var $carousels = $('.carousel');
+        var startX, endX;
+        // 在滑动的一定范围内，才切换图片
+        var offset = 50;
+        // 注册滑动事件
+        $carousels.on('touchstart', function (e) {
+            // 手指触摸开始时记录一下手指所在的坐标x
+            startX = e.originalEvent.touches[0].clientX;
+
+        });
+        $carousels.on('touchmove', function (e) {
+            // 目的是：记录手指离开屏幕一瞬间的位置 ，用move事件重复赋值
+            endX = e.originalEvent.touches[0].clientX;
+        });
+        $carousels.on('touchend', function (e) {
+            //console.log(endX);
+            //结束触摸一瞬间记录手指最后所在坐标x的位置 endX
+            //比较endX与startX的大小，并获取每次运动的距离，当距离大于一定值时认为是有方向的变化
+            var distance = Math.abs(startX - endX);
+            if (distance > offset) {
+                //说明有方向的变化
+                //根据获得的方向 判断是上一张还是下一张出现
+                $(this).carousel(startX > endX ? 'next' : 'prev');
+            }
+        })
+    });
+</script>
 </html>

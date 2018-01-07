@@ -12,7 +12,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="pragma" content="no-cache"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-    <link rel="icon" href="../Images/SystemPicture/创造力.ico" />
+    <link rel="icon" href="../Img/CZM.png" />
     <link href="../bootstrap337/css/style.css" rel="stylesheet" />
     <link href="../bootstrap337/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../Content/FontBindData.css" rel="stylesheet" />

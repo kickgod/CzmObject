@@ -25,11 +25,15 @@ namespace CzmWeb.UserPage
             }
             if (!IsPostBack)
             {
-                if (Request.QueryString["QueryName"] != "")
-                {
-                    txtTread.Text = Request.QueryString["QueryName"];
-                }
                 DataBindT();
+                if (Request.QueryString["QueryNames"] != "")
+                {
+                    txtTread.Text = Request.QueryString["QueryNames"];
+                }
+                if (Request.QueryString["QueryNamet"] != "")
+                {
+                    txtTread.Text = Request.QueryString["QueryNamet"];
+                }
             }
         }
         private void MessageBoxResponse(string msg)

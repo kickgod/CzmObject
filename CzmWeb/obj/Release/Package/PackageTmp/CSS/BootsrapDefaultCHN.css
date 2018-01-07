@@ -1,11 +1,8 @@
 ﻿   *{ padding: 0px;margin: 0px;}
    .CZMBrandCompany{ font-family: '微软雅黑';font-size: 14px; color: gray}
-   .CZMBrandCompanyT{ font-family: '微软雅黑';font-size: 18px; color: white}
+   .CZMBrandCompanyT{ font-family: '微软雅黑';font-size: 16px; color: white}
    #ShowPhoneIfStart{ background-color:RGB(176, 53, 112) ;color: white}
    #ShowPhoneIfStart div ul li a{ color: white;}
-   #ShowPhoneIfEnd{ background-color: white;color: white}
-   #ShowPhoneIfEnd div ul li a{ color: gray;background-color:white }
-   #ShowPhoneIfEnd,#ShowPhoneIfStart{ border: 0px;}
    #LunBoControl{ margin-top: -20px;}
    #LunBoControl{
        background: linear-gradient(to left, RGB(6, 31, 62), RGB(18, 69, 131), RGB(11, 29, 50));
@@ -29,7 +26,7 @@
    #NewProductShow img{ width: 100%;height: 250px;transition: 0.7s}
    #NewProductShow img:hover{ transform: scale(1.5, 1.5);-webkit-transform: scale(1.5, 1.5);}
    .introShowWord{ font-size: 15px;font-weight: 500;font-family: ProductFontStyle;color: purple;overflow: hidden;width: 100%;height: 25px;}
-   .ProductShowDiscr{ width: 100%;height: 100px;overflow:hidden}
+   .ProductShowDiscr{ width: 100%;height: 55px;overflow:hidden}
    .DownGoumai .MeonyChar{ font-weight: 600;color: RGB(148, 30, 80);font-size: 20px;vertical-align: top;padding-left: 10px;}
    .DownGoumai .Meony{ font-weight: 700;font-size: 25px;color:RGB(148, 30, 80) }
    .DownGoumai .MeonyLastChar{ color: RGB(191,181,181); text-decoration: line-through;font-size: 15px}
@@ -43,7 +40,7 @@
    .Watchlive .LiveSelf a{ display: block;float: left;margin: 10px;}
    .Watchlive .LiveSelf a img{ width: 200px;height: 200px;border-radius: 50%;}
    .Watchlive .LiveSelf a img:hover{ border: 2px solid red;}
-   .TypeName{ position: absolute;top: 5px;left: 10px;width: 20px;background-color: purple;color: white;height: 80%;text-align: center;font-family: ProductFontStyle;font-size: 16px;padding-top: 27px; }
+   .TypeName{ position: absolute;top: 5px;left: -30px;width: 20px;background-color: purple;color: white;height: 80%;text-align: center;font-family: ProductFontStyle;font-size: 16px;padding-top: 27px; }
    /**手机样式**/
    #DaiTwo{ width: 100%;height: 400px;background-color: RGB(124,112,177);}
 
@@ -115,14 +112,18 @@
    }
    @media only screen and (min-width:768px) and (max-width: 1199px) {
        
-       .TypeName{ position: absolute;top: 5px;left: 10px;width: 20px;background-color: purple;color: white;height: 80%;text-align: center;font-family: ProductFontStyle;font-size: 16px;padding-top: 27px; }
+       .TypeName{ position: absolute;top: 5px;left: -10px;width: 20px;background-color: purple;color: white;height: 80%;text-align: center;font-family: ProductFontStyle;font-size: 16px;padding-top: 27px; }
        
-       
+       .FirstTimeDivLogo{display: none}
        #Font_Intro_Footer3{  overflow: hidden} 
        #Font_Intro_Footer3 img{ width: 100px;height: 100px;}
        #myCarousel{ width: 100%;margin: auto}    
-       #ShowPhoneIfStart{display: none}  
-       #ShowPhoneIfEnd{display: block}    
+       #ShowPhoneIfStart{display: block}  
+       #ShowPhoneIfEnd{display: none}
+       #ShowPhoneIfStart{ background-color:RGB(176, 53, 112) ;color: white}
+       #ShowPhoneIfStart div ul li a{ color: white;}  
+       #ShowPhoneIfStart div ul li a:hover{color: black}   
+       #ShowPhoneIfStart div ul li{background-color:RGB(176, 53, 112)}     
        #CompanyName{ font-size: 14px;font-family: '楷体', '宋体';font-weight: 500;color: purple;width: 100%;text-align: center }  
        .VedioList{ width: 100%;height: 400px;background-color: RGB(231, 223, 238);box-sizing: border-box}
        .VedioList .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }
@@ -163,7 +164,7 @@
    }
    @media only screen and (min-width: 480px) and (max-width: 767.9px) {
 
-       .TypeName{ position: absolute;top: 5px;left: 10px;width: 20px;background-color: purple;color: white;height: 80%;text-align: center;font-family: ProductFontStyle;font-size: 16px;padding-top: 27px; }
+       .TypeName{ position: absolute;top: 5px;left: -10px;width: 20px;background-color: purple;color: white;height: 80%;text-align: center;font-family: ProductFontStyle;font-size: 16px;padding-top: 27px; }
 
        #Font_Intro_Footer1{ height: 300px;}
        #Font_Intro_Footer2{ height: 50px;}
@@ -220,7 +221,7 @@
    }
    @media only screen and (min-width: 0px) and (max-width: 480px) {
 
-       .TypeName{ position: absolute;top: 5px;left: 10px;width: 20px;background-color: purple;color: white;height: 80%;text-align: center;font-family: ProductFontStyle;font-size: 16px;padding-top: 27px; }
+       .TypeName{ position: absolute;top: 5px;left: -5px;width: 20px;background-color: purple;color: white;height: 80%;text-align: center;font-family: ProductFontStyle;font-size: 16px;padding-top: 27px; }
 
        #Font_Intro_Footer1{ height: 300px;}
        #Font_Intro_Footer2{ display: none;overflow: hidden}
@@ -235,6 +236,10 @@
        #CompanyName{ font-size: 14px;font-family: '楷体', '宋体';font-weight: 500;color: purple;width: 100%;text-align: center }
        .Font_Name_English{ color: darkmagenta;font-weight: 400;font-size: 15px; text-align: center;padding-left: 10px;letter-spacing: 1px;word-spacing: 3px; }
        #RowProductTypeShow img{ width: 100%;height: 150px;} 
+       #RowProductTypeShow input[type=submit] {
+           margin-left:-30px;
+           margin-top: 0px;
+       }
        .intro{font-size: 14px;font-family: '楷体', '宋体';font-weight: 400;color: purple}
        .VedioList{ width: 100%;height: 400px;background-color: RGB(231, 223, 238);box-sizing: border-box}
        .VedioList .JuzhongFont{ width: 100%;text-align: center;line-height: 150px;height: 150px }

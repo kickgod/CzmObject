@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-<link rel="icon" href="../Images/SystemPicture/创造力.ico" />
+    <link rel="icon" href="../Img/CZM.png" />
 <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link href="../CSS/TraditionalFontStyle.css" type="text/css"  rel="stylesheet" />

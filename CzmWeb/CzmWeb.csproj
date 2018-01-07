@@ -130,7 +130,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Manage.aspx" />
     <Content Include="Account\OpenAuthProviders.ascx" />
@@ -198,7 +197,6 @@
     <Content Include="Common\wuc_UpLoadDouble.ascx" />
     <Content Include="Common\wuc_UpLoadDoubleEng.ascx" />
     <Content Include="Common\wuc_UploadPic.ascx" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\BtnGethupStyle.css" />
     <Content Include="Content\BtnStanderdStyle.css" />
     <Content Include="Content\FontBindData.css" />
@@ -261,10 +259,13 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="CradIDPictureDB\2017104162454686.jpg" />
     <Content Include="CradIDPictureDB\201710416920339.jpg" />
+    <Content Include="CssStardered\BasicStyle.css" />
+    <Content Include="CssStardered\icon\chuangzaoValue.png" />
     <Content Include="CSS\BootsrapDefaultCHN.css" />
     <Content Include="CSS\BootsrapDefaultENG.css" />
     <Content Include="CSS\BootsrapMuBan.css" />
     <Content Include="CSS\button.css" />
+    <Content Include="CSS\default_class.css" />
     <Content Include="CSS\Demo.css" />
     <Content Include="CSS\index.css" />
     <Content Include="CSS\jquery.flipster.css" />
@@ -293,9 +294,10 @@
     <Content Include="CSS\WebScreen.css" />
     <Content Include="CSS\WebSubPage.css" />
     <Content Include="CSS\WebTable.css" />
-    <Content Include="DefalutEngs.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DefalutEng.aspx" />
+    <Content Include="Default_Pc_CHN.aspx" />
+    <Content Include="Default_Pc_ENG.aspx" />
     <Content Include="FirstImage\1_CompanyName_c.jpg" />
     <Content Include="FirstImage\2_CompanyIntro_c.jpg" />
     <Content Include="FirstImage\3_CompanyTitle_c.jpg" />
@@ -336,61 +338,9 @@
     <Content Include="FirstImage\首页8.jpg" />
     <Content Include="FirstImage\首页9.jpg" />
     <Content Include="Font\demowebfont.html" />
-    <Content Include="Font\font_ppbzixtnuahsemi\demo.css" />
-    <Content Include="Font\font_ppbzixtnuahsemi\demo_fontclass.html" />
-    <Content Include="Font\font_ppbzixtnuahsemi\demo_symbol.html" />
-    <Content Include="Font\font_ppbzixtnuahsemi\demo_unicode.html" />
-    <Content Include="Font\font_ppbzixtnuahsemi\iconfont.css" />
-    <Content Include="Font\font_ppbzixtnuahsemi\iconfont.js" />
-    <Content Include="Font\font_ppbzixtnuahsemi\iconfont.svg" />
-    <Content Include="Font\font_yz1d77s34lzt1emi\demo.css" />
-    <Content Include="Font\font_yz1d77s34lzt1emi\demo_fontclass.html" />
-    <Content Include="Font\font_yz1d77s34lzt1emi\demo_symbol.html" />
-    <Content Include="Font\font_yz1d77s34lzt1emi\demo_unicode.html" />
-    <Content Include="Font\font_yz1d77s34lzt1emi\iconfont.css" />
-    <Content Include="Font\font_yz1d77s34lzt1emi\iconfont.js" />
-    <Content Include="Font\font_yz1d77s34lzt1emi\iconfont.svg" />
     <Content Include="Font\webfont.svg" />
-    <Content Include="Font\webfont_pnqaxdsleaaqyqfr\demo.html" />
-    <Content Include="Font\webfont_pnqaxdsleaaqyqfr\webfont.svg" />
-    <Content Include="Images\2017102821478558.png" />
-    <Content Include="Images\2017102902334113.jpg" />
-    <Content Include="Images\2017102903256739.png" />
-    <Content Include="Images\201710290348332.png" />
-    <Content Include="Images\2017102904032432.png" />
-    <Content Include="Images\201710290425663.png" />
-    <Content Include="Images\2017102911836732.png" />
-    <Content Include="Images\2017102912012961.bmp" />
-    <Content Include="Images\2017102912129739.bmp" />
-    <Content Include="Images\2017102912232929.jpg" />
-    <Content Include="Images\201710294331663.bmp" />
-    <Content Include="Images\2017102943437343.png" />
-    <Content Include="Images\2017102943856266.bmp" />
-    <Content Include="Images\2017102944712378.png" />
-    <Content Include="Images\2017102945045307.png" />
-    <Content Include="Images\2017102945211892.png" />
-    <Content Include="Images\2017102945422308.png" />
-    <Content Include="Images\201710294557360.png" />
-    <Content Include="Images\201710295030450.png" />
-    <Content Include="Images\201710295135851.png" />
-    <Content Include="Images\201710295738629.png" />
-    <Content Include="Images\201710295944437.png" />
-    <Content Include="Images\2017104162454690.jpg" />
-    <Content Include="Images\201710416920346.jpg" />
     <Content Include="Images\2017117112048512.jpg" />
     <Content Include="Images\2017117143810747.jpg" />
-    <Content Include="Images\20171191345850.gif" />
-    <Content Include="Images\20171191345855.gif" />
-    <Content Include="Images\accent.png" />
-    <Content Include="Images\bg_error.png" />
-    <Content Include="Images\bg_error_bottom.png" />
-    <Content Include="Images\bg_error_middle.png" />
-    <Content Include="Images\bg_error_top.png" />
-    <Content Include="Images\bg_wordbrowse_bottom.png" />
-    <Content Include="Images\bg_wordbrowse_middle.png" />
-    <Content Include="Images\bg_wordbrowse_top.png" />
-    <Content Include="Images\btn_downarrow_sed.png" />
-    <Content Include="Images\bullet.png" />
     <Content Include="Images\button\allow_right.png" />
     <Content Include="Images\button\btn_add.png" />
     <Content Include="Images\button\btn_back.png" />
@@ -429,10 +379,6 @@
     <Content Include="Images\button\btn_search.png" />
     <Content Include="Images\button\btn_submit.png" />
     <Content Include="Images\button\btn_unfold.gif" />
-    <Content Include="Images\color.png" />
-    <Content Include="Images\error_bg.png" />
-    <Content Include="Images\error_left.png" />
-    <Content Include="Images\error_right.png" />
     <Content Include="Images\Example\csv1.png" />
     <Content Include="Images\Example\excel1.png" />
     <Content Include="Images\Example\excel10.png" />
@@ -450,8 +396,6 @@
     <Content Include="Images\Example\excel8.png" />
     <Content Include="Images\Example\excel9.png" />
     <Content Include="Images\Example\saveas1.png" />
-    <Content Include="Images\frm_bg3.gif" />
-    <Content Include="Images\heroAccent.png" />
     <Content Include="Images\Ico\1.png" />
     <Content Include="Images\Ico\10.png" />
     <Content Include="Images\Ico\11.png" />
@@ -507,7 +451,6 @@
     <Content Include="Images\orderedList7.png" />
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
-    <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\pic\sicnu_logo.png" />
     <Content Include="Images\pic\sicnu_name.png" />
@@ -617,12 +560,28 @@
     <Content Include="Images\Web\title_line.png" />
     <Content Include="Images\Web\top.png" />
     <Content Include="Images\Web\xxgk.png" />
+    <Content Include="Img\1.jpg" />
     <Content Include="Img\1510495015.png" />
-    <Content Include="Img\mmexport1509186467240.jpg" />
+    <Content Include="Img\2.jpg" />
+    <Content Include="Img\3.jpg" />
+    <Content Include="Img\4.jpg" />
+    <Content Include="Img\5.jpg" />
+    <Content Include="Img\Icon.png" />
+    <Content Include="Img\Qiye2WM.jpg" />
     <Content Include="Img\QQ.png" />
+    <Content Include="Img\weixin.png" />
+    <Content Include="Img\One.png" />
+    <Content Include="Img\yonghu.png" />
+    <Content Include="Img\zhiding.png" />
+    <Content Include="Img\zixun.png" />
+    <Content Include="Img\CZM.png" />
     <Content Include="Img\微信.png" />
     <Content Include="Img\支付宝.png" />
+    <Content Include="Img\User.png" />
+    <Content Include="Img\dingbu.png" />
+    <Content Include="Img\Aliba.png" />
     <Content Include="Js\Demo.js" />
+    <Content Include="Js\hammer.js" />
     <Content Include="Js\scroll.js" />
     <Content Include="Master\2.gif" />
     <Content Include="Master\BigFengCheng.gif" />
@@ -634,16 +593,7 @@
     <Content Include="Font\webfont.eot" />
     <Content Include="Font\webfont.ttf" />
     <Content Include="Font\webfont.woff" />
-    <Content Include="Font\webfont_pnqaxdsleaaqyqfr\webfont.eot" />
-    <Content Include="Font\webfont_pnqaxdsleaaqyqfr\webfont.ttf" />
-    <Content Include="Font\webfont_pnqaxdsleaaqyqfr\webfont.woff" />
-    <Content Include="Font\font_yz1d77s34lzt1emi\iconfont.eot" />
-    <Content Include="Font\font_yz1d77s34lzt1emi\iconfont.ttf" />
-    <Content Include="Font\font_yz1d77s34lzt1emi\iconfont.woff" />
     <Content Include="Font\RTWSYueGoTrial-ExLight.otf" />
-    <Content Include="Font\font_ppbzixtnuahsemi\iconfont.eot" />
-    <Content Include="Font\font_ppbzixtnuahsemi\iconfont.ttf" />
-    <Content Include="Font\font_ppbzixtnuahsemi\iconfont.woff" />
     <Content Include="Master\UserPageMaster.Master" />
     <Content Include="Content\锐字云姚体.TTF" />
     <Content Include="bootstrap337\css\bootstrap-theme.css.map" />
@@ -656,7 +606,18 @@
     <Content Include="bootstrap337\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Master\UserPageMasters.Master" />
     <Content Include="ForePage\使用文档.docx" />
-    <Content Include="WebForm1.aspx" />
+    <Content Include="ProductImage\2017122420347590.png" />
+    <Content Include="ProductImage\20181733151216.jpg" />
+    <Content Include="ProductImage\2018173316481.jpg" />
+    <Content Include="ProductImage\2018173363815.jpg" />
+    <Content Include="ProductImage\20181734121246.jpg" />
+    <Content Include="ProductImage\2018173414690.jpg" />
+    <Content Include="ProductImage\20181734234292.jpg" />
+    <Content Include="ProductImage\2018173429103.jpg" />
+    <Content Include="ProductImage\2018174112477.jpg" />
+    <Content Include="ProductImage\2018174112485.jpg" />
+    <Content Include="ProjectFile\201711413214740.docx" />
+    <Content Include="ProjectFile\20171224214113165.pdf" />
     <None Include="Properties\PublishProfiles\CzmWeb.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="ProductImage\2017117102612606.jpg" />
@@ -670,7 +631,10 @@
     <Content Include="ProductImage\productType2.jpg" />
     <Content Include="ProductImage\productType3.jpg" />
     <Content Include="ProductImage\productType4.jpg" />
-    <Content Include="ProgressBar.htm" />
+    <Content Include="ProjectFile\201711413214731.jpg" />
+    <Content Include="ProjectFile\20171223213640864.jpg" />
+    <Content Include="ProjectFile\20171224205742854.png" />
+    <Content Include="ProjectFile\20171224214113171.png" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
@@ -718,20 +682,6 @@
     <Content Include="UserPage\UserProjectShowCHN.aspx" />
     <Content Include="UserPage\UserVedioShowList.aspx" />
     <Content Include="UserPage\UserVedioShowListCHE.aspx" />
-    <Content Include="UserZhengJian\201712215254980.jpg" />
-    <Content Include="UserZhengJian\2017122152946215.jpg" />
-    <Content Include="UserZhengJian\2017122153042494.jpg" />
-    <Content Include="UserZhengJian\2017122153047304.jpg" />
-    <Content Include="UserZhengJian\2017122153644884.jpg" />
-    <Content Include="UserZhengJian\2017122153652954.jpg" />
-    <Content Include="UserZhengJian\2017122161111750.jpg" />
-    <Content Include="UserZhengJian\2017122161128103.jpg" />
-    <Content Include="UserZhengJian\2017122163211463.jpg" />
-    <Content Include="UserZhengJian\2017122163251142.png" />
-    <Content Include="UserZhengJian\201712216326184.jpg" />
-    <Content Include="UserZhengJian\201712216331232.jpg" />
-    <Content Include="UserZhengJian\20171221661378.jpg" />
-    <Content Include="UserZhengJian\201712216623758.jpg" />
     <Content Include="VedioList\2017102413124848.jpg" />
     <Content Include="VedioList\20171024215330535.mp4" />
     <Content Include="VedioList\20171121154618192.jpg" />
@@ -741,11 +691,9 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\_references.js" />
-    <Content Include="Site.Mobile.Master" />
     <Content Include="VedioList\招聘.webm" />
     <Content Include="VedioList\2017102413124848.webm" />
     <None Include="Web.Debug.config">
@@ -768,13 +716,6 @@
     <Compile Include="App_Code\VwProvinceList.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Account\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -993,20 +934,6 @@
     <Compile Include="Common\wuc_UploadPic.ascx.designer.cs">
       <DependentUpon>wuc_UploadPic.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DefalutEngs.aspx.cs">
-      <DependentUpon>DefalutEngs.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DefalutEngs.aspx.designer.cs">
-      <DependentUpon>DefalutEngs.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1020,6 +947,20 @@
     </Compile>
     <Compile Include="DefalutEng.aspx.designer.cs">
       <DependentUpon>DefalutEng.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default_Pc_CHN.aspx.cs">
+      <DependentUpon>Default_Pc_CHN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default_Pc_CHN.aspx.designer.cs">
+      <DependentUpon>Default_Pc_CHN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default_Pc_ENG.aspx.cs">
+      <DependentUpon>Default_Pc_ENG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default_Pc_ENG.aspx.designer.cs">
+      <DependentUpon>Default_Pc_ENG.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1039,20 +980,6 @@
       <DependentUpon>UserPageMasters.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Site.Master.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.designer.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
     <Compile Include="UserPage\UserbecomeTypeHigh.aspx.cs">
       <DependentUpon>UserbecomeTypeHigh.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1207,21 +1134,13 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\NeatUpload_Temp\" />
-    <Folder Include="ProjectFile\" />
+    <Folder Include="UserZhengJian\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
-    <Content Include="Site.Master" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

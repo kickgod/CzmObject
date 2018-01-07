@@ -13,7 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="../bootstrap337/js/bootstrap.min.js"></script>
     <script src="../bootstrap337/js/holder.min.js"></script>
-    <link rel="icon" href="../Images/SystemPicture/创造力.ico" />
+    <link rel="icon" href="../Img/CZM.png" />
     <link href="../bootstrap337/css/style.css" rel="stylesheet" />
     <link href="../bootstrap337/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../Content/FontBindData.css" rel="stylesheet" />
@@ -82,7 +82,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../Default.aspx"><strong class="CZMBrandCompany">创造门</strong></a>
+                <a class="navbar-brand" href="../Default.aspx"><strong class="CZMBrandCompany">四川创造门高新技术开发有限公司</strong></a>
             </div>
             <div class="collapse navbar-collapse" id="example-navbar-collapse">
                 <ul class="nav navbar-nav">

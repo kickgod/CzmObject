@@ -130,6 +130,33 @@ namespace CzmWeb.BackendManage {
         protected global::CzmObject.Common.wuc_FileUpload wuc_FileUpload;
         
         /// <summary>
+        /// btnAgainPhone 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAgainPhone;
+        
+        /// <summary>
+        /// wuc_FileUpload_pc 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::CzmObject.Common.wuc_FileUpload wuc_FileUpload_pc;
+        
+        /// <summary>
+        /// btnSavepc 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSavepc;
+        
+        /// <summary>
         /// txtPriceNow 控件。
         /// </summary>
         /// <remarks>

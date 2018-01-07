@@ -89,6 +89,8 @@
         return true;
     }
 </script>
+<br/>
+<span style="font-size: 20px;font-weight: 400">The first picture：</span>
 <a href="javascript:;" class="file" style="border-radius: 13px">
     <asp:FileUpload ID="FlUpLoad" runat="server" onchange="javascript:setImagePreview();" multiple="multiple" />  Select a document
 </a>
@@ -100,6 +102,7 @@
     <img id="preview" src="" runat="server" width="100" height="100" style="display: block;border: 1px solid white;" alt="" />
 </div>
 <br/>
+<span style="font-size: 20px;font-weight: 400">The second picture：</span>
 <a href="javascript:;" class="file" style="border-radius: 13px">
     <asp:FileUpload ID="FlUpLoad2" runat="server" onchange="javascript:setImagePreview2();" multiple="multiple" />  Select a document
 </a>

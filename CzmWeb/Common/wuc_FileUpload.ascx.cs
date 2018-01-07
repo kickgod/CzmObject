@@ -18,6 +18,18 @@ namespace CzmObject.Common
         {
             if (FlUpLoad.HasFile)
             {
+                string[] type = { ".jpg", ".gif", ".png", ".bmp", ".jpeg" };
+                string isStanderded = "";
+                string FileType = Path.GetExtension(FlUpLoad.PostedFile.FileName);
+                foreach (string name in type.Where<string>(str => str == FileType))
+                {
+                    isStanderded = name;
+                }
+                if (isStanderded == "")
+                {
+                    MessaegBox("文件格式只支持 jpg gif png bmp！");
+                    return false;
+                }
                 return true;
             }
             else

@@ -62,6 +62,10 @@ namespace CzmWeb.BackendManage
             txtPhone.Text = td.Rows[0]["NewPhone"].ToString();
             hylicture.NavigateUrl = td.Rows[0]["ImgPicturPath"].ToString();
             hylZs.NavigateUrl = td.Rows[0]["PciRemark"].ToString();
+            if (hylicture.NavigateUrl == "")
+            {
+                Label1.Text = "用户未上传图片";
+            }
             DataTable tdInsert = getView.GetAllDataFrom_vwProjectInvestInfor("InsertProjectName ='" + txtProjectName.Text+"'");
             Repert.DataSource = tdInsert;
             Repert.DataBind();

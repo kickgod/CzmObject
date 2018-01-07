@@ -13,9 +13,7 @@ namespace CzmWeb.UserPage
     public partial class UserInvestProjectCHN : System.Web.UI.Page
     {
         GetDataFromTable getTable = new GetDataFromTable();
-        GetDataFromView getView = new GetDataFromView();
         PublicGetDataFromDB DB = new PublicGetDataFromDB();
-        SendPhoneMessage send = new SendPhoneMessage();
         PublicUserJudge Judge = new PublicUserJudge();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,6 +24,14 @@ namespace CzmWeb.UserPage
             }
             if (!IsPostBack)
             {
+                if (Request.QueryString["projectName"] != "" && Request.QueryString["projectName"] !=null)
+                {
+                    txtTread.Text=DB.CarryOutSqlGetFirstColmun("  select PciName_c from  [XcXm].[dbo].[tblProjectCreate] where [PciID]= " + Request.QueryString["projectName"]);
+                }
+                else if (Request.QueryString["QueryNamet"] != "" &&Request.QueryString["QueryNamet"] !=null)
+                {
+                    txtTread.Text = Request.QueryString["QueryNamet"];
+                }
                 DataBindS();
             }
         }
@@ -92,10 +98,12 @@ namespace CzmWeb.UserPage
         private void ChangeNULL()
         {
             txtAmount.Text = "已结受理.请等待我们的短信通知！";
+            /*
             txtAddress.Text = "成功！请等待审核! 我们将以短信的方式通知你";
             txtApplicant.Text = "成功！请等待审核! 我们将以短信的方式通知你";
             txtPhone.Text = "成功！请等待审核! 我们将以短信的方式通知你";
             txtTread.Text = "成功！请等待审核! 我们将以短信的方式通知你";
+             * */
         }
         protected void btnSave_Click(object sender, EventArgs e)
         {
@@ -125,7 +133,7 @@ namespace CzmWeb.UserPage
             }
             string ProjectName = txtTread.Text;
             string Account = txtAmount.Text;
-            string UserID = "15685962321"; /*Session["User"].ToString();*/
+            string UserID =Session["User"].ToString();
             string Province = ddlProvince.SelectedItem.Text;
             Province =Province+" "+ ddlDataRegiom.SelectedItem.Text;
             string InsertDwName = txtAddress.Text;

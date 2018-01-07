@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="../Content/FontBindData.css" type="text/css"  rel="stylesheet" />
-    <link rel="icon" href="../Images/SystemPicture/创造力.ico" />
+<link rel="icon" href="../Img/CZM.png" />
     <style type="text/css">
         *{ padding: 0px;margin: 0px;text-decoration: none;}
         .JiaoBen{ width: 100%;height: 80px;font-size: smaller;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: gainsboro;text-align: center;background-color:RGB(176,53,112) }
@@ -322,7 +322,7 @@
             </div>
 </header>
         <div class="Head" id="headerCaidan">
-            <div class="logo"><i class="Font_Title">创造门</i></div>
+            <div class="logo"><i style="font-size: 16px;">创造门</i></div>
             <div class="Nav">
                 <ul>
                     <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneFirstPage20171001.png"/><a target="_blank" href="../DefalutEng.aspx"><asp:Label ID="lblFisrtPage" runat="server" CssClass="FontColor" Text="Home"></asp:Label></a></li>

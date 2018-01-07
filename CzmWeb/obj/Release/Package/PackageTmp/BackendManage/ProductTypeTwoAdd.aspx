@@ -90,7 +90,7 @@
                         <td align="center">
                             中文名称
                         </td>
-                        <td>
+                        <td >
                             <asp:TextBox ID="txtBoxCHNname" CssClass="txtBox" runat="server"></asp:TextBox>
                         </td>
                         <td align="center">
