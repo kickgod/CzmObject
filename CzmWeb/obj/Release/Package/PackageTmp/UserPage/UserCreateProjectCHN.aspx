@@ -112,61 +112,55 @@
             z-index: 10;
         }
     </style>
+    <link rel="stylesheet" href="../CSS/navXiaoxiannv.css" type="text/css" />
 </head>
 <body>
     <!--导航部分bootstrap框架-->
-<nav class="navbar navbar-default" role="navigation" id="ShowPhoneIfStart">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#example-navbar-collapse">
-                <span class="sr-only">切换导航</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="../Default.aspx"><strong class="CZMBrandCompany">四川创造门高新技术开发有限公司</strong></a>
-        </div>
-        <div class="collapse navbar-collapse" id="example-navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Language【语言】 <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../Default.aspx" target="blank" >中文</a></li>
-                        <li><a href="../DefalutEng.aspx" target="blank" >English</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        用户入口 <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a target="_blank" href="../UserPage/UserPageLoginCHN.aspx"><span class="glyphicon glyphicon-user"></span> 立即登录</a></li>
-                        <li><a target="_blank" href="../UserPage/UserPageRegisterCHN.aspx"><span class="glyphicon glyphicon-log-in"></span> 立即注册</a></li>
-                        <li><a target="_blank" href="../UserPage/UserbecomeTypeHighCHN.aspx"><span class="glyphicon glyphicon-home"></span> 个人中心</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        用户功能 <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="active"><a target="_blank" href="../Default.aspx">主页</a></li>
-                        <li><a target="_blank" href="../UserPage/UserProductTypeShowCHN.aspx">产品分类</a></li>
-                        <li><a target="_blank" href="../UserPage/UserNewProductShowCHN.aspx">新品预告</a></li>
-                        <li><a target="_blank" href="../UserPage/UserCreateProjectCHN.aspx">我要创作</a></li>
-                        <li><a target="_blank" href="../UserPage/UserInvestProjectCHN.aspx">我要投资</a></li>
-                        <li><a target="_blank" href="../UserPage/UserProjectShowCHN.aspx">项目展示</a></li>
-                        <li><a target="_blank" href="../UserPage/UserVedioShowListCHE.aspx">视频专区</a></li>
-                        <li><a target="_blank" href="../UserPage/UserConmunicationApaceCHN.aspx">交流空间</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+ <div class="row row_15" id="PhoneDaohang">
+			<ul class="nav_bar_Headers">
+				<li class="navbar-title"><a target="_blank" href="../Default.aspx" class="text-left" >四川创造门高新技术开发有限公司</a></li>
+				<li class="navbar-open"><a href="javascript:Opennavbar()">网站导航</a></li>
+			</ul>
+		</div>
+		<div  id="XDXC" style="display: none;">
+			<div class="dropdown" >
+				  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				    <small>Language【语言】</small>
+				    <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="Menu1">
+				      <li><a href="../Default.aspx" target="blank" >中文</a></li>
+				      <li><a href="../DefalutEng.aspx" target="blank" >English</a></li>
+				  </ul>
+				</div>
+				<div class="dropdown">
+				  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				    <small>用户入口</small> 
+				    <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2" id="Menu2">
+				      <li><a target="_blank" href="../UserPage/UserPageLoginCHN.aspx"><span class="glyphicon glyphicon-user"></span> 立即登录</a></li>
+				      <li><a target="_blank" href="../UserPage/UserPageRegisterCHN.aspx"><span class="glyphicon glyphicon-log-in"></span> 立即注册</a></li>
+				      <li><a target="_blank" href="../UserPage/UserbecomeTypeHighCHN.aspx"><span class="glyphicon glyphicon-home"></span> 个人中心</a></li>
+				  </ul>
+				</div>
+				<div class="dropdown">
+				  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				      <small>用户功能</small> 
+				    <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="dropdownMenu3" id="Menu3">
+				      <li class="active"><a target="_blank" href="../Default.aspx">主页</a></li>
+				      <li><a target="_blank" href="../UserPage/UserProductTypeShowCHN.aspx">产品分类</a></li>
+				      <li><a target="_blank" href="../UserPage/UserNewProductShowCHN.aspx">新品预告</a></li>
+				      <li><a target="_blank" href="../UserPage/UserCreateProjectCHN.aspx">我要创作</a></li>
+				      <li><a target="_blank" href="../UserPage/UserInvestProjectCHN.aspx">我要投资</a></li>
+				      <li><a target="_blank" href="../UserPage/UserProjectShowCHN.aspx">项目展示</a></li>
+				      <li><a target="_blank" href="../UserPage/UserVedioShowListCHE.aspx">视频专区</a></li>
+				      <li><a target="_blank" href="../UserPage/UserConmunicationApaceCHN.aspx">交流空间</a></li>
+			 	 </ul>
+			</div>
+		</div>			
 <nav class="navbar navbar-default" role="navigation" id="ShowPhoneIfEnd">
     <div class="container-fluid"> 
         <div>
@@ -194,6 +188,7 @@
         </div>
     </div>
 </nav>
+<br/>   
     <form id="form1" runat="server">
         <div class="container">
             <div class="page-header" style="margin-top: -20px">
@@ -273,4 +268,14 @@
         </p>
     </div>
 </body>
+<script type="text/javascript">
+    function Opennavbar() {
+        var Invest = document.getElementById("XDXC");
+        if (Invest.style.display == "block") {
+            Invest.style.display = "none";
+        } else {
+            Invest.style.display = "block";
+        }
+    }
+</script>
 </html>

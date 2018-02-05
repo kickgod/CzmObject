@@ -70,5 +70,10 @@ namespace CzmWeb
                 Response.Redirect("~/UserPage/UserProductTypeShowCHN.aspx?TypeIds= " + e.CommandArgument);
             }
         }
+
+        protected void ImageButton1_Command(object sender, CommandEventArgs e)
+        {
+
+        }
     }
 }

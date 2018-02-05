@@ -1,10 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserbecomeTypeHigh.aspx.cs" Inherits="CzmWeb.UserPage.UserbecomeTypeHigh" %>
 
 <%@ Register Src="~/Common/wuc_UpLoadDoubleEng.ascx" TagPrefix="uc1" TagName="wuc_UpLoadDoubleEng" %>
-
-
-
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -37,7 +33,7 @@
         #reptemNewProductMy figure img{ width: 100%;height: 100%;}
         .TitleIconss{color: purple;font-size: 18px;font-family: ProductFontStyle;}
         .TitleIconsins{color: purple;font-size: 13px;font-family: ProductFontStyle;}
-        /**电脑**/
+        /**电脑
         @media only screen and (min-width: 1200px) {
             #ProjectHave figure img{ width: 100%;height: 200px;}
             #reptemNewProductMy figure img{ width: 120px;height: 55px;}
@@ -53,7 +49,7 @@
         @media only screen and (min-width:0px ) and (max-width: 440px) {
             #ProjectHave figure img{ width: 100%;height: 200px;}
             #reptemNewProductMy figure img{ width: 120px;height: 55px;}
-        }
+        }**/
         .ulloSpan a{display: block}
         .ulloSpan:hover { border-bottom: white 2px solid;border-top: white 2px solid;color: black;font-size: 18px}
         .navbar-nav li:hover{
@@ -74,6 +70,9 @@
             } else {
                 return true;
             }
+        }
+        function Guquan(StockName) {
+            alert(StockName);
         }
     </script>
     <title>创造门</title>
@@ -318,11 +317,12 @@
                                 </table>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="Personal">
+                        <div class="tab-pane fade" id="Personal" style="padding: 5px">
+                            <br/>
                             <div class="row" id="reptemNewProductMy">
                                 <asp:Repeater ID="reptmMy" runat="server">
                                     <ItemTemplate>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="col-md-5 col-sm-6 col-xs-12">
                                             <figure>
                                                 <img src='<%#Eval("ImgPicturPath")%>' >          
                                                 <figcaption>

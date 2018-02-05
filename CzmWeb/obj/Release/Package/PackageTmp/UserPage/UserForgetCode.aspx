@@ -12,6 +12,7 @@
         *{ padding: 0px;margin: 0px;text-decoration: none;}
         .JiaoBen{ width: 100%;height: 80px;font-size: smaller;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: gainsboro;text-align: center;background-color:RGB(176,53,112) }
         .JiaoBen a{color: gainsboro}
+       
         /***********************************************1300px以上*************************************************************************/
         @media only screen and (min-width:1300px) {
             .PhoneImg{ width: 30px;height: 30px;padding-top: 10px;display: none}
@@ -122,12 +123,12 @@
             .PhoneHead{z-index: 100000000000; position: fixed;top: 0px;left: 0px;display: block;height: 50px;width: 100%;background: linear-gradient(to left, purple, RGB(176, 53, 112));border-bottom:gray 2px solid}
             .PhoneHead .headerTtile{ width: 100%;}
             .PhoneHead .headerTtile .left .transfer{color: white}
-            .PhoneHead .headerTtile .left{ width: 20%;float: left;height: 50px;}
-            .PhoneHead .headerTtile .left span{text-indent: 15px; display: block;color: RGB(232,105,170);font-weight: bold;font-size: 1em;font-style: italic;line-height:50px;height: 50px;text-align: left;}
+            .PhoneHead .headerTtile .left{ width: 230px;float: left;height: 50px;}
+            .PhoneHead .headerTtile .left span{text-indent: 15px; display: block;color:white;font-weight: bold;font-size: 14px;line-height:50px;height: 50px;text-align: left;}
             .PhoneHead .headerTtile .center{text-indent: 20px; width: 48%;float: left;}
-            .PhoneHead .headerTtile .center .cents{ height: 50px;line-height: 50px;color: white;font-weight: bold}
+
             .PhoneHead .headerTtile .right{ width: 30%;float: left;height: 50px;position: relative}
-            .PhoneHead .headerTtile .right a{display: block; position: absolute;top: 0px;right: 5px}
+            .PhoneHead .headerTtile .right a{display: block; position: absolute;top: 0px;right: 5px;color: gold;line-height: 50px;}
             .Head{display: none;background-color: white;color: #333333;position: fixed;top: 52px;color: #333333;width: 100%}
             .Head .logo{display: none}
             .Head .Nav ul li{ border-bottom: 1px solid black;height: 50px;line-height: 50px;text-indent: 30px;color: #333333}
@@ -157,12 +158,11 @@
             .PhoneHead{z-index: 100000000000; position: fixed;top: 0px;left: 0px;display: block;height: 50px;width: 100%;background: linear-gradient(to left, purple, RGB(176, 53, 112));border-bottom:gray 2px solid}
             .PhoneHead .headerTtile{ width: 100%;}
             .PhoneHead .headerTtile .left .transfer{color: white}
-            .PhoneHead .headerTtile .left{ width: 20%;float: left;height: 50px;}
-            .PhoneHead .headerTtile .left span{text-indent: 15px; display: block;color: RGB(232,105,170);font-weight: bold;font-size: 1em;font-style: italic;line-height:50px;height: 50px;text-align: left;}
+            .PhoneHead .headerTtile .left{ width: 230px;float: left;height: 50px;}
+            .PhoneHead .headerTtile .left span{text-indent: 15px; display: block;color:white;font-weight: bold;font-size: 14px;line-height:50px;height: 50px;text-align: left;}
             .PhoneHead .headerTtile .center{text-indent: 20px; width: 48%;float: left;}
-            .PhoneHead .headerTtile .center .cents{ height: 50px;line-height: 50px;color: white;font-weight: bold}
             .PhoneHead .headerTtile .right{ width: 30%;float: left;height: 50px;position: relative}
-            .PhoneHead .headerTtile .right a{display: block; position: absolute;top: 0px;right: 5px}
+            .PhoneHead .headerTtile .right a{display: block; position: absolute;top: 0px;right: 5px;color: gold;line-height: 50px;}
             .Head{display: none;background-color: white;color: #333333;position: fixed;top: 52px;color: #333333;width: 100%}
             .Head .logo{display: none}
             .Head .Nav ul li{ border-bottom: 1px solid black;height: 50px;line-height: 50px;text-indent: 30px;color: #333333}
@@ -192,12 +192,11 @@
             .PhoneHead{z-index: 100000000000; position: fixed;top: 0px;left: 0px;display: block;height: 50px;width: 100%;background: linear-gradient(to left, purple, RGB(176, 53, 112));border-bottom:gray 2px solid}
             .PhoneHead .headerTtile{ width: 100%;}
             .PhoneHead .headerTtile .left .transfer{color: white}
-            .PhoneHead .headerTtile .left{ width: 20%;float: left;height: 50px;}
-            .PhoneHead .headerTtile .left span{text-indent: 15px; display: block;color: RGB(232,105,170);font-weight: bold;font-size: 1em;font-style: italic;line-height:50px;height: 50px;text-align: left;}
+            .PhoneHead .headerTtile .left{ width: 230px;float: left;height: 50px;}
+            .PhoneHead .headerTtile .left span{text-indent: 15px; display: block;color:white;font-weight: bold;font-size: 14px;line-height:50px;height: 50px;text-align: left;}
             .PhoneHead .headerTtile .center{text-indent: 20px; width: 48%;float: left;}
-            .PhoneHead .headerTtile .center .cents{ height: 50px;line-height: 50px;color: white;font-weight: bold}
-            .PhoneHead .headerTtile .right{ width: 30%;float: left;height: 50px;position: relative}
-            .PhoneHead .headerTtile .right a{display: block; position: absolute;top: 0px;right: 5px}
+            .PhoneHead .headerTtile .right{ width: 80px;float: left;height: 50px;position: relative}
+            .PhoneHead .headerTtile .right a{display: block; position: absolute;top: 0px;right: 5px;color: gold;line-height: 50px;}
             .Head{display: none;background-color: white;color: #333333;position: fixed;top: 52px;color: #333333;width: 100%}
             .Head .logo{display: none}
             .Head .Nav ul li{ height: 40px;line-height: 40px;text-indent: 30px;color: #333333}
@@ -224,6 +223,7 @@
             .JiaoBen{margin-bottom: 0px; width: 100%;height: 80px;font-size: 0.5em;font-family:'华文楷体','楷体', '微软雅黑', '宋体';word-spacing: 2px;color: gainsboro;text-align: center;background-color:RGB(176,53,112) }
             .JiaoBen a{color: gainsboro}
         }
+       cents{ width: 100px;height: 30px;line-height: 30px;color: white;font-weight: 300;border: 1px solid gray}
         .English {font-size: smaller;font-family: '华文楷体', '微软雅黑', '宋体';}
     </style>
     <script type="text/javascript">
@@ -310,14 +310,10 @@
 <header class="PhoneHead" id="daohanglanPhone">
             <div class="headerTtile">
                 <div class="left">
-                    <span>创造门</span>
-                </div>
-                <div class="center">
-                    <asp:LinkButton  CssClass="cents"  ID="lnkChinese" runat="server" OnClick="lnkChinese_Click">CHE</asp:LinkButton>
-                    <asp:LinkButton  CssClass="cents" ID="LnkEnglish" runat="server" OnClick="lkbtnEnish_Click">ENG</asp:LinkButton>                    
+                    <span>四川创造门高新技术开发有限公司</span>
                 </div>
                 <div class="right">
-                    <a href="javascript:ShowHead()"><img  src="../Images/SystemPicture/zhedie.png" width="50px" height="50px"/></a>
+                    <a href="javascript:ShowHead()"><asp:Label ID="lbltxtTitle" runat="server" Text="网站导航"></asp:Label></a>
                 </div>
             </div>
 </header>
@@ -347,7 +343,7 @@
                         <a href="../UserPage/UserPageLogin.aspx" class="hoverTitle"  target="_blank"  id="KickOpen" ><img src="../Images/SystemPicture/User_White.png"/></a>
                     </li>
                     <li>
-                        <asp:LinkButton ID="lkbtnChinese" CssClass="transfer" runat="server" target="_blank"  OnClick="lkbtnChinese_Click">转为汉语</asp:LinkButton>
+                        <asp:LinkButton ID="lkbtnChinese" CssClass="transfer" runat="server" target="_blank"  OnClick="lkbtnChinese_Click" >转为汉语</asp:LinkButton>
                         <asp:LinkButton ID="lkbtnEnish" CssClass="transfer"  runat="server" target="_blank" OnClick="lkbtnEnish_Click">English</asp:LinkButton>
                         <li></li>
                         <li></li>
@@ -387,6 +383,13 @@
                         </p>
                         <p class="SendCode">
                             <asp:Button ID="btnOk" runat="server" CssClass="Btn_Submit" Text="提交" OnClick="btnOk_Click" />
+                        </p>
+                        <p style="text-align: center">
+                            <asp:LinkButton   ID="lnkChinese" runat="server" OnClick="lnkChinese_Click" ForeColor="#FF0066" Width="100" Height="25" Font-Size="Medium">中文</asp:LinkButton>
+                            &nbsp;
+                            &nbsp;
+
+                            <asp:LinkButton  ID="LnkEnglish" runat="server" OnClick="lkbtnEnish_Click"  ForeColor="#FF0066"  Width="100" Height="25" Font-Size="Medium">English</asp:LinkButton>   
                         </p>
                 </div>
             </div>

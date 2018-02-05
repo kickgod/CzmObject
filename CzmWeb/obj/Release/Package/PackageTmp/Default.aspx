@@ -206,14 +206,14 @@
                 <ItemTemplate>
                     <div class="col-md-3 col-sm-6 col-xs-6 borderGrey_One">
                         <figure>
-                            <a href="../UserPage/UserProductTypeShowCHN.aspx" target="_blank" ><img src='<%#Eval("TypePicture")%>'  ></a>                 
+                            <a href="../UserPage/UserProductTypeShowCHN.aspx" target="_blank" ><img src='<%#Eval("TypePicture")%>'></a>                 
                         </figure>
                         <div class="TypeName">
                             <%#Eval("typeName_c")%> 
                         </div>
-                        <div style=" height: 25px; opacity: 0.6; filter: opacity(60); color: white; position: absolute; top: 40%;left: 35%">
+                        <div style=" height: 25px; opacity: 0.2; filter: opacity(20); color: white; position: absolute; top: 4%;left: 21%">
                             <p style="width: 100px;display: block; color: white; text-align: center;">
-                                <asp:Button ID="btnCheck" CssClass="btn btn-default" runat="server" Text="查看详情" CommandArgument='<%#Eval("typeID")%>' CommandName="Check" />
+                                <asp:Button ID="btnCheck" CssClass="btn btn-default" runat="server" Text="查看详情" CommandArgument='<%#Eval("typeID")%>' CommandName="Check" Width="160" Height="150" />
                             </p>
                         </div>
                     </div>

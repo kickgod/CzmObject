@@ -217,9 +217,9 @@
                             <a href="../UserPage/UserProductTypeShowCHN.aspx" target="_blank" ><img src='<%#Eval("TypePicture")%>'  ></a>      
                              <span style="font-size:14px;font-weight:500;color:purple;text-decoration-line:underline"><%#Eval("typeName_e")%></span>              
                         </figure>
-                        <div style=" height: 25px; opacity: 0.6; filter: opacity(60); color: white; position: absolute; top: 40%;left: 35%">
+                        <div style=" height: 25px; opacity: 0.2; filter: opacity(20); color: white;  position: absolute; top: 0%;left: 21%">
                             <p style="width: 100px;display: block; color: white; text-align: center;">
-                                <asp:Button ID="btnCheck" CssClass="btn btn-default" runat="server" Text="See Details" CommandArgument='<%#Eval("typeID")%>' CommandName="Check" />
+                                <asp:Button ID="btnCheck" CssClass="btn btn-default" runat="server" Text="See Details" CommandArgument='<%#Eval("typeID")%>' CommandName="Check" Width="160" Height="150" />
                             </p>
                         </div>
                     </div>

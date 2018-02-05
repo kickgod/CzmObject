@@ -98,35 +98,36 @@
     <header class="PhoneHead" id="daohanglanPhone">
         <div class="headerTtile">
             <div class="left">
-                <span><a href="../Default.aspx" target="_blank" >四川创造门高新技术开发有限公司</a></span>
+                <span><a href="../Default.aspx" target="_blank"  style="color: white">四川创造门高新技术开发有限公司</a></span>
+            </div>
+            <div class="right">
+                <a href="javascript:ShowHead();">网站导航</a>
             </div>
             <div class="center">
                 <a href="../Defalut.aspx" style="visibility: hidden" target="_blank"  class ="cents" >CHE</a>
                 <a href="../DefalutEng.aspx" class="cents" target="_blank"  style="visibility: hidden" >ENG</a>                      
             </div>
-            <div class="right">
-                <a href="javascript:ShowHead();"><img  src="../Images/SystemPicture/zhedie.png" width="50px" height="50px"/></a>
-            </div>
+
         </div>
     </header>
     <div class="Head" id="headerCaidan">
         <div class="logo"><a href="../Default.aspx" target="_blank"  ><i class="Font_Title">创造门</i></a></div>
         <div class="Nav">
             <ul>
-                <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneFirstPage20171001.png"/><a target="_blank" href="../Default.aspx"><asp:Label ID="lblFisrtPage" runat="server" CssClass="FontColor" Text="首页"></asp:Label></a></li>
-                <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneType20171001.png"/><a target="_blank" href="../UserPage/UserProductTypeShowCHN.aspx"><asp:Label ID="lbl_Product_type"  runat="server" CssClass="FontColor"  Text="产品分类"></asp:Label></a></li>
-                <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneNewProject20171001.png"/><a target="_blank" href="../UserPage/UserNewProductShowCHN.aspx"><asp:Label ID="lbl_NewProduct"    runat="server"  CssClass="FontColor" Text="新品预告"></asp:Label></a></li>
-                <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneCreate20171001.png"/><a target="_blank" href="../UserPage/UserCreateProjectCHN.aspx"><asp:Label ID="lbl_CreateProject" runat="server" CssClass="FontColor"  Text="我要创作"></asp:Label></a></li>
-                <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneInvest20171001.png"/><a target="_blank" href="../UserPage/UserInvestProjectCHN.aspx"><asp:Label ID="lbl_Create_Invert" runat="server" CssClass="FontColor"  Text="我要投资"></asp:Label></a></li>
-                <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneShoe20171001.png"/><a target="_blank" href="../UserPage/UserProjectShowCHN.aspx"><asp:Label ID="lbl_Project_show" runat="server" CssClass="FontColor"  Text="项目展示"></asp:Label></a></li>
-                <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneVedio20171001.png"/><a target="_blank" href="../UserPage/UserVedioShowListCHE.aspx"><asp:Label ID="lbl_Look_Vedio" runat="server"  CssClass="FontColor" Text="视屏专区"></asp:Label></a></li>
-                <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneConection20171001.png"/><a target="_blank" href="../UserPage/UserConmunicationApaceCHN.aspx"><asp:Label ID="lblChangeSpace" runat="server"  CssClass="FontColor" Text="交流空间"></asp:Label></a></li>
+                <li><a target="_blank" href="../Default_Pc_CHN.aspx"><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneFirstPage20171001.png"/><asp:Label ID="lblFisrtPage" runat="server" CssClass="FontColor" Text="首页"></asp:Label></a></li>
+                <li><a target="_blank" href="../UserPage/UserProductTypeShowCHN.aspx"><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneType20171001.png"/><asp:Label ID="lbl_Product_type"  runat="server" CssClass="FontColor"  Text="产品分类"></asp:Label></a></li>
+                <li><a target="_blank" href="../UserPage/UserNewProductShowCHN.aspx"><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneNewProject20171001.png"/><asp:Label ID="lbl_NewProduct"    runat="server"  CssClass="FontColor" Text="新品预告"></asp:Label></a></li>
+                <li><a target="_blank" href="../UserPage/UserCreateProjectCHN.aspx"><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneCreate20171001.png"/><asp:Label ID="lbl_CreateProject" runat="server" CssClass="FontColor"  Text="我要创作"></asp:Label></a></li>
+                <li><a target="_blank" href="../UserPage/UserInvestProjectCHN.aspx"><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneInvest20171001.png"/><asp:Label ID="lbl_Create_Invert" runat="server" CssClass="FontColor"  Text="我要投资"></asp:Label></a></li>
+                <li><a target="_blank" href="../UserPage/UserProjectShowCHN.aspx"><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneShoe20171001.png"/><asp:Label ID="lbl_Project_show" runat="server" CssClass="FontColor"  Text="项目展示"></asp:Label></a></li>
+                <li><a target="_blank" href="../UserPage/UserVedioShowListCHE.aspx"><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneVedio20171001.png"/><asp:Label ID="lbl_Look_Vedio" runat="server"  CssClass="FontColor" Text="视屏专区"></asp:Label></a></li>
+                <li><a target="_blank" href="../UserPage/UserConmunicationApaceCHN.aspx"><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneConection20171001.png"/><asp:Label ID="lblChangeSpace" runat="server"  CssClass="FontColor" Text="交流空间"></asp:Label></a></li>
             </ul>
         </div>
         <div class="NavPhone">
             <ul>
-                <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneLog20171001.png"/><a target="_blank" href="../UserPage/UserPageLoginCHN.aspx"><asp:Label ID="lblUserLog" runat="server"  CssClass="FontColor" Text="用户登录"></asp:Label></a></li>
-                <li><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneLogin20171001.png"/><a target="_blank" href="../UserPage/UserPageRegisterCHN.aspx"><asp:Label ID="lblUserLogin" runat="server"  CssClass="FontColor" Text="用户注册"></asp:Label></a></li>
+                <li><a target="_blank" href="../UserPage/UserPageLoginCHN.aspx"><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneLog20171001.png"/><asp:Label ID="lblUserLog" runat="server"  CssClass="FontColor" Text="用户登录"></asp:Label></a></li>
+                <li><a target="_blank" href="../UserPage/UserPageRegisterCHN.aspx"><img class="PhoneImg" src="../Images/SystemPicture/NavPhoneLogin20171001.png"/><asp:Label ID="lblUserLogin" runat="server"  CssClass="FontColor" Text="用户注册"></asp:Label></a></li>
                 <li></li>
                 <li></li>
             </ul>
