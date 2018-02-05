@@ -3,7 +3,7 @@
    .CZMBrandCompanyT{ font-family: '微软雅黑';font-size: 16px; color: white}
    #ShowPhoneIfStart{ background-color:RGB(176, 53, 112) ;color: white}
    #ShowPhoneIfStart div ul li a{ color: white;}
-   #LunBoControl{ margin-top: -20px;}
+   #LunBoControl{ margin-top: -10px;}
    #LunBoControl{
        background: linear-gradient(to left, RGB(6, 31, 62), RGB(18, 69, 131), RGB(11, 29, 50));
        Background: -webkit-linear-gradient(to left, RGB(6, 31, 62), RGB(18, 69, 131), RGB(11, 29, 50));
@@ -26,7 +26,7 @@
    #NewProductShow img{ width: 100%;height: 250px;transition: 0.7s}
    #NewProductShow img:hover{ transform: scale(1.5, 1.5);-webkit-transform: scale(1.5, 1.5);}
    .introShowWord{ font-size: 15px;font-weight: 500;font-family: ProductFontStyle;color: purple;overflow: hidden;width: 100%;height: 25px;}
-   .ProductShowDiscr{ width: 100%;height: 55px;overflow:hidden}
+   .ProductShowDiscr{ width: 100%;height: 63px;overflow:hidden}
    .DownGoumai .MeonyChar{ font-weight: 600;color: RGB(148, 30, 80);font-size: 20px;vertical-align: top;padding-left: 10px;}
    .DownGoumai .Meony{ font-weight: 700;font-size: 25px;color:RGB(148, 30, 80) }
    .DownGoumai .MeonyLastChar{ color: RGB(191,181,181); text-decoration: line-through;font-size: 15px}

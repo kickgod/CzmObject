@@ -81,10 +81,6 @@ namespace CzmWeb.UserPage
                     Session["User"] = txtUserID.Text;
                     MessageBoxResponse("登录成功");
             }
-            else
-            {
-                MessaegBox("用户名错误");
-            }
         }
     }
 }

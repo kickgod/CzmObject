@@ -1,0 +1,20 @@
+﻿/*******************************************************  教师查看页面设置  *******************************************************/
+*
+{
+	padding: 0px;
+	margin: 0px;
+}
+body
+{
+    background-color:#000;
+    color:#FFFFCC;
+    font-weight:bold;
+}
+.table,.table tr td
+{
+	border:solid 2px #FF0000;
+	border-collapse:collapse;
+	line-height:20px;
+	font-size:12px;
+	vertical-align:middle;
+}

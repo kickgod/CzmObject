@@ -25,7 +25,7 @@
         .pic{width: 64px; height: 64px;background-image: url(../Master/BigFengCheng.gif);  /*居中显示方法*/ position: absolute; top: 0px;left: 0px; right: 0px; bottom: 0px; margin: auto;}
     </style>
     <link href="../Content/FontBindData.css" rel="stylesheet" />
-    <link href="../CSS/BootsrapDefaultCHN.css" rel="stylesheet" />
+    <link href="../CSS/BootsrapDefaultCHNS.css" rel="stylesheet" />
     <style type="text/css">
         .OnMouseOver{}
         .OnMouseOver:hover{cursor: pointer}
@@ -215,11 +215,8 @@
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <figure>
                             <a href="../UserPage/UserProductTypeShowCHN.aspx" target="_blank" ><img src='<%#Eval("TypePicture")%>'  ></a>      
-                             <%#Eval("typeName_e")%>              
+                             <span style="font-size:14px;font-weight:500;color:purple;text-decoration-line:underline"><%#Eval("typeName_e")%></span>              
                         </figure>
-                        <div class="TypeName">
-                            <%#Eval("typeName_c")%> 
-                        </div>
                         <div style=" height: 25px; opacity: 0.6; filter: opacity(60); color: white; position: absolute; top: 40%;left: 35%">
                             <p style="width: 100px;display: block; color: white; text-align: center;">
                                 <asp:Button ID="btnCheck" CssClass="btn btn-default" runat="server" Text="See Details" CommandArgument='<%#Eval("typeID")%>' CommandName="Check" />

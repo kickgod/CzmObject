@@ -1,0 +1,30 @@
+﻿body {
+}
+@import url("BasicFontStyle.css");
+
+/*你懂的：Border样式*/
+.borderGrey_1{
+    border: 1px solid gainsboro ;
+}
+.borderGrey_1:hover{border: 1px solid dodgerblue;box-shadow: 0px 0px 2px 2px dodgerblue;}
+
+.borderGrey_One{
+    border: 1px solid gainsboro ;
+}
+
+/*你懂的 2017/11/26 <a> 标签样式*/
+
+/*改变默认<a>标签样式*/
+a{text-decoration: none;}
+
+.Link_Nav_Qidian a{color: black;transition:color 2s; }
+.Link_Nav_Qidian a:hover{background-color: white;color: red;}
+
+.Link_Baidu{color: dodgerblue;text-decoration: none;}
+.Link_Baidu:hover{text-decoration: underline;}
+
+.Link_Show_Btn{padding: 5px;border: 1px solid gainsboro;background-color: RGB(242,242,242); }
+.Link_Show_Btn:hover{background-color: #DCDCDC;}
+
+.Link_Show_Corp_Btn{background-color: white; transition: 1s;}
+.Link_Show_Corp_Btn:hover{background-color: crimson;color: white;border:crimson ;}

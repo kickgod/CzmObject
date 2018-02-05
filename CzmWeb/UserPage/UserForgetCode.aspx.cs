@@ -66,6 +66,7 @@ namespace CzmWeb.UserPage
             lblUserLogin.Text = "用户注册";
             btnOk.Text = "发送";
             btnSendCodeNow.Text = "提交";
+            lbltxtTitle.Text = "网站导航";
         }
 
         private void EnglishTranslate()
@@ -84,6 +85,7 @@ namespace CzmWeb.UserPage
             lblUserLogin.Text = "New User";
             btnOk.Text = "Submit";
             btnSendCodeNow.Text = "Send";
+            lbltxtTitle.Text = "Navigation";
         }
         protected void lkbtnChinese_Click(object sender, EventArgs e)
         {

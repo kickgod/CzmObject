@@ -1,0 +1,52 @@
+﻿.PageContainer
+{
+    margin-top: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 16px;
+    padding: 10px;
+    text-align: center;
+    background-color: #808080;
+}
+.PagePrintButton
+{
+    margin-left: 5px;
+    margin-right: 5px;
+    border-left: solid 1px #d9d5cf;
+    border-right: solid 1px #d9d5cf;
+    border-top: solid 1px #d9d5cf;
+    line-height: 36px;
+    text-align: center;
+}
+.PageStyle
+{
+    margin: 0 auto;
+    background-color: white;
+    text-align: center;
+    padding: 30px;
+}
+.vPageStyle
+{
+    background-color: white;
+    text-align: center;
+    padding: 30px;
+}
+.hPageStyle
+{
+    background-color: white;
+    text-align: center;
+    padding: 30px;
+}
+.PageBottom
+{
+    background-color: white;
+    text-align: center;
+    height: 16px;
+    line-height: 16px;
+}
+.PageStyleFixedHeight
+{
+    background-color: white;
+    margin: 5px;
+    text-align: center;
+}

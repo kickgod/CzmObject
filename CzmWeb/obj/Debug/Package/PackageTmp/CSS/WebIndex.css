@@ -1,0 +1,165 @@
+﻿/*******************************************************  教师查看页面设置  *******************************************************/
+*
+{
+    padding: 0px;
+    margin: 0px;
+}
+body
+{
+}
+#full-screen-slider
+{
+    width: 100%;
+    height: 356px;
+    float: center;
+    position: relative;
+}
+#slides
+{
+    display: block;
+    width: 100%;
+    height: 356px;
+    float: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+#slides li
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+    float: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+#slides li a
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+    float: center;
+    text-indent: -9999px;
+}
+#pagination
+{
+    display: block;
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    top: 330px;
+    z-index: 9;
+    padding: 5px 15px 5px 0;
+    margin: 0;
+}
+#pagination li
+{
+    display: block;
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    float: left;
+    margin-left: 15px;
+    border-radius: 5px;
+    background: #CCC;
+}
+#pagination li a
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    text-indent: -9999px;
+}
+#pagination li.current
+{
+    background: #0092CE;
+}
+#MainMiddle
+{
+    height: 256px;
+    background-color: #EEE;
+    margin:0 auto;
+}
+#MainMiddle .Left
+{
+    width:560px;
+    margin-left:32px;
+    float:left;
+}
+#MainMiddle .Left .Title
+{
+    height:32px;
+    color:#666;
+    background-image:url("../Images/Web/bg_MainMiddleLeftTitle.png");
+    background-repeat:no-repeat;
+}
+#MainMiddle .Left .Title .MoreIcon
+{
+    margin-right:32px;
+    width: 32px;
+    line-height:32px;
+    float: right;
+    text-align: center; 
+    font-family:Bell MT;
+}
+#MainMiddle .Left .Title .MoreIcon a
+{
+    color:#666;
+    text-decoration:none;
+}
+#MainMiddle .Left .Title .MoreIcon a:hover
+{
+    color:#FF0000;
+    text-decoration:underline;
+}
+#MainMiddle .Right
+{
+    width:560px;
+    margin-right:32px;
+    float:left;
+}
+#MainMiddle .Right .Title
+{
+    height:32px;
+    color:#FFF;
+    background-image:url("../Images/Web/bg_MainMiddleRightTitle.png");
+    background-repeat:no-repeat;
+}
+#MainMiddle .Right .Title .MoreIcon
+{
+    margin-right:32px;
+    width: 32px;
+    line-height:32px;
+    float: right;
+    text-align: center; 
+    font-family:Bell MT;
+}
+#MainMiddle .Right .Title .MoreIcon a
+{
+    color:#FFF;
+    text-decoration:none;
+}
+#MainMiddle .Right .Title .MoreIcon a:hover
+{
+    color:#FF0000;
+    text-decoration:underline;
+}
+#MainBottom
+{
+    
+}
+.TitleText
+{
+    width:320px;
+    float: left;
+    margin-left:48px;
+    text-align:left;
+    font-size:14px;
+    line-height:32px;
+}
+

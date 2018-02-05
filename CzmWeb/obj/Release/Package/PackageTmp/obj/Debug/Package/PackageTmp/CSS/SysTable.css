@@ -1,0 +1,386 @@
+﻿.iframe_content
+{
+	margin:5px;
+	text-align:center;
+	/*height: 216px;*/
+}
+.iframe_content2
+{
+	margin:5px;
+	text-align:center;
+	color:#3C5D78;
+	font-size:12px;
+}
+.pop_content
+
+{
+    color:#3C5D78;
+	font-size:12px;
+	text-align:center;
+	margin:10px;
+}
+/*****************************当前页面位置***************************************/
+.content_top
+{
+	background-image: url( "../Images/frm_bg1.gif" );
+	background-repeat: repeat-x;
+	height: 28px;
+}
+ .position
+{
+	line-height: 28px;
+	margin-left: 10px;
+}
+
+/*************************添加删除编辑按钮一栏**********************************/
+ .btn_bar
+ {
+    height:30px;
+ }
+
+.btn
+ {    
+    float:left;      
+ }
+ /*****************************导入栏******************************************/
+ .daoru_bar
+ {
+ 	height:30px;
+ 	text-align:center;
+ 	
+ }
+ 
+/********************************表格设置******************************************/
+.table_default
+{
+	border-collapse: collapse;
+	border: none;
+}
+.table_default tr td
+{
+	border: solid 1px #d9d5cf;
+}
+.table_default tr.border_lrb td
+{
+	border-top: none;
+}
+.table_default tr td.border_r
+{
+	border-left: none;
+	border-top: none;
+	border-right: 2px;
+	border-bottom: none;
+}
+.table4,.table4 tr td,.table4 tr th
+{
+	border:solid 1px #E5E5E5;
+	border-collapse:collapse;
+	height:32px;
+	line-height:20px;
+	font-size:12px;
+	vertical-align:middle;
+}
+.p_item_0
+{
+	background-color:#FFFFFF;
+	color:#222;
+	vertical-align:middle;
+}
+.p_item_1
+{
+	background-color:#FAFAFA;
+	color:#222;
+	vertical-align:middle;
+}
+.p_item_3
+{
+	background-color:#FF8000;
+	color:#FFF;
+	vertical-align:middle;
+}
+.p_item_hover td,.p_item_hover th
+{
+	background-color:#0092C5;
+	color:#FFF;
+}
+.table_title,.table_title td,.table_title th
+{
+	border:solid 1px #E5E5E5;
+	font-size: 12px;
+	font-weight: bold;
+	background: url("../images/tt_bg.png");
+	background-position:center top;
+	background-repeat:repeat-x;
+	color:#3C5D78;
+	padding: 0px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+.table1,.table1 td
+{
+	border:solid 1px #C6E3F7;
+	border-collapse:collapse;
+	color:#3C5D78;
+	font-size:12px;
+	height:32px;
+	text-align:left;
+	padding-left:10px;
+}
+.table2
+{
+	border:solid 1px #C6E3F7;
+	border-collapse:collapse;
+	color:#3C5D78;
+	font-size:12px;
+	height:32px;
+}
+.table3,.table3 td
+{
+	border:0px;
+}
+
+.table5,.table5 td
+{
+	border:solid 1px #000;
+	border-collapse:collapse;
+	color:#000;
+	font-size:12px;
+	height:32px;
+	line-height:20px;
+}
+.table6
+{
+	border:solid 1px #C6E3F7;
+	border-collapse:collapse;
+	color:#3C5D78;
+	font-size:12px;
+	height:32px;
+}
+.table7,.table7 td
+{
+	border-bottom:solid 1px #000;
+	border-collapse:collapse;
+	color:#000;
+	font-family:黑体;
+	font-size:16px;
+	height:42px;
+}
+.table_none tr td
+{
+	border:none;
+	color:#000000;
+	border-collapse:collapse;
+	height:32px;
+	line-height:32px;
+	font-size:12px;
+}
+.table_none2 tr td
+{
+	border:none;
+	color:#3C5D78;
+	font-size:12px;
+	text-align:left;
+}
+ .td_border, .td_border td
+{
+	border:solid 1px #E5E5E5;
+	border-collapse:collapse;
+	line-height:36px;
+	font-size:12px;
+	text-align:center;
+}
+
+.td_bg
+{
+	background:url("../Images/td_bg.gif");
+	height:21px;
+	font-size:13px;
+	font-weight:bold;
+}
+.td_bg2
+{
+	background-color:#eaf3fd;
+	font-size:13px;
+}
+.td_bg3
+{
+	background-color:#eaf3fd;
+	font-size:13px;
+	width:80px;
+}
+/*标题样式*/
+.p_title
+{
+	font-size: 14px;
+	font-weight: bold;
+	background-position: center center;
+	padding: 0px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+}
+.p_title td, th
+{
+	padding: 0px;
+}
+.p_title_one
+{
+	text-align:center;
+	height:20px;
+	color:#3C5D78;
+	font-weight:bold;
+}
+.p_title_two
+{
+	text-align:center;
+    color:#3C5D78;
+    font-weight:bold;
+    font-size:12px;
+    height:30px;
+}
+.p_title_three
+{
+	text-align:center;
+    color:#3C5D78;
+    font-weight:bold;
+    font-size:12px;
+    height:20px;
+}
+
+.table_footer
+{
+	border:solid 1px #C6E3F7;
+	font-size: 14px;
+	font-weight: bold;
+	background: url("../images/frm_bg5.gif");
+	background-position: center center;
+	padding: 0px;
+	height: 25px;
+	text-align: center;
+}
+.uLine
+{
+	border-top: solid 1px #d9d5cf;
+	line-height: 40px;
+}
+.dLine
+{
+	border-bottom: solid 1px #d9d5cf;
+	line-height: 40px;
+}
+.lrdLine
+{
+	border-left: solid 1px #d9d5cf;
+	border-right: solid 1px #d9d5cf;
+	border-bottom: solid 1px #d9d5cf;
+	line-height: 40px;
+}
+.lrtLine
+{
+	border-left: solid 1px #d9d5cf;
+	border-right: solid 1px #d9d5cf;
+	border-top: solid 1px #d9d5cf;
+	line-height: 40px;
+}
+.AllLine
+{
+	border: solid 1px #d9d5cf;
+	line-height: 40px;
+}
+/*****************************  div设置 *************************************/
+.PJLR,.GL,.LR
+{
+	margin-top:10px;
+	margin-bottom:10px;
+	text-align:center;
+}
+.div_margin
+{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.div_margin2
+{
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.div_border
+{
+	border:solid 1px #C6E3F7;
+	text-align:center;
+}
+.div_border2
+{
+	border:solid 1px #C6E3F7;
+	text-align:left;
+	width:400px;
+	margin:10px;
+}
+.div_bg1
+{
+	text-align:center;
+	height:70px;
+	background:url("../Images/frm_bg2.gif");	
+}
+.div_bg2
+{
+	text-align:center;
+	line-height:40px;
+	/*height:40px;
+	background:url("../Images/frm_bg3.gif");	*/
+}
+.div_bg3
+{
+	text-align:center;
+	height:21px;
+	background:url("../Images/frm_bg4.gif");	
+}
+.div_bg4
+{
+	text-align:center;
+	height:54px;
+	background:url("../Images/frm_bg2.gif");	
+}
+.div_LeftTopButton
+{
+	float: left; 
+	padding-left: 6px;
+	padding-top:10px;
+}
+.div_LeftBottomButton
+{
+	float: left; 
+	padding-left: 2px;
+	padding-top:3px;
+}
+.div_RightBottom
+{
+	float: right; 
+	padding-left: 2px;
+	padding-top:3px;
+}
+.tip
+{
+	margin:10px;
+}
+/********************************  文本框设置  ***************************************/
+
+.txt_border_none
+{
+	background:none;
+	border:none;
+}
+
+/********************************  treeView设置  *************************************/
+.treeView
+{
+}
+.treeView tr td, th
+{
+	height:22px \9;
+	line-height:22px;
+	padding: 0px;
+	border: none;
+}
+	

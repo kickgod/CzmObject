@@ -1,0 +1,300 @@
+﻿/*******************************************************  教师查看页面设置  *******************************************************/
+*
+{
+	padding: 0px;
+	margin: 0px;
+}
+.TcContainer
+{
+	width: 1004px;
+	margin: 0 auto;
+	text-align: center;
+}
+/*********************************************  全部信息与基本信息设置  *********************************************/
+
+.TcContent
+{
+	margin: 0 auto;
+	width: 900px;
+	text-align: center;
+}
+.TcContent_top
+{
+	margin: 0 auto;
+	height: 40px;
+	width: 900px;
+	background-image: url("../Images/TcIndex/TcContent2_top.png");
+	background-repeat: no-repeat;
+}
+.TcContent_content
+{
+	margin: 0 auto;
+	width: 900px;
+	background-color: #89befe;
+}
+.TcContent_bottom
+{
+	margin: 0 auto;
+	height: 40px;
+	width: 900px;
+	background-image: url("../Images/TcIndex/TcContent2_bottom.png");
+	background-repeat: no-repeat;
+	margin-bottom: 20px;
+}
+.TcContent_top span
+{
+	float: left;
+	padding-left: 130px;
+	line-height: 40px;
+	font-size: 15px;
+	color: White;
+	font-weight: bold;
+}
+.TcTable, .TcTable td
+{
+	border: solid 1px #cccccc;
+	border-collapse: collapse;
+	color: #3C5D78;
+	background-color: White;
+	font-size: 12px;
+	height: 25px;
+}
+.align_left
+{
+	width: 50%;
+	text-align: left;
+	padding-left: 50px;
+}
+.align_right
+{
+	width: 50%;
+	text-align: right;
+	padding-right: 50px;
+}
+.tc_jxrw, .tc_jbxx, .tc_gzl, .tc_pjxx, .tc_gzkh, .tc_jjf, .tc_khjg
+{
+	width: 800px;
+	margin: 0 auto;
+}
+.TcTable2, .TcTable2 td
+{
+	border: solid 1px #cccccc;
+	border-collapse: collapse;
+	color: #3C5D78;
+	background-color: White;
+	font-size: 12px;
+	height: 25px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.title_bg
+{
+	width: 800px;
+	height: 30px;
+	background-color: #f0f0f0;
+	text-align: center;
+}
+.title_bg span
+{
+	color: #3C5D78;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 30px;
+}
+.title_common
+{
+	font-weight: bold;
+	height: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+/*********************************************  全部信息设置  *********************************************/
+/*.TcContent2
+{
+	margin:0 auto;
+	width:900px;
+	text-align:center;
+	margin-top:10px;
+	margin-bottom:20px;
+}
+.TcContent2_top
+{
+	margin:0 auto;
+	height:40px;
+	width:900px;
+	background-image:url("../Images/TcIndex/TcContent2_top.png");
+	background-repeat:no-repeat;
+}
+.TcContent2_content
+{
+	margin:0 auto;
+	width:900px;
+	background-color:#89befe;
+}
+.TcContent2_bottom
+{
+	margin:0 auto;
+	height:40px;
+	width:900px;
+	background-image:url("../Images/TcIndex/TcContent2_bottom.png");
+	background-repeat:no-repeat;
+	margin-bottom:20px;
+}
+.TcContent2_top span
+{
+	float:left;
+	padding-left:130px;
+	line-height:40px;
+	font-size:15px;
+	color:White;
+	font-weight:bold;
+}
+.tc_jxrw,.tc_jbxx,.tc_gzl,.tc_pjxx,.tc_gzkh，tc_jjf
+{
+	width:900px;
+	margin:0 auto;
+}
+.TcTable2,.TcTable2 td
+{
+	border:solid 1px #cccccc;
+	border-collapse:collapse;
+	color:#3C5D78;
+	background-color:White;
+	font-size:12px;
+	height:25px;
+}
+.align_left2
+{
+	width:50%;
+	text-align:left;
+	padding-left:50px;
+}
+.align_right2
+{
+	width:50%;
+	text-align:right;
+	padding-right:50px;
+}
+.TcTable3,.TcTable3 td
+{
+	border:solid 1px #cccccc;
+	border-collapse:collapse;
+	color:#3C5D78;
+	background-color:White;
+	font-size:12px;
+	height:25px;
+	margin:0px;
+	padding:0px;
+}
+*/
+/*********************************************  全部信息设置  *********************************************/
+
+
+/*.TcContent1
+{
+	margin:0 auto;
+	width:740px;
+	text-align:center;
+}
+.TcContent1_top
+{
+	margin:0 auto;
+	height:40px;
+	width:740px;
+	background-image:url("../Images/TcIndex/TcContent1_top.png");
+	background-repeat:no-repeat;
+	margin-top:10px;
+}
+.TcContent1_content
+{
+	margin:0 auto;
+	width:740px;
+	background-color:#89befe;
+	margin:0px;
+}
+.TcContent1_bottom
+{
+	margin:0 auto;
+	height:20px;
+	width:740px;
+	background-image:url("../Images/TcIndex/TcContent1_bottom.png");
+	background-repeat:no-repeat;
+}
+.tc_jbxx2
+{
+	margin:0 auto;
+}
+	
+.TcTable1,.TcTable1 td
+{
+	border:solid 1px #cccccc;
+	border-collapse:collapse;
+	color:#3C5D78;
+	background-color:White;
+	font-size:12px;
+	height:25px;
+}
+.align_left
+{
+	width:50%;
+	text-align:left;
+	padding-left:20px;
+}
+.align_right
+{
+	width:50%;
+	text-align:right;
+	padding-right:20px;
+}
+
+.TcContent1_top span
+{
+	float:left;
+	padding-left:100px;
+	line-height:40px;
+	font-size:15px;
+	color:White;
+	font-weight:bold;
+}
+.title_bg
+{
+	width:740px;
+	height:30px;
+	background-color:#f0f0f0;
+	text-align:center;
+}
+.title_bg span
+{
+	color:#3C5D78;
+	font-size:13px;
+	font-weight:bold;
+	line-height:30px;
+}
+.title_bg2
+{
+	height:30px;
+	background-color:#f0f0f0;
+	text-align:center;
+}
+.title_bg2 span
+{
+	color:#3C5D78;
+	font-size:13px;
+	font-weight:bold;
+	line-height:30px;
+}
+
+.title_common
+{
+	font-weight:bold;
+	height:25px;
+}*/

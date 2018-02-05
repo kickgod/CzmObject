@@ -1,0 +1,147 @@
+﻿    *{ padding: 0px;margin: 0px;}
+    .CZMBrandCompany{ font-family: '创造们';font-size: 18px; color: white}
+    #ShowPhoneIfStart{ background-color: RGB(176, 53, 112);color: white}
+    #ShowPhoneIfStart div ul li a{ color: white;}
+    #ShowPhoneIfEnd{ background-color: RGB(176, 53, 112);color: white}
+    #ShowPhoneIfEnd div ul li a{ color: white;background-color:RGB(176, 53, 112) }
+    #ShowPhoneIfEnd,#ShowPhoneIfStart{ border: 0px;}
+    #LunBoControl{ margin-top: -20px;}
+    #LunBoControl{ background: linear-gradient(to left,darkmagenta, RGB(176, 53, 112));}
+    #LunBoControl2{ margin-top: -20px;}
+    #LunBoControl2{ background: linear-gradient(to left,RGB(234,202,223), RGB(176, 53, 112)),RGB(241,222,233);}
+    .intro{font-size: 1.2em;font-family: '楷体', '宋体';font-weight: 600;color: purple}
+    .ItroDuctionOfCompany{ height: 150px;overflow: hidden;word-break: break-all;font-size: 12px;}
+    .JuzhongFont{ width: 100%;text-align: center;line-height: 70px;height: 70px }
+    .JuzhongFont .productFont{ font-size: 1.5em;font-weight: 600;}
+    .Font_Name_English{ color: darkmagenta;font-weight: 400;font-size: 20px; text-align: center;padding-left: 10px;letter-spacing: 1px;word-spacing: 3px; }
+    .introShowWord{ font-size: 15px;font-weight: 500;font-family: ProductFontStyle;color: purple;overflow: hidden;width: 100%;height: 25px;}
+    .ProductShowDiscr{ width: 100%;height: 100px;overflow-y: auto}
+    .DownGoumai .MeonyChar{ font-weight: 600;color: RGB(148, 30, 80);font-size: 20px;vertical-align: top;padding-left: 10px;}
+    .DownGoumai .Meony{ font-weight: 700;font-size: 25px;color:RGB(148, 30, 80) }
+    .DownGoumai .MeonyLastChar{ color: RGB(191,181,181); text-decoration: line-through;font-size: 15px}
+    .ProjectName{ color: gainsboro;font-size: 22px;font-weight: 400;background-color: crimson;}
+    .WordOfTheProduct{ color: white;font-weight: 400;font-style: italic;text-transform: uppercase;font-size: 15px;background-color: RGB(148, 30, 80) }
+    .ShowIntorductiOfpROJECT{ width: 100%;height: 100px;overflow: hidden}
+    .ProductNameType{ color: white;font-weight: 500;background-color: RGB(174, 105, 130);padding: 5px 20px;word-spacing: 5px;font-size: 16px }
+    /**手机样式**/
+    .ulloSpan a{display: block}
+    .ulloSpan:hover { border-bottom: white 2px solid;border-top: white 2px solid;color: black;font-size: 18px}
+    .navbar-nav li:hover{
+        background-color: purple;
+    }
+    .navbar-nav li  a:hover{
+        background-color: purple;
+    }
+    @media only screen and (min-width: 1200px) {
+        .JiaoBen{background-color: white;width: 100%;border-top: 1px silver solid;position: fixed;bottom: 0px;}
+        #ShowPhoneIfStart{display: none}  
+        #ShowPhoneIfEnd{display: block}    
+        #LunBoControl{ width: 100%;}    
+        #LunBoControl2{width: 100%}
+        .ItroDuctionOfCompany{ height: 100px;overflow: hidden;word-break: break-all;font-size: 12px;}
+        #CompanyName{ font-size: 20px;font-family: '楷体', '宋体';font-weight: 400;color: purple;width: 100%;text-align: center }
+        #myCarousel{ width: 1200px;margin: auto}    
+        #myCarouse2{width: 1000px;margin: auto;height: 400px}
+        #LunBoControl2 img{ width: 1000px;height: 400px}  
+        footer{ background-color: RGB(10, 18, 43);width: 100%; height: 300px;}
+        footer .HeadColor{ height: 50px;width: 100%;background-color: RGB(144,68,117)}
+        footer .TowPart{ width: 100%;background-color: white;height: 250px;}
+        footer .TowPart .Left_Font{ width: 69%;height: 250px;float: left; }
+        footer .TowPart .Left_Font table{width: 100%; padding: 7px;margin: auto}
+        footer .TowPart .Left_Font table th{ height: 40px;line-height: 40px;margin: auto;font-size: 1.2em;font-family: '微软雅黑', '宋体';word-spacing: 2px;}
+        footer .TowPart .Left_Font table tr{height: 40px;line-height: 40px;font-size: small}
+        footer .TowPart .Left_Font table .TitleIntroduce{ color: RGB(114, 114, 114);font-size: small}
+        footer .TowPart .Right_Picture{ width: 30%;height: 250px;float: left}
+        footer .TowPart .Right_Picture .PictureOneWechat { background-color: purple;width: 200px;height: 200px;position: relative;top: 10px;right: 100px;}
+        .zixun{z-index: 100000; width: 170px;height: 220px;font-size: 1em;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: RGB(114, 114, 114);position: fixed;right: 5px;top: 35%;}
+        .zixun .showDiv{opacity: 0.8;filter: alpha(opacity=80);width: 135px;height: 220px;background-color: white;float: left}
+        .zixun .showDiv p{opacity: 0.8;filter: alpha(opacity=80); letter-spacing: 2px;font-size: small}
+        .zixun .showDiv .fontci{opacity: 0.8;filter: alpha(opacity=80); height: 30px;line-height: 30px;color: white;font-family:'华文楷体', '微软雅黑', '宋体';font-weight: bold }
+        .zixun .showDiv img{opacity: 0.8;filter: alpha(opacity=80); width: 105px;height: 105px;background-color: white;padding: 15px}
+        .zixun .lanmu{ width: 32px;height: 220px;background-color: purple;color: white;float: right}
+        .zixun .lanmu a img{ width: 30px;height: 30px;margin:5px auto}
+        .zixun .lanmu a img:hover{ transform: translate(2px, 2px);-webkit-transform: translate(2px, 2px);background-color: white} /***1300px以上***/
+    }
+    @media only screen and (min-width:768px) and (max-width: 1199px) { 
+        .JiaoBen{background-color: white;width: 100%;border-top: 1px silver solid;position: fixed;bottom: 0px;
+        }
+        #ShowPhoneIfStart{display: none}  
+        #ShowPhoneIfEnd{display: block}    
+        #CompanyName{ font-size: 14px;font-family: '楷体', '宋体';font-weight: 500;color: purple;width: 100%;text-align: center }  
+        footer{ background-color: RGB(10, 18, 43);width: 100%; height: 300px;}
+        footer .HeadColor{ height: 20px;color: white; width: 100%;background-color: RGB(144,68,117)}
+        footer .TowPart{ width: 100%;background-color: white;height: 250px;}
+        footer .TowPart .Left_Font{ width: 69%;height: 250px;float: left; }
+        footer .TowPart .Left_Font table{width: 100%; padding: 7px;margin: auto}
+        footer .TowPart .Left_Font table th{ height: 40px;margin: auto;font-size: 1.2em;font-family: '微软雅黑', '宋体';word-spacing: 2px;}
+        footer .TowPart .Left_Font table tr{height: 40px;font-size: small}
+        footer .TowPart .Left_Font table .TitleIntroduce{ color: RGB(114, 114, 114);font-size: small}
+        footer .TowPart .Right_Picture{ width: 30%;height: 250px;float: left}
+        footer .TowPart .Right_Picture .PictureOneWechat { background-color: purple;width: 200px;height: 200px;position: relative;top: 10px;left: 18px;}
+        #Watchlive{ width: 100%;height: 250px;}
+        #Watchlive .row{ text-align: center;}
+        #Watchlive .row  img{ width: 150px;height: 150px;border-radius: 50%}
+        .zixun{z-index: 100000; width: 170px;height: 220px;font-size: 1em;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: RGB(114, 114, 114);position: fixed;right: 5px;top: 35%;}
+        .zixun .showDiv{opacity: 0.8;filter: alpha(opacity=80);width: 135px;height: 220px;background-color: white;float: left}
+        .zixun .showDiv p{opacity: 0.8;filter: alpha(opacity=80); letter-spacing: 2px;font-size: small}
+        .zixun .showDiv .fontci{opacity: 0.8;filter: alpha(opacity=80); height: 30px;line-height: 30px;color: white;font-family:'华文楷体', '微软雅黑', '宋体';font-weight: bold }
+        .zixun .showDiv img{opacity: 0.8;filter: alpha(opacity=80); width: 105px;height: 105px;background-color: white;padding: 15px}
+        .zixun .lanmu{ width: 32px;height: 220px;background-color: purple;color: white;float: right}
+        .zixun .lanmu a img{ width: 30px;height: 30px;margin:5px auto}
+        .zixun .lanmu a img:hover{ transform: translate(2px, 2px);-webkit-transform: translate(2px, 2px);background-color: white}
+    }
+    @media only screen and (min-width: 441px) and (max-width: 767.9px) {
+        .JiaoBen{background-color: white;width: 100%;border-top: 1px silver solid;}
+        #ShowPhoneIfStart{display:block}  
+        #ShowPhoneIfEnd{display: none}    
+        #CompanyName{ font-size: 14px;font-family: '楷体', '宋体';font-weight: 500;color: purple;width: 100%;text-align: center }      
+        #RowProductTypeShow .col-md-3{ margin-bottom: 15px;margin: auto}    
+        #RowProductTypeShow img{ width: 100%;height: 160px;}    
+        footer{ background-color: RGB(10, 18, 43);width: 100%; height: 300px;}
+        footer .HeadColor{ height: 50px;width: 100%;background-color: RGB(144,68,117)}
+        footer .TowPart{ width: 100%;background-color: white;height: 250px;}
+        footer .TowPart .Left_Font{ width: 69%;height: 250px;float: left; }
+        footer .TowPart .Left_Font table{width: 100%; padding: 7px;margin: auto}
+        footer .TowPart .Left_Font table th{ height: 40px;margin: auto;font-size: 1.2em;font-family: '微软雅黑', '宋体';word-spacing: 2px;}
+        footer .TowPart .Left_Font table tr{height: 40px;font-size: small}
+        footer .TowPart .Left_Font table .TitleIntroduce{ color: RGB(114, 114, 114);font-size: small}
+        footer .TowPart .Right_Picture{ width: 30%;height: 250px;float: left}
+        footer .TowPart .Right_Picture .PictureOneWechat { background-color: purple;width: 200px;height: 200px;position: relative;top: 10px;left: 18px;}
+        .zixun{z-index: 100000; width: 170px;height: 220px;font-size: 1em;font-family: '微软雅黑', '宋体';word-spacing: 2px;color: RGB(114, 114, 114);position: fixed;right: 5px;top: 35%;}
+        .zixun .showDiv{opacity: 0.8;filter: alpha(opacity=80);width: 135px;height: 220px;background-color: white;float: left}
+        .zixun .showDiv p{opacity: 0.8;filter: alpha(opacity=80); letter-spacing: 2px;font-size: small}
+        .zixun .showDiv .fontci{opacity: 0.8;filter: alpha(opacity=80); height: 30px;line-height: 30px;color: white;font-family:'华文楷体', '微软雅黑', '宋体';font-weight: bold }
+        .zixun .showDiv img{opacity: 0.8;filter: alpha(opacity=80); width: 105px;height: 105px;background-color: white;padding: 15px}
+        .zixun .lanmu{ width: 32px;height: 220px;background-color: purple;color: white;float: right}
+        .zixun .lanmu a img{ width: 30px;height: 30px;margin:5px auto}
+        .zixun .lanmu a img:hover{ transform: translate(2px, 2px);-webkit-transform: translate(2px, 2px);background-color: white}
+        .ProjectName{ color: gainsboro;font-size: 15px;font-weight: 400;background-color: crimson;}
+        .WordOfTheProduct{ color: white;font-weight: 400;font-style: italic;text-transform: uppercase;font-size: 8px;line-height: 10px;background-color: RGB(148, 30, 80) }
+        .ShowIntorductiOfpROJECT{ width: 100%;height: 50px;overflow: hidden}
+    }
+    @media only screen and (min-width: 0px) and (max-width: 440px) {
+        .JiaoBen{background-color: white;width: 100%;border-top: 1px silver solid;}
+        #ShowPhoneIfStart{display: block}  
+        #ShowPhoneIfEnd{display: none} 
+        #CompanyName{ font-size: 14px;font-family: '楷体', '宋体';font-weight: 500;color: purple;width: 100%;text-align: center }
+        .Font_Name_English{ color: darkmagenta;font-weight: 400;font-size: 15px; text-align: center;padding-left: 10px;letter-spacing: 1px;word-spacing: 3px; }
+        #RowProductTypeShow img{ width: 100%;height: 160px;} 
+        .intro{font-size: 14px;font-family: '楷体', '宋体';font-weight: 400;color: purple}
+        footer{ background-color: RGB(10, 18, 43);width: 100%; height: 600px;}
+        footer .HeadColor{ height: 50px;width: 100%;background-color: RGB(144,68,117)}
+        footer .TowPart{ width: 100%;background-color: white;height: 250px;}
+        footer .TowPart .Left_Font{ width: 100%;height: 250px;float: left; }
+        footer .TowPart .Left_Font table{width: 100%; padding: 7px;margin: auto}
+        footer .TowPart .Left_Font table th{ height: 40px;margin: auto;font-size: 1.2em;font-family: '微软雅黑', '宋体';word-spacing: 2px;}
+        footer .TowPart .Left_Font table tr{height: 40px;font-size: small}
+        footer .TowPart .Left_Font table .TitleIntroduce{ color: RGB(114, 114, 114);font-size: small}
+        footer .TowPart .Right_Picture{ width: 100%;height: 250px;float: left}
+        footer .TowPart .Right_Picture .PictureOneWechat { background-color: purple;width: 200px;height: 200px;position: relative;top: 10px;left: 18px;}
+        #Watchlive{ width: 100%;height: 150px;}
+        #Watchlive .row{ text-align: center;}
+        #Watchlive .row  img{ width: 100%;height: 80px;border-radius: 50%;}
+        .ProjectName{ color: gainsboro;font-size: 12px;font-weight: 400;background-color: crimson;}
+        .WordOfTheProduct{ display: none; }
+        .ShowIntorductiOfpROJECT{ width: 100%;height: 50px;overflow: hidden}
+        .zixun{ display: none;}
+    }

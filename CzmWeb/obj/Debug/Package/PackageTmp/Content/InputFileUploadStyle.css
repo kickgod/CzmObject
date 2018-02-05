@@ -1,0 +1,89 @@
+/*提供两种对文件上传标签或者控件的样式 */
+/*例如： ASP.NET的 FileUpload   
+ *      Html标签的 <input type = "file"/>
+ *      其对于 颜色 字体 大小 但是 在修改之前 请复制此样式表到其他地方修改  保持这个 样式的原样 已做以后之修改 等是可以修改的 
+ *  */
+		/*a  upload */
+		/*input file上传按钮的美化思路是，先把之前的按钮透明度opacity设置为0,然后，外层用div包裹，就实现了美化功能。*/
+		.a-upload {
+		    padding: 4px 10px;
+		    height: 20px;
+		   /* font-family: "楷体";
+		    * font-family: "宋体"; 
+		    * font-family: "新宋体";
+		    * 字体的选择要考虑到页面的风格而定
+		    * 请 谨慎考虑
+		    */	    	    
+		    line-height: 20px;
+		    position: relative;
+		    cursor: pointer;
+		    color: #888;
+		    background: #fafafa;
+		    /*
+		     * 背景色 请谨慎考虑
+		     * 务必和整个页面风格一致
+		     */
+		    border: 1px solid #ddd;
+		    border-radius: 4px;
+		    overflow: hidden;
+		    display: inline-block;
+		    *display: inline;
+		    *zoom: 1
+		}
+		
+		.a-upload input {
+		    position: absolute;
+		    font-size: 100px;
+		    right: 0;
+		    top: 0;
+		    opacity: 0;
+		    filter: alpha(opacity=0);
+		    cursor: pointer
+		}
+		.a-upload:link{
+			text-decoration: none
+		}
+		.a-upload:hover {
+		    color: #444;
+		   /* background: #eee;*/
+		    border-color: #ccc;
+		    background-color: #3C8DDE;
+		    text-decoration: none
+		}	
+		/*a  file */	
+		.file {
+		    position: relative;
+		    display: inline-block;
+		   /* font-family: "楷体";
+		    * font-family: "宋体"; 
+		    * font-family: "新宋体";
+		    * 字体的选择要考虑到页面的风格而定
+		    * 请 谨慎考虑
+		    */	 
+		    background: #D0EEFF;
+		    /*
+		     * 背景色 请谨慎考虑
+		     * 务必和整个页面风格一致
+		     */
+		    border: 1px solid #99D3F5;
+		    border-radius: 4px;
+		    padding: 4px 12px;
+		    overflow: hidden;
+		    color: #1E88C7;
+		    text-decoration: none;
+		    text-indent: 0;
+		    line-height: 20px;
+		}
+		.file input {
+		    position: absolute;
+		    font-size: 100px;
+		    right: -1154px;
+		    top: -10px;
+		    opacity: 0;
+		}
+		.file:hover {
+		    background: #AADFFD;
+		    border-color: #78C3F3;
+		    color: #004974;
+		    text-decoration: none;
+		}	

@@ -18,7 +18,6 @@
         </script>
         <link rel="icon" href="../Images/SystemPicture/创造力.ico" />
         <script src="../bootstrap337/js/jquery-3.2.1.min.js"></script>
-        <link href="../bootstrap337/css/style.css" rel="stylesheet" />
         <link href="../bootstrap337/css/bootstrap.min.css" rel="stylesheet" />
         <style type="text/css">
             .Loading{width: 100%;height: 100%;position: fixed;top: 0px;left: 0px;background-color: white;z-index: 200;}
@@ -26,8 +25,8 @@
         </style>
         <link href="../Content/FontBindData.css" rel="stylesheet" />
         <link href="../CSS/BootsrapDefaultCHN.css" rel="stylesheet" />
+        <link rel="stylesheet" href="CSS/navXiaoxiannv.css" type="text/css" />
         <style type="text/css">
-            .OnMouseOver{}
             .OnMouseOver:hover{cursor: pointer}
              .introShowWordNew{ font-family: ProductFontStyle;font-size: 23px;text-indent: 20px;text-decoration: underline;height: 50px;overflow: hidden }
             .TypeIntroductions{ font-family: ProductFontStyle;font-size: 16px;padding-left: 20px;height: 200px;overflow: hidden;}
@@ -73,65 +72,64 @@
             #ShowPhoneIfEnd a{font-size: 16px;color: gray;display: inline-block;height: 70px;line-height: 70px;padding-left: 15px;padding-right: 15px;transition: 1s;}
             #ShowPhoneIfEnd a:hover{ text-decoration: none;color: white;background-color: RGB(175, 53, 110);border: RGB(175, 53, 110);border-radius: 5px }
             #ShowPhoneIfEnd .FloatRight{float: right}
+            .scroll-box{
+                width: 100%;
+                height: 250px;
+                border: 1px solid white;
+                margin: 20px auto;
+                overflow: hidden;
+ 
+            }
         </style>
     </head>
 <body>
-<div class="FirstTimeDivLogo">
-    <a class="navbar-brand" href="#Adminsrator"><i>四川创造门高新技术开发有限公司</i></a>
-</div>
-<nav class="navbar navbar-default" role="navigation" id="ShowPhoneIfStart">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#example-navbar-collapse">
-                <span class="sr-only">切换导航</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="../Default.aspx"><strong class="CZMBrandCompanyT">四川创造门高新技术开发有限公司</strong></a>
-        </div>
-        <div class="collapse navbar-collapse" id="example-navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Language【语言】 <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../Default.aspx" target="blank" >中文</a></li>
-                        <li><a href="../DefalutEng.aspx" target="blank" >English</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        用户入口 <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a target="_blank" href="../UserPage/UserPageLoginCHN.aspx"><span class="glyphicon glyphicon-user"></span> 立即登录</a></li>
-                        <li><a target="_blank" href="../UserPage/UserPageRegisterCHN.aspx"><span class="glyphicon glyphicon-log-in"></span> 立即注册</a></li>
-                        <li><a target="_blank" href="../UserPage/UserbecomeTypeHighCHN.aspx"><span class="glyphicon glyphicon-home"></span> 个人中心</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        用户功能 <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="active"><a target="_blank" href="../Default.aspx">主页</a></li>
-                        <li><a target="_blank" href="../UserPage/UserProductTypeShowCHN.aspx">产品分类</a></li>
-                        <li><a target="_blank" href="../UserPage/UserNewProductShowCHN.aspx">新品预告</a></li>
-                        <li><a target="_blank" href="../UserPage/UserCreateProjectCHN.aspx">我要创作</a></li>
-                        <li><a target="_blank" href="../UserPage/UserInvestProjectCHN.aspx">我要投资</a></li>
-                        <li><a target="_blank" href="../UserPage/UserProjectShowCHN.aspx">项目展示</a></li>
-                        <li><a target="_blank" href="#Watchlive">观看直播</a></li>
-                        <li><a target="_blank" href="../UserPage/UserVedioShowListCHE.aspx">视频专区</a></li>
-                        <li><a target="_blank" href="../UserPage/UserConmunicationApaceCHN.aspx">交流空间</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+    <div class="row row_15">
+			<ul class="nav_bar_Headers">
+				<li class="navbar-title"><a target="_blank" href="../Default.aspx" class="text-left" >四川创造门高新技术开发有限公司</a></li>
+				<li class="navbar-open"><a href="javascript:Opennavbar()">网站导航</a></li>
+			</ul>
+		</div>
+		<div  id="XDXC" style="display: none;">
+			<div class="dropdown" >
+				  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				    <small>Language【语言】</small>
+				    <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="Menu1">
+				      <li><a href="../Default.aspx" target="blank" >中文</a></li>
+				      <li><a href="../DefalutEng.aspx" target="blank" >English</a></li>
+				  </ul>
+				</div>
+				<div class="dropdown">
+				  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				    <small>用户入口</small> 
+				    <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2" id="Menu2">
+				      <li><a target="_blank" href="../UserPage/UserPageLoginCHN.aspx"><span class="glyphicon glyphicon-user"></span> 立即登录</a></li>
+				      <li><a target="_blank" href="../UserPage/UserPageRegisterCHN.aspx"><span class="glyphicon glyphicon-log-in"></span> 立即注册</a></li>
+				      <li><a target="_blank" href="../UserPage/UserbecomeTypeHighCHN.aspx"><span class="glyphicon glyphicon-home"></span> 个人中心</a></li>
+				  </ul>
+				</div>
+				<div class="dropdown">
+				  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				      <small>用户功能</small> 
+				    <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="dropdownMenu3" id="Menu3">
+				      <li class="active"><a target="_blank" href="../Default.aspx">主页</a></li>
+				      <li><a target="_blank" href="../UserPage/UserProductTypeShowCHN.aspx">产品分类</a></li>
+				      <li><a target="_blank" href="../UserPage/UserNewProductShowCHN.aspx">新品预告</a></li>
+				      <li><a target="_blank" href="../UserPage/UserCreateProjectCHN.aspx">我要创作</a></li>
+				      <li><a target="_blank" href="../UserPage/UserInvestProjectCHN.aspx">我要投资</a></li>
+				      <li><a target="_blank" href="../UserPage/UserProjectShowCHN.aspx">项目展示</a></li>
+				      <li><a target="_blank" href="#Watchlive">观看直播</a></li>
+				      <li><a target="_blank" href="../UserPage/UserVedioShowListCHE.aspx">视频专区</a></li>
+				      <li><a target="_blank" href="../UserPage/UserConmunicationApaceCHN.aspx">交流空间</a></li>
+			 	 </ul>
+			</div>
+		</div>				
+
 <nav class="borderGrey_One" id="ShowPhoneIfEnd">
                  <a target="_blank" href="../Default.aspx">主页</a>
                  <a target="_blank" href="../UserPage/UserProductTypeShowCHN.aspx">产品分类</a>
@@ -203,7 +201,7 @@
 <br/><br/>
 <form id="form1" runat="server">
     <div class="container" >
-        <div class="row" id="RowProductTypeShow">
+        <div class="row" id="RowProductTypeShow" style="padding:20px">
             <asp:Repeater ID="reptem" runat="server" OnItemCommand="reptem_ItemCommand">
                 <ItemTemplate>
                     <div class="col-md-3 col-sm-6 col-xs-6 borderGrey_One">
@@ -324,7 +322,7 @@
     <div style="width: 100%; text-align: center; font-size: 18px; font-family: '微软雅黑'; color: white; background-color: purple; height: 30px; line-height: 30px;">
         项目图片
     </div>
-    <section class="container-fluid" style="width: 100%">
+    <section class="container" style="width: 100%">
         <div class="row" id="PictureProject">
             <asp:Repeater ID="reptmProject" runat="server">
                 <ItemTemplate>
@@ -378,20 +376,117 @@
     <div class="container">
         <div class="box" >
             <div class="bcon" id="ScrollTime">
-                <h1><b>合作展示</b></h1>
+                <h4 style="border-bottom: 1px solid gray">合作展示</h4>
                 <!-- 展示列表 -->
-                <div class="list_lh">
+                <div class="scroll-box">
                     <ul>
+                                                <li>
+                            <div class="row">
+                                <div style="text-indent: 20px;height: 20px; width: 48%; float: left;text-align: left">
+                                    <a href="javascript:alert('对方隐私！无法查看')" target="_blank">钻石会员Whchat</a>
+                                </div>
+                                <div style="height: 20px; width: 48%; float: left;text-align: center">
+                                    投资250000元
+                                </div>
+                                <div  style="text-indent: 20px;text-align: right;height: 17px; width: 48%; float: left;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                    <a href="javascript:Guquan('联合开发下属五大茶厂及周边茶农基地生态茶园建设项目')">联合开发下属五大茶厂及周边茶农基地生态茶园建设项目</a>
+                                </div>
+                                <div  style="height: 20px; width: 48%; float: left;text-align: center">
+                                    <span>2017/12/4 14:38:17</span>
+                                </div>
+                            </div>
+                            <br/>
+                        </li>    
+                        <li>
+                            <div class="row">
+                                <div style="text-indent: 20px;height: 20px; width: 48%; float: left;text-align: left">
+                                    <a href="javascript:alert('对方隐私！无法查看')" target="_blank">钻石会员李明</a>
+                                </div>
+                                <div style="height: 20px; width: 48%; float: left;text-align: center">
+                                    投资150000元
+                                </div>
+                                <div  style="text-indent: 20px;text-align: right;height: 17px; width: 48%; float: left;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                    <a href="javascript:Guquan('联合开发下属五大茶厂及周边茶农基地生态茶园建设项目')">联合开发下属五大茶厂及周边茶农基地生态茶园建设项目</a>
+                                </div>
+                                <div  style="height: 20px; width: 48%; float: left;text-align: center">
+                                    <span>2017/12/4 14:38:17</span>
+                                </div>
+                            </div>
+                            <br/>
+                        </li>   
+                        <li>
+                            <div class="row">
+                                <div style="text-indent: 20px;height: 20px; width: 48%; float: left;text-align: left">
+                                    <a href="javascript:alert('对方隐私！无法查看')" target="_blank">钻石会员Kicker</a>
+                                </div>
+                                <div style="height: 20px; width: 48%; float: left;text-align: center">
+                                    投资3000000元
+                                </div>
+                                <div  style="text-indent: 20px;text-align: right;height: 17px; width: 48%; float: left;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                    <a href="javascript:Guquan('联合开发下属五大茶厂及周边茶农基地生态茶园建设项目')">联合开发下属五大茶厂及周边茶农基地生态茶园建设项目</a>
+                                </div>
+                                <div  style="height: 20px; width: 48%; float: left;text-align: center">
+                                    <span>2017/12/4 14:38:17</span>
+                                </div>
+                            </div>
+                            <br/>
+                        </li>   
+                        <li>
+                            <div class="row">
+                                <div style="text-indent: 20px;height: 20px; width: 48%; float: left;text-align: left">
+                                    <a href="javascript:alert('对方隐私！无法查看')" target="_blank">钻石会员Kicker</a>
+                                </div>
+                                <div style="height: 20px; width: 48%; float: left;text-align: center">
+                                    投资3000000元
+                                </div>
+                                <div  style="text-indent: 20px;text-align: right;height: 17px; width: 48%; float: left;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                    <a href="javascript:Guquan('联合开发下属五大茶厂及周边茶农基地生态茶园建设项目')">联合开发下属五大茶厂及周边茶农基地生态茶园建设项目</a>
+                                </div>
+                                <div  style="height: 20px; width: 48%; float: left;text-align: center">
+                                    <span>2017/12/4 14:38:17</span>
+                                </div>
+                            </div>
+                            <br/>
+                        </li>   
+                        <li>
+                            <div class="row">
+                                <div style="text-indent: 20px;height: 20px; width: 48%; float: left;text-align: left">
+                                    <a href="javascript:alert('对方隐私！无法查看')" target="_blank">钻石会员Kicker</a>
+                                </div>
+                                <div style="height: 20px; width: 48%; float: left;text-align: center">
+                                    投资1000000元
+                                </div>
+                                <div  style="text-indent: 20px;text-align: right;height: 17px; width: 48%; float: left;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                    <a href="javascript:Guquan('联合开发下属五大茶厂及周边茶农基地生态茶园建设项目')">联合开发下属五大茶厂及周边茶农基地生态茶园建设项目</a>
+                                </div>
+                                <div  style="height: 20px; width: 48%; float: left;text-align: center">
+                                    <span>2017/12/4 14:38:17</span>
+                                </div>
+                            </div>
+                            <br/>
+                        </li>  
                         <asp:Repeater ID="reptmInvset" runat="server">
                             <ItemTemplate>
                                 <li>
-                                    <p><a href="javascript:alert('对方隐私！无法查看')" target="_blank"><%#Eval("TypeName_c") %> <%#Eval("UserName_e") %>  对</a>
-                                        <a href="#" target="_blank" class="btn_lh" >投资了<%#Eval("Account") %>元</a><em style="width: 30%"><%#Eval("InsertProjectName") %></em></p>
-                                     <br/><br/><br/><br/>
-                                     <p><a href="javascript:alert('对方隐私！无法查看')" target="_blank" class="a_blue">投资时间：</a><span><%#Eval("InvestTime") %></span></p>
-                                </li>                       
+                                    <div class="row">
+                                        <div style="text-indent: 20px; height: 20px; width: 48%; float: left;text-align: left">
+                                            <a href="javascript:alert('对方隐私！无法查看')" target="_blank"><%#Eval("TypeName_c") %> <%#Eval("UserName_e") %></a>
+                                        </div>
+                                        <div style="height: 20px; width: 48%; float: left;text-align: center">
+                                            投资<%#Eval("Account") %>元
+                                        </div>
+                                        <div  style="text-indent: 20px;text-align: right;height: 17px; width: 48%; float: left;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                           <a href="javascript:Guquan('<%#Eval("InsertProjectName") %>')"> <%#Eval("InsertProjectName") %></a>
+                                        </div>
+                                        <div  style="height: 20px; width: 48%; float: left;text-align: center">
+                                            <span><%#Eval("InvestTime") %></span></p>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                </li>    
                             </ItemTemplate>
                         </asp:Repeater>
+ 
                     </ul>
                 </div>
             </div>    
@@ -527,8 +622,15 @@
  </body>
 <script src="../bootstrap337/js/bootstrap.min.js"></script>
 <script src="../bootstrap337/js/holder.min.js"></script>
-<script src="../Js/scroll.js"></script>
 <script type="text/javascript">
+    function Opennavbar() {
+        var Invest = document.getElementById("XDXC");
+        if (Invest.style.display == "block") {
+            Invest.style.display = "none";
+        } else {
+            Invest.style.display = "block";
+        }
+    }
     document.querySelector("#myCarousel").addEventListener("touchstart",
         function(event) {
             //code here
@@ -565,6 +667,32 @@
                 $(this).carousel(startX > endX ? 'next' : 'prev');
             }
         })
+    });
+    function Guquan(StockName) {
+        alert(StockName);
+    }
+    $(function () {
+        //获得当前<ul>
+        var $uList = $(".scroll-box ul");
+        var timer = null;
+        //触摸清空定时器
+        $uList.hover(function () {
+            clearInterval(timer);
+        }, function () {//离开启动定时器
+            timer = setInterval(function () {
+                scrollList($uList);
+            }, 2300);
+        }).trigger("mouseleave"); //自动触发触摸事件
+        //滚动动画
+        function scrollList(obj) {
+            //获得当前<li>的高度
+            var scrollHeight = $("ul li:first").height();
+            //滚动出一个<li>的高度
+            $uList.stop().animate({ marginTop: -scrollHeight }, 600, function () {
+                //动画结束后，将当前<ul>marginTop置为初始值0状态，再将第一个<li>拼接到末尾。
+                $uList.css({ marginTop: 0 }).find("li:first").appendTo($uList);
+            });
+        }
     });
 </script>
 </html>

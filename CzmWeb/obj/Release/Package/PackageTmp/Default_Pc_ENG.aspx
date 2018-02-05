@@ -195,9 +195,9 @@
 <form id="form1" runat="server">
       <header>
         <nav >
-            <asp:HyperLink ID="HyPersonCenter" Visible="False" NavigateUrl="../UserPage/UserbecomeTypeHighCHN.aspx" runat="server">Personal</asp:HyperLink>
-            <a href="../UserPage/UserPageLoginCHN.aspx" >Login In</a>
-            <a  href="../UserPage/UserPageRegisterCHN.aspx"> Login Up</a>
+            <asp:HyperLink ID="HyPersonCenter" Visible="False" NavigateUrl="../UserPage/UserbecomeTypeHigh.aspx" runat="server">Personal</asp:HyperLink>
+            <a href="../UserPage/UserPageLogin.aspx" target="_blank" >Login In</a>
+            <a href="../UserPage/UserPageRegister.aspx" target="_blank" > Login Up</a>
         </nav>			
     </header>
 

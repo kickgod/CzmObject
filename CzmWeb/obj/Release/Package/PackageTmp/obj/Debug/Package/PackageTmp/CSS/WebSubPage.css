@@ -1,0 +1,578 @@
+﻿/*********************左边二级导航*****************************（成人教育）**********************************/
+#SubLeft
+{
+    width: 254px;
+    float:left;
+    z-index:0;
+}
+#SubLeft .SubTitle
+{
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    background: url(../Images/Web/SubleftTitle.png) no-repeat;
+    text-align: left;
+    font-family: Microsoft Yahei;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFF;
+    margin: 0 auto;
+}
+#SubLeft .SubNav_Wrap
+{
+    background: url(../Images/Web/subleft_bg.png);
+    background-repeat: repeat-y;
+}
+#SubLeft .SubNav_Wrap .SubNav
+{
+    width: 220px;
+    margin-left:32px;
+    *margin-left:30px;
+    _margin-left:30px;
+}
+#SubLeft .SubNav_Wrap .SubNav .Blank
+{
+    width:220px;
+    height:16px;
+    border-top: solid #91AF8D 1px;
+    background-color: #FFF;
+    border-left: solid #91AF8D 1px;
+    border-right: solid #E5E5E5 1px;
+}
+#SubLeft .SubNav_Wrap .SubNav ul
+{
+    border-top: solid #D2D2D2 1px;
+    display: block;
+}
+#SubLeft .SubNav_Wrap .SubNav ul li
+{
+    width:220px;
+    height: 42px;
+    position: relative;
+    font-family: Microsoft Yahei;
+    font-size: 12px;
+    line-height: 36px;
+    text-align: left;
+    background-color: #FFF;
+    border-bottom: solid #D2D2D2 1px;
+    border-left: solid #91AF8D 1px;
+    border-right: solid #E5E5E5 1px;
+    display: block;
+}
+#SubLeft .SubNav_Wrap .SubNav ul li a
+{
+    color: #727272;
+    padding-left:32px;
+    line-height:42px;
+}
+#SubLeft .SubNav ul li .hover
+{
+    height:0px;
+}
+#SubLeft .SubNav_Wrap .SubNav ul li a:hover
+{
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #3D94AF;
+    line-height:42px;
+}
+
+#SubLeft .Webo
+{
+    margin-top: 32px;
+    width: 254px;
+    height: 480px;
+}
+/*
+.menuItemStyle
+{
+	margin: 0px;
+	padding: 0px;
+	width: 208px;
+	height: 40px;
+	line-height:40px;
+	border-top: solid #FFF 2px;
+	border-bottom: solid #999 2px;
+	text-align:left;
+	padding-left:32px;
+}
+.menuItemStyle a
+{
+	z-index: 300;
+	height: 40px;
+}
+.menuHoverStyle a
+{
+	background-color:#999;
+}
+.menuSelectedStyle
+{
+	width: 208px;
+	height: 40px;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+.menuSelectedStyle a
+{
+	background-color:#999;
+}
+*/
+#SubContent
+{
+    width: 934px;
+    min-height:400px;
+    background-color:#FFF;
+    float:left;
+}
+#SubContent .SubContentTop
+{
+    height: 24px;
+    margin-top: 20px;
+    margin-left:16px;
+    margin-right:16px;
+    padding-left: 12px;
+    border-bottom: solid #054D03 2px;
+}
+#SubContent .SubContentTop .SiteMap
+{
+    height: 24px;
+    line-height: 24px;
+    font-size:12px;
+    text-align: left;
+}
+#SubContent .SubContentTop .SiteMap a
+{
+    text-decoration: none;
+    color: #727272;
+}
+#SubContent .SubContentTop .SiteMap a:hover
+{
+    text-decoration:underline;
+    color: #2E7A54;
+}
+#SubContent .SubContent
+{
+    margin-left:16px;
+    margin-right:16px;
+    padding:8px;
+    text-align:left;
+}
+/*
+#SubContent .SubContent a
+{
+    text-decoration:none;
+    color: #333;
+}
+*/
+#SubContent .SubContent a:houver
+{
+    text-decoration:underline;
+    color: #FF0000;
+}
+.xytable tr td {
+	border: solid 1px #C6C6C6;
+	padding-left:20px;
+	padding-top:10px;
+	padding-bottom:10px;
+	line-height:24px;
+	font-size:14px;
+	text-align:left;
+}
+.xytable a
+{
+    color:#EF1E07;
+    text-decoration:none;
+}
+/*********************左边二级导航*****************************（自学考试）**********************************/
+#left_list_2
+{
+    width: 240px;
+    padding-bottom: 20px;
+    float: left;
+    clear: both; /*border-right:#999 dotted 1px;*/
+}
+.nav_list_2
+{
+    margin: 1px 0 0 1px;
+}
+.title_2
+{
+    width: 240px;
+    height: 50px;
+    background: url(../Images/sub_nav_bg2.jpg) repeat;
+    text-align: center;
+    color: #FFF;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    line-height: 48px;
+}
+.list_2 ul
+{
+    font-size: 12px;
+    list-style: none;
+}
+.list_2 ul li
+{
+    /*width:240px;height:32px; */
+    font-size: 12px;
+    line-height: 36px;
+    text-align: left;
+    border-bottom: #FFF dotted 1px;
+}
+.list_2 ul li a
+{
+    display: block;
+    padding-left: 2em;
+    text-decoration: none;
+    color: Black;
+    background-color: #cccc99;
+}
+.list_2 ul li a:hover
+{
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    background-color: #999966;
+}
+
+
+/*********************左边二级导航*****************************（职业教育）**********************************/
+#left_list_3
+{
+    width: 240px;
+    padding-bottom: 20px;
+    float: left;
+    clear: both; /*border-right:#999 dotted 1px;*/
+}
+.nav_list_3
+{
+    margin: 1px 0 0 1px;
+}
+.title_3
+{
+    width: 240px;
+    height: 50px;
+    background: url(../Images/sub_nav_bg3.jpg) repeat;
+    text-align: center;
+    color: #FFF;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    line-height: 48px;
+}
+.list_3 ul
+{
+    font-size: 12px;
+    list-style: none;
+}
+.list_3 ul li
+{
+    /*width:240px;height:32px; */
+    font-size: 12px;
+    line-height: 36px;
+    text-align: left;
+    border-bottom: #FFF dotted 1px;
+}
+.list_3 ul li a
+{
+    display: block;
+    padding-left: 2em;
+    text-decoration: none;
+    color: Black;
+    background-color: #c9e6e0;
+}
+.list_3 ul li a:hover
+{
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    background-color: #5f877f;
+}
+
+
+/*********************左边二级导航*****************************（硕士教育）**********************************/
+#left_list_4
+{
+    width: 240px;
+    padding-bottom: 20px;
+    float: left;
+    clear: both; /*border-right:#999 dotted 1px;*/
+}
+.nav_list_4
+{
+    margin: 1px 0 0 1px;
+}
+.title_4
+{
+    width: 240px;
+    height: 50px;
+    background: url(../Images/sub_nav_bg6.jpg) repeat;
+    text-align: center;
+    color: #FFF;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    line-height: 48px;
+}
+.list_4 ul
+{
+    font-size: 12px;
+    list-style: none;
+}
+.list_4 ul li
+{
+    /*width:240px;height:32px; */
+    font-size: 12px;
+    line-height: 36px;
+    text-align: left;
+    border-bottom: #FFF dotted 1px;
+}
+.list_4 ul li a
+{
+    display: block;
+    padding-left: 2em;
+    text-decoration: none;
+    color: Black;
+    background-color: #bedbc9;
+}
+.list_4 ul li a:hover
+{
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    background-color: #929e97;
+}
+
+/*********************左边二级导航*****************************（联合办学）**********************************/
+#left_list_5
+{
+    width: 240px;
+    padding-bottom: 20px;
+    float: left;
+    clear: both; /*border-right:#999 dotted 1px;*/
+}
+.nav_list_5
+{
+    margin: 1px 0 0 1px;
+}
+.title_5
+{
+    width: 240px;
+    height: 50px;
+    background: url(../Images/sub_nav_bg4.jpg) repeat;
+    text-align: center;
+    color: #FFF;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    line-height: 48px;
+}
+.list_5 ul
+{
+    font-size: 12px;
+    list-style: none;
+}
+.list_5 ul li
+{
+    /*width:240px;height:32px; */
+    font-size: 12px;
+    line-height: 36px;
+    text-align: left;
+    border-bottom: #FFF dotted 1px;
+}
+.list_5 ul li a
+{
+    display: block;
+    padding-left: 2em;
+    text-decoration: none;
+    color: Black;
+    background-color: #bfcecd;
+}
+.list_5 ul li a:hover
+{
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    background-color: #969a9a;
+}
+
+/*********************左边二级导航*****************************（网络学院）**********************************/
+#left_list_6
+{
+    width: 240px;
+    padding-bottom: 20px;
+    float: left;
+    clear: both; /*border-right:#999 dotted 1px;*/
+}
+.nav_list_6
+{
+    margin: 1px 0 0 1px;
+}
+.title_6
+{
+    width: 240px;
+    height: 50px;
+    background: url(../Images/sub_nav_bg5.jpg) repeat;
+    text-align: center;
+    color: #FFF;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    line-height: 48px;
+}
+.list_6 ul
+{
+    font-size: 12px;
+    list-style: none;
+}
+.list_6 ul li
+{
+    /*width:240px;height:32px; */
+    font-size: 12px;
+    line-height: 36px;
+    text-align: left;
+    border-bottom: #FFF dotted 1px;
+}
+.list_6 ul li a
+{
+    display: block;
+    padding-left: 2em;
+    text-decoration: none;
+    color: Black;
+    background-color: #e6ddc1;
+}
+.list_6 ul li a:hover
+{
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    background-color: #9a9483;
+}
+
+
+/************************************************浏览咨询*********************************************/
+.message
+{
+    padding: 0 25px 0 25px;
+}
+.message dl
+{
+    border-bottom: dashed 1px #e1e1e1;
+    padding-bottom: 10px;
+}
+.message dl img
+{
+    padding-right: 5px;
+}
+.message dl dt
+{
+    font-weight: bold;
+}
+.message dl dd
+{
+    color: #036;
+}
+
+
+/************************************************通知与公告&最新资讯&招生考试*********************************************/
+#banner_wrap1
+{
+    width: 100%;
+    height: 280px;
+}
+.banner_pic1
+{
+    height: 365px;
+    margin-bottom: -42px;
+    background: url(../Images/index_nav.jpg) no-repeat;
+}
+
+
+
+/******************************************************************相同部分*****************************************************************/
+
+/*********************右边内容**********************************/
+#right_content
+{
+    width: 738px;
+    float: right;
+    padding: 10px;
+    border-left: #999 dotted 1px;
+}
+/************当前位置********************/
+.location
+{
+    padding-top: 15px;
+    border-bottom: #ccc solid 1px;
+    padding-left: 20px;
+    margin-bottom: 18px;
+}
+.location p
+{
+    color: #999;
+    font-size: 11px;
+}
+.location p a
+{
+    color: #999;
+    text-decoration: none;
+}
+.location p a:hover
+{
+    color: #666;
+    text-decoration: underline;
+}
+
+/***************************内容**************************/
+.content .items
+{
+    margin: 0 5px 30px;
+    clear: both;
+}
+.items ul li
+{
+    padding: 4px 4px 4px 10px;
+    border-bottom: 1px dotted #CBCBCB;
+    background: url(../Images/arrow_gray.png) no-repeat 0 10px;
+    line-height: 22px;
+    font-size: 13px;
+    clear: both;
+}
+.items span
+{
+    float: right;
+    padding-left: 9px;
+}
+.items ul li a
+{
+    color: #333;
+    text-decoration: none;
+    padding-left: 6px;
+}
+.items ul li a:hover
+{
+    color: Red;
+    text-decoration: none;
+}
+/*****************page************************/
+.page
+{
+    margin: 0 20px 30px;
+    padding: 3px 20px 0;
+    color: #474747;
+    line-height: 24px;
+}
+.page span
+{
+    margin-left: 20px;
+}
+.page a
+{
+    margin: 0 3px;
+    color: #474747;
+    text-decoration: none;
+}
+.page a:hover
+{
+    margin: 0 3px;
+    color: #006699;
+    text-decoration: underline;
+}
+
+
