@@ -80,6 +80,11 @@
                 overflow: hidden;
  
             }
+            .btnDetailWH 
+            {
+                 Width:160px;
+                 Height:150px; 
+            }
         </style>
     </head>
 <body>
@@ -211,9 +216,9 @@
                         <div class="TypeName">
                             <%#Eval("typeName_c")%> 
                         </div>
-                        <div style=" height: 25px; opacity: 0.2; filter: opacity(20); color: white; position: absolute; top: 4%;left: 21%">
+                        <div style=" opacity: 0.2; filter: opacity(20); color: white; position: absolute; top: 4%;left: 21%">
                             <p style="width: 100px;display: block; color: white; text-align: center;">
-                                <asp:Button ID="btnCheck" CssClass="btn btn-default" runat="server" Text="查看详情" CommandArgument='<%#Eval("typeID")%>' CommandName="Check" Width="160" Height="150" />
+                                <asp:Button ID="btnCheck" CssClass="btnDetailWH" runat="server" Text="查看详情" CommandArgument='<%#Eval("typeID")%>' CommandName="Check" Width="160" Height="150" />
                             </p>
                         </div>
                     </div>

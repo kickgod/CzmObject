@@ -60,6 +60,11 @@
             .FirstTimeDivLogo{ display: none;overflow: hidden}
             #introdutionOFourCompany{ display: none;overflow: hidden}
         }
+        .btnDetailWH 
+            {
+                 Width:160px;
+                 Height:150px; 
+            }
         .SearchTxt{ width: 70%;height: 27px;border-radius: 12.5px;font-size: 13px;color: black;text-indent: 15px}
         .LiveIng{color:coral;font-size:15px;border-bottom: coral 1px solid}
         .ulloSpan a{display: block}
@@ -219,7 +224,7 @@
                         </figure>
                         <div style=" height: 25px; opacity: 0.2; filter: opacity(20); color: white;  position: absolute; top: 0%;left: 21%">
                             <p style="width: 100px;display: block; color: white; text-align: center;">
-                                <asp:Button ID="btnCheck" CssClass="btn btn-default" runat="server" Text="See Details" CommandArgument='<%#Eval("typeID")%>' CommandName="Check" Width="160" Height="150" />
+                                <asp:Button ID="btnCheck" CssClass="btnDetailWH" runat="server" Text="See Details" CommandArgument='<%#Eval("typeID")%>' CommandName="Check" Width="160" Height="150" />
                             </p>
                         </div>
                     </div>
